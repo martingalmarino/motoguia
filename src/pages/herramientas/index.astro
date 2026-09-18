@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import { paths } from '../../config/site';
+---
+
+<BaseLayout title="Herramientas" description="Comparador y calculadoras de combustible y costo mensual para motos en Argentina." path={paths.tools}>
+  <article class="wrap editorial-article">
+    <PageHeader
+      eyebrow="Calculadoras"
+      title="Herramientas"
+      lede="Compará fichas publicadas y estimá nafta o gasto mensual con los números que vos cargues."
+    />
+    <div class="grid grid-3">
+      <a class="card tool-card" href={paths.comparator}>
+        <span class="tool-kicker">Comparador</span>
+        <h3>Comparador de fichas</h3>
+        <p class="muted">Dos o tres modelos publicados, lado a lado.</p>
+      </a>
+      <a class="card tool-card" href={paths.fuel}>
+        <span class="tool-kicker">Combustible</span>
+        <h3>Calculadora de combustible</h3>
+        <p class="muted">Litros y pesos con el precio del litro que indiques.</p>
+      </a>
+      <a class="card tool-card" href={paths.monthlyCost}>
+        <span class="tool-kicker">Costo</span>
+        <h3>Costo mensual</h3>
+        <p class="muted">Nafta, seguro, patente prorrateada y service.</p>
+      </a>
+    </div>
+    <p class="muted">La patente se carga a mano: no estimamos el monto por jurisdicción.</p>
+  </article>
+</BaseLayout>

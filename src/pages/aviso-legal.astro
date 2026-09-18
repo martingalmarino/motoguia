@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { paths, site } from '../config/site';
+---
+
+<BaseLayout title="Aviso legal" description="MotoGuía AR no vende motos ni garantiza disponibilidad, precios o homologaciones." path={paths.legal}>
+  <article class="wrap prose">
+    <h1>Aviso legal</h1>
+    <p>{site.name} es una guía informativa. Las fichas resumen fuentes de terceros. Un patentamiento no es una oferta de venta.</p>
+    <p>Los precios vencen. Las clases de licencia dependen del organismo que emite el documento. Las imágenes genéricas están rotuladas como referencia.</p>
+  </article>
+</BaseLayout>

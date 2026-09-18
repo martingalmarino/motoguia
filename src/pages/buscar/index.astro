@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { paths } from '../../config/site';
+import { getPublishedAccessoryGuides, getPublishedComparisons, getPublishedGuides, getPublishedMotorcycles, motorcycleUrl } from '../../lib/content/catalog';
+import { displayName } from '../../lib/content/present';
+import { jsonLdScript } from '../../lib/seo/urls';
+
+const motos = await getPublishedMotorcycles();
+const guides = await getPublishedGuides();
+const comparisons = await getPublishedComparisons();
+const accessories = await getPublishedAccessoryGuides();
+const index = [
+  ...motos.map((entry) => ({ title: displayName(entry), url: motorcycleUrl(entry), summary: entry.data.editorial.summary })),
+  ...guides.map((entry) => ({ title: entry.data.title, url: `${paths.guides}${entry.id}/`, summary: entry.data.description })),
+  ...comparisons.map((entry) => ({ title: entry.data.title, url: `${paths.comparisons}${entry.id}/`, summary: entry.data.description })),
+  ...accessories.map((entry) => ({ title: entry.data.title, url: `${paths.accessories}${entry.id}/`, summary: entry.data.description })),
+];
+---
+
+<BaseLayout title="Buscar" description="Buscá fichas, guías y comparativas publicadas en MotoGuía AR." path={paths.search} noindex={true}>
+  <article class="wrap editorial-article">
+    <p class="eyebrow">Catálogo y lecturas</p>
+    <h1>Buscar</h1>
+    <p class="lede">Escribí marca, modelo o tema. No distingue mayúsculas ni tildes.</p>
+    <form class="search-inline" data-search-form>
+      <label>
+        Consulta
+        <input type="search" name="q" />
+      </label>
+      <button class="btn btn-primary" type="submit">Buscar</button>
+    </form>
+    <ul data-search-results></ul>
+    <script type="application/json" id="search-index" set:html={jsonLdScript(index)} />
+  </article>
+</BaseLayout>
+<script>
+  import '../../scripts/search';
+</script>

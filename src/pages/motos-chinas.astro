@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MotoCard from '../components/catalog/MotoCard.astro';
+import PageHeader from '../components/editorial/PageHeader.astro';
+import { paths } from '../config/site';
+import { getPublishedMotorcycles } from '../lib/content/catalog';
+
+const motos = (await getPublishedMotorcycles()).filter((entry) => entry.data.chineseHub);
+---
+
+<BaseLayout title="Motos chinas en Argentina" description="Marcas del volumen argentino a menudo asociadas a suministro chino. Origen, ensamble e importador se separan y solo se afirman con fuente." path={paths.chinese}>
+  <article class="wrap editorial-article">
+    <PageHeader
+      eyebrow="Volumen del mercado"
+      title="Motos chinas en Argentina"
+      lede="En búsquedas locales, “motos chinas” suele agrupar cub y street de marcas como Gilera, Keller, Motomel, Corven, Mondial, SIAM o Zanella. Eso es un hábito de mercado, no una partida aduanera."
+    />
+    <p>
+      Honda publica origen Argentina en varias fichas; Grupo Corven se presenta como capitales nacionales; SIAM es marca argentina de Newsan. Ninguna de esas frases prueba o niega piezas chinas en un modelo puntual.
+    </p>
+    <h2>Qué mirar además del precio</h2>
+    <ul>
+      <li>Nombre de ranking ACARA versus nombre comercial (KN110-8 ≠ Crono; B110 ≠ Blitz, hasta que haya fuente).</li>
+      <li>Garantía escrita y taller cercano.</li>
+      <li>ABS/CBS informado, no supuesto.</li>
+    </ul>
+    <div class="grid grid-3">
+      {motos.map((entry) => <MotoCard entry={entry} />)}
+    </div>
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Todas estas motos se fabrican en China?</h3>
+    <p>No lo afirmamos. Falta la declaración de planta en la mayoría de las fichas.</p>
+    <h3>¿Son peores que una Honda?</h3>
+    <p>No hay prueba de manejo en este sitio. Hay diferencias de garantía publicada y de volumen de patentamientos.</p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { paths } from '../config/site';
+---
+
+<BaseLayout title="Metodología" description="Cómo se eligen ranking, fichas, precios y fechas en MotoGuía AR." path={paths.methodology}>
+  <article class="wrap prose editorial-article">
+    <p class="eyebrow">Confianza</p>
+    <h1>Metodología</h1>
+    <ol>
+      <li>Ranking: informe ACARA/SIOMAA más reciente verificable. Agosto 2026 es el mes cerrado al 18/09/2026. El acumulado y el mes no se mezclan. CADECOM se cita solo como contraste porque agrupa versiones.</li>
+      <li>Fichas: páginas y PDFs de fabricante o importador en Argentina. Si el ranking usa otro nombre (KN110-8, B110), no se cruza sin documento.</li>
+      <li>Precios: lista oficial con fecha de observación. Un precio de nota se etiqueta como cotización. No se completa con “alrededor de”.</li>
+      <li>Un dato ausente no se completa con cero ni se inventa para cerrar la tabla.</li>
+      <li>Las fechas de revisión se actualizan cuando cambia el contenido, no por el paso del calendario.</li>
+    </ol>
+    <p>Si un modelo del ranking no tiene ficha verificada, lo decimos en la tabla. No completamos el top 20 con suposiciones.</p>
+  </article>
+</BaseLayout>

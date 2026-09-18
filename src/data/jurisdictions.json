@@ -1,0 +1,17 @@
+[
+  {
+    "id": "ar-national",
+    "jurisdiction": "Nacional",
+    "authority": "Direcciones provinciales de rentas / organismos locales de patente",
+    "fiscalYear": 2026,
+    "effectiveFrom": "2026-01-01",
+    "effectiveTo": "2026-12-31",
+    "valuationBasis": null,
+    "brackets": [],
+    "exemptions": [],
+    "notes": "El MVP no estima patente. Cada provincia y CABA publica alícuotas, valuaciones y calendarios propios. La herramienta de costo mensual pide el monto anual que ya conozcas y lo prorratea en 12 cuotas contables, que no equivalen al calendario real de vencimientos.",
+    "sourceIds": [],
+    "verifiedAt": "2026-09-18",
+    "estimatorEnabled": false
+  }
+]

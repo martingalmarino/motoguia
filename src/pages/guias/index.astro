@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import { paths } from '../../config/site';
+import { getPublishedGuides } from '../../lib/content/catalog';
+import { formatDate } from '../../lib/format';
+
+const guides = await getPublishedGuides();
+---
+
+<BaseLayout title="Guías para elegir y mantener una moto" description="Licencia, primera moto, 110 versus 150, usadas, costo y garantía." path={paths.guides}>
+  <article class="wrap editorial-article">
+    <PageHeader
+      eyebrow="Lecturas"
+      title="Guías"
+      lede="Textos para decidir con datos locales: licencia, presupuesto, cilindrada y lo que conviene pedir en el concesionario."
+    />
+    <ul class="guide-list">
+      {guides.map((guide) => (
+        <li>
+          <a class="card" href={`${paths.guides}${guide.id}/`}>
+            {guide.data.title}
+            <span>Actualizada {formatDate(guide.data.reviewedAt)}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </article>
+</BaseLayout>

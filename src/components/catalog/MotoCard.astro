@@ -1,0 +1,66 @@
+---
+import { motorcycleUrl, getBrand } from '../../lib/content/catalog';
+import { categoryLabel, engineLabel, shortPrice, shortSpec } from '../../lib/content/present';
+import { formatDate } from '../../lib/format';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'motorcycles'>;
+}
+
+const { entry } = Astro.props;
+const brand = getBrand(entry.data.brandId);
+const href = motorcycleUrl(entry);
+const price = entry.data.price;
+---
+
+<article
+  class="card moto-card"
+  data-moto-card
+  data-id={entry.data.id}
+  data-brand={entry.data.brandId}
+  data-category={entry.data.category}
+  data-engine={entry.data.engineType}
+  data-cc={entry.data.engine?.displacementCc ?? ''}
+  data-price={price?.minARS ?? ''}
+  data-name={`${brand?.name ?? ''} ${entry.data.name} ${entry.data.variant ?? ''}`}
+  data-chinese={entry.data.chineseHub ? '1' : '0'}
+>
+  <div class="silhouette">
+    <img
+      src={entry.data.images[0]?.path ?? '/images/silhouette.svg'}
+      alt={entry.data.images[0]?.alt ?? 'Silueta de referencia'}
+      width="640"
+      height="320"
+      loading="lazy"
+    />
+  </div>
+  <div class="body">
+    <h3>
+      <a href={href}>{brand?.name} {entry.data.name}</a>
+    </h3>
+    <div class="cluster">
+      <span class="chip meta-chip">{categoryLabel(entry.data.category)}</span>
+      <span class="chip">{shortSpec(entry)}</span>
+      <span class="chip">{engineLabel(entry.data.engineType)}</span>
+    </div>
+    <p class="summary">{entry.data.editorial.summary}</p>
+    {
+      price ? (
+        <p class="price-line">
+          {shortPrice(entry)}
+          <span class="muted">
+            {' '}
+            · {price.priceType === 'quoted' ? 'cotización' : price.priceType === 'list' ? 'lista' : price.priceType} al {formatDate(price.observedAt)}
+          </span>
+        </p>
+      ) : (
+        <p class="price-line muted">Precio de lista no informado por la fuente</p>
+      )
+    }
+    <div class="cluster actions">
+      <a class="btn btn-primary" href={href}>Ver ficha</a>
+      <button class="btn btn-ghost" type="button" data-compare={entry.data.id}>Comparar</button>
+    </div>
+  </div>
+</article>

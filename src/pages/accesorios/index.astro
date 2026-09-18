@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import { paths } from '../../config/site';
+import { getPublishedAccessoryGuides } from '../../lib/content/catalog';
+
+const items = await getPublishedAccessoryGuides();
+---
+
+<BaseLayout title="Guías de accesorios" description="Cómo elegir casco, guantes y trabas para moto en Argentina." path={paths.accessories}>
+  <article class="wrap editorial-article">
+    <PageHeader
+      eyebrow="Equipamiento"
+      title="Accesorios"
+      lede="Casco, guantes y trabas, con criterios verificables."
+    />
+    <p class="muted">Si un enlace de compra es de afiliado, lo marcamos. <a href={paths.affiliates}>Cómo declaramos esos enlaces</a>.</p>
+    <ul class="guide-list">
+      {items.map((item) => (
+        <li>
+          <a class="card" href={`${paths.accessories}${item.id}/`}>
+            {item.data.title}
+            <span>{item.data.description}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </article>
+</BaseLayout>

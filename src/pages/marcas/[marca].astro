@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MotoCard from '../../components/catalog/MotoCard.astro';
+import { paths } from '../../config/site';
+import { getAllBrands, getPublishedMotorcycles } from '../../lib/content/catalog';
+
+export async function getStaticPaths() {
+  const motos = await getPublishedMotorcycles();
+  const brands = getAllBrands().filter((brand) => motos.some((moto) => moto.data.brandId === brand.id));
+  return brands.map((brand) => ({
+    params: { marca: brand.slug },
+    props: { brand, motos: motos.filter((moto) => moto.data.brandId === brand.id) },
+  }));
+}
+
+const { brand, motos } = Astro.props;
+---
+
+<BaseLayout title={`${brand.name} en Argentina`} description={brand.originNote} path={`${paths.brands}${brand.slug}/`}>
+  <article class="wrap editorial-article">
+    <p class="eyebrow">Marca</p>
+    <h1>{brand.name}</h1>
+    <p class="lede">{brand.originNote}</p>
+    {brand.website && <p><a href={brand.website} rel="noopener">Sitio oficial</a></p>}
+    <div class="grid grid-3">
+      {motos.map((entry) => <MotoCard entry={entry} />)}
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { paths } from '../../config/site';
+import { getPublishedMotorcycles, motorcycleUrl } from '../../lib/content/catalog';
+import { displayName } from '../../lib/content/present';
+
+const motos = await getPublishedMotorcycles();
+const payload = motos.map((entry) => ({
+  id: entry.data.id,
+  name: displayName(entry),
+  href: motorcycleUrl(entry),
+  engineType: entry.data.engineType,
+  category: entry.data.category,
+  displacementCc: entry.data.engine?.displacementCc ?? null,
+  power: entry.data.engine?.declaredPowerOriginalValue ?? entry.data.electric?.nominalPowerKw ?? null,
+  powerUnit: entry.data.engine?.declaredPowerOriginalUnit ?? (entry.data.electric ? 'kW' : null),
+  transmission: entry.data.engine?.transmission ?? null,
+  brakesFront: entry.data.chassis?.brakesFront ?? null,
+  brakesRear: entry.data.chassis?.brakesRear ?? null,
+  abs: entry.data.chassis?.abs ?? null,
+  cbs: entry.data.chassis?.cbs ?? null,
+  tankLiters: entry.data.fuel?.tankLiters ?? null,
+  seatHeightMm: entry.data.dimensions?.seatHeightMm ?? null,
+  weightKg: entry.data.dimensions?.weightKg ?? null,
+  weightBasis: entry.data.dimensions?.weightBasis ?? null,
+  rangeKm: entry.data.electric?.declaredRangeKm ?? null,
+  priceMin: entry.data.price?.minARS ?? null,
+}));
+---
+
+<BaseLayout title="Comparador de motos" description="Compará dos o tres fichas publicadas, lado a lado." path={paths.comparator} noindex={true}>
+  <article class="wrap editorial-article">
+    <p class="eyebrow">Herramientas</p>
+    <h1>Comparador</h1>
+    <p class="lede">
+      Elegí dos o tres modelos distintos del catálogo. Los campos vacíos se muestran como no informados; nunca como cero.
+      Más cilindrada o más potencia no se etiquetan como “mejor”.
+    </p>
+    <form class="form-grid card form-card" data-compare-form>
+      <label>
+        Modelo
+        <select name="modelo">
+          <option value="">Elegí una ficha</option>
+          {payload.map((item) => <option value={item.id}>{item.name}</option>)}
+        </select>
+      </label>
+      <button class="btn btn-primary" type="submit">Agregar</button>
+    </form>
+    <p data-compare-error class="muted" hidden></p>
+    <div class="cluster" data-chips></div>
+    <p class="muted">En el teléfono, la tabla se desplaza de costado. La primera columna queda fija.</p>
+    <div class="compare-scroll">
+      <table class="compare-table" data-compare-table></table>
+    </div>
+    <script type="application/json" id="compare-data" set:html={JSON.stringify(payload)} />
+  </article>
+</BaseLayout>
+<script>
+  import '../../scripts/comparator';
+</script>

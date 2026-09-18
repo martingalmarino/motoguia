@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { paths, site } from '../config/site';
+---
+
+<BaseLayout title="Sobre nosotros" description="Qué es MotoGuía AR y cómo trabaja la redacción." path={paths.about}>
+  <article class="wrap prose editorial-article">
+    <p class="eyebrow">Quién escribe</p>
+    <h1>Sobre {site.name}</h1>
+    <p>
+      {site.name} es una guía editorial para elegir una moto en Argentina: fichas locales, ranking de patentamientos y calculadoras de uso.
+      No somos concesionaria, clasificados ni foro.
+    </p>
+    <p>
+      La redacción se firma como {site.editorLabel}. Si una ficha no publica potencia, precio u origen, lo marcamos como no informado. No inventamos pruebas de manejo ni puntajes.
+    </p>
+    <p>
+      Los patentamientos ACARA/SIOMAA no son ventas de mostrador. Cómo leemos cada fuente está en <a href={paths.methodology}>metodología</a>.
+    </p>
+  </article>
+</BaseLayout>

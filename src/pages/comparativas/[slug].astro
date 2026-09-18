@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/editorial/Breadcrumbs.astro';
+import SourceList from '../../components/editorial/SourceList.astro';
+import { paths } from '../../config/site';
+import { getPublishedComparisons, getMotorcycle, motorcycleUrl, render } from '../../lib/content/catalog';
+import { displayName } from '../../lib/content/present';
+import { formatDate, isoDate } from '../../lib/format';
+import { articleLd, breadcrumbLd } from '../../lib/seo/jsonld';
+
+export async function getStaticPaths() {
+  const items = await getPublishedComparisons();
+  return items.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const path = `${paths.comparisons}${entry.id}/`;
+const models = [];
+for (const id of entry.data.modelIds) {
+  const model = await getMotorcycle(id);
+  if (model) models.push(model);
+}
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.comparisons, label: 'Comparativas' },
+  { href: path, label: entry.data.title },
+];
+---
+
+<BaseLayout
+  title={entry.data.seoTitle}
+  description={entry.data.seoDescription}
+  path={path}
+  ogType="article"
+  jsonLd={[
+    breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
+    articleLd({
+      headline: entry.data.title,
+      description: entry.data.description,
+      path,
+      datePublished: isoDate(entry.data.publishedAt),
+      dateModified: isoDate(entry.data.reviewedAt),
+    }),
+  ]}
+>
+  <article class="wrap prose editorial-article">
+    <Breadcrumbs items={crumbs} />
+    <p class="eyebrow">Comparativa</p>
+    <p class="muted">{entry.data.author} · {formatDate(entry.data.reviewedAt)}</p>
+    <h1>{entry.data.title}</h1>
+    <p class="lede">{entry.data.description}</p>
+    <p>Fichas usadas (los números técnicos salen del catálogo, no se reescriben acá):</p>
+    <ul>
+      {models.map((model) => (
+        <li><a href={motorcycleUrl(model)}>{displayName(model)}</a></li>
+      ))}
+    </ul>
+    <Content />
+    <SourceList ids={entry.data.sourceIds} />
+  </article>
+</BaseLayout>

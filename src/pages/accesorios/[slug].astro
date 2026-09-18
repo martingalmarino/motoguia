@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/editorial/Breadcrumbs.astro';
+import { paths } from '../../config/site';
+import { getPublishedAccessoryGuides, render } from '../../lib/content/catalog';
+import { formatDate, isoDate } from '../../lib/format';
+import { articleLd, breadcrumbLd } from '../../lib/seo/jsonld';
+
+export async function getStaticPaths() {
+  const items = await getPublishedAccessoryGuides();
+  return items.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const path = `${paths.accessories}${entry.id}/`;
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.accessories, label: 'Accesorios' },
+  { href: path, label: entry.data.title },
+];
+---
+
+<BaseLayout
+  title={entry.data.seoTitle}
+  description={entry.data.seoDescription}
+  path={path}
+  ogType="article"
+  jsonLd={[
+    breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
+    articleLd({
+      headline: entry.data.title,
+      description: entry.data.description,
+      path,
+      datePublished: isoDate(entry.data.publishedAt),
+      dateModified: isoDate(entry.data.reviewedAt),
+    }),
+  ]}
+>
+  <article class="wrap prose editorial-article">
+    <Breadcrumbs items={crumbs} />
+    <p class="eyebrow">Accesorios</p>
+    <p class="muted">{entry.data.author} · {formatDate(entry.data.reviewedAt)}</p>
+    <h1>{entry.data.title}</h1>
+    <p class="lede">{entry.data.description}</p>
+    <p class="notice">Algunos enlaces de compra pueden ser de afiliado. Podemos recibir una comisión si comprás a través de ellos. <a href={paths.affiliates}>Más información</a>.</p>
+    <Content />
+  </article>
+</BaseLayout>

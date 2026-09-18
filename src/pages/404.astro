@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { paths } from '../config/site';
+---
+
+<BaseLayout title="Página no encontrada" description="Esa ruta no existe en MotoGuía AR." path="/404.html" noindex={true}>
+  <article class="wrap">
+    <p class="eyebrow">Error 404</p>
+    <h1>No encontramos esa página</h1>
+    <p class="lede">Esa dirección no existe en MotoGuía AR.</p>
+    <p><a class="btn btn-primary" href={paths.home}>Ir al inicio</a></p>
+  </article>
+</BaseLayout>

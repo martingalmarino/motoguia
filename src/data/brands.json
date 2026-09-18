@@ -1,0 +1,134 @@
+[
+  {
+    "id": "honda",
+    "name": "Honda",
+    "slug": "honda",
+    "originCountry": "JP",
+    "originNote": "Marca japonesa. Las fichas locales de Wave, GLH 150, XR150L y Navi indican origen Argentina.",
+    "importer": "Honda Motor de Argentina S.A.",
+    "chineseHub": false,
+    "website": "https://motos.honda.com.ar/",
+    "sourceIds": ["honda-motos-ar", "honda-garantia"]
+  },
+  {
+    "id": "gilera",
+    "name": "Gilera",
+    "slug": "gilera",
+    "originCountry": null,
+    "originNote": "Gilera Motors Argentina comercializa el catálogo local. No hay en las fichas consultadas un país de fabricación explícito.",
+    "importer": "Gilera Motors Argentina",
+    "chineseHub": true,
+    "website": "https://gilera.com.ar/",
+    "sourceIds": ["gilera-ar"]
+  },
+  {
+    "id": "keller",
+    "name": "Keller",
+    "slug": "keller",
+    "originCountry": null,
+    "originNote": "El sitio local describe motores UNNITEC en la línea Crono. ACARA lista KN110-8; no hay fuente que iguale ambos nombres.",
+    "importer": null,
+    "chineseHub": true,
+    "website": "https://motoskeller.com.ar/",
+    "sourceIds": ["keller-ar"]
+  },
+  {
+    "id": "motomel",
+    "name": "Motomel",
+    "slug": "motomel",
+    "originCountry": null,
+    "originNote": "Motomel Argentina publica garantía y políticas asociadas a La Emilia. ACARA usa códigos B110, CX 150 y C110 DLX que no siempre coinciden con el nombre comercial.",
+    "importer": "Motomel Argentina",
+    "chineseHub": true,
+    "website": "https://motomel.com.ar/",
+    "sourceIds": ["motomel-ar", "motomel-garantia"]
+  },
+  {
+    "id": "corven",
+    "name": "Corven",
+    "slug": "corven",
+    "originCountry": "AR",
+    "originNote": "Grupo Corven se presenta como holding de capitales nacionales, con motos desde 2008 y planta asociada a Venado Tuerto. Eso no prueba el origen de cada componente.",
+    "importer": "Corven Motos",
+    "chineseHub": true,
+    "website": "https://corvenmotos.com.ar/",
+    "sourceIds": ["corven-motos", "grupo-corven"]
+  },
+  {
+    "id": "mondial",
+    "name": "Mondial",
+    "slug": "mondial",
+    "originCountry": null,
+    "originNote": "Catálogo local en mondial.com.ar. Sin declaración de país de fabricación en las páginas revisadas.",
+    "importer": null,
+    "chineseHub": true,
+    "website": "https://mondial.com.ar/",
+    "sourceIds": ["mondial-ar"]
+  },
+  {
+    "id": "siam",
+    "name": "SIAM",
+    "slug": "siam",
+    "originCountry": "AR",
+    "originNote": "Marca argentina comercializada por Newsan. El N4 declara motor Yadea; el QU 110 no declara país de fabricación en la ficha consultada.",
+    "importer": "Newsan",
+    "chineseHub": true,
+    "website": "https://siammotos.com.ar/",
+    "sourceIds": ["siam-motos"]
+  },
+  {
+    "id": "zanella",
+    "name": "Zanella",
+    "slug": "zanella",
+    "originCountry": null,
+    "originNote": "Catálogo argentino en zanellaglobal.com/ar. Sin declaración de origen de fabricación en las fichas ZB 110 revisadas.",
+    "importer": null,
+    "chineseHub": true,
+    "website": "https://zanellaglobal.com/ar/",
+    "sourceIds": ["zanella-ar"]
+  },
+  {
+    "id": "ika",
+    "name": "IKA",
+    "slug": "ika",
+    "originCountry": null,
+    "originNote": "Aparece en el ranking ACARA como IKA IKA P110. No se localizó sitio oficial de motos al 18/09/2026.",
+    "importer": null,
+    "chineseHub": true,
+    "website": null,
+    "sourceIds": ["acara-siomaa-2026-08"]
+  },
+  {
+    "id": "guerrero",
+    "name": "Guerrero",
+    "slug": "guerrero",
+    "originCountry": null,
+    "originNote": "Aparece en el ranking ACARA como GUERRERO G110 TRIP. Los dominios comerciales consultados no respondieron con ficha oficial.",
+    "importer": null,
+    "chineseHub": true,
+    "website": null,
+    "sourceIds": ["acara-siomaa-2026-08"]
+  },
+  {
+    "id": "bajaj",
+    "name": "Bajaj",
+    "slug": "bajaj",
+    "originCountry": "IN",
+    "originNote": "Marca india. Grupo Corven declara alianza de fabricación y comercialización exclusiva en Argentina desde 2014.",
+    "importer": "Corven Motos",
+    "chineseHub": false,
+    "website": "https://corvenmotos.com.ar/",
+    "sourceIds": ["grupo-corven"]
+  },
+  {
+    "id": "sunra",
+    "name": "SUNRA",
+    "slug": "sunra",
+    "originCountry": null,
+    "originNote": "SUNRA Argentina publica catálogo eléctrico. ACARA registra patentamientos de la marca SUNRA en 2026, sin desglose por modelo en el top 50.",
+    "importer": null,
+    "chineseHub": true,
+    "website": "https://sunra.com.ar/",
+    "sourceIds": ["sunra-ar", "acara-siomaa-2026-08"]
+  }
+]

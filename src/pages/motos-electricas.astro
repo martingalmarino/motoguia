@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MotoCard from '../components/catalog/MotoCard.astro';
+import PageHeader from '../components/editorial/PageHeader.astro';
+import { paths } from '../config/site';
+import { getPublishedMotorcycles } from '../lib/content/catalog';
+
+const motos = (await getPublishedMotorcycles()).filter((entry) => entry.data.engineType === 'electric');
+---
+
+<BaseLayout title="Motos eléctricas en Argentina" description="Fichas eléctricas con potencia, autonomía condicionada y licencia. Ninguna entra al top 50 ACARA de modelos en agosto 2026." path={paths.electric}>
+  <article class="wrap editorial-article">
+    <PageHeader
+      eyebrow="Oferta local"
+      title="Motos eléctricas en Argentina"
+      lede="Hay oferta en catálogos SIAM, Motomel y SUNRA. ACARA registró 367 patentamientos de la marca SUNRA en enero-agosto 2026, sin desglose por modelo en el top 50. No se infiere un ranking eléctrico de eso."
+    />
+    <h2>Cómo leer una ficha eléctrica</h2>
+    <ul>
+      <li>Potencia nominal versus pico, si la fuente los separa.</li>
+      <li>Autonomía con condiciones (velocidad, peso, clima). 150 km a 40 km/h no es 150 km a 80 km/h.</li>
+      <li>Capacidad usable versus Ah × V de etiqueta.</li>
+      <li>Tiempo de carga y si la batería es extraíble.</li>
+      <li>Recambio de batería: si no hay precio, queda como incertidumbre.</li>
+    </ul>
+    <p>La licencia no es la misma para todo vehículo eléctrico de dos ruedas. <a href={`${paths.guides}licencia-moto-argentina/`}>Clases ANSV</a>.</p>
+    <div class="grid grid-3">
+      {motos.map((entry) => <MotoCard entry={entry} />)}
+    </div>
+  </article>
+</BaseLayout>

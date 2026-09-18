@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import { paths } from '../../config/site';
+import { getPublishedMotorcycles, getRanking, motorcycleUrl } from '../../lib/content/catalog';
+import { formatInteger } from '../../lib/format';
+import { itemListLd } from '../../lib/seo/jsonld';
+
+const ytd = await getRanking('2026-ytd');
+const month = await getRanking('2026-08');
+const motos = await getPublishedMotorcycles();
+const byId = new Map(motos.map((entry) => [entry.data.id, entry]));
+if (!ytd) throw new Error('Missing YTD ranking');
+
+function hrefFor(ids: string[]) {
+  const first = ids.map((id) => byId.get(id)).find(Boolean);
+  return first ? motorcycleUrl(first) : null;
+}
+---
+
+<BaseLayout
+  title="Motos más vendidas en Argentina 2026"
+  description="Ranking acumulado enero-agosto 2026 de patentamientos ACARA/SIOMAA, con el mes de agosto aparte."
+  path={paths.ranking2026}
+  jsonLd={[itemListLd('Patentamientos motos Argentina 2026 YTD', ytd.data.rows.map((row) => ({ name: row.reportModelName, path: hrefFor(row.modelIds) ?? undefined })))]}
+>
+  <article class="wrap editorial-article">
+    <PageHeader
+      eyebrow="Patentamientos ACARA/SIOMAA"
+      title="Motos más patentadas en Argentina, 2026"
+      lede="“Más vendidas” en esta página significa patentamientos, no tickets de concesionario. Período acumulado: 1 de enero al 31 de agosto de 2026 (586.650 motos del universo Total Motos). Informe con fecha de PDF 31/08/2026."
+    />
+    <p class="muted">{ytd.data.methodology}</p>
+    <h2>Acumulado enero-agosto 2026</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Puesto</th>
+            <th>Modelo (texto ACARA)</th>
+            <th class="num">Unidades</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ytd.data.rows.slice(0, 10).map((row) => (
+            <tr>
+              <td class="rank-index">{row.rank}</td>
+              <td>
+                {hrefFor(row.modelIds) ? <a href={hrefFor(row.modelIds)!}>{row.reportModelName}</a> : row.reportModelName}
+                {row.modelIds.length === 0 && <span class="muted"> · sin ficha verificada</span>}
+              </td>
+              <td class="num">{formatInteger(row.units)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <details class="more-rows">
+      <summary>Ver puestos 11 a 20</summary>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Puesto</th>
+              <th>Modelo</th>
+              <th class="num">Unidades</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ytd.data.rows.slice(10).map((row) => (
+              <tr>
+                <td class="rank-index">{row.rank}</td>
+                <td>{hrefFor(row.modelIds) ? <a href={hrefFor(row.modelIds)!}>{row.reportModelName}</a> : row.reportModelName}</td>
+                <td class="num">{formatInteger(row.units)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </details>
+    {
+      month && (
+        <>
+          <h2>Solo agosto 2026</h2>
+          <p>73.566 motos en el mes. La variación es contra julio 2026, de la misma tabla. No mezclar con CADECOM/DNRPA.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Puesto</th>
+                  <th>Modelo</th>
+                  <th class="num">Unidades</th>
+                  <th class="num">Vs julio</th>
+                </tr>
+              </thead>
+              <tbody>
+                {month.data.rows.map((row) => (
+                  <tr>
+                    <td class="rank-index">{row.rank}</td>
+                    <td>{row.reportModelName}</td>
+                    <td class="num">{formatInteger(row.units)}</td>
+                    <td class="num">{row.comparableChange === null ? '—' : formatInteger(row.comparableChange)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )
+    }
+    <p><a href={paths.ranking}>Volver al hub de rankings</a></p>
+  </article>
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import { paths } from '../../config/site';
+---
+
+<BaseLayout title="Motos más vendidas en Argentina" description="Ranking de patentamientos ACARA/SIOMAA. El informe 2026 está en su propia página." path={paths.ranking}>
+  <article class="wrap editorial-article">
+    <PageHeader
+      eyebrow="Ranking"
+      title="Motos más vendidas"
+      lede="El ranking vigente es el acumulado enero-agosto 2026 de ACARA/SIOMAA. Agosto está publicado aparte."
+    />
+    <ul class="guide-list">
+      <li>
+        <a class="card" href={paths.ranking2026}>
+          Ranking 2026 (acumulado y agosto)
+          <span>Patentamientos del universo Total Motos, con metodología a la vista.</span>
+        </a>
+      </li>
+    </ul>
+    <p class="muted">Los años anteriores se archivan en su propia ruta cuando exista un informe verificado. No se sobrescribe un año para “verse actual”.</p>
+  </article>
+</BaseLayout>

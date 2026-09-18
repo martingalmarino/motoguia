@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MotoCard from '../../components/catalog/MotoCard.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import { paths } from '../../config/site';
+import { getAllBrands, getPublishedMotorcycles } from '../../lib/content/catalog';
+import { formatInteger } from '../../lib/format';
+
+const motos = await getPublishedMotorcycles();
+const brands = getAllBrands().filter((brand) => motos.some((moto) => moto.data.brandId === brand.id));
+---
+
+<BaseLayout title="Catálogo de motos en Argentina" description="Fichas publicadas con filtros de marca, categoría, motor y cilindrada. Las motos sin precio de lista siguen a la vista, salvo que filtres por presupuesto." path={paths.catalog}>
+  <div class="wrap catalog-page">
+    <PageHeader
+      eyebrow="Catálogo"
+      title="Motos publicadas"
+      lede={`${formatInteger(motos.length)} fichas con fuente. Si filtrás por precio, se ocultan las que no tienen lista oficial.`}
+    />
+    <form class="card catalog-toolbar" id="filtros" data-filters>
+      <label class="catalog-search">
+        Buscar
+        <input type="search" name="q" autocomplete="off" placeholder="Marca o modelo" />
+      </label>
+      <details class="catalog-filters">
+        <summary>Filtros</summary>
+        <div class="catalog-filters-grid">
+          <label>
+            Marca
+            <select name="marca">
+              <option value="">Todas</option>
+              {brands.map((brand) => <option value={brand.id}>{brand.name}</option>)}
+            </select>
+          </label>
+          <label>
+            Categoría
+            <select name="categoria">
+              <option value="">Todas</option>
+              <option value="cub">Cub</option>
+              <option value="street">Street</option>
+              <option value="scooter">Scooter</option>
+              <option value="trail">Trail</option>
+            </select>
+          </label>
+          <label>
+            Motor
+            <select name="motor">
+              <option value="">Todos</option>
+              <option value="combustion">Combustión</option>
+              <option value="electric">Eléctrico</option>
+            </select>
+          </label>
+          <label>
+            Cilindrada
+            <select name="cc">
+              <option value="">Todas</option>
+              <option value="110">Hasta 115 cc</option>
+              <option value="150">116 a 150 cc</option>
+            </select>
+          </label>
+          <label>
+            Precio máx.
+            <input type="number" name="precio" min="0" step="1000" inputmode="numeric" placeholder="ARS" />
+          </label>
+          <label>
+            Orden
+            <select name="orden">
+              <option value="nombre">Alfabético</option>
+              <option value="precio-asc">Menor precio</option>
+              <option value="precio-desc">Mayor precio</option>
+            </select>
+          </label>
+        </div>
+      </details>
+      <div class="catalog-toolbar-actions">
+        <p data-count>{formatInteger(motos.length)} fichas</p>
+        <button class="btn btn-ghost" type="reset" data-clear>Limpiar</button>
+      </div>
+      <p class="muted catalog-empty" data-empty hidden>No hay fichas con esos filtros. Si pusiste un tope de precio, las motos sin lista oficial no entran.</p>
+    </form>
+    <div class="grid grid-3" data-catalog>
+      {motos.map((entry) => <MotoCard entry={entry} />)}
+    </div>
+  </div>
+</BaseLayout>
+<script>
+  import '../../scripts/catalog';
+</script>

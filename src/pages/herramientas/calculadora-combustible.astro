@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { paths } from '../../config/site';
+import { getPublishedMotorcycles } from '../../lib/content/catalog';
+import { displayName } from '../../lib/content/present';
+
+const motos = (await getPublishedMotorcycles()).filter(
+  (entry) => entry.data.engineType === 'combustion' && entry.data.fuel?.consumptionL100km,
+);
+---
+
+<BaseLayout title="Calculadora de combustible para moto" description="Calculá litros y pesos de nafta con tus kilómetros y el precio que cargues. Un ejemplo no es el precio actual." path={paths.fuel}>
+  <article class="wrap prose editorial-article">
+    <p class="eyebrow">Herramientas</p>
+    <h1>Calculadora de combustible</h1>
+    <p>
+      Fórmula: litros al mes = km del mes × L/100 km / 100. El costo anual es ese mes por 12 a precio constante, no un pronóstico de inflación.
+      Podés cargar km mensuales, o km por día y días de uso: no los dos a la vez.
+    </p>
+    <form class="form-grid card form-card" data-fuel-form>
+      <fieldset>
+        <legend>Kilómetros</legend>
+        <label><input type="radio" name="modo" value="mes" checked /> Km al mes</label>
+        <label><input type="radio" name="modo" value="dia" /> Km por día × días</label>
+        <label>Km al mes <input name="kmMes" inputmode="decimal" /></label>
+        <label>Km por día <input name="kmDia" inputmode="decimal" /></label>
+        <label>Días de uso al mes <input name="dias" inputmode="numeric" /></label>
+      </fieldset>
+      <label>
+        Consumo
+        <select name="unidad">
+          <option value="l100">L/100 km</option>
+          <option value="kml">km/L</option>
+        </select>
+      </label>
+      <label>Valor de consumo <input name="consumo" inputmode="decimal" /></label>
+      <label>
+        Precargar consumo de una ficha (solo si hay fuente)
+        <select name="moto">
+          <option value="">Ninguna</option>
+          {motos.map((entry) => (
+            <option value={entry.data.fuel?.consumptionL100km ?? ''}>{displayName(entry)}</option>
+          ))}
+        </select>
+      </label>
+      <label>Precio del litro (ARS) <input name="precio" inputmode="decimal" placeholder="Ejemplo hipotético: 1500" /></label>
+      <p class="muted">Cualquier cifra de ejemplo es hipotética. No es el precio actual de nafta.</p>
+      <div class="cluster">
+        <button class="btn btn-primary" type="submit">Calcular</button>
+        <button class="btn btn-ghost" type="button" data-example>Cargar ejemplo</button>
+        <button class="btn btn-ghost" type="reset">Reset</button>
+      </div>
+    </form>
+    <p role="status" data-fuel-result></p>
+  </article>
+</BaseLayout>
+<script>
+  import '../../scripts/fuel';
+</script>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import { paths } from '../../config/site';
+import { getPublishedComparisons } from '../../lib/content/catalog';
+
+const items = await getPublishedComparisons();
+---
+
+<BaseLayout title="Comparativas de motos" description="Comparativas editoriales entre fichas publicadas." path={paths.comparisons}>
+  <article class="wrap editorial-article">
+    <PageHeader
+      eyebrow="Editoriales"
+      title="Comparativas"
+      lede="Textos entre modelos publicados. También podés armar tu propia comparación en el comparador."
+    />
+    <p><a class="btn btn-secondary" href={paths.comparator}>Ir al comparador interactivo</a></p>
+    <ul class="guide-list">
+      {items.map((item) => (
+        <li>
+          <a class="card" href={`${paths.comparisons}${item.id}/`}>
+            {item.data.title}
+            <span>{item.data.description}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </article>
+</BaseLayout>

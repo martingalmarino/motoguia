@@ -1,0 +1,36 @@
+---
+import { site } from '../config/site';
+import { absoluteUrl, jsonLdScript } from '../lib/seo/urls';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
+  jsonLd?: unknown[];
+}
+
+const { title, description, path, noindex = false, ogType = 'website', jsonLd = [] } = Astro.props;
+const canonical = absoluteUrl(path);
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
+<meta property="og:type" content={ogType} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:locale" content="es_AR" />
+<meta property="og:site_name" content={site.name} />
+<meta property="og:image" content={absoluteUrl(site.defaultOgImage)} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+{
+  jsonLd.map((item) => (
+    <script type="application/ld+json" set:html={jsonLdScript(item)} />
+  ))
+}

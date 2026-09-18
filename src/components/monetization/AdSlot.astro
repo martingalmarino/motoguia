@@ -1,0 +1,25 @@
+---
+import { ads } from '../../config/site';
+
+interface Props {
+  slot: 'article' | 'sidebar';
+}
+
+const { slot } = Astro.props;
+const id = slot === 'sidebar' ? ads.slotSidebar : ads.slotArticle;
+---
+
+{
+  ads.enabled && ads.client && id ? (
+    <aside class="ad-slot" aria-label="Publicidad">
+      <ins
+        class="adsbygoogle"
+        style="display:block;min-height:120px"
+        data-ad-client={ads.client}
+        data-ad-slot={id}
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+    </aside>
+  ) : null
+}

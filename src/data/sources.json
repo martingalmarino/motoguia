@@ -1,0 +1,392 @@
+[
+  {
+    "id": "acara-siomaa-2026-08",
+    "title": "Informe del Sector SIOMAA — Agosto 2026",
+    "url": "https://autoblog.com.ar/wp-content/uploads/2026/10/2026.08-ACARA.-Informe-de-Mercado-2W_Inst-1.pdf",
+    "publisher": "ACARA / SIOMAA (hospedado por Autoblog)",
+    "publishedAt": "2026-08-31",
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["ranking-ytd-2026", "ranking-agosto-2026", "totales-mercado"]
+  },
+  {
+    "id": "ambito-motos-2026-09-08",
+    "title": "El mercado de motos se expande con más modelos y fuerte presencia de opciones económicas",
+    "url": "https://www.ambito.com/autos/el-mercado-motos-se-expande-mas-modelos-y-fuerte-presencia-opciones-economicas-n6319745",
+    "publisher": "Ámbito",
+    "publishedAt": "2026-09-08",
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["ranking-ytd-top10", "precios-honda-citados"]
+  },
+  {
+    "id": "tn-wave-agosto-2026",
+    "title": "La Honda Wave 110S fue la moto más vendida de agosto 2026",
+    "url": "https://tn.com.ar/autos/novedades/2026/09/01/la-honda-wave-110s-fue-la-moto-mas-vendida-de-agosto-2026/",
+    "publisher": "TN",
+    "publishedAt": "2026-09-01",
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["ranking-agosto-2026-top10", "totales-agosto"]
+  },
+  {
+    "id": "cadecom-2026-08",
+    "title": "Informe de patentamiento de motovehículos – Agosto 2026",
+    "url": "https://cadecom.org.ar/informe-de-patentamiento-de-motovehiculos-agosto-2026/",
+    "publisher": "CADECOM",
+    "publishedAt": "2026-09-01",
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["ranking-dnrpa-agosto", "advertencia-agrupacion-versiones"]
+  },
+  {
+    "id": "ansv-clases",
+    "title": "Licencia Nacional de Conducir: clases y subclases",
+    "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases",
+    "publisher": "ANSV / Argentina.gob.ar",
+    "publishedAt": "2026-02-11",
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["licencia-clases-A"]
+  },
+  {
+    "id": "honda-motos-ar",
+    "title": "Honda Motos Argentina — catálogo",
+    "url": "https://motos.honda.com.ar/",
+    "publisher": "Honda Motor de Argentina S.A.",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["fichas-honda", "precios-honda"]
+  },
+  {
+    "id": "honda-wave",
+    "title": "Honda Wave 110S",
+    "url": "https://motos.honda.com.ar/modelos/wave-110s",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["wave-110s"]
+  },
+  {
+    "id": "honda-wave-pdf",
+    "title": "Ficha técnica Wave 110 Disco",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20WAVE%20110%20DISCO%20digital.pdf",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": "2026-07-13",
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["wave-110s-disco-specs"]
+  },
+  {
+    "id": "honda-glh",
+    "title": "Honda GLH 150",
+    "url": "https://motos.honda.com.ar/modelos/glh-150",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["glh-150"]
+  },
+  {
+    "id": "honda-xr150l",
+    "title": "Honda XR150L",
+    "url": "https://motos.honda.com.ar/modelos/xr150l",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["xr150l"]
+  },
+  {
+    "id": "honda-navi",
+    "title": "Honda Navi",
+    "url": "https://motos.honda.com.ar/modelos/navi",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["navi"]
+  },
+  {
+    "id": "honda-garantia",
+    "title": "Garantía Honda Motos",
+    "url": "https://motos.honda.com.ar/garantia/",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["garantia-honda"]
+  },
+  {
+    "id": "gilera-ar",
+    "title": "Gilera Argentina",
+    "url": "https://gilera.com.ar/",
+    "publisher": "Gilera Motors Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["catalogo-gilera"]
+  },
+  {
+    "id": "gilera-smash",
+    "title": "Gilera Smash Full II",
+    "url": "https://gilera.com.ar/modelo/smash-full-ii/",
+    "publisher": "Gilera Motors Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["smash-full-ii"]
+  },
+  {
+    "id": "gilera-sahel",
+    "title": "Gilera Sahel 150",
+    "url": "https://gilera.com.ar/modelo/sahel-150-2025/",
+    "publisher": "Gilera Motors Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["sahel-150"]
+  },
+  {
+    "id": "corven-motos",
+    "title": "Corven Motos",
+    "url": "https://corvenmotos.com.ar/",
+    "publisher": "Corven Motos",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["catalogo-corven"]
+  },
+  {
+    "id": "grupo-corven",
+    "title": "Grupo Corven",
+    "url": "https://corven.com.ar/",
+    "publisher": "Grupo Corven",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["historia-corven", "alianza-bajaj"]
+  },
+  {
+    "id": "corven-energy",
+    "title": "Corven Energy 110 AD",
+    "url": "https://corvenmotos.com.ar/project/energy-110-nueva/",
+    "publisher": "Corven Motos",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["energy-110"]
+  },
+  {
+    "id": "corven-mirage",
+    "title": "Corven Mirage 110 AD",
+    "url": "https://corvenmotos.com.ar/project/mirage-110-ad/",
+    "publisher": "Corven Motos",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["mirage-110"]
+  },
+  {
+    "id": "corven-triax",
+    "title": "Corven Triax 150 ONE",
+    "url": "https://corvenmotos.com.ar/triax-150-one/",
+    "publisher": "Corven Motos",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["triax-150"]
+  },
+  {
+    "id": "siam-motos",
+    "title": "SIAM Motos",
+    "url": "https://siammotos.com.ar/",
+    "publisher": "SIAM / Newsan",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["catalogo-siam"]
+  },
+  {
+    "id": "siam-qu",
+    "title": "SIAM QU 110",
+    "url": "https://siammotos.com.ar/qu",
+    "publisher": "SIAM / Newsan",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["qu-110"]
+  },
+  {
+    "id": "siam-n4",
+    "title": "SIAM N4",
+    "url": "https://siammotos.com.ar/n4",
+    "publisher": "SIAM / Newsan",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["n4-electrica"]
+  },
+  {
+    "id": "zanella-ar",
+    "title": "Zanella Argentina",
+    "url": "https://zanellaglobal.com/ar/",
+    "publisher": "Zanella",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["catalogo-zanella"]
+  },
+  {
+    "id": "zanella-zb-full",
+    "title": "Zanella ZB 110 FULL",
+    "url": "https://zanellaglobal.com/ar/producto/zb-110-full/",
+    "publisher": "Zanella",
+    "publishedAt": "2025-08-11",
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["zb-110-full"]
+  },
+  {
+    "id": "zanella-zb-st",
+    "title": "Zanella ZB 110 ST",
+    "url": "https://zanellaglobal.com/ar/producto/zb-110-st/",
+    "publisher": "Zanella",
+    "publishedAt": "2026-08-12",
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["zb-110-st"]
+  },
+  {
+    "id": "motomel-ar",
+    "title": "Motomel Argentina",
+    "url": "https://motomel.com.ar/",
+    "publisher": "Motomel Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["catalogo-motomel"]
+  },
+  {
+    "id": "motomel-s2",
+    "title": "Motomel S2 150 START",
+    "url": "https://motomel.com.ar/productos/s2-150/",
+    "publisher": "Motomel Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["s2-150"]
+  },
+  {
+    "id": "motomel-dlx",
+    "title": "Motomel DLX Deluxe CBS",
+    "url": "https://motomel.com.ar/productos/dlx-deluxe/",
+    "publisher": "Motomel Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["c110-dlx"]
+  },
+  {
+    "id": "motomel-blitz",
+    "title": "Motomel Blitz 110",
+    "url": "https://motomel.com.ar/productos/blitz-110-v8-start/",
+    "publisher": "Motomel Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["blitz-110"]
+  },
+  {
+    "id": "motomel-stratoe",
+    "title": "Motomel StratoE",
+    "url": "https://motomel.com.ar/productos/stratoe/",
+    "publisher": "Motomel Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["stratoe"]
+  },
+  {
+    "id": "motomel-garantia",
+    "title": "Garantía Motomel",
+    "url": "https://motomel.com.ar/garantia/",
+    "publisher": "Motomel Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["garantia-motomel"]
+  },
+  {
+    "id": "keller-ar",
+    "title": "Keller Motos",
+    "url": "https://motoskeller.com.ar/",
+    "publisher": "Keller Motos",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["catalogo-keller"]
+  },
+  {
+    "id": "keller-crono-full",
+    "title": "Keller Crono Classic FULL 110",
+    "url": "https://motoskeller.com.ar/crono-classic-full-110/",
+    "publisher": "Keller Motos",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["crono-classic-110"]
+  },
+  {
+    "id": "mondial-ar",
+    "title": "Mondial Argentina",
+    "url": "https://mondial.com.ar/",
+    "publisher": "Mondial",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["catalogo-mondial"]
+  },
+  {
+    "id": "mondial-ld",
+    "title": "Mondial LD 110 Max AD",
+    "url": "https://mondial.com.ar/modelos/ld-110-max-ad/",
+    "publisher": "Mondial",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["ld-110-max"]
+  },
+  {
+    "id": "sunra-ar",
+    "title": "SUNRA Argentina",
+    "url": "https://sunra.com.ar/motos-electricas/",
+    "publisher": "SUNRA Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["catalogo-sunra"]
+  },
+  {
+    "id": "sunra-future",
+    "title": "SUNRA Future",
+    "url": "https://sunra.com.ar/moto-electrica-future/",
+    "publisher": "SUNRA Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["sunra-future"]
+  },
+  {
+    "id": "sunra-miku",
+    "title": "SUNRA Miku Max",
+    "url": "https://sunra.com.ar/moto-electrica-miku-max/",
+    "publisher": "SUNRA Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-09-18",
+    "countryScope": "AR",
+    "supports": ["sunra-miku-max"]
+  }
+]

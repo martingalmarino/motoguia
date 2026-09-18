@@ -1,0 +1,57 @@
+---
+import '@fontsource-variable/source-sans-3/wght.css';
+import '@fontsource-variable/source-serif-4/wght.css';
+import '../styles/global.css';
+import Header from '../components/navigation/Header.astro';
+import Footer from '../components/navigation/Footer.astro';
+import SEO from '../components/SEO.astro';
+import { site } from '../config/site';
+import { formatPageTitle } from '../lib/seo/urls';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  noindex?: boolean;
+  ogType?: 'website' | 'article';
+  jsonLd?: unknown[];
+}
+
+const {
+  title,
+  description,
+  path,
+  noindex = !site.indexingEnabled,
+  ogType = 'website',
+  jsonLd = [],
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={site.language}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <SEO
+      title={formatPageTitle(title)}
+      description={description}
+      path={path}
+      noindex={noindex || !site.indexingEnabled}
+      ogType={ogType}
+      jsonLd={jsonLd}
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <Header />
+    <main id="contenido">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import '../scripts/compare';
+    </script>
+  </body>
+</html>

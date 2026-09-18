@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { analytics, ads, paths, site } from '../config/site';
+---
+
+<BaseLayout title="Política de privacidad" description="Qué datos trata MotoGuía AR y qué servicios de medición o anuncios pueden estar activos." path={paths.privacy}>
+  <article class="wrap prose">
+    <h1>Política de privacidad</h1>
+    <p>No pedimos cuentas ni datos personales. No hay formulario de registro.</p>
+    <p>El comparador guarda en tu navegador los modelos que elegiste. Eso no se envía a un servidor nuestro.</p>
+    <p>Anuncios: {ads.enabled ? 'hay anuncios de Google configurados.' : 'no hay anuncios activos.'}</p>
+    <p>Medición: {analytics.enabled ? 'hay medición de audiencia configurada.' : 'no hay medición activa.'}</p>
+    {
+      (ads.enabled || analytics.enabled) && (
+        <p>
+          Si se activan anuncios o medición en una jurisdicción que exige un gestor de consentimiento certificado, ese mecanismo se publica junto con el servicio.
+        </p>
+      )
+    }
+    <p>
+      Contacto del responsable: {site.contactEmail ? <a href={paths.contact}>{site.contactEmail}</a> : <a href={paths.contact}>página de contacto</a>}.
+    </p>
+  </article>
+</BaseLayout>

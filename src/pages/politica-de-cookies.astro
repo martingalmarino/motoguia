@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ads, analytics, paths } from '../config/site';
+---
+
+<BaseLayout title="Política de cookies" description="Qué cookies usa MotoGuía AR según anuncios y medición activos." path={paths.cookies}>
+  <article class="wrap prose">
+    <h1>Política de cookies</h1>
+    <p>
+      {
+        ads.enabled || analytics.enabled
+          ? `Hay servicios de ${[ads.enabled && 'anuncios', analytics.enabled && 'medición'].filter(Boolean).join(' y ')} que pueden usar cookies.`
+          : 'Hoy no usamos cookies de publicidad ni de medición.'
+      }
+    </p>
+    <p>El comparador usa almacenamiento local de tu navegador, no cookies de seguimiento.</p>
+  </article>
+</BaseLayout>

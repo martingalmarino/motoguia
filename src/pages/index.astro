@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MotoCard from '../components/catalog/MotoCard.astro';
+import { paths, site } from '../config/site';
+import {
+  getPublishedComparisons,
+  getPublishedGuides,
+  getPublishedMotorcycles,
+  getRanking,
+  motorcycleUrl,
+} from '../lib/content/catalog';
+import { formatDate, formatInteger } from '../lib/format';
+import { organizationLd, websiteLd } from '../lib/seo/jsonld';
+
+const motos = await getPublishedMotorcycles();
+const ranking = await getRanking('2026-ytd');
+const guides = (await getPublishedGuides()).slice(0, 3);
+const comparisons = (await getPublishedComparisons()).slice(0, 3);
+const featuredIds = ['honda-wave-110s', 'gilera-smash', 'honda-glh-150', 'siam-n4'];
+const featured = featuredIds
+  .map((id) => motos.find((entry) => entry.data.id === id))
+  .filter((entry): entry is (typeof motos)[number] => Boolean(entry));
+const chineseCount = motos.filter((entry) => entry.data.chineseHub).length;
+const electricCount = motos.filter((entry) => entry.data.engineType === 'electric').length;
+const byId = new Map(motos.map((entry) => [entry.data.id, entry]));
+
+function hrefFor(ids: string[]) {
+  const first = ids.map((id) => byId.get(id)).find(Boolean);
+  return first ? motorcycleUrl(first) : null;
+}
+---
+
+<BaseLayout
+  title={site.tagline}
+  description="Catálogo, ranking de patentamientos, comparador y calculadoras para elegir una moto en Argentina."
+  path={paths.home}
+  jsonLd={[organizationLd(), websiteLd()]}
+>
+  <div class="wrap page-stack">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Guía editorial · Argentina</p>
+        <h1>{site.tagline}</h1>
+        <p class="lede">
+          Fichas locales, patentamientos ACARA/SIOMAA y calculadoras para estimar el gasto.
+          No vendemos motos. Hay {formatInteger(motos.length)} fichas verificadas; no es el inventario completo del mercado.
+        </p>
+        <form class="search-inline" method="get" action={paths.search} role="search">
+          <label>
+            Buscar marca o modelo
+            <input type="search" name="q" placeholder="Wave, GLH, Smash…" />
+          </label>
+          <button class="btn btn-primary" type="submit">Buscar</button>
+        </form>
+        <div class="cluster">
+          <a class="btn btn-primary" href={paths.catalog}>Explorar motos</a>
+          <a class="btn btn-secondary" href={paths.comparator}>Comparar modelos</a>
+        </div>
+      </div>
+      {
+        ranking && (
+          <aside class="card ranking-card ranking-preview">
+            <header>
+              <p class="eyebrow">Ranking 2026</p>
+              <h2>Más patentadas, enero-agosto</h2>
+              <p class="muted">
+                Inscripciones ACARA/SIOMAA, no ventas de mostrador. Período {formatDate(ranking.data.periodStart)} a {formatDate(ranking.data.periodEnd)}.
+              </p>
+            </header>
+            <ol>
+              {ranking.data.rows.slice(0, 5).map((row) => {
+                const href = hrefFor(row.modelIds);
+                return (
+                  <li>
+                    <span class="rank-index">{row.rank}</span>
+                    {href ? <a href={href}>{row.reportModelName}</a> : <span>{row.reportModelName}</span>}
+                    <span class="muted">{formatInteger(row.units)}</span>
+                  </li>
+                );
+              })}
+            </ol>
+            <p>
+              <a class="section-link" href={paths.ranking2026}>Ver top 20 y agosto</a>
+            </p>
+          </aside>
+        )
+      }
+    </section>
+
+    <section>
+      <div class="cluster">
+        <a class="chip" href={paths.ranking2026}>Ranking 2026</a>
+        <a class="chip" href={paths.chinese}>Motos chinas ({formatInteger(chineseCount)} fichas)</a>
+        <a class="chip" href={paths.electric}>Eléctricas ({formatInteger(electricCount)} fichas)</a>
+        <a class="chip" href={paths.fuel}>Combustible</a>
+        <a class="chip" href={paths.monthlyCost}>Costo mensual</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Catálogo</p>
+          <h2>Fichas para empezar</h2>
+        </div>
+        <a class="section-link" href={paths.catalog}>Ver todas</a>
+      </div>
+      <div class="grid grid-4">
+        {featured.map((entry) => (
+          <MotoCard entry={entry} />
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Herramientas</p>
+          <h2>Comparar y calcular el gasto</h2>
+        </div>
+        <a class="section-link" href={paths.tools}>Todas las herramientas</a>
+      </div>
+      <div class="grid grid-3">
+        <a class="card tool-card" href={paths.comparator}>
+          <span class="tool-kicker">Comparador</span>
+          <h3>Dos o tres fichas, lado a lado</h3>
+          <p class="muted">Solo modelos publicados. Sin puntajes inventados.</p>
+        </a>
+        <a class="card tool-card" href={paths.fuel}>
+          <span class="tool-kicker">Combustible</span>
+          <h3>Litros y pesos con tu precio</h3>
+          <p class="muted">Cargás el litro. Un ejemplo no es la nafta de hoy.</p>
+        </a>
+        <a class="card tool-card" href={paths.monthlyCost}>
+          <span class="tool-kicker">Costo mensual</span>
+          <h3>Nafta, seguro, patente y service</h3>
+          <p class="muted">Sumás lo que sabés. Lo que falta queda vacío.</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Lecturas</p>
+          <h2>Guías y comparativas</h2>
+        </div>
+        <a class="section-link" href={paths.guides}>Ver guías</a>
+      </div>
+      <ul class="guide-list">
+        {guides.map((guide) => (
+          <li>
+            <a class="card" href={`${paths.guides}${guide.id}/`}>
+              {guide.data.title}
+              <span>{guide.data.description}</span>
+            </a>
+          </li>
+        ))}
+        {comparisons.map((item) => (
+          <li>
+            <a class="card" href={`${paths.comparisons}${item.id}/`}>
+              {item.data.title}
+              <span>{item.data.description}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="notice">
+      <p>
+        Las cifras de ranking salen del informe ACARA/SIOMAA de agosto 2026.
+        <a href={paths.methodology}>Metodología</a>.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

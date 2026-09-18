@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { paths } from '../../config/site';
+---
+
+<BaseLayout title="Costo mensual de tener una moto" description="Sumá nafta o energía, seguro, patente prorrateada, service y cochera. La patente anual/12 no es un estimador legal." path={paths.monthlyCost}>
+  <article class="wrap prose editorial-article">
+    <p class="eyebrow">Herramientas</p>
+    <h1>Costo mensual de tener una moto</h1>
+    <p>
+      Total mensual = combustible o energía + seguro + patente anual/12 + previsión de service + cochera + otros.
+      Quedan afuera precio de compra, patentamiento inicial, financiación y depreciación, salvo que los cargues en otros.
+      El prorrateo de patente es contable, no el calendario de vencimientos.
+    </p>
+    <p>Para eléctricas, cargá el gasto de energía a mano. Esta calculadora no estima kWh por carga.</p>
+    <form class="form-grid card form-card" data-own-form>
+      <label>Combustible o energía mensual (ARS) <input name="fuel" inputmode="decimal" /></label>
+      <label>Seguro mensual (ARS) <input name="insurance" inputmode="decimal" /></label>
+      <label>Patente anual conocida (ARS) <input name="tax" inputmode="decimal" /></label>
+      <fieldset>
+        <legend>Mantenimiento (un modo)</legend>
+        <label><input type="radio" name="maintMode" value="monthly" checked /> Previsión mensual</label>
+        <label><input type="radio" name="maintMode" value="service" /> Service / meses</label>
+        <label>Previsión mensual <input name="maintMonthly" inputmode="decimal" /></label>
+        <label>Costo de service <input name="serviceCost" inputmode="decimal" /></label>
+        <label>Intervalo en meses <input name="serviceEvery" inputmode="numeric" /></label>
+      </fieldset>
+      <label>Cochera mensual (opcional) <input name="parking" inputmode="decimal" value="0" /></label>
+      <label>Otros mensuales (opcional) <input name="other" inputmode="decimal" value="0" /></label>
+      <div class="cluster">
+        <button class="btn btn-primary" type="submit">Calcular</button>
+        <button class="btn btn-ghost" type="reset">Reset</button>
+      </div>
+    </form>
+    <div role="status" data-own-result></div>
+  </article>
+</BaseLayout>
+<script>
+  import '../../scripts/ownership';
+</script>

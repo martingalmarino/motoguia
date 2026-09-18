@@ -1,0 +1,20 @@
+[
+  {
+    "id": "helmets",
+    "title": "Cascos",
+    "description": "Criterios de talle, certificación y ajuste. Sin promesas de compatibilidad con un modelo puntual.",
+    "guideSlug": "como-elegir-casco-moto"
+  },
+  {
+    "id": "gloves-rain",
+    "title": "Guantes e impermeables",
+    "description": "Protección diaria para quienes usan la moto todos los días.",
+    "guideSlug": "guantes-impermeables-moto"
+  },
+  {
+    "id": "security",
+    "title": "Trabas y seguridad",
+    "description": "Cómo comparar trabas, cadenas y anclajes sin inflar claims de inviolabilidad.",
+    "guideSlug": "trabas-cadenas-seguridad-moto"
+  }
+]

@@ -1,0 +1,28 @@
+---
+import { footerGroups, site, paths } from '../../config/site';
+---
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    {
+      footerGroups.map((group) => (
+        <section>
+          <h2>{group.title}</h2>
+          <ul>
+            {group.links.map((link) => (
+              <li>
+                <a href={link.href}>{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+  <div class="wrap">
+    <p class="footer-note">
+      {site.name} es una guía editorial. No vende motos ni intermedia patentamiento.
+      Los patentamientos no son ventas de mostrador. <a href={paths.methodology}>Metodología y fuentes</a>.
+    </p>
+  </div>
+</footer>

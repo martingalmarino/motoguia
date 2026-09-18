@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="Silueta de referencia de una moto">
+  <rect width="960" height="480" fill="#EEF2F6"/>
+  <path d="M120 400h720" stroke="#C5CED6" stroke-width="2"/>
+  <g fill="none" stroke="#17212B" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="318" cy="332" r="70" stroke-width="7"/>
+    <circle cx="318" cy="332" r="18" stroke-width="5"/>
+    <circle cx="662" cy="332" r="70" stroke-width="7"/>
+    <circle cx="662" cy="332" r="18" stroke-width="5"/>
+    <path d="M662 248v84" stroke-width="8"/>
+    <path d="M638 168h70l-46 80" stroke-width="7"/>
+    <path d="M618 160h118" stroke-width="8"/>
+    <path d="M736 160l14-12" stroke-width="6"/>
+    <path d="M318 332l70-78h168" stroke-width="8"/>
+    <path d="M388 254l24 78" stroke-width="6"/>
+    <path d="M556 254l42 78" stroke-width="6"/>
+    <rect x="404" y="276" width="96" height="50" rx="7" stroke-width="5" fill="#F5F7FA"/>
+    <path d="M360 250c18-8 48-12 78-8" stroke-width="10"/>
+    <path d="M258 300c12-40 58-56 100-34" stroke-width="6"/>
+    <path d="M624 268c18-20 54-20 74 0" stroke-width="6"/>
+    <path d="M500 318h76" stroke-width="6"/>
+  </g>
+  <circle cx="318" cy="332" r="5" fill="#17212B"/>
+  <circle cx="662" cy="332" r="5" fill="#17212B"/>
+  <path d="M430 244c28-14 72-16 96 4" fill="#B93816" opacity=".35"/>
+  <text x="480" y="68" text-anchor="middle" fill="#526170" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" letter-spacing="2.4">IMAGEN DE REFERENCIA</text>
+</svg>

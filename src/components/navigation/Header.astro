@@ -1,0 +1,77 @@
+---
+import { navItems, paths } from '../../config/site';
+---
+
+<header class="site-header">
+  <div class="masthead-bar">
+    <div class="wrap masthead-bar-inner">
+      <span>Guía editorial · Argentina</span>
+      <span>Patentamientos ACARA/SIOMAA</span>
+      <a href={paths.methodology}>Cómo citamos las fuentes</a>
+    </div>
+  </div>
+  <div class="wrap header-inner">
+    <a class="brand" href={paths.home}>
+      <img src="/favicon.svg" width="36" height="36" alt="" />
+      <span class="brand-name">MotoGuía <span>AR</span></span>
+    </a>
+    <form class="header-search" method="get" action={paths.search} role="search">
+      <label class="visually-hidden" for="busqueda-sitio">Buscar marca o modelo</label>
+      <input id="busqueda-sitio" type="search" name="q" placeholder="Wave, GLH, Smash…" />
+      <button class="btn btn-ghost" type="submit">Buscar</button>
+    </form>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-nav-toggle>
+      Menú
+    </button>
+    <nav class="nav" id="menu-principal" data-nav aria-label="Principal">
+      {
+        navItems.map((item) =>
+          'children' in item ? (
+            <div class="nav-group">
+              <a class="nav-top" href={item.href}>
+                {item.label}
+              </a>
+              <div class="nav-panel">
+                {item.children.map((child) => (
+                  <a href={child.href}>{child.label}</a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <a href={item.href}>{item.label}</a>
+          ),
+        )
+      }
+      <a class="search-entry" href={paths.search}>Buscar</a>
+    </nav>
+  </div>
+</header>
+<script>
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const nav = document.querySelector('[data-nav]');
+  if (toggle instanceof HTMLButtonElement && nav instanceof HTMLElement) {
+    const setOpen = (open: boolean) => {
+      nav.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.textContent = open ? 'Cerrar' : 'Menú';
+      document.body.classList.toggle('is-nav-open', open);
+    };
+    const close = () => setOpen(false);
+    toggle.addEventListener('click', (event) => {
+      event.stopPropagation();
+      setOpen(!nav.classList.contains('is-open'));
+    });
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', close);
+    });
+    document.addEventListener('click', (event) => {
+      if (!nav.classList.contains('is-open')) return;
+      const target = event.target;
+      if (target instanceof Node && (nav.contains(target) || toggle.contains(target))) return;
+      close();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') close();
+    });
+  }
+</script>

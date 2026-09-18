@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { contactEmail, paths, site } from '../config/site';
+---
+
+<BaseLayout title="Contacto" description="Cómo escribir a la redacción de MotoGuía AR." path={paths.contact}>
+  <article class="wrap prose editorial-article">
+    <p class="eyebrow">Redacción</p>
+    <h1>Contacto</h1>
+    {
+      contactEmail ? (
+        <p>
+          Escribinos a <a href={`mailto:${contactEmail}?subject=${encodeURIComponent('Corrección MotoGuía AR')}`}>{contactEmail}</a>.
+        </p>
+      ) : (
+        <p>
+          Recibimos correcciones de fichas, ranking y enlaces. El correo de redacción se publica en esta página.
+        </p>
+      )
+    }
+    <p>{site.editorLabel} no intermedia compras ni patentamientos.</p>
+  </article>
+</BaseLayout>
