@@ -57,11 +57,11 @@ editorial:
     - Sin ranking por modelo
   ownershipNotes: 0,8 kW, si es continua nominal, clase A 1.1.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de un scooter eléctrico, no es una foto de la SUNRA Miku Max
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/sunra-miku-max.jpg
+    alt: SUNRA Miku Max, foto de catálogo de SUNRA Argentina
+    source: SUNRA Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de SUNRA Argentina.
 sourceIds:
   - sunra-miku
   - ansv-clases

@@ -54,11 +54,11 @@ editorial:
     - Sin precio de lista hallado
   ownershipNotes: CADECOM etiqueta el modelo como Ld 110 Max-ad en agosto. No se fusionan informes.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una cub, no es una foto de la Mondial LD 110 MAX
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/mondial-ld-110-max.jpg
+    alt: Mondial LD 110 MAX gris, foto de catálogo de Mondial Argentina
+    source: Mondial
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Mondial Argentina.
 sourceIds:
   - mondial-ld
   - mondial-ar

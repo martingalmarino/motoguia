@@ -68,11 +68,11 @@ editorial:
     - El tipo de peso no está aclarado
   ownershipNotes: Grupo Corven se presenta como capitales nacionales; eso no describe el origen de cada pieza.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una cub, no es una foto de la Corven Energy 110
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/corven-energy-110.jpg
+    alt: Corven Energy 110 AD roja, foto de catálogo de Corven Motos
+    source: Corven Motos
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Corven Motos.
 sourceIds:
   - corven-energy
   - corven-motos

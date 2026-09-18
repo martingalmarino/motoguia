@@ -64,11 +64,11 @@ editorial:
     - Sin precio ni garantía en la página
   ownershipNotes: ACARA lista KELLER KN110-8 con 51.658 unidades YTD. El sitio habla de Crono Classic. No se fusionan.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una cub, no es una foto de la Keller Crono Classic 110
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/keller-crono-classic-110.jpg
+    alt: Keller Crono Classic FULL 110 azul, foto de catálogo de Keller Motos
+    source: Keller Motos
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Keller Motos.
 sourceIds:
   - keller-crono-full
   - keller-ar

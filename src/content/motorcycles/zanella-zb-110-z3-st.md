@@ -53,11 +53,11 @@ editorial:
     - Ficha web incompleta
   ownershipNotes: No se le asignan las unidades de ZB 110 ni Z3 FULL.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una cub, no es una foto de la Zanella ZB 110 ST
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/zanella-zb-110-z3-st.png
+    alt: Zanella ZB 110 ST gris, foto de catálogo de Zanella Argentina
+    source: Zanella
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Zanella Argentina.
 sourceIds:
   - zanella-zb-st
   - acara-siomaa-2026-08

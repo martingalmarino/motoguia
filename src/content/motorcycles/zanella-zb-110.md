@@ -66,11 +66,11 @@ editorial:
     - Sin precio de lista hallado
   ownershipNotes: ACARA separa ZB 110, Z3 ST y Z3 FULL. Esta ficha cubre FULL y no absorbe las otras filas.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una cub, no es una foto de la Zanella ZB 110
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/zanella-zb-110.png
+    alt: Zanella ZB 110 FULL roja, foto de catálogo de Zanella Argentina
+    source: Zanella
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Zanella Argentina.
 sourceIds:
   - zanella-zb-full
   - zanella-ar

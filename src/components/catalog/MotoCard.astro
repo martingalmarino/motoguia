@@ -12,6 +12,8 @@ const { entry } = Astro.props;
 const brand = getBrand(entry.data.brandId);
 const href = motorcycleUrl(entry);
 const price = entry.data.price;
+const photo = entry.data.images[0];
+const isPhoto = Boolean(photo?.path && !photo.path.includes('silhouette'));
 ---
 
 <article
@@ -26,10 +28,10 @@ const price = entry.data.price;
   data-name={`${brand?.name ?? ''} ${entry.data.name} ${entry.data.variant ?? ''}`}
   data-chinese={entry.data.chineseHub ? '1' : '0'}
 >
-  <div class="silhouette">
+  <div class:list={['silhouette', { 'is-photo': isPhoto }]}>
     <img
-      src={entry.data.images[0]?.path ?? '/images/silhouette.svg'}
-      alt={entry.data.images[0]?.alt ?? 'Silueta de referencia'}
+      src={photo?.path ?? '/images/silhouette.svg'}
+      alt={photo?.alt ?? 'Silueta de referencia'}
       width="640"
       height="320"
       loading="lazy"

@@ -57,11 +57,11 @@ editorial:
     - Importador legal no identificado en la página
   ownershipNotes: 3 kW, si es continua nominal, sigue en A 1.1 (hasta 4 kW). Verificá la cédula.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una moto eléctrica, no es una foto de la SUNRA Future
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/sunra-future.jpg
+    alt: SUNRA Future verde, foto de catálogo de SUNRA Argentina
+    source: SUNRA Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de SUNRA Argentina.
 sourceIds:
   - sunra-future
   - sunra-ar

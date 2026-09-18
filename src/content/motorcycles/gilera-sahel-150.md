@@ -73,11 +73,11 @@ editorial:
     - ABS/CBS no informado
   ownershipNotes: Ámbito cotizó $2.630.000 el 8/09/2026. Puede estar desactualizado al momento de comprar.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una trail, no es una foto de la Gilera Sahel 150
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/gilera-sahel-150.png
+    alt: Gilera Sahel 150 roja, foto de catálogo de Gilera Argentina
+    source: Gilera Motors Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Gilera Argentina.
 sourceIds:
   - gilera-sahel
   - ambito-motos-2026-09-08

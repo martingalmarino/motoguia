@@ -67,11 +67,11 @@ editorial:
     - El ranking no distingue versiones
   ownershipNotes: Garantía Gilera declarada 12 meses o 12.000 km.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una cub, no es una foto de la Gilera Smash
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/gilera-smash.png
+    alt: Gilera Smash Full II roja, foto de catálogo de Gilera Argentina
+    source: Gilera Motors Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Gilera Argentina.
 sourceIds:
   - gilera-smash
   - gilera-ar

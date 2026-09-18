@@ -77,11 +77,11 @@ editorial:
     - El ranking Wave 110S no incluye la fila Wave 110S CD
   ownershipNotes: El precio de lista observado no aclara si incluye patentamiento.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una cub urbana, no es una foto de la Honda Wave 110S
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/honda-wave-110s.webp
+    alt: Honda Wave 110S roja, foto de catálogo de Honda Motos Argentina
+    source: Honda Motos Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Honda Motos Argentina.
 sourceIds:
   - honda-wave
   - honda-wave-pdf

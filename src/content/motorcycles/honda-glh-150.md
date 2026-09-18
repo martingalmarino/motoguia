@@ -76,11 +76,11 @@ editorial:
     - Sin ABS
   ownershipNotes: El precio no aclara patentamiento.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una street, no es una foto de la Honda GLH 150
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/honda-glh-150.webp
+    alt: Honda GLH 150 roja, foto de catálogo de Honda Motos Argentina
+    source: Honda Motos Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Honda Motos Argentina.
 sourceIds:
   - honda-glh
   - honda-garantia

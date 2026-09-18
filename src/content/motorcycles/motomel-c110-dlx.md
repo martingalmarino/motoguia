@@ -54,11 +54,11 @@ editorial:
     - Un rótulo de 150 kg no se usa como peso vacío
   ownershipNotes: "Garantía Motomel 2026: 12 meses o 12.000 km."
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una cub, no es una foto de la Motomel DLX
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/motomel-c110-dlx.png
+    alt: Motomel DLX Deluxe 110 roja, foto de catálogo de Motomel Argentina
+    source: Motomel Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Motomel Argentina.
 sourceIds:
   - motomel-dlx
   - motomel-garantia

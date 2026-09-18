@@ -59,11 +59,11 @@ editorial:
     - Ranking agrupado
   ownershipNotes: Existe Triax 150 MAX; no se le atribuyen estas unidades.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una trail, no es una foto de la Corven Triax 150
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/corven-triax-150.png
+    alt: Corven Triax 150 ONE blanca, foto de catálogo de Corven Motos
+    source: Corven Motos
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Corven Motos.
 sourceIds:
   - corven-triax
   - acara-siomaa-2026-08

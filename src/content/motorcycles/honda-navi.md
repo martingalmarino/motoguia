@@ -75,11 +75,11 @@ editorial:
     - Potencia no publicada
   ownershipNotes: No es una cub semiautomática ni un scooter de baúl grande; es el formato Navi de Honda.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de un scooter, no es una foto de la Honda Navi
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/honda-navi.webp
+    alt: Honda Navi roja, foto de catálogo de Honda Motos Argentina
+    source: Honda Motos Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Honda Motos Argentina.
 sourceIds:
   - honda-navi
   - honda-garantia

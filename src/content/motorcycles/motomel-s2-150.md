@@ -68,11 +68,11 @@ editorial:
     - Consumo no publicado
   ownershipNotes: No se le atribuyen las unidades MOTOMEL B110 ni CX 150.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una street 150, no es una foto de la Motomel S2 150
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/motomel-s2-150.png
+    alt: Motomel S2 150 gris, foto de catálogo de Motomel Argentina
+    source: Motomel Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Motomel Argentina.
 sourceIds:
   - motomel-s2
   - motomel-garantia

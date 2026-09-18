@@ -65,11 +65,11 @@ editorial:
     - Sin precio de lista
   ownershipNotes: MOTOMEL B110 es la cuarta del ranking 2026. Motomel no publica un modelo llamado B110. No se le asignan las 38.811 unidades.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una cub, no es una foto de la Motomel Blitz 110
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/motomel-blitz-110.png
+    alt: Motomel Blitz 110 gris, foto de catálogo de Motomel Argentina
+    source: Motomel Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Motomel Argentina.
 sourceIds:
   - motomel-blitz
   - motomel-garantia

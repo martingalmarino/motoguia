@@ -65,11 +65,11 @@ editorial:
     - Sin unidades por modelo en el top 50 ACARA
   ownershipNotes: 1,8 kW de ficha caería en clase A 1.1 si esa cifra es potencia máxima continua nominal. Confirmalo con la cédula.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de un scooter eléctrico, no es una foto de la SIAM N4
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/siam-n4.webp
+    alt: SIAM N4 blanca, foto de catálogo de SIAM Motos
+    source: SIAM / Newsan
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de SIAM Motos.
 sourceIds:
   - siam-n4
   - siam-motos

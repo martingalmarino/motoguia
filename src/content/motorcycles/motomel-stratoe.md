@@ -64,11 +64,11 @@ editorial:
     - Sin ranking por modelo
   ownershipNotes: 1,2 kWh es 60×20/1000. No afirma capacidad usable.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de un scooter eléctrico, no es una foto de la Motomel StratoE
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/motomel-stratoe.png
+    alt: Motomel StratoE negra, foto de catálogo de Motomel Argentina
+    source: Motomel Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Motomel Argentina.
 sourceIds:
   - motomel-stratoe
   - motomel-garantia

@@ -75,11 +75,11 @@ editorial:
     - Asiento a 834 mm, más alto que una cub
   ownershipNotes: ABS delantero no equivale a ABS integral.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una trail, no es una foto de la Honda XR150L
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/honda-xr150l.webp
+    alt: Honda XR150L roja y negra, foto de catálogo de Honda Motos Argentina
+    source: Honda Motos Argentina
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de Honda Motos Argentina.
 sourceIds:
   - honda-xr150l
   - honda-garantia

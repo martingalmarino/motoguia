@@ -67,11 +67,11 @@ editorial:
     - Julio ACARA partía QU 110 BASE y QU 110
   ownershipNotes: Garantía de ficha 12 meses o 12.000 km.
 images:
-  - path: /images/silhouette.svg
-    alt: Silueta de referencia de una cub, no es una foto de la SIAM QU 110
-    source: MotoGuía AR
-    rightsBasis: original-asset
-    credit: Silueta genérica. Imagen de referencia.
+  - path: /images/motos/siam-qu-110.webp
+    alt: SIAM QU 110 blanca, foto de catálogo de SIAM Motos
+    source: SIAM / Newsan
+    rightsBasis: manufacturer-catalog
+    credit: Foto del catálogo de SIAM Motos.
 sourceIds:
   - siam-qu
   - siam-motos

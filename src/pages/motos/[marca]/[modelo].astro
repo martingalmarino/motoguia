@@ -66,7 +66,7 @@ const availability =
     <div class="profile-layout">
       <div>
         <div class="card profile-media">
-          <div class="silhouette">
+          <div class:list={['silhouette', { 'is-photo': !entry.data.images[0].path.includes('silhouette') }]}>
             <img src={entry.data.images[0].path} alt={entry.data.images[0].alt} width="960" height="480" />
           </div>
         </div>
