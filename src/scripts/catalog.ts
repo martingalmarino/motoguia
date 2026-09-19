@@ -4,6 +4,13 @@ function parseHash(hash: string): URLSearchParams {
   return new URLSearchParams(hash.replace(/^#/, ''));
 }
 
+function matchesQuery(haystack: string, query: string): boolean {
+  const tokens = fold(query).split(/\s+/).filter(Boolean);
+  if (!tokens.length) return true;
+  const hay = fold(haystack);
+  return tokens.every((token) => hay.includes(token));
+}
+
 function apply() {
   const form = document.querySelector<HTMLFormElement>('[data-filters]');
   const catalog = document.querySelector('[data-catalog]');
@@ -32,7 +39,8 @@ function apply() {
     const engine = card.dataset.engine ?? '';
     const displacement = card.dataset.cc ? Number(card.dataset.cc) : null;
     const price = card.dataset.price ? Number(card.dataset.price) : null;
-    const matchesQ = !q || fold(name).includes(fold(q));
+    const haystack = `${card.dataset.search ?? ''} ${name} ${brand}`;
+    const matchesQ = matchesQuery(haystack, q);
     const matchesBrand = !marca || brand === marca;
     const matchesCat = !categoria || category === categoria;
     const matchesEngine = !motor || engine === motor;
@@ -58,7 +66,10 @@ function apply() {
   const fragment = document.createDocumentFragment();
   let visible = 0;
   for (const item of scored) {
+    item.card.classList.toggle('is-hidden', !item.show);
     item.card.hidden = !item.show;
+    if (item.show) item.card.style.removeProperty('display');
+    else item.card.style.setProperty('display', 'none');
     if (item.show) visible += 1;
     fragment.append(item.card);
   }
@@ -74,7 +85,10 @@ function writeHash(form: HTMLFormElement) {
   const data = new FormData(form);
   const params = new URLSearchParams();
   for (const [key, value] of data.entries()) {
-    if (String(value).trim()) params.set(key, String(value).trim());
+    const trimmed = String(value).trim();
+    if (!trimmed) continue;
+    if (key === 'orden' && trimmed === 'nombre') continue;
+    params.set(key, trimmed);
   }
   const next = params.toString();
   const url = next ? `#${next}` : `${location.pathname}${location.search}`;
@@ -94,6 +108,11 @@ form?.addEventListener('input', (event) => {
   if (!(event.target instanceof HTMLInputElement)) return;
   window.clearTimeout(debounce);
   debounce = window.setTimeout(() => writeHash(form), 160);
+});
+
+form?.addEventListener('search', () => {
+  window.clearTimeout(debounce);
+  writeHash(form);
 });
 
 form?.addEventListener('change', () => {

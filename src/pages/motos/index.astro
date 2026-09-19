@@ -17,12 +17,22 @@ const brands = getAllBrands().filter((brand) => motos.some((moto) => moto.data.b
       title="Motos publicadas"
       lede={`${formatInteger(motos.length)} fichas con fuente. Si filtrás por precio, se ocultan las que no tienen lista oficial.`}
     />
-    <form class="card catalog-toolbar" id="filtros" data-filters>
-      <label class="catalog-search">
-        Buscar
-        <input type="search" name="q" autocomplete="off" placeholder="Marca o modelo" />
-      </label>
-      <details class="catalog-filters">
+    <form class="card catalog-toolbar" id="filtros" data-filters role="search">
+      <div class="catalog-search-row">
+        <label for="catalogo-q">
+          Buscar marca o modelo
+          <input
+            id="catalogo-q"
+            type="search"
+            name="q"
+            autocomplete="off"
+            enterkeyhint="search"
+            placeholder="Wave, GLH, Smash…"
+          />
+        </label>
+        <button class="btn btn-primary" type="submit">Buscar</button>
+      </div>
+      <details class="catalog-filters" open>
         <summary>Filtros</summary>
         <div class="catalog-filters-grid">
           <label>
@@ -73,12 +83,12 @@ const brands = getAllBrands().filter((brand) => motos.some((moto) => moto.data.b
         </div>
       </details>
       <div class="catalog-toolbar-actions">
-        <p data-count>{formatInteger(motos.length)} fichas</p>
+        <p data-count aria-live="polite">{formatInteger(motos.length)} fichas</p>
         <button class="btn btn-ghost" type="reset" data-clear>Limpiar</button>
       </div>
       <p class="muted catalog-empty" data-empty hidden>No hay fichas con esos filtros. Si pusiste un tope de precio, las motos sin lista oficial no entran.</p>
     </form>
-    <div class="grid grid-3" data-catalog>
+    <div class="grid grid-3 catalog-grid" data-catalog>
       {motos.map((entry) => <MotoCard entry={entry} />)}
     </div>
   </div>

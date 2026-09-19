@@ -14,6 +14,17 @@ const href = motorcycleUrl(entry);
 const price = entry.data.price;
 const photo = entry.data.images[0];
 const isPhoto = Boolean(photo?.path && !photo.path.includes('silhouette'));
+const searchText = [
+  brand?.name,
+  entry.data.name,
+  entry.data.variant,
+  entry.data.id,
+  entry.data.brandId,
+  categoryLabel(entry.data.category),
+  engineLabel(entry.data.engineType),
+  entry.data.category,
+  entry.data.engineType,
+].filter(Boolean).join(' ');
 ---
 
 <article
@@ -26,6 +37,7 @@ const isPhoto = Boolean(photo?.path && !photo.path.includes('silhouette'));
   data-cc={entry.data.engine?.displacementCc ?? ''}
   data-price={price?.minARS ?? ''}
   data-name={`${brand?.name ?? ''} ${entry.data.name} ${entry.data.variant ?? ''}`}
+  data-search={searchText}
   data-chinese={entry.data.chineseHub ? '1' : '0'}
 >
   <div class:list={['silhouette', { 'is-photo': isPhoto }]}>
