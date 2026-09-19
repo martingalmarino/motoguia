@@ -48,16 +48,16 @@ fuel:
     - corven-triax
 electric: null
 editorial:
-  summary: On-off 150 de Corven con tanque de 12 litros. ACARA no abre ONE y MAX.
+  summary: On-off 150 de Corven, con tanque de 12 litros y caja de 5 en la ficha ONE. ACARA no separa ONE y MAX, y la potencia no está publicada.
   suitableFor:
-    - Uso mixto ciudad y tierra
+    - Uso mixto de ciudad y tierra liviana, si te cierra una 150 sin ABS declarado
   strengths:
-    - Transmisión detallada en ONE
-    - Tanque 12 litros
+    - La ONE detalla transmisión, carburador Euro 2 y un tanque de 12 litros
+    - 7.461 patentamientos de la fila TRIAX 150 en el acumulado 2026
   limitations:
-    - Potencia, peso y precio no informados
-    - Ranking agrupado
-  ownershipNotes: Existe Triax 150 MAX; no se le atribuyen estas unidades.
+    - Potencia, peso y precio de lista no están en la página revisada
+    - El ranking agrupa versiones
+  ownershipNotes: Existe una Triax 150 MAX. Esta ficha es la ONE y no hereda las unidades de la otra.
 images:
   - path: /images/motos/corven-triax-150.png
     alt: Corven Triax 150 ONE blanca, foto de catálogo de Corven Motos
@@ -78,11 +78,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - CORVEN TRIAX 150
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Corven Triax 150 ficha Argentina
-seoDescription: Qué publica Corven de la Triax 150 ONE y cómo se lee el ranking agrupado ACARA.
+seoDescription: "Corven Triax 150 ONE: tanque de 12 litros, caja de 5 y un ranking ACARA que no separa versiones."
 licenceHint: 150 cc, clase A 1.2 según ANSV.
 warranty: null
 ---
 
-CORVEN TRIAX 150 acumula 7.461 patentamientos en 2026. La ficha ONE describe motor 150 cc 4T refrigerado por aire, carburador Euro 2, 5 velocidades con embrague húmedo, disco hidráulico delantero, tambor trasero y tanque de 12 litros. Potencia y peso no están en esa página.
+La Triax 150 es la on-off Corven del ranking: 7.461 patentamientos en 2026. En la calle se la compara con la XR150L; en el papel, la distancia es otra. Honda publica ABS delantero y lista; Corven publica un 150 de aire y un tanque de 12 litros, sin potencia ni peso en la página ONE.
+
+Esa ficha describe motor 150 cc 4T refrigerado por aire, carburador Euro 2, 5 velocidades con embrague húmedo, disco hidráulico delantero y tambor trasero. Es un recorte de ciudad y ripio, no un enduro. ACARA no abre ONE y MAX: el número del ranking es de la fila, no de esta versión sola.
+
+Si te la cotizan, preguntá cuál. La MAX existe y no absorbe estas unidades.

@@ -43,16 +43,16 @@ dimensions: null
 fuel: null
 electric: null
 editorial:
-  summary: ACARA la lista como C110 DLX. Motomel la vende como DLX Deluxe CBS.
+  summary: ACARA la cuenta como C110 DLX; Motomel la vende como DLX Deluxe CBS. El cruce de nombre es más claro que en la B110, la ficha no tanto.
   suitableFor:
-    - Uso urbano
+    - Uso urbano, si te alcanza el CBS delantero y no necesitás tanque publicado
   strengths:
-    - Cruce de nombre comercial más claro que B110
-    - CBS delantero
+    - Puesto 20 del acumulado ACARA 2026, con 5.640 unidades y un nombre comercial reconocible
+    - 108 cm³, 8 Hp y disco delantero con CBS en la DLX Deluxe
   limitations:
-    - Tanque no extraído con litros confiables
-    - Un rótulo de 150 kg no se usa como peso vacío
-  ownershipNotes: "Garantía Motomel 2026: 12 meses o 12.000 km."
+    - "El tanque no se cargó: el extracto no traía los litros"
+    - Un rótulo de 150 kg no se usa como peso vacío; parece capacidad de carga
+  ownershipNotes: "Garantía Motomel 2026: 12 meses o 12.000 km. Pedí en el local si la unidad es la Deluxe CBS o otra DLX."
 images:
   - path: /images/motos/motomel-c110-dlx.png
     alt: Motomel DLX Deluxe 110 roja, foto de catálogo de Motomel Argentina
@@ -73,11 +73,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - MOTOMEL C110 DLX
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Motomel DLX Deluxe CBS ficha Argentina
-seoDescription: Qué se puede afirmar de la Motomel DLX Deluxe CBS y su fila C110 DLX en ACARA.
+seoDescription: "Motomel DLX Deluxe CBS y su fila C110 DLX en ACARA: 8 Hp, CBS delantero y lo que la ficha no deja citar."
 licenceHint: 108 cm³, clase A 1.2 según ANSV.
 warranty: Unidades 2026, 12 meses o 12.000 km.
 ---
 
-MOTOMEL C110 DLX ocupa el puesto 20 del acumulado ACARA 2026, con 5.640 unidades. Motomel publica DLX Deluxe CBS: 108 cm³, 8 Hp a 7.500 rpm y disco delantero con CBS. El tanque no se cargó porque el extracto no traía los litros. Un valor de 150 kg junto a “peso vacío” se omite: es coherente con capacidad de carga en otras fichas Motomel.
+A diferencia de la Blitz, acá el nombre del ranking y el del catálogo se parecen. MOTOMEL C110 DLX ocupa el puesto 20 del acumulado ACARA 2026, con 5.640 unidades. Motomel publica DLX Deluxe CBS: 108 cm³, 8 Hp a 7.500 rpm y disco delantero con CBS.
+
+El tanque no se cargó porque el extracto no traía los litros. Un valor de 150 kg junto a “peso vacío” se omite: en otras fichas Motomel esa cifra encaja con capacidad de carga, no con el peso de la moto. Mejor un casillero vacío que un número mal leído.
+
+Es una cub de ciudad con CBS a la vista. El resto, hasta completar el PDF, queda en el mostrador.

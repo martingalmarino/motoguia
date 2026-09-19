@@ -63,19 +63,19 @@ fuel:
     - honda-wave-pdf
 electric: null
 editorial:
-  summary: Cub urbana líder en patentamientos 2026. Honda publica dos versiones locales y no informa potencia en la ficha.
+  summary: "Es la cub más patentada del año en Argentina, con lista oficial y dos versiones locales. Honda no publica la potencia: en esta ficha ese casillero queda vacío."
   suitableFor:
-    - Primera moto urbana
-    - Trámites y delivery liviano
-    - Quienes priorizan red de servicio Honda
+    - Quien busca una primera moto urbana y una red de service amplia
+    - Trámites, delivery liviano o el ida y vuelta al trabajo en ciudad
+    - Quien prefiere un precio de lista antes que cotizar a ciegas
   strengths:
-    - Lidera el ranking ACARA 2026 acumulado
-    - CBS declarado
-    - Garantía local 36 meses o 36.000 km
+    - "Lidera el ranking ACARA enero-agosto 2026, con 59.184 patentamientos: hay volumen de calle y de recambio"
+    - CBS declarado y dos frenos a elección, tambor o disco de 220 mm
+    - Garantía Honda de 36 meses o 36.000 km, de las más largas del recorte 110
   limitations:
-    - Potencia y consumo no figuran en la ficha oficial
-    - El ranking Wave 110S no incluye la fila Wave 110S CD
-  ownershipNotes: El precio de lista observado no aclara si incluye patentamiento.
+    - Honda no informa potencia ni consumo; no se completan con cifras de otros mercados
+    - La fila WAVE 110S CD de ACARA queda afuera y no se suma a este recuento
+  ownershipNotes: El precio de lista del 18 de septiembre de 2026 no aclara si incluye patentamiento, flete o accesorios. Pedilo por escrito en el concesionario.
 images:
   - path: /images/motos/honda-wave-110s.webp
     alt: Honda Wave 110S roja, foto de catálogo de Honda Motos Argentina
@@ -101,17 +101,17 @@ accessoryCategoryIds:
 rankingReportNames:
   - HONDA WAVE 110S
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Honda Wave 110S ficha y precio en Argentina
-seoDescription: Ficha técnica, precio de lista y patentamientos de la Honda Wave 110S en Argentina, con fuentes oficiales.
+seoDescription: "Cómo leer la Honda Wave 110S en Argentina: lista oficial, dos versiones, CBS y el ranking ACARA 2026, con lo que Honda no publica."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV. Verificá la cédula.
 warranty: 36 meses o 36.000 km; batería 12 meses.
 ---
 
-La Honda Wave 110S es, en el informe ACARA/SIOMAA de agosto 2026, el modelo con más patentamientos acumulados del año: 59.184 unidades entre enero y agosto. Eso mide inscripciones, no una prueba de manejo ni una encuesta de talleres.
+Si en 2026 alguien te dice “la moto de la ciudad”, en Argentina suele estar hablando de esta. En el informe ACARA/SIOMAA de agosto, la Honda Wave 110S encabeza el acumulado del año con 59.184 patentamientos entre enero y agosto. Eso mide inscripciones, no si te va a resultar cómoda ni cómo anda el taller de tu barrio.
 
-Honda Motos Argentina ofrece al menos dos configuraciones: freno a tambor y Wave Cast Disc. La ficha PDF revisada corresponde a la versión disco: 109 cm³, tanque de 3,7 litros, asiento a 763 mm y 102 kg en orden de marcha, con CBS. La potencia no está publicada; no se completa con cifras de otros mercados.
+Honda Motos Argentina la vende al menos en dos configuraciones: tambor y Wave Cast Disc. La ficha PDF que usamos es la versión disco: 109 cm³, tanque de 3,7 litros, asiento a 763 mm, 102 kg en orden de marcha y CBS. La potencia no está publicada. No la completamos con números de Brasil, India u otro catálogo: si Honda Argentina no la declara, acá no aparece.
 
-El precio de lista observado el 18/09/2026 en el sitio Honda es $3.529.707 (tambor) y $4.020.800 (disco). Ámbito citó los mismos valores el 8/09/2026. Ninguna fuente aclara si incluye patentamiento, flete o extras.
+El 18 de septiembre de 2026 el sitio de la marca mostraba $3.529.707 para el tambor y $4.020.800 para el disco. Ámbito había citado los mismos valores el 8 de septiembre. Ninguna de las dos fuentes aclara si entra patentamiento, flete o extras.
 
-ACARA separa una fila HONDA WAVE 110S CD (fuera del top 20 anual). Esas unidades no se suman a esta ficha.
+Hay un detalle de ranking que conviene no mezclar: ACARA abre una fila HONDA WAVE 110S CD, fuera del top 20 anual. Esas unidades no se suman a esta ficha.

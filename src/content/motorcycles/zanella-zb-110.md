@@ -55,16 +55,16 @@ fuel:
     - zanella-zb-full
 electric: null
 editorial:
-  summary: Novena en el ranking ACARA 2026. CBS y 107 cm³ publicados; hay conflicto interno sobre el tipo de caja.
+  summary: "Novena del ranking ACARA 2026, con CBS y 107 cm³ en el PDF FULL. En la misma marca conviven dos descripciones de la caja: no se elige una."
   suitableFor:
-    - Uso urbano
+    - Uso urbano, si te cierra una cub Zanella y cotizás la versión FULL
   strengths:
-    - CBS
-    - Tanque y peso en PDF
+    - CBS, disco/tambor, tanque de 3,2 litros y 91 kg vacío en el PDF FULL
+    - 11.476 patentamientos de la fila ZB 110, aparte de Z3 ST y Z3 FULL
   limitations:
-    - Conflicto manual vs semiautomática en fuentes de la misma marca
+    - El PDF habla de caja manual y el copy web, de semiautomática
     - Sin precio de lista hallado
-  ownershipNotes: ACARA separa ZB 110, Z3 ST y Z3 FULL. Esta ficha cubre FULL y no absorbe las otras filas.
+  ownershipNotes: ACARA separa ZB 110, Z3 ST y Z3 FULL. Esta ficha cubre FULL y no absorbe las otras filas. Pedí en el local cuál es la unidad y cómo está descripta la caja.
 images:
   - path: /images/motos/zanella-zb-110.png
     alt: Zanella ZB 110 FULL roja, foto de catálogo de Zanella Argentina
@@ -86,13 +86,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - ZANELLA ZB 110
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Zanella ZB 110 FULL ficha Argentina
-seoDescription: Specs de la Zanella ZB 110 Z3 FULL, el conflicto de caja y su lugar en el ranking ACARA 2026.
+seoDescription: "Zanella ZB 110 Z3 FULL: novena del ranking 2026, con CBS y un conflicto de caja entre el PDF y la web."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null
 ---
 
-ZANELLA ZB 110 suma 11.476 patentamientos en el acumulado 2026, aparte de las filas Z3 ST y Z3 FULL.
+La ZB 110 es la cub Zanella de volumen: 11.476 patentamientos en el acumulado 2026, novena del ranking, y eso sin sumar las filas Z3 ST y Z3 FULL. ACARA las cuenta aparte, y acá también.
 
-La ficha FULL indica 107 cm³, 6,5 hp, CBS, disco/tambor, tanque de 3,2 litros y 91 kg vacío. El PDF describe la caja como manual y el texto web habla de semiautomática: se deja el conflicto a la vista, sin promediar.
+La ficha FULL indica 107 cm³, 6,5 hp, CBS, disco/tambor, tanque de 3,2 litros y 91 kg vacío. El problema no es lo que falta: es lo que se contradice. El PDF describe la caja como manual y el texto web habla de semiautomática. Se deja el conflicto a la vista, sin promediar ni elegir la versión más cómoda.
+
+Si estás por señar una, pedí que te muestren cómo está descripta en el documento de la unidad. En esta guía no se resuelve con un empate técnico.

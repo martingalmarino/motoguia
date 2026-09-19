@@ -55,18 +55,17 @@ fuel:
     - corven-energy
 electric: null
 editorial:
-  summary: Cub de alto volumen en el ranking 2026. Ficha AD con 106,7 cm³ y 6,7 HP.
+  summary: Una de las cub de más volumen del ranking 2026. La ficha AD publica 106,7 cm³ y 6,7 HP; lo que no aparece es el precio de lista ni si hay CBS.
   suitableFor:
-    - Uso urbano
-    - Presupuesto de cub 110
+    - Uso urbano, si te cierra el segmento 110 y el recambio de Corven
+    - Presupuesto de cub, sabiendo que vas a cotizar sin lista de fábrica
   strengths:
-    - Quinta en patentamientos acumulados 2026
-    - Cilindrada y potencia publicadas
+    - Quinta del acumulado ACARA 2026, con 33.193 patentamientos
+    - Cilindrada y potencia publicadas en la ficha AD
   limitations:
-    - Sin precio de lista hallado
-    - ABS/CBS no informado
-    - El tipo de peso no está aclarado
-  ownershipNotes: Grupo Corven se presenta como capitales nacionales; eso no describe el origen de cada pieza.
+    - No hay precio de lista en las páginas revisadas
+    - ABS y CBS no figuran; el tipo de peso (seco u orden de marcha) tampoco está aclarado
+  ownershipNotes: Corven se presenta como capitales nacionales. Eso habla de la empresa, no del origen de cada pieza. Existe una Energy 110 RT con otro rodado; no se le atribuyen estas unidades.
 images:
   - path: /images/motos/corven-energy-110.jpg
     alt: Corven Energy 110 AD roja, foto de catálogo de Corven Motos
@@ -90,13 +89,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - CORVEN ENERGY 110
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Corven Energy 110 ficha técnica Argentina
-seoDescription: Cilindrada, potencia y contexto de patentamientos de la Corven Energy 110 AD en Argentina.
+seoDescription: "Corven Energy 110 AD en Argentina: 106,7 cm³, 6,7 HP y el quinto puesto del ranking ACARA, con lo que la marca no publica."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null
 ---
 
-La Corven Energy 110 ocupa el quinto lugar del ranking ACARA enero-agosto 2026, con 33.193 patentamientos. El informe no separa AD y RT.
+La Energy 110 es, en volumen, la cub Corven del año: quinto lugar del ranking ACARA enero-agosto 2026, con 33.193 patentamientos. El informe no separa AD y RT, así que el número cuenta la familia, no esta ficha sola.
 
-La ficha AD declara 106,7 cm³, 6,7 HP a 8.000 rpm, 4 velocidades, disco delantero, tambor trasero, tanque de 4 litros y 97 kg, sin aclarar si el peso es en seco o en orden de marcha. ABS y CBS no figuran. Existe una Energy 110 RT con otro rodado delantero; no se le atribuyen estas unidades.
+La versión AD declara 106,7 cm³, 6,7 HP a 8.000 rpm, 4 velocidades, disco delantero, tambor trasero, tanque de 4 litros y 97 kg. Corven no aclara si ese peso es en seco o en orden de marcha. Tampoco figuran ABS ni CBS. Hay una Energy 110 RT con otro rodado delantero: no le asignamos estas unidades.
+
+Sin lista oficial, el precio sale de la cotización del día. Pedí por escrito de qué versión se trata.

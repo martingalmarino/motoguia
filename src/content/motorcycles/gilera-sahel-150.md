@@ -62,16 +62,16 @@ fuel:
     - gilera-sahel
 electric: null
 editorial:
-  summary: On-off 149 cc de Gilera. El precio citado es de Ámbito, no de la ficha Gilera.
+  summary: On-off 149 cc de Gilera, con 10,7 Hp y tanque de 8,6 litros en ficha. El precio que ves acá lo cotizó Ámbito, no el sitio de la marca.
   suitableFor:
-    - Ciudad y ripio liviano
+    - Ciudad y ripio liviano, si te cierra una 150 manual sin ABS declarado
   strengths:
-    - Potencia y tanque publicados
-    - Caja manual de 5
+    - "Gilera publica potencia, caja de 5 y tanque: 10,7 Hp, 8,6 litros, 120 kg en seco"
+    - 5.807 patentamientos en el acumulado ACARA 2026
   limitations:
-    - Precio no sale del sitio Gilera
-    - ABS/CBS no informado
-  ownershipNotes: Ámbito cotizó $2.630.000 el 8/09/2026. Puede estar desactualizado al momento de comprar.
+    - "El precio no sale del sitio Gilera: Ámbito citó $2.630.000 el 8 de septiembre de 2026"
+    - ABS y CBS no figuran
+  ownershipNotes: "Esa cotización de Ámbito puede estar vieja el día que vayas a comprar. Pedí número fresco y por escrito. Garantía Gilera: 12 meses o 12.000 km."
 images:
   - path: /images/motos/gilera-sahel-150.png
     alt: Gilera Sahel 150 roja, foto de catálogo de Gilera Argentina
@@ -94,11 +94,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - GILERA SAHEL 150
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Gilera Sahel 150 ficha técnica Argentina
-seoDescription: Motor, peso y precio citado en nota de la Gilera Sahel 150, con ranking ACARA 2026.
+seoDescription: "Gilera Sahel 150: 10,7 Hp, tanque de 8,6 litros y un precio de Ámbito que no sale de la ficha de la marca."
 licenceHint: 149 cc, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km, según Gilera.
 ---
 
-GILERA SAHEL 150 suma 5.807 patentamientos en el acumulado 2026. La ficha Gilera indica 149 cm³, 10,7 Hp a 8.500 rpm, manual de 5, disco/tambor, tanque 8,6 litros y 120 kg en seco. El precio $2.630.000 viene de Ámbito (8/09/2026), no del sitio de la marca.
+La Sahel 150 es la on-off Gilera del ranking: 5.807 patentamientos en el acumulado 2026. En el papel se parece más a una Triax que a una XR: disco adelante, tambor atrás, sin ABS ni CBS informados, y un tanque más chico que el de las Honda 150.
+
+La ficha de la marca indica 149 cm³, 10,7 Hp a 8.500 rpm, manual de 5, disco/tambor, tanque de 8,6 litros y 120 kg en seco. Eso alcanza para ubicarla en el recorte; no alcanza para hablar de prestaciones de ruta.
+
+El $2.630.000 no está en el sitio Gilera. Lo cotizó Ámbito el 8 de septiembre de 2026. Tratalo como una foto de ese día, no como lista de fábrica.

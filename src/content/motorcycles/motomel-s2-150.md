@@ -55,18 +55,18 @@ fuel:
     - motomel-s2
 electric: null
 editorial:
-  summary: Street 150 con embrague manual, CBS y tanque de 11 litros. Séptima en el ranking acumulado 2026.
+  summary: "Street 150 con embrague a mano, CBS y tanque de 11 litros. Séptima del ranking 2026: es el salto natural desde una cub, no otra cub alta."
   suitableFor:
-    - Ciudad y ruta corta
-    - Quienes ya manejan cub y quieren caja manual
+    - Ciudad y alguna ruta corta, si ya te llevás bien con la caja
+    - Quien viene de una 110 semiautomática y quiere probar el embrague a mano
   strengths:
-    - Ficha relativamente completa
-    - CBS y 5 marchas
+    - "Ficha relativamente completa: 13,4 HP, 5 marchas, CBS, 11 litros y 115 kg vacío"
+    - 12.701 patentamientos en el acumulado ACARA 2026
     - Garantía Motomel 2026 de 12 meses o 12.000 km
   limitations:
     - Sin precio de lista hallado
     - Consumo no publicado
-  ownershipNotes: No se le atribuyen las unidades MOTOMEL B110 ni CX 150.
+  ownershipNotes: No se le atribuyen las unidades MOTOMEL B110 ni CX 150. El punto a probar en el local es el embrague, no un salto de prestaciones que la ficha no cuantifica.
 images:
   - path: /images/motos/motomel-s2-150.png
     alt: Motomel S2 150 gris, foto de catálogo de Motomel Argentina
@@ -91,13 +91,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - MOTOMEL S2 150
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Motomel S2 150 ficha técnica Argentina
-seoDescription: Cilindrada, potencia, CBS y medidas de la Motomel S2 150 START, con ranking ACARA 2026.
+seoDescription: "Motomel S2 150 START: 13,4 HP, CBS y tanque de 11 litros, séptima del ranking ACARA 2026."
 licenceHint: 150 cc, clase A 1.2 según ANSV.
 warranty: Unidades vendidas desde el 01/01/2026, 12 meses o 12.000 km.
 ---
 
-La Motomel S2 150 START aparece en ACARA como MOTOMEL S2 150, con 12.701 patentamientos en el acumulado 2026. La ficha local declara 150 cm³, 13,4 HP a 8.500 rpm, caja de 5 marchas con embrague manual, disco delantero, tambor trasero, CBS, tanque de 11 litros y 115 kg vacío.
+La S2 150 es la street Motomel que sí entra al ranking con nombre propio: MOTOMEL S2 150, 12.701 patentamientos en el acumulado 2026, séptima del año. No es una cub. Si venís de una 110 semiautomática, el cambio de hábito está en el embrague a mano, no en un salto de “prestaciones” que la ficha no mide en consumo ni en velocidad.
 
-Es una calle 150, no una cub. Si venís de una 110 semiautomática, el punto a probar es el embrague, no un salto de “prestaciones” que la ficha no cuantifica en consumo ni velocidad.
+La ficha START declara 150 cm³, 13,4 HP a 8.500 rpm, caja de 5 con embrague manual, disco delantero, tambor trasero, CBS, tanque de 11 litros y 115 kg vacío. Hay litros y hay marchas; no hay lista de precio.
+
+Tampoco se le atribuyen las unidades B110 ni CX 150. Cada fila de ACARA se lee aparte.

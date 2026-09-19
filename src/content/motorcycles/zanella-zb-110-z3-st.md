@@ -43,15 +43,15 @@ dimensions: null
 fuel: null
 electric: null
 editorial:
-  summary: Fila propia en ACARA (Z3 ST). La web ST publica 107 cm³, 6,5 HP y CBS; tanque y peso no están en el extracto.
+  summary: Fila propia en ACARA (Z3 ST), distinta de la ZB 110 y de la FULL. La web ST publica 107 cm³, 6,5 HP y CBS; tanque y peso no estaban en el extracto.
   suitableFor:
-    - Uso urbano
+    - Uso urbano, si estás cotizando la ST y no una FULL
   strengths:
-    - Identidad de ranking separada de ZB 110 y Z3 FULL
-    - CBS declarado
+    - "Identidad de ranking separada: 5.743 unidades y puesto 19 del acumulado 2026"
+    - CBS, 107 cm³ y 4 velocidades declarados en la web ST
   limitations:
-    - Ficha web incompleta
-  ownershipNotes: No se le asignan las unidades de ZB 110 ni Z3 FULL.
+    - Tanque, peso y detalle de frenos no estaban en el extracto revisado
+  ownershipNotes: No se le asignan las unidades de ZB 110 ni Z3 FULL. Zanella comercializa ZB 110 ST; ACARA la lista como Z3 ST. Pedí cómo figura en la cédula.
 images:
   - path: /images/motos/zanella-zb-110-z3-st.png
     alt: Zanella ZB 110 ST gris, foto de catálogo de Zanella Argentina
@@ -71,11 +71,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - ZANELLA ZB 110 Z3 ST
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Zanella ZB 110 Z3 ST Argentina
-seoDescription: Qué dice la ficha ST y por qué ACARA la cuenta aparte de la ZB 110 y la Z3 FULL.
+seoDescription: "Zanella ZB 110 ST: puesto 19 de ACARA, aparte de la ZB 110 y la FULL, con CBS en la web y una ficha todavía incompleta."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null
 ---
 
-ACARA lista ZANELLA ZB 110 Z3 ST con 5.743 unidades en el acumulado 2026 (puesto 19). Zanella comercializa ZB 110 ST. La web declara 107 cm³, 6,5 HP, 4 velocidades y CBS. Tanque, peso y detalle de frenos no estaban en el extracto revisado.
+Zanella vende más de una ZB 110, y ACARA las cuenta como si fueran vecinas de ranking, no la misma moto. La fila ZANELLA ZB 110 Z3 ST suma 5.743 unidades en el acumulado 2026 y queda 19.ª. La marca la comercializa como ZB 110 ST.
+
+La web declara 107 cm³, 6,5 HP, 4 velocidades y CBS. Tanque, peso y detalle de frenos no estaban en el extracto revisado. Hasta completar ese papel, no se rellenan con los números de la FULL: son fichas distintas.
+
+Si te cotizan una ZB 110 a secas, preguntá ST o FULL. En el ranking no se mezclan, y acá tampoco.

@@ -116,12 +116,13 @@ const availability =
             </tbody>
           </table>
         </div>
-        <h2>A quién puede servir</h2>
+        <h2>Para quién tiene sentido</h2>
         <ul>{entry.data.editorial.suitableFor.map((item) => <li>{item}</li>)}</ul>
-        <h2>Fortalezas documentadas</h2>
+        <h2>Qué suma, con fuente</h2>
         <ul>{entry.data.editorial.strengths.map((item) => <li>{item}</li>)}</ul>
-        <h2>Límites y vacíos</h2>
+        <h2>Qué falta o no cierra</h2>
         <ul>{entry.data.editorial.limitations.map((item) => <li>{item}</li>)}</ul>
+        <h2>Al momento de comprar</h2>
         <p>{entry.data.editorial.ownershipNotes}</p>
         {entry.data.warranty && <p><strong>Garantía.</strong> {entry.data.warranty}</p>}
         {entry.data.licenceHint && <p><strong>Licencia.</strong> {entry.data.licenceHint} <a href={`${paths.guides}licencia-moto-argentina/`}>Guía de clases</a>.</p>}

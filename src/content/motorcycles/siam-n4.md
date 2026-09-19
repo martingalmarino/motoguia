@@ -53,17 +53,16 @@ electric:
   chargingConditions: Según comunicación web SIAM, no un ensayo normalizado.
   warranty: Motor 24 meses; batería 12; resto 12.
 editorial:
-  summary: Eléctrica SIAM/Newsan con motor Yadea 1800 W y autonomía declarada de 50 km sin ciclo de ensayo.
+  summary: "Eléctrica SIAM/Newsan con motor Yadea de 1800 W y 50 km declarados. Esos kilómetros no traen ciclo de ensayo: se leen como cifra de catálogo."
   suitableFor:
-    - Tramos urbanos cortos
-    - Quienes pueden cargar en domicilio
+    - Tramos urbanos cortos, si podés cargar en casa y no necesitás un número de homologación
   strengths:
-    - Batería extraíble declarada
-    - Potencia y autonomía publicadas
+    - Batería de litio extraíble, 60 V, y un motor Yadea publicado
+    - "Autonomía y peso a la vista: 50 km y 81 kg, con las condiciones que faltan"
   limitations:
-    - 50 km sin condiciones de ensayo
+    - Los 50 km no citan ciclo, velocidad ni carga
     - Sin unidades por modelo en el top 50 ACARA
-  ownershipNotes: 1,8 kW de ficha caería en clase A 1.1 si esa cifra es potencia máxima continua nominal. Confirmalo con la cédula.
+  ownershipNotes: "Si 1,8 kW es la potencia máxima continua nominal, caería en clase A 1.1. Confirmalo con la cédula, no con el folleto. Garantía de ficha: motor 24 meses, batería 12, resto 12."
 images:
   - path: /images/motos/siam-n4.webp
     alt: SIAM N4 blanca, foto de catálogo de SIAM Motos
@@ -85,11 +84,15 @@ accessoryCategoryIds:
   - helmets
 rankingReportNames: []
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: SIAM N4 eléctrica ficha Argentina
-seoDescription: Motor Yadea, autonomía declarada y límites de la ficha de la SIAM N4 en Argentina.
+seoDescription: "SIAM N4: motor Yadea 1800 W, batería extraíble y 50 km declarados sin ciclo de ensayo."
 licenceHint: Si 1,8 kW es potencia continua nominal, clase A 1.1. Verificá la cédula.
 warranty: Motor 24 meses, batería 12, resto 12.
 ---
 
-La SIAM N4 está en el catálogo de Newsan. La ficha declara motor Yadea 1800 W, 60 V, 45 km/h, batería de litio extraíble, autonomía 50 km y 81 kg. No hay un ciclo de homologación citado para esos 50 km. ACARA registra patentamientos de marca SUNRA en 2026, no una fila N4 en el top 50 de modelos.
+La N4 es la eléctrica de Newsan que sí llega a ficha con marca de motor. SIAM declara Yadea 1800 W, 60 V, 45 km/h, batería de litio extraíble, 50 km de autonomía y 81 kg. El número que más se cita es el de los 50 km: no hay un ciclo de homologación detrás. Se lee como catálogo, no como ensayo.
+
+ACARA registró patentamientos de marca SUNRA en 2026; no hay una fila N4 en el top 50 de modelos. El volumen eléctrico, en este recorte, todavía no se cuenta unidad por unidad como una Wave.
+
+La carga, según la web SIAM, va de 6 a 8 horas. Tampoco es un protocolo normalizado. Si la usás en ciudad, el dato práctico es si llegás a enchufarla en casa. La clase de licencia sale de la cédula, no de los 1800 W del folleto.

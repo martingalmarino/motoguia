@@ -63,18 +63,18 @@ fuel:
     - honda-glh
 electric: null
 editorial:
-  summary: Street 150 de producción local con CBS, tanque grande y precio de lista publicado. Décima en el ranking 2026.
+  summary: Una street 150 de producción local, con CBS, tanque grande y lista oficial. Queda décima en el ranking 2026; Honda, otra vez, no publica la potencia.
   suitableFor:
-    - Uso urbano intensivo
-    - Quienes quieren caja de 5 y red Honda
+    - Quien ya está en ciudad todos los días y quiere una caja de 5
+    - Quien prioriza red Honda y un precio que se puede citar
   strengths:
-    - Precio de lista y ficha local
-    - CBS y 12,7 litros de tanque
-    - Garantía 36 meses o 36.000 km
+    - Ficha argentina y precio de lista a la vista, algo poco habitual en este segmento
+    - CBS, disco delantero de 240 mm y un tanque de 12,7 litros que estira los días entre cargas
+    - Garantía de 36 meses o 36.000 km
   limitations:
-    - Potencia no publicada
-    - Sin ABS
-  ownershipNotes: El precio no aclara patentamiento.
+    - Honda no publica la potencia
+    - "No hay ABS: el auxilio de frenado declarado es CBS"
+  ownershipNotes: El $4.737.555 de lista del 18 de septiembre de 2026 no aclara si incluye patentamiento. Confirmalo en la cotización.
 images:
   - path: /images/motos/honda-glh-150.webp
     alt: Honda GLH 150 roja, foto de catálogo de Honda Motos Argentina
@@ -98,13 +98,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - HONDA GLH 150
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Honda GLH 150 ficha y precio Argentina
-seoDescription: Precio de lista, CBS, tanque y ranking de la Honda GLH 150 en Argentina.
+seoDescription: "Honda GLH 150 en Argentina: lista oficial, CBS, tanque de 12,7 litros y el puesto 10 del ranking ACARA 2026."
 licenceHint: 149 cc, clase A 1.2 según ANSV.
 warranty: 36 meses o 36.000 km; batería 12 meses.
 ---
 
-La Honda GLH 150 aparece décima en el acumulado ACARA 2026, con 10.440 patentamientos. La ficha local (origen Argentina) indica 149 cm³, 5 velocidades, disco delantero 240 mm, tambor trasero 130 mm, CBS, tanque de 12,7 litros, asiento a 757 mm y 129 kg en orden de marcha. Honda no publica la potencia.
+La GLH 150 es la street Honda que más se ve en el ranking: décima del acumulado ACARA 2026, con 10.440 patentamientos. No es una cub alta ni una trail: es una 150 de calle, armada en el país, pensada para uso diario.
 
-El precio de lista observado el 18/09/2026 es $4.737.555, coincidente con Ámbito del 8/09/2026.
+La ficha local declara 149 cm³, cinco velocidades, disco delantero de 240 mm, tambor trasero de 130 mm, CBS, tanque de 12,7 litros, asiento a 757 mm y 129 kg en orden de marcha. El tanque es el dato que más la separa de una 110: hay litros de sobra para la semana. Lo que no hay es potencia publicada, y no se inventa.
+
+El 18 de septiembre de 2026 el precio de lista era $4.737.555, el mismo que había citado Ámbito el 8 de septiembre. Como en el resto de las Honda de este recorte, la lista no aclara patentamiento.

@@ -50,16 +50,16 @@ dimensions:
 fuel: null
 electric: null
 editorial:
-  summary: Cub Corven con potencia aproximada (~7,5 HP) según la propia ficha.
+  summary: "Cub Corven semiautomática, con disco delantero en la AD. La propia ficha marca la potencia como aproximada: unos 7,5 HP, no un número cerrado."
   suitableFor:
-    - Uso urbano
+    - Uso urbano, si te cierra el embrague semiautomático de una 110
   strengths:
-    - Semiautomática declarada
-    - Disco delantero en AD
+    - Semiautomática declarada y disco hidráulico delantero en la AD
+    - 6.948 patentamientos en el acumulado ACARA 2026
   limitations:
-    - La potencia está marcada como aproximación
-    - Tanque no informado
-  ownershipNotes: "La tilde de aproximación se conserva: no se redondea como cifra exacta."
+    - La potencia está escrita como aproximación; no la tratamos como cifra exacta
+    - El tanque aparece vacío en la ficha revisada
+  ownershipNotes: "La tilde de aproximación se conserva: Corven la escribe así, y no se redondea para que parezca un ensayo."
 images:
   - path: /images/motos/corven-mirage-110.jpg
     alt: Corven Mirage 110 AD blanca, foto de catálogo de Corven Motos
@@ -79,11 +79,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - CORVEN MIRAGE 110
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Corven Mirage 110 ficha Argentina
-seoDescription: Datos de la Corven Mirage 110 AD, incluyendo la potencia aproximada que declara la propia marca.
+seoDescription: "Corven Mirage 110 AD: semiautomática, disco delantero y una potencia que la propia marca publica como aproximada."
 licenceHint: 110 cc, clase A 1.2 según ANSV.
 warranty: null
 ---
 
-CORVEN MIRAGE 110 suma 6.948 patentamientos en el acumulado 2026. La ficha AD indica 110 cc, ~7,5 HP a 7.000 rpm, 4 velocidades con embrague semiautomático, disco hidráulico delantero, tambor trasero y 99 kg. El tanque aparece vacío en la ficha revisada. La potencia se trata como valor aproximado porque así lo escribe Corven.
+La Mirage 110 es la otra cub Corven del ranking: 6.948 patentamientos en el acumulado 2026. Menos volumen que la Energy, mismo recorte de ciudad.
+
+La ficha AD indica 110 cc, unos 7,5 HP a 7.000 rpm, 4 velocidades con embrague semiautomático, disco hidráulico delantero, tambor trasero y 99 kg. El tanque aparece vacío en la página revisada. La potencia se trata como valor aproximado porque así lo escribe Corven: no la convertimos en un número de laboratorio.
+
+Si estás comparando Energy y Mirage, el dato que sí cambia a simple vista es el embrague semiautomático y esa tilde en los HP. El precio, otra vez, queda en la cotización.

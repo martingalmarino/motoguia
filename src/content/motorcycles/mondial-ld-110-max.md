@@ -43,16 +43,16 @@ dimensions: null
 fuel: null
 electric: null
 editorial:
-  summary: Sexta en patentamientos 2026. Mondial declara CBS, USB, LED y baúl; el resto de la ficha 2026 no se pudo extraer con números confiables.
+  summary: Sexta en patentamientos 2026, con CBS, USB, LED y baúl en la página del modelo. El resto de la ficha 2026 no se pudo extraer con números confiables.
   suitableFor:
-    - Uso urbano con baúl
+    - Uso urbano con baúl, si te alcanza el ranking como señal de recambio y no pedís una ficha completa
   strengths:
-    - Presencia alta en el ranking anual
-    - CBS declarado en la página del modelo
+    - "22.537 patentamientos en el acumulado ACARA 2026: sexto modelo del año"
+    - CBS declarado en la página LD 110 Max AD
   limitations:
-    - Cilindrada, potencia, peso y tanque no informados en texto verificable
+    - Cilindrada, potencia, peso y tanque no están en un texto verificable
     - Sin precio de lista hallado
-  ownershipNotes: CADECOM etiqueta el modelo como Ld 110 Max-ad en agosto. No se fusionan informes.
+  ownershipNotes: CADECOM etiqueta el modelo como Ld 110 Max-ad en agosto. No se fusionan informes. El “110” del nombre no reemplaza una cilindrada medida.
 images:
   - path: /images/motos/mondial-ld-110-max.jpg
     alt: Mondial LD 110 MAX gris, foto de catálogo de Mondial Argentina
@@ -74,13 +74,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - MONDIAL LD 110 MAX
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Mondial LD 110 MAX en Argentina
-seoDescription: Qué se puede afirmar con fuente de la Mondial LD 110 MAX y qué queda fuera hasta extraer la ficha completa.
+seoDescription: "Mondial LD 110 MAX: sexta del ranking ACARA 2026, con CBS en la web y una ficha técnica que todavía no se puede citar completa."
 licenceHint: Si la cédula indica hasta 150 cc, clase A 1.2. Confirmá el dato en el documento.
 warranty: null
 ---
 
-ACARA registra 22.537 patentamientos de MONDIAL LD 110 MAX entre enero y agosto de 2026. Es el sexto modelo del acumulado.
+Hay motos que se conocen más por el ranking que por la ficha. La Mondial LD 110 MAX es una de esas: 22.537 patentamientos entre enero y agosto de 2026, sexto modelo del acumulado. En la calle se la ve; en el papel, Mondial muestra menos de lo que el volumen sugiere.
 
-La página de LD 110 Max AD menciona puerto USB, luces LED, baúl y frenos CBS. El PDF 2026 es una imagen; no se copiaron cilindrada, potencia, tanque ni peso porque el OCR no entregó números confiables. El nombre comercial incluye “110”, pero eso no reemplaza una cilindrada medida en ficha.
+La página de LD 110 Max AD menciona puerto USB, luces LED, baúl y frenos CBS. El PDF 2026 es una imagen: no copiamos cilindrada, potencia, tanque ni peso porque el OCR no entregó números confiables. El nombre comercial incluye “110”, pero eso no reemplaza una medida de ficha.
+
+Hasta extraer un documento limpio, esta página dice lo que se puede afirmar y deja el resto en blanco. No es un olvido: es el estándar de la guía.

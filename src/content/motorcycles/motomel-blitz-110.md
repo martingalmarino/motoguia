@@ -54,16 +54,16 @@ fuel:
     - motomel-blitz
 electric: null
 editorial:
-  summary: Cub comercial Blitz 110. No se afirma que sea la fila ACARA MOTOMEL B110.
+  summary: "Cub comercial Blitz 110, con ficha START bastante completa. No se afirma que sea la fila ACARA MOTOMEL B110: el ranking usa otro nombre."
   suitableFor:
-    - Primera moto urbana
+    - Primera moto urbana, si cotizás versión disco o tambor y no esperás lista de fábrica
   strengths:
-    - Ficha completa
-    - CBS en versiones disco
+    - Ficha START con 110 cm³, 7 HP, 3,5 litros y 99 kg vacío
+    - CBS en las versiones de disco delantero
   limitations:
-    - Sin cruce documental con B110
+    - Sin documento que iguale Blitz y B110
     - Sin precio de lista
-  ownershipNotes: MOTOMEL B110 es la cuarta del ranking 2026. Motomel no publica un modelo llamado B110. No se le asignan las 38.811 unidades.
+  ownershipNotes: "MOTOMEL B110 es la cuarta del ranking 2026, con 38.811 unidades. Motomel no publica un modelo llamado B110. Esas unidades no se copian a esta ficha. Garantía 2026: 12 meses o 12.000 km."
 images:
   - path: /images/motos/motomel-blitz-110.png
     alt: Motomel Blitz 110 gris, foto de catálogo de Motomel Argentina
@@ -83,13 +83,15 @@ accessoryCategoryIds:
   - helmets
 rankingReportNames: []
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Motomel Blitz 110 ficha Argentina
-seoDescription: Specs de la Motomel Blitz 110 y la diferencia con el nombre de ranking B110.
+seoDescription: "Motomel Blitz 110: 7 HP y CBS en disco, y por qué no se le asigna el ranking B110 de ACARA."
 licenceHint: 110 cm³, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km para unidades 2026.
 ---
 
-Motomel vende la familia Blitz 110. La ficha START declara 110 cm³, 7 HP a 8.000 rpm, embrague automático, 4 velocidades (o automática según versión), 99 kg vacío, tanque 3,5 litros y CBS en disco delantero.
+Motomel vende la familia Blitz 110. La ficha START declara 110 cm³, 7 HP a 8.000 rpm, embrague automático, 4 velocidades (o automática, según versión), 99 kg vacío, tanque de 3,5 litros y CBS cuando el delantero es disco. Es una cub de trabajo, con más datos en papel que varias rivales del ranking.
 
-ACARA lista MOTOMEL B110 con 38.811 patentamientos. Sin un documento que iguale B110 y Blitz, las unidades del ranking no se copian a esta ficha.
+El cruce con ACARA, en cambio, no está. El informe lista MOTOMEL B110 con 38.811 patentamientos, cuarta del acumulado 2026. Motomel no publica un modelo llamado B110. Sin un documento que iguale los nombres, las unidades del ranking no se copian acá.
+
+En el local, preguntá cómo figura en la cédula. Blitz y B110 pueden ser la misma conversación de mostrador; en esta guía no se fusionan.

@@ -55,17 +55,17 @@ fuel:
     - gilera-smash
 electric: null
 editorial:
-  summary: Segunda en patentamientos 2026. ACARA agrupa Smash; la ficha citada es la Full II.
+  summary: "Segunda en patentamientos 2026, pero ACARA junta todas las Smash. La ficha que citamos es la Full II: 107 cm³, 7,2 hp y doble disco, sin lista oficial."
   suitableFor:
-    - Uso urbano diario
-    - Cub 110 semiautomática
+    - Uso urbano de todos los días, si te cierra una cub semiautomática
+    - Quien busca volumen de recambio más que una lista de fábrica
   strengths:
-    - Volumen de patentamientos muy alto
-    - CBS y doble disco en Full II
+    - "51.687 patentamientos en el acumulado ACARA 2026: es la cub que más se ve después de la Wave"
+    - La Full II declara CBS y disco adelante y atrás
   limitations:
-    - Sin precio de lista oficial hallado
-    - El ranking no distingue versiones
-  ownershipNotes: Garantía Gilera declarada 12 meses o 12.000 km.
+    - No hay precio de lista en la página revisada
+    - El ranking no abre versiones; no todas las Smash de la calle son Full II
+  ownershipNotes: "Gilera declara 12 meses o 12.000 km. Pedí qué versión estás comprando: el ranking dice Smash, el mostrador puede decir otra cosa."
 images:
   - path: /images/motos/gilera-smash.png
     alt: Gilera Smash Full II roja, foto de catálogo de Gilera Argentina
@@ -89,15 +89,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - GILERA SMASH
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Gilera Smash ficha técnica en Argentina
-seoDescription: Qué cubre la ficha Smash Full II y cómo leer el ranking ACARA de la Gilera Smash en Argentina.
+seoDescription: "Cómo leer la Gilera Smash en Argentina: ranking ACARA agrupado, ficha Full II y lo que la marca no publica de precio."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km, según Gilera.
 ---
 
-En el acumulado ACARA enero-agosto 2026, GILERA SMASH suma 51.687 patentamientos y queda segunda. El informe no abre esa fila por versión.
+La Smash es, después de la Wave, la cub que más se inscribe en el país. En el acumulado ACARA enero-agosto 2026, GILERA SMASH suma 51.687 patentamientos y queda segunda. El informe no abre esa fila por versión: en la calle hay más de una Smash, y el ranking las cuenta juntas.
 
-La ficha usada acá es Smash Full II: 107 cm³, 7,2 hp a 7.500 r/min, semiautomática de 4 marchas, CBS, discos adelante y atrás, tanque de 3,5 litros y 87 kg en seco. Los 1.070 mm de la ficha son alto total, no altura de asiento.
+La ficha que usamos es la Full II: 107 cm³, 7,2 hp a 7.500 r/min, semiautomática de 4 marchas, CBS, discos adelante y atrás, tanque de 3,5 litros y 87 kg en seco. Los 1.070 mm de la ficha son el alto total, no la altura de asiento. La conversión a kW usa caballo métrico (0,7355 kW/hp), para no mezclar unidades.
 
-No hay precio de lista en la página revisada. La conversión a kW usa caballo métrico (0,7355 kW/hp) y se declara para no mezclar unidades.
+No hay precio de lista en la página revisada. Si te cotizan una Smash, preguntá cuál: Full II no es un apodo del ranking, es una versión concreta.

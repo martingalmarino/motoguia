@@ -62,18 +62,18 @@ fuel:
     - honda-xr150l
 electric: null
 editorial:
-  summary: Trail 150 local con ABS delantero y asiento más alto. Puesto 12 del ranking 2026.
+  summary: Trail 150 local, con ABS delantero y el asiento más alto del recorte Honda. Duodécima en el ranking 2026, y la más cara de lista en esta familia.
   suitableFor:
-    - Ciudad y camino de tierra liviano
-    - Conductores que quieren ABS delantero en 150
+    - Ciudad más algún camino de tierra liviano, no un enduro
+    - Quien quiere ABS delantero en una 150 de producción nacional
   strengths:
-    - ABS delantero declarado
-    - Precio de lista
-    - Origen Argentina en ficha
+    - ABS en el disco delantero de 240 mm, el único del recorte Honda 150 publicado acá
+    - Precio de lista y origen Argentina en la ficha
+    - Tanque de 12 litros y caja de 5
   limitations:
-    - Potencia no publicada
-    - Asiento a 834 mm, más alto que una cub
-  ownershipNotes: ABS delantero no equivale a ABS integral.
+    - Honda no publica la potencia
+    - "El asiento va a 834 mm: se siente más alta que una cub o una GLH"
+  ownershipNotes: ABS delantero no es ABS integral. Atrás sigue un tambor de 110 mm. El $6.051.456 de lista del 18 de septiembre de 2026 no aclara patentamiento.
 images:
   - path: /images/motos/honda-xr150l.webp
     alt: Honda XR150L roja y negra, foto de catálogo de Honda Motos Argentina
@@ -97,11 +97,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - HONDA XR150L
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-09-19
 seoTitle: Honda XR150L ficha y precio Argentina
-seoDescription: ABS delantero, medidas, precio de lista y ranking de la Honda XR150L en Argentina.
+seoDescription: "Honda XR150L en Argentina: ABS delantero, asiento a 834 mm, lista oficial y el puesto 12 del ranking 2026."
 licenceHint: 149 cc, clase A 1.2 según ANSV.
 warranty: 36 meses o 36.000 km; batería 12 meses.
 ---
 
-La Honda XR150L suma 9.148 patentamientos en el acumulado ACARA 2026. La ficha local indica 149 cm³, 5 velocidades, disco delantero 240 mm con ABS, tambor trasero 110 mm, tanque de 12 litros, asiento a 834 mm y 131 kg en orden de marcha. Precio de lista observado: $6.051.456. La potencia no está publicada.
+Si la GLH es la 150 de asfalto, la XR150L es la que Honda arma para salir un poco de la ciudad. En el acumulado ACARA 2026 suma 9.148 patentamientos y queda 12.ª. El salto de precio también se nota: el 18 de septiembre de 2026 la lista era $6.051.456, la más alta de las Honda publicadas acá.
+
+La ficha local indica 149 cm³, cinco velocidades, disco delantero de 240 mm con ABS, tambor trasero de 110 mm, tanque de 12 litros, asiento a 834 mm y 131 kg en orden de marcha. Ese asiento cambia la moto: no es la altura de una cub, y conviene sentarse antes de comprar. La potencia, otra vez, no está publicada.
+
+El ABS es delantero. No lo leas como un sistema integral: atrás sigue el tambor. Para mucha gente igual es el argumento que la separa de las on-off 150 del ranking, donde ese dato suele faltar.
