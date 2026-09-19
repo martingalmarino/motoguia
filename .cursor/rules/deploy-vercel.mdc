@@ -1,0 +1,8 @@
+---
+description: Subir commits a origin para el deploy de Vercel
+alwaysApply: true
+---
+
+# Deploy en Vercel
+
+Después de un commit en este repo, hacé `git push` a `origin` de la rama actual (sin `--force` en `main`) para que Vercel tome el cambio. No esperes a que lo pidan.
