@@ -99,7 +99,7 @@ rankingReportNames:
   - HONDA GLH 150
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Honda GLH 150 ficha y precio Argentina
+seoTitle: "Honda GLH 150: precio, ficha técnica y garantía"
 seoDescription: "Honda GLH 150: moto de calle de 149 cc fabricada en Argentina, con caja de 5, disco de 240 mm con CBS y tanque de 12,7 litros."
 licenceHint: 149 cc, clase A 1.2 según ANSV.
 warranty: 36 meses o 36.000 km; batería 12 meses.

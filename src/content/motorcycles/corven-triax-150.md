@@ -80,7 +80,7 @@ rankingReportNames:
   - CORVEN TRIAX 150
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Corven Triax 150 ficha Argentina
+seoTitle: "Corven Triax 150: ficha técnica y versiones ONE y MAX"
 seoDescription: "Corven Triax 150 ONE: trail de 150 cc refrigerada por aire, con caja de 5, disco hidráulico delantero y tanque de 12 litros. Ficha técnica."
 licenceHint: 150 cc, clase A 1.2 según ANSV.
 warranty: null

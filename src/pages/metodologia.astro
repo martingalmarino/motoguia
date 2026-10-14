@@ -9,7 +9,7 @@ const crumbs = [
 ];
 ---
 
-<BaseLayout title="Metodología y fuentes" description="Cómo se arman los rankings, las fichas técnicas y los precios de referencia de MotoGuía AR." path={paths.methodology}>
+<BaseLayout title="Metodología y fuentes" description="Cómo se arman los rankings, las fichas técnicas y los precios de referencia de MotoGuía AR, y cómo acceder a los datos en JSON." path={paths.methodology}>
   <div class="wrap">
     <PageHeader
       crumbs={crumbs}
@@ -36,6 +36,10 @@ const crumbs = [
       </p>
       <h2>Fechas de revisión</h2>
       <p>Actualizamos la fecha de revisión cuando cambia el contenido de una página.</p>
+      <h2>Datos abiertos</h2>
+      <p>
+        Todas las fichas están disponibles en formato JSON en <a href="/datos/motos.json">/datos/motos.json</a>, con las especificaciones, los precios con su tipo y fecha, la fecha de revisión y las fuentes de cada modelo. Los datos que la marca no publica figuran como <code>null</code>. También publicamos un resumen del sitio para asistentes de IA en <a href="/llms.txt">/llms.txt</a>. Si citás estos datos, enlazá la ficha del modelo.
+      </p>
       <p>¿Encontraste un error? <a href={paths.contact}>Escribinos</a>.</p>
     </div>
   </div>

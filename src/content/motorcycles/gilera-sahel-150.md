@@ -96,7 +96,7 @@ rankingReportNames:
   - GILERA SAHEL 150
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Gilera Sahel 150 ficha técnica Argentina
+seoTitle: "Gilera Sahel 150: precio de referencia y ficha técnica"
 seoDescription: "Gilera Sahel 150: trail de 149 cc y 10,7 hp con caja de 5, disco delantero y tanque de 8,6 litros. Ficha técnica y precio de referencia."
 licenceHint: 149 cc, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km, según Gilera.

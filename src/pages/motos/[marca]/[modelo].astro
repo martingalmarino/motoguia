@@ -10,12 +10,16 @@ import Icon from '../../../components/ui/Icon.astro';
 import { paths } from '../../../config/site';
 import {
   getBrand,
+  getPublishedComparisons,
   getPublishedGuides,
   getPublishedMotorcycles,
+  getRanking,
   motorcycleUrl,
   relatedMotorcycles,
   render,
 } from '../../../lib/content/catalog';
+import { modelFaqs } from '../../../lib/content/faq';
+import { hubsForModel } from '../../../lib/content/hubs';
 import {
   categoryLabel,
   displayName,
@@ -27,7 +31,8 @@ import {
   stageImage,
 } from '../../../lib/content/present';
 import { formatArs, formatDate, formatInteger } from '../../../lib/format';
-import { breadcrumbLd } from '../../../lib/seo/jsonld';
+import { breadcrumbLd, faqLd, modelWebPageLd, motorcycleLd } from '../../../lib/seo/jsonld';
+import { formatPageTitle } from '../../../lib/seo/urls';
 
 export async function getStaticPaths() {
   const motos = await getPublishedMotorcycles();
@@ -49,6 +54,21 @@ const path = motorcycleUrl(entry);
 const name = displayName(entry);
 const image = stageImage(entry);
 const facts = keyFacts(entry);
+const allMotos = await getPublishedMotorcycles();
+const hubs = hubsForModel(entry, allMotos);
+const comparisons = (await getPublishedComparisons()).filter((item) => item.data.modelIds.includes(d.id));
+const ytd = await getRanking('ranking-2026-ytd');
+const rankingRow = ytd?.data.rows.find((row) => row.modelIds.includes(d.id));
+const faqs = modelFaqs(entry);
+const ogImage = `/images/og/${entry.id}.jpg`;
+const largeImage = image.srcset ? image.srcset.split(', ').at(-1)!.split(' ')[0] : image.src;
+const versionAnchor = (name: string) =>
+  `version-${name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')}`;
 const isElectric = d.engineType === 'electric';
 const hasVersions = d.versions.length > 0 || Boolean(d.versionNote);
 const crumbs = [
@@ -114,6 +134,7 @@ const sections = [
   ...(hasVersions ? [{ id: 'versiones', label: 'Versiones' }] : []),
   { id: 'costos', label: 'Costos' },
   ...(related.length ? [{ id: 'alternativas', label: 'Alternativas' }] : []),
+  { id: 'preguntas', label: 'Preguntas' },
   { id: 'fuentes', label: 'Fuentes' },
 ];
 const availability =
@@ -128,7 +149,16 @@ const availability =
   title={d.seoTitle}
   description={d.seoDescription}
   path={path}
-  jsonLd={[breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href })))]}
+  image={{ src: ogImage, alt: `${name}: ficha técnica en MotoGuía AR`, width: 1200, height: 630, type: 'image/jpeg' }}
+  modifiedTime={d.reviewedAt}
+  publishedTime={d.publishedAt}
+  alternateJson="/datos/motos.json"
+  jsonLd={[
+    modelWebPageLd(entry, { path, title: formatPageTitle(d.seoTitle), description: d.seoDescription, image: largeImage }),
+    motorcycleLd(entry, { path, images: [largeImage, ogImage] }),
+    breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
+    faqLd(faqs),
+  ]}
 >
   <article class="wrap">
     <Breadcrumbs items={crumbs} />
@@ -179,6 +209,9 @@ const availability =
           )
         }
         {d.specVersion && <p class="key-facts__note">Datos técnicos de la versión {d.specVersion}.</p>}
+        <p class="key-facts__note">
+          Ficha actualizada el <time datetime={d.reviewedAt.toISOString().slice(0, 10)}>{formatDate(d.reviewedAt)}</time>.
+        </p>
         <div class="model-actions">
           <button
             class="compare-toggle compare-toggle--large compare-toggle--primary"
@@ -290,7 +323,7 @@ const availability =
             {d.versions.length > 0 && (
               <div class="version-grid">
                 {d.versions.map((version) => (
-                  <div class="version-card">
+                  <div class="version-card" id={versionAnchor(version.name)}>
                     <h3>{version.name}</h3>
                     {version.priceARS !== null && d.price ? (
                       <>
@@ -364,6 +397,58 @@ const availability =
       }
 
       {
+        (hubs.length > 0 || comparisons.length > 0 || rankingRow) && (
+          <section class="model-section" aria-labelledby="explorar-titulo">
+            <h2 id="explorar-titulo">Más sobre la {name}</h2>
+            <ul class="related-links">
+              {comparisons.map((item) => (
+                <li>
+                  <a class="link-arrow" href={`${paths.comparisons}${item.id}/`}>
+                    Comparativa: {item.data.title} <Icon name="arrow" size={16} />
+                  </a>
+                </li>
+              ))}
+              {hubs.map((hub) => (
+                <li>
+                  <a class="link-arrow" href={hub.path}>
+                    {hub.h1} <Icon name="arrow" size={16} />
+                  </a>
+                </li>
+              ))}
+              {d.engineType === 'electric' && (
+                <li>
+                  <a class="link-arrow" href={paths.electric}>
+                    Otras motos eléctricas en Argentina <Icon name="arrow" size={16} />
+                  </a>
+                </li>
+              )}
+              {d.chineseHub && (
+                <li>
+                  <a class="link-arrow" href={paths.chinese}>
+                    Motos chinas en Argentina <Icon name="arrow" size={16} />
+                  </a>
+                </li>
+              )}
+              {rankingRow && (
+                <li>
+                  <a class="link-arrow" href={paths.ranking2026}>
+                    Su lugar en el ranking de patentamientos 2026 <Icon name="arrow" size={16} />
+                  </a>
+                </li>
+              )}
+              {d.price && (
+                <li>
+                  <a class="link-arrow" href="/motos/precios/">
+                    Precios de otras motos <Icon name="arrow" size={16} />
+                  </a>
+                </li>
+              )}
+            </ul>
+          </section>
+        )
+      }
+
+      {
         guides.length > 0 && (
           <section class="model-section" aria-labelledby="guias-titulo">
             <h2 id="guias-titulo">Para seguir leyendo</h2>
@@ -381,6 +466,18 @@ const availability =
           </section>
         )
       }
+
+      <section class="model-section" id="preguntas" aria-labelledby="preguntas-titulo">
+        <h2 id="preguntas-titulo">Preguntas frecuentes sobre la {name}</h2>
+        <div class="faq-list">
+          {faqs.map((faq) => (
+            <div class="faq-item" id={`pregunta-${faq.id}`}>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section class="model-section source-notes" id="fuentes" aria-labelledby="fuentes-titulo">
         <h2 id="fuentes-titulo">Fuentes y actualización</h2>

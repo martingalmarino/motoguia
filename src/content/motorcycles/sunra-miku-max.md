@@ -83,7 +83,7 @@ accessoryCategoryIds:
 rankingReportNames: []
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: SUNRA Miku Max eléctrica Argentina
+seoTitle: "SUNRA Miku Max eléctrica: autonomía y ficha técnica"
 seoDescription: "SUNRA Miku Max: scooter eléctrico de 800 W con batería extraíble de 60 V, 40 km/h de máxima y hasta 45 km declarados. Ficha técnica."
 licenceHint: "Con 0,8 kW declarados, corresponde la clase A 1.1 (hasta 4 kW) si es la potencia continua nominal. Verificá la cédula."
 warranty: null

@@ -4,9 +4,9 @@ import Breadcrumbs from '../../components/editorial/Breadcrumbs.astro';
 import MotorcycleCard from '../../components/catalog/MotorcycleCard.astro';
 import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
-import { getAllBrands, getPublishedComparisons, getPublishedMotorcycles } from '../../lib/content/catalog';
-import { categoryLabel } from '../../lib/content/present';
-import { breadcrumbLd } from '../../lib/seo/jsonld';
+import { getAllBrands, getPublishedComparisons, getPublishedMotorcycles, getRanking, motorcycleUrl } from '../../lib/content/catalog';
+import { cardSpecLine, categoryLabel, displayName } from '../../lib/content/present';
+import { breadcrumbLd, collectionPageLd, faqLd, itemListLd } from '../../lib/seo/jsonld';
 
 export async function getStaticPaths() {
   const motos = await getPublishedMotorcycles();
@@ -28,13 +28,44 @@ const crumbs = [
   { href: paths.brands, label: 'Marcas' },
   { href: path, label: brand.name },
 ];
+const join = (items: string[]) => (items.length <= 1 ? items.join('') : `${items.slice(0, -1).join(', ')} y ${items.at(-1)}`);
+const newest = motos.map((moto) => moto.data.reviewedAt).sort((a, b) => b.valueOf() - a.valueOf())[0];
+const ytd = await getRanking('ranking-2026-ytd');
+const topRow = ytd?.data.rows.find((row) => row.modelIds.some((id) => ids.has(id)));
+const topModel = topRow ? motos.find((moto) => topRow.modelIds.includes(moto.data.id)) : undefined;
+const warranties = [...new Set(motos.map((moto) => moto.data.warranty).filter((value): value is string => Boolean(value)))];
+const title = `Motos ${brand.name} en Argentina: modelos, precios y fichas`;
+const description = `Los ${count === 1 ? 'modelo' : `${count} modelos`} ${brand.name} del catálogo (${join(motos.map((moto) => moto.data.name))}) con ficha técnica, precio de referencia y comparativas.`;
+const faqs = [
+  {
+    question: `¿Qué motos ${brand.name} se venden en Argentina?`,
+    answer: `En MotoGuía hay ${count === 1 ? 'un modelo' : `${count} modelos`} ${brand.name}: ${join(motos.map((moto) => `${displayName(moto)} (${cardSpecLine(moto).toLowerCase()})`))}.`,
+  },
+  ...(topModel && topRow && ytd
+    ? [
+        {
+          question: `¿Cuál es la moto ${brand.name} más patentada?`,
+          answer: `La ${displayName(topModel)}: figura en el puesto ${topRow.rank} del ranking de patentamientos de enero a agosto de 2026 de ACARA/SIOMAA.`,
+        },
+      ]
+    : []),
+  ...(warranties.length === 1
+    ? [{ question: `¿Qué garantía tienen las motos ${brand.name}?`, answer: `${warranties[0].replace(/\.$/, '')}, según la marca. Revisá las condiciones en la ficha de cada modelo.` }]
+    : []),
+];
 ---
 
 <BaseLayout
-  title={`Motos ${brand.name} en Argentina`}
-  description={`Explorá ${count} ${count === 1 ? 'modelo' : 'modelos'} ${brand.name} con ficha técnica, precio de referencia y comparación con otras motos del mercado argentino.`}
+  title={title}
+  description={description}
   path={path}
-  jsonLd={[breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href })))]}
+  modifiedTime={newest}
+  jsonLd={[
+    collectionPageLd({ name: `Motos ${brand.name} en Argentina`, description, path, dateModified: newest }),
+    breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
+    itemListLd(`Motos ${brand.name}`, motos.map((moto) => ({ name: displayName(moto), path: motorcycleUrl(moto) }))),
+    faqLd(faqs),
+  ]}
 >
   <section class="brand-masthead">
     <div class="wrap">
@@ -132,6 +163,20 @@ const crumbs = [
       <div class="prose">
         <p>{brand.originNote}</p>
         {brand.importer && <p>Comercializa en el país: {brand.importer}.</p>}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="marca-preguntas">
+      <h2 id="marca-preguntas">Preguntas frecuentes sobre {brand.name}</h2>
+      <div class="faq-list">
+        {
+          faqs.map((faq) => (
+            <div class="faq-item">
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </div>
+          ))
+        }
       </div>
     </section>
   </div>

@@ -90,7 +90,7 @@ rankingReportNames:
   - MOTOMEL S2 150
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Motomel S2 150 ficha técnica Argentina
+seoTitle: "Motomel S2 150: ficha técnica y características"
 seoDescription: "Motomel S2 150 START: moto de calle de 150 cc y 13,4 hp con caja de 5, embrague manual, CBS y tanque de 11 litros. Ficha técnica."
 licenceHint: 150 cc, clase A 1.2 según ANSV.
 warranty: "12 meses o 12.000 km para unidades vendidas desde el 1 de enero de 2026."

@@ -83,7 +83,7 @@ accessoryCategoryIds:
 rankingReportNames: []
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Motomel StratoE eléctrica Argentina
+seoTitle: "Motomel StratoE eléctrica: ficha técnica y batería"
 seoDescription: "Motomel StratoE: scooter eléctrico de 2.000 W con batería de litio extraíble de 60 V y 20 Ah, frenos a disco y 83 kg. Ficha técnica."
 licenceHint: "Con 2 kW declarados, corresponde la clase A 1.1 (hasta 4 kW) si es la potencia continua nominal. Verificá la cédula."
 warranty: "12 meses o 12.000 km, régimen Motomel para unidades 2026."

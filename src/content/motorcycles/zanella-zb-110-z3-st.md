@@ -87,7 +87,7 @@ rankingReportNames:
   - ZANELLA ZB 110 Z3 ST
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Zanella ZB 110 Z3 ST Argentina
+seoTitle: "Zanella ZB 110 ST: ficha técnica y diferencias con la FULL"
 seoDescription: "Zanella ZB 110 ST: cub de 107 cc y 6,5 hp con frenos a tambor y CBS, puertos USB y 88 kg. Ficha técnica y diferencias con la FULL."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null

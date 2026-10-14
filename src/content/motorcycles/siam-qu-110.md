@@ -89,7 +89,7 @@ rankingReportNames:
   - SIAM QU 110
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: SIAM QU 110 ficha técnica Argentina
+seoTitle: "SIAM QU 110: ficha técnica y versiones Disco y Base"
 seoDescription: "SIAM QU 110: cub semiautomática de 107 cc y 6,6 hp, en versiones Disco y Base. Ficha técnica, tanque de 3 litros y garantía."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: "12 meses o 12.000 km, según SIAM."

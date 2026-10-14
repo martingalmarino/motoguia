@@ -28,6 +28,8 @@ const crumbs = [
   description={entry.data.seoDescription}
   path={path}
   ogType="article"
+  modifiedTime={entry.data.reviewedAt}
+  publishedTime={entry.data.publishedAt}
   jsonLd={[
     breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
     articleLd({

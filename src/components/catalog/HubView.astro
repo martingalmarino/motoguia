@@ -1,0 +1,193 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../editorial/PageHeader.astro';
+import MotorcycleCard from './MotorcycleCard.astro';
+import Icon from '../ui/Icon.astro';
+import { paths } from '../../config/site';
+import { motorcycleUrl } from '../../lib/content/catalog';
+import { activeHubs, type Hub } from '../../lib/content/hubs';
+import { hubFaqs } from '../../lib/content/hub-faq';
+import { displayName, powerLabel, priceTypeLabel, shortPrice } from '../../lib/content/present';
+import { formatDate, formatInteger } from '../../lib/format';
+import { breadcrumbLd, collectionPageLd, faqLd, itemListLd } from '../../lib/seo/jsonld';
+
+type Moto = CollectionEntry<'motorcycles'>;
+
+interface Props {
+  hub: Hub;
+  models: Moto[];
+  allModels: Moto[];
+}
+
+const { hub, models, allModels } = Astro.props;
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.catalog, label: 'Motos' },
+  { href: hub.path, label: hub.label },
+];
+const faqs = hubFaqs(hub, models);
+const newest = models.map((entry) => entry.data.reviewedAt).sort((a, b) => b.valueOf() - a.valueOf())[0];
+const siblings = activeHubs(allModels).filter((item) => item.key !== hub.key);
+const decimal = (value: number) => value.toLocaleString('es-AR', { maximumFractionDigits: 2 });
+
+function motorCell(entry: Moto) {
+  if (entry.data.engineType === 'electric') {
+    const kw = entry.data.electric?.nominalPowerKw;
+    return { main: kw ? `${decimal(kw)} kW` : 'No informado', note: 'Eléctrica' };
+  }
+  const cc = entry.data.engine?.displacementCc;
+  const hasPower = Boolean(entry.data.engine?.declaredPowerOriginalValue);
+  return { main: cc ? `${decimal(cc)} cc` : 'No informado', note: hasPower ? powerLabel(entry) : 'Potencia no informada' };
+}
+
+function rangeCell(entry: Moto) {
+  if (entry.data.engineType === 'electric') {
+    const km = entry.data.electric?.declaredRangeKm;
+    return km ? `${formatInteger(km)} km de autonomía` : 'No informado';
+  }
+  const liters = entry.data.fuel?.tankLiters;
+  return liters ? `${decimal(liters)} l de tanque` : 'No informado';
+}
+
+function brakeCell(entry: Moto) {
+  const c = entry.data.chassis;
+  const front = c?.brakesFront ?? 'No informado';
+  const system = c?.abs ? 'ABS' : c?.cbs ? 'CBS' : null;
+  return { main: front, note: system };
+}
+---
+
+<BaseLayout
+  title={hub.seoTitle}
+  description={hub.seoDescription}
+  path={hub.path}
+  modifiedTime={newest}
+  jsonLd={[
+    collectionPageLd({ name: hub.h1, description: hub.seoDescription, path: hub.path, dateModified: newest }),
+    breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
+    itemListLd(hub.h1, models.map((entry) => ({ name: displayName(entry), path: motorcycleUrl(entry) }))),
+    faqLd(faqs),
+  ]}
+>
+  <div class="wrap">
+    <PageHeader crumbs={crumbs} title={hub.h1} lede={hub.lede} />
+
+    <section class="section" aria-labelledby="hub-intro-titulo">
+      <h2 id="hub-intro-titulo" class="visually-hidden">Qué tener en cuenta</h2>
+      <div class="prose">
+        {hub.intro.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="hub-tabla-titulo">
+      <div class="section-heading">
+        <div>
+          <h2 id="hub-tabla-titulo">{models.length} modelos para comparar</h2>
+          <p>Datos declarados por cada marca. Los precios figuran con su tipo y fecha.</p>
+        </div>
+      </div>
+      <div class="table-region" role="region" aria-labelledby="hub-tabla-titulo" tabindex="0">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Modelo</th>
+              <th scope="col">Motor</th>
+              <th scope="col">Freno delantero</th>
+              <th scope="col" class="num">Peso</th>
+              <th scope="col">{models.some((entry) => entry.data.engineType === 'electric') ? 'Tanque o autonomía' : 'Tanque'}</th>
+              <th scope="col">Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              models.map((entry) => {
+                const motor = motorCell(entry);
+                const brake = brakeCell(entry);
+                return (
+                  <tr>
+                    <th scope="row">
+                      <a href={motorcycleUrl(entry)}>{displayName(entry)}</a>
+                    </th>
+                    <td>
+                      {motor.main}
+                      <span class="note">{motor.note}</span>
+                    </td>
+                    <td>
+                      {brake.main}
+                      {brake.note && <span class="note">{brake.note}</span>}
+                    </td>
+                    <td class="num">{entry.data.dimensions?.weightKg ? `${formatInteger(entry.data.dimensions.weightKg)} kg` : 'No informado'}</td>
+                    <td>{rangeCell(entry)}</td>
+                    <td>
+                      {shortPrice(entry)}
+                      {entry.data.price && (
+                        <span class="note">
+                          {priceTypeLabel(entry.data.price.priceType)} al {formatDate(entry.data.price.observedAt)}
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="muted">El peso no siempre se mide igual: cada ficha aclara si es en seco o en orden de marcha.</p>
+    </section>
+
+    <section class="section" aria-labelledby="hub-fichas-titulo">
+      <div class="section-heading">
+        <div>
+          <h2 id="hub-fichas-titulo">Fichas de cada modelo</h2>
+        </div>
+        <a class="link-arrow" href={paths.comparator}>Comparar lado a lado <Icon name="arrow" size={18} /></a>
+      </div>
+      <div class="card-grid card-grid--3">
+        {models.map((entry) => <MotorcycleCard entry={entry} />)}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="hub-preguntas-titulo">
+      <h2 id="hub-preguntas-titulo">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        {
+          faqs.map((faq) => (
+            <div class="faq-item" id={`pregunta-${faq.id}`}>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    {
+      siblings.length > 0 && (
+        <section class="section" aria-labelledby="hub-mas-titulo">
+          <h2 id="hub-mas-titulo">Explorá por tipo y cilindrada</h2>
+          <ul class="related-links">
+            {siblings.map((item) => (
+              <li>
+                <a class="link-arrow" href={item.path}>
+                  {item.h1} <Icon name="arrow" size={16} />
+                </a>
+              </li>
+            ))}
+            <li>
+              <a class="link-arrow" href={paths.electric}>
+                Motos eléctricas en Argentina <Icon name="arrow" size={16} />
+              </a>
+            </li>
+            <li>
+              <a class="link-arrow" href="/motos/precios/">
+                Precios de motos en Argentina <Icon name="arrow" size={16} />
+              </a>
+            </li>
+          </ul>
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>

@@ -86,7 +86,7 @@ accessoryCategoryIds:
 rankingReportNames: []
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: SIAM N4 eléctrica ficha Argentina
+seoTitle: "SIAM N4 eléctrica: autonomía, batería y ficha técnica"
 seoDescription: "SIAM N4: scooter eléctrico con motor Yadea de 1.800 W, batería de litio extraíble de 60 V, 45 km/h y 50 km declarados. Ficha técnica."
 licenceHint: "Con 1,8 kW declarados, corresponde la clase A 1.1 (hasta 4 kW) si es la potencia continua nominal. Verificá la cédula."
 warranty: "Motor 24 meses; batería y resto del vehículo, 12 meses."

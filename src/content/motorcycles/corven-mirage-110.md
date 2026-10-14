@@ -82,7 +82,7 @@ rankingReportNames:
   - CORVEN MIRAGE 110
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Corven Mirage 110 ficha Argentina
+seoTitle: "Corven Mirage 110: ficha técnica y características"
 seoDescription: "Corven Mirage 110 AD: cub semiautomática de 110 cc con caja de 4, disco hidráulico delantero y unos 7,5 hp declarados. Ficha técnica."
 licenceHint: 110 cc, clase A 1.2 según ANSV.
 warranty: null

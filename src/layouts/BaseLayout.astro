@@ -6,7 +6,7 @@ import '@fontsource/archivo/latin-700.css';
 import '../styles/global.css';
 import Header from '../components/navigation/Header.astro';
 import Footer from '../components/navigation/Footer.astro';
-import SEO from '../components/SEO.astro';
+import SEO, { type SeoImage } from '../components/SEO.astro';
 import { site } from '../config/site';
 import { formatPageTitle } from '../lib/seo/urls';
 
@@ -17,6 +17,10 @@ interface Props {
   noindex?: boolean;
   ogType?: 'website' | 'article';
   jsonLd?: unknown[];
+  image?: SeoImage;
+  modifiedTime?: Date;
+  publishedTime?: Date;
+  alternateJson?: string;
 }
 
 const {
@@ -26,6 +30,10 @@ const {
   noindex = !site.indexingEnabled,
   ogType = 'website',
   jsonLd = [],
+  image,
+  modifiedTime,
+  publishedTime,
+  alternateJson,
 } = Astro.props;
 ---
 
@@ -43,6 +51,10 @@ const {
       noindex={noindex || !site.indexingEnabled}
       ogType={ogType}
       jsonLd={jsonLd}
+      image={image}
+      modifiedTime={modifiedTime}
+      publishedTime={publishedTime}
+      alternateJson={alternateJson}
     />
   </head>
   <body>

@@ -76,7 +76,7 @@ rankingReportNames:
   - MONDIAL LD 110 MAX
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Mondial LD 110 MAX en Argentina
+seoTitle: "Mondial LD 110 MAX: equipamiento y características"
 seoDescription: "Mondial LD 110 MAX AD: cub urbana con frenado combinado CBS, luces LED, puerto USB y baúl. Equipamiento y ficha en Argentina."
 licenceHint: Si la cédula indica hasta 150 cc, clase A 1.2. Confirmá el dato en el documento.
 warranty: null

@@ -1,0 +1,17 @@
+---
+import HubView from '../../components/catalog/HubView.astro';
+import { getPublishedMotorcycles } from '../../lib/content/catalog';
+import { activeHubs, hubModels, type Hub } from '../../lib/content/hubs';
+
+export async function getStaticPaths() {
+  const motos = await getPublishedMotorcycles();
+  return activeHubs(motos)
+    .filter((hub) => hub.kind === 'displacement')
+    .map((hub) => ({ params: { cilindrada: hub.key }, props: { hub } }));
+}
+
+const { hub } = Astro.props as { hub: Hub };
+const motos = await getPublishedMotorcycles();
+---
+
+<HubView hub={hub} models={hubModels(hub, motos)} allModels={motos} />

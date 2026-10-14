@@ -75,7 +75,7 @@ rankingReportNames:
   - MOTOMEL C110 DLX
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Motomel DLX Deluxe CBS ficha Argentina
+seoTitle: "Motomel C110 DLX (DLX Deluxe CBS): ficha técnica"
 seoDescription: "Motomel C110 DLX (DLX Deluxe CBS): cub de 108 cc y 8 hp con disco delantero y CBS. Ficha técnica y garantía en Argentina."
 licenceHint: 108 cm³, clase A 1.2 según ANSV.
 warranty: "12 meses o 12.000 km para unidades 2026."

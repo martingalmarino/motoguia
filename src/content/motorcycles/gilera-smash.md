@@ -90,7 +90,7 @@ rankingReportNames:
   - GILERA SMASH
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Gilera Smash ficha técnica en Argentina
+seoTitle: "Gilera Smash: ficha técnica, versiones y garantía"
 seoDescription: "Gilera Smash Full II: cub semiautomática de 107 cc y 7,2 hp, con disco adelante y atrás y CBS. Ficha técnica y garantía en Argentina."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km, según Gilera.

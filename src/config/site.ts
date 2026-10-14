@@ -25,7 +25,7 @@ export const PLACEHOLDER_ORIGINS = new Set([
 ]);
 
 export const configuredSiteUrl = envValue('SITE_URL');
-export const productionOriginFallback = 'https://www.motoguia.ar';
+export const productionOriginFallback = 'https://www.motoguia.com.ar';
 
 export const siteOrigin = stripSlash(
   configuredSiteUrl ?? productionOriginFallback,
@@ -82,7 +82,7 @@ export const site = {
   indexingEnabled,
   deploymentStage,
   contactEmail,
-  defaultOgImage: '/images/og-default.svg',
+  defaultOgImage: '/images/og-default.png',
   defaultOgImageAlt: 'MotoGuía AR, guía para elegir y comparar motos en Argentina',
   priceReviewDays: 30,
 } as const;
@@ -90,6 +90,7 @@ export const site = {
 export const paths = {
   home: '/',
   catalog: '/motos/',
+  prices: '/motos/precios/',
   brands: '/marcas/',
   ranking: '/motos-mas-vendidas/',
   ranking2026: '/motos-mas-vendidas/2026/',
@@ -121,9 +122,13 @@ export const navItems: NavItem[] = [
     href: paths.catalog,
     children: [
       { href: paths.catalog, label: 'Catálogo' },
+      { href: paths.prices, label: 'Precios' },
       { href: paths.ranking, label: 'Más vendidas' },
-      { href: paths.chinese, label: 'Motos chinas' },
+      { href: '/motos/tipo/cub/', label: 'Cub' },
+      { href: '/motos/tipo/scooter/', label: 'Scooters' },
+      { href: '/motos/150cc/', label: 'Motos 150 cc' },
       { href: paths.electric, label: 'Motos eléctricas' },
+      { href: paths.chinese, label: 'Motos chinas' },
     ],
   },
   { label: 'Marcas', href: paths.brands },
@@ -144,8 +149,12 @@ export const footerGroups: { title: string; links: NavLink[] }[] = [
     title: 'Motos',
     links: [
       { href: paths.catalog, label: 'Catálogo' },
+      { href: paths.prices, label: 'Precios' },
       { href: paths.brands, label: 'Marcas' },
       { href: paths.ranking2026, label: 'Más vendidas 2026' },
+      { href: '/motos/110cc/', label: 'Motos 110 cc' },
+      { href: '/motos/150cc/', label: 'Motos 150 cc' },
+      { href: '/motos/tipo/trail/', label: 'Motos trail' },
       { href: paths.chinese, label: 'Motos chinas' },
       { href: paths.electric, label: 'Motos eléctricas' },
     ],

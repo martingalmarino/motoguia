@@ -101,7 +101,7 @@ rankingReportNames:
   - HONDA WAVE 110S
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Honda Wave 110S ficha y precio en Argentina
+seoTitle: "Honda Wave 110S: precio, versiones y ficha técnica"
 seoDescription: "Honda Wave 110S: cub de 109 cc con CBS, versiones con tambor o disco de 220 mm, ficha técnica, precio de lista y garantía de 36 meses."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV. Verificá la cédula.
 warranty: 36 meses o 36.000 km; batería 12 meses.

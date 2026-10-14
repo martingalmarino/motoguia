@@ -9,3 +9,19 @@
 7. Rollback: redeploy del commit anterior.
 
 Headers actuales: nosniff, referrer strict-origin-when-cross-origin, SAMEORIGIN. No hay CSP adivinada.
+
+## Dominio de producción
+
+Dominio canónico: `https://www.motoguia.com.ar`.
+
+1. En Vercel (Project → Settings → Domains), agregar `www.motoguia.com.ar` y `motoguia.com.ar`.
+2. En NIC.ar, cargar los registros que indique Vercel (CNAME de `www` y A del dominio raíz) o delegar los NS a Vercel.
+3. Dejar `www.motoguia.com.ar` como dominio principal, con redirección 301 desde `motoguia.com.ar` y `motoguia.vercel.app`.
+4. Cuando `https://www.motoguia.com.ar` responda, configurar en Vercel (Production) y volver a desplegar:
+   - `SITE_URL=https://www.motoguia.com.ar`
+   - `PUBLIC_INDEXING_ENABLED=true`
+   - `DEPLOYMENT_STAGE=production`
+5. Verificar que las páginas no tengan `noindex`, que el canonical apunte a `www.motoguia.com.ar`, que `/sitemap-index.xml` responda 200 y que `/robots.txt` declare el sitemap.
+6. Dar de alta el dominio en Google Search Console y Bing Webmaster Tools y enviar el sitemap.
+
+No activar la indexación antes de que el dominio cargue: los canonical apuntarían a un dominio sin respuesta.

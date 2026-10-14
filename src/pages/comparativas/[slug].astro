@@ -35,6 +35,9 @@ const comparatorHref = `${paths.comparator}#ids=${models.map((model) => model.da
   description={entry.data.seoDescription}
   path={path}
   ogType="article"
+  modifiedTime={entry.data.reviewedAt}
+  publishedTime={entry.data.publishedAt}
+  image={{ src: `/images/og/${entry.data.modelIds[0]}.jpg`, alt: entry.data.title, width: 1200, height: 630, type: 'image/jpeg' }}
   jsonLd={[
     breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
     articleLd({
@@ -43,6 +46,7 @@ const comparatorHref = `${paths.comparator}#ids=${models.map((model) => model.da
       path,
       datePublished: isoDate(entry.data.publishedAt),
       dateModified: isoDate(entry.data.reviewedAt),
+      image: `/images/og/${entry.data.modelIds[0]}.jpg`,
     }),
   ]}
 >

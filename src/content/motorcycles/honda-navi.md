@@ -95,7 +95,7 @@ rankingReportNames:
   - HONDA NAVI
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Honda Navi ficha y precio Argentina
+seoTitle: "Honda Navi: precio, ficha técnica y garantía"
 seoDescription: "Honda Navi: moto automática V-Matic de 109 cc fabricada en Argentina, con frenos a tambor y CBS. Ficha técnica, precio de lista y garantía."
 licenceHint: 109 cc, clase A 1.2 según ANSV.
 warranty: 36 meses o 36.000 km; batería 12 meses.

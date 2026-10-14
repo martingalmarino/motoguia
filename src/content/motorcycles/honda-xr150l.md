@@ -99,7 +99,7 @@ rankingReportNames:
   - HONDA XR150L
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Honda XR150L ficha y precio Argentina
+seoTitle: "Honda XR150L: precio, ficha técnica y garantía"
 seoDescription: "Honda XR150L: trail de 149 cc fabricada en Argentina, con ABS delantero, caja de 5 y asiento a 834 mm. Ficha técnica, precio de lista y garantía."
 licenceHint: 149 cc, clase A 1.2 según ANSV.
 warranty: 36 meses o 36.000 km; batería 12 meses.

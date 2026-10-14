@@ -90,7 +90,7 @@ rankingReportNames:
   - CORVEN ENERGY 110
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Corven Energy 110 ficha técnica Argentina
+seoTitle: "Corven Energy 110: ficha técnica y versiones AD y RT"
 seoDescription: "Corven Energy 110 AD: cub de 106,7 cc y 6,7 hp con caja de 4, disco delantero y tanque de 4 litros. Ficha técnica en Argentina."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null

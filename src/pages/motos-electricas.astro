@@ -5,6 +5,7 @@ import PageHeader from '../components/editorial/PageHeader.astro';
 import Icon from '../components/ui/Icon.astro';
 import { paths } from '../config/site';
 import { getPublishedMotorcycles } from '../lib/content/catalog';
+import { modelListingLd } from '../lib/seo/jsonld';
 
 const motos = (await getPublishedMotorcycles()).filter((entry) => entry.data.engineType === 'electric');
 const crumbs = [
@@ -12,12 +13,15 @@ const crumbs = [
   { href: paths.catalog, label: 'Motos' },
   { href: paths.electric, label: 'Motos eléctricas' },
 ];
+const description =
+  'Motos eléctricas en Argentina con potencia, autonomía, batería, tiempo de carga y licencia, según la ficha de cada marca.';
 ---
 
 <BaseLayout
   title="Motos eléctricas en Argentina"
-  description="Motos eléctricas en Argentina con potencia, autonomía, batería, tiempo de carga y licencia, según la ficha de cada marca."
+  description={description}
   path={paths.electric}
+  jsonLd={modelListingLd({ name: 'Motos eléctricas en Argentina', description, path: paths.electric, crumbs, models: motos })}
 >
   <div class="wrap">
     <PageHeader

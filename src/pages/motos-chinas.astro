@@ -5,6 +5,7 @@ import PageHeader from '../components/editorial/PageHeader.astro';
 import Icon from '../components/ui/Icon.astro';
 import { paths } from '../config/site';
 import { getPublishedMotorcycles } from '../lib/content/catalog';
+import { modelListingLd } from '../lib/seo/jsonld';
 
 const motos = (await getPublishedMotorcycles()).filter((entry) => entry.data.chineseHub);
 const crumbs = [
@@ -12,12 +13,15 @@ const crumbs = [
   { href: paths.catalog, label: 'Motos' },
   { href: paths.chinese, label: 'Motos chinas' },
 ];
+const description =
+  'Modelos de marcas que en Argentina suelen asociarse a motos chinas, con ficha técnica, precio de referencia y datos de origen solo cuando hay fuente.';
 ---
 
 <BaseLayout
   title="Motos chinas en Argentina"
-  description="Modelos de marcas que en Argentina suelen asociarse a motos chinas, con ficha técnica, precio de referencia y datos de origen solo cuando hay fuente."
+  description={description}
   path={paths.chinese}
+  jsonLd={modelListingLd({ name: 'Motos chinas en Argentina', description, path: paths.chinese, crumbs, models: motos })}
 >
   <div class="wrap">
     <PageHeader

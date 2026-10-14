@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import Icon from '../../components/ui/Icon.astro';
+import { paths } from '../../config/site';
+import { getPublishedMotorcycles, motorcycleUrl } from '../../lib/content/catalog';
+import { activeHubs } from '../../lib/content/hubs';
+import { categoryLabel, displayName, priceTypeLabel, shortPrice } from '../../lib/content/present';
+import { formatArs, formatDate } from '../../lib/format';
+import { breadcrumbLd, collectionPageLd, faqLd, itemListLd } from '../../lib/seo/jsonld';
+
+const path = '/motos/precios/';
+const motos = await getPublishedMotorcycles();
+const priced = motos.filter((entry) => entry.data.price).sort((a, b) => a.data.price!.minARS - b.data.price!.minARS);
+const unpriced = motos.filter((entry) => !entry.data.price);
+const newest = priced.map((entry) => entry.data.price!.observedAt).sort((a, b) => b.valueOf() - a.valueOf())[0];
+const hubs = activeHubs(motos);
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.catalog, label: 'Motos' },
+  { href: path, label: 'Precios' },
+];
+const title = 'Precios de motos en Argentina';
+const description =
+  'Precios de referencia de motos en Argentina por modelo y versión, con el tipo de precio, la fecha de cada dato y si incluye patentamiento.';
+const cheapest = priced[0];
+
+const faqs = [
+  ...(cheapest
+    ? [
+        {
+          id: 'mas-barata',
+          question: '¿Cuál es la moto más barata con precio publicado?',
+          answer: `Entre los modelos con precio en MotoGuía, la ${displayName(cheapest)} arranca en ${formatArs(cheapest.data.price!.minARS)} (${priceTypeLabel(cheapest.data.price!.priceType).toLowerCase()} al ${formatDate(cheapest.data.price!.observedAt)}). Muchas marcas no publican precios, así que puede haber motos más baratas que no figuran en esta lista.`,
+        },
+      ]
+    : []),
+  {
+    id: 'patentamiento',
+    question: '¿Los precios incluyen patentamiento?',
+    answer: 'Depende de la fuente. Cada ficha aclara si el precio incluye patentamiento o si la fuente no lo dice. Antes de pagar, pedí el precio final por escrito, con flete, formularios y patente.',
+  },
+  {
+    id: 'sin-precio',
+    question: '¿Por qué algunas motos no tienen precio?',
+    answer: 'Varias marcas no publican precios de lista en sus sitios y los concesionarios cotizan cada unidad. En esos casos la ficha muestra “Precio no disponible” y conviene pedir una cotización por escrito.',
+  },
+  {
+    id: 'actualizacion',
+    question: '¿Qué tan actualizados están estos precios?',
+    answer: 'Cada precio muestra la fecha en que se tomó y su tipo: de lista, cotizado o de referencia de prensa. Con inflación, los precios cambian seguido: usalos como referencia y confirmalos en el concesionario.',
+  },
+];
+---
+
+<BaseLayout
+  title="Precios de motos en Argentina: lista por modelo y versión"
+  description={description}
+  path={path}
+  modifiedTime={newest}
+  jsonLd={[
+    collectionPageLd({ name: title, description, path, dateModified: newest }),
+    breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
+    itemListLd(title, priced.map((entry) => ({ name: displayName(entry), path: motorcycleUrl(entry) }))),
+    faqLd(faqs),
+  ]}
+>
+  <div class="wrap">
+    <PageHeader
+      crumbs={crumbs}
+      title={title}
+      lede="Precios de referencia por modelo y versión, ordenados de menor a mayor, con el tipo de precio y la fecha de cada dato."
+    />
+
+    <section class="section" aria-labelledby="precios-tabla">
+      <div class="section-heading">
+        <div>
+          <h2 id="precios-tabla">Motos con precio publicado</h2>
+          <p>{priced.length} modelos. El precio final puede cambiar según el concesionario, la forma de pago y los gastos de entrega.</p>
+        </div>
+      </div>
+      <div class="table-region" role="region" aria-labelledby="precios-tabla" tabindex="0">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Modelo</th>
+              <th scope="col">Tipo</th>
+              <th scope="col" class="num">Precio</th>
+              <th scope="col">Dato</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              priced.map((entry) => {
+                const price = entry.data.price!;
+                const versions = entry.data.versions.filter((version) => version.priceARS !== null);
+                return (
+                  <tr>
+                    <th scope="row">
+                      <a href={motorcycleUrl(entry)}>{displayName(entry)}</a>
+                      {versions.length > 1 && (
+                        <span class="note">{versions.map((version) => `${version.name}: ${formatArs(version.priceARS!)}`).join(' · ')}</span>
+                      )}
+                    </th>
+                    <td>{categoryLabel(entry.data.category)}</td>
+                    <td class="num">{shortPrice(entry)}</td>
+                    <td>
+                      {priceTypeLabel(price.priceType)} al {formatDate(price.observedAt)}
+                      <span class="note">
+                        {price.includesRegistration === null
+                          ? 'La fuente no aclara si incluye patentamiento'
+                          : price.includesRegistration
+                            ? 'Incluye patentamiento'
+                            : 'No incluye patentamiento'}
+                      </span>
+                    </td>
+                  </tr>
+                );
+              })
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    {
+      unpriced.length > 0 && (
+        <section class="section" aria-labelledby="precios-sin">
+          <div class="section-heading">
+            <div>
+              <h2 id="precios-sin">Modelos sin precio publicado</h2>
+              <p>Sus marcas no publican precio de lista. Cada ficha tiene la ficha técnica completa.</p>
+            </div>
+          </div>
+          <ul class="related-links">
+            {unpriced.map((entry) => (
+              <li>
+                <a class="link-arrow" href={motorcycleUrl(entry)}>
+                  {displayName(entry)} <Icon name="arrow" size={16} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <section class="section" aria-labelledby="precios-preguntas">
+      <h2 id="precios-preguntas">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        {
+          faqs.map((faq) => (
+            <div class="faq-item" id={`pregunta-${faq.id}`}>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="precios-mas">
+      <h2 id="precios-mas">Calculá y explorá</h2>
+      <ul class="related-links">
+        <li><a class="link-arrow" href={paths.monthlyCost}>Cuánto cuesta tener una moto por mes <Icon name="arrow" size={16} /></a></li>
+        <li><a class="link-arrow" href={paths.fuel}>Calculadora de gasto en combustible <Icon name="arrow" size={16} /></a></li>
+        {hubs.map((hub) => (
+          <li><a class="link-arrow" href={hub.path}>{hub.h1} <Icon name="arrow" size={16} /></a></li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</BaseLayout>

@@ -2051,6 +2051,43 @@ input[type='radio'] {
   gap: 10px;
 }
 
+.related-links {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 900px) {
+  .related-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 32px;
+  }
+}
+
+.faq-list {
+  display: grid;
+  border-top: 1px solid var(--border);
+}
+
+.faq-item {
+  display: grid;
+  gap: 6px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: calc(var(--header-h) + 64px);
+}
+
+.faq-item h3 {
+  font-size: 1.0625rem;
+}
+
+.faq-item p {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  max-width: 72ch;
+}
+
 .source-notes {
   display: grid;
   gap: 16px;

@@ -3,7 +3,7 @@
   <rect x="88" y="150" width="96" height="96" rx="21" fill="#FFFFFF"/>
   <path d="M112 216V180l24 22.5L160 180v36" fill="none" stroke="#123D50" stroke-width="8.25" stroke-linecap="round" stroke-linejoin="round"/>
   <rect x="112" y="223.5" width="48" height="6" rx="3" fill="#006F9E"/>
-  <text x="88" y="360" fill="#FFFFFF" font-size="84" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700">MotoGuía AR</text>
-  <text x="88" y="424" fill="#B8CCD6" font-size="34" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif">Encontrá la moto que va con vos.</text>
-  <text x="88" y="540" fill="#7CC4E4" font-size="24" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="600" letter-spacing="1.5">MOTOS · MARCAS · COMPARADOR · HERRAMIENTAS</text>
+  <text x="88" y="360" fill="#FFFFFF" font-size="84" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700">MotoGu&#237;a AR</text>
+  <text x="88" y="424" fill="#B8CCD6" font-size="34" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif">Encontr&#225; la moto que va con vos.</text>
+  <text x="88" y="540" fill="#7CC4E4" font-size="24" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="600" letter-spacing="1.5">MOTOS &#183; MARCAS &#183; COMPARADOR &#183; HERRAMIENTAS</text>
 </svg>

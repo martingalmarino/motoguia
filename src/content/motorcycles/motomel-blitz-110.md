@@ -90,7 +90,7 @@ rankingReportNames:
   - MOTOMEL B110
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Motomel Blitz 110 (B110) ficha Argentina
+seoTitle: "Motomel Blitz 110 (B110): ficha técnica y versiones"
 seoDescription: "Motomel Blitz 110: cub de 110 cc y 7 hp, con versiones de cambios o automática y disco con CBS. Ficha técnica y garantía en Argentina."
 licenceHint: 110 cm³, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km para unidades 2026.

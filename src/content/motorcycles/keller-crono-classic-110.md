@@ -90,7 +90,7 @@ rankingReportNames:
   - KELLER KN110-8
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: Keller Crono Classic 110 (KN110-8) ficha Argentina
+seoTitle: "Keller Crono Classic 110: ficha técnica y versiones"
 seoDescription: "Keller Crono Classic 110: cub semiautomática de 107 cc y 7 hp en versiones ECO, PLUS y FULL, con disco hidráulico en la FULL. Ficha y garantía."
 licenceHint: 107 cc, clase A 1.2 si la cédula indica hasta 150 cc.
 warranty: 1 año o 10.000 km de garantía mecánica, según el manual del usuario.

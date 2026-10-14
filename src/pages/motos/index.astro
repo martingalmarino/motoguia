@@ -7,6 +7,8 @@ import { paths } from '../../config/site';
 import { getAllBrands, getPublishedMotorcycles } from '../../lib/content/catalog';
 import { categoryLabel } from '../../lib/content/present';
 import { formatInteger } from '../../lib/format';
+import { activeHubs } from '../../lib/content/hubs';
+import { modelListingLd } from '../../lib/seo/jsonld';
 
 const motos = await getPublishedMotorcycles();
 const brands = getAllBrands().filter((brand) => motos.some((moto) => moto.data.brandId === brand.id));
@@ -21,12 +23,16 @@ const crumbs = [
   { href: paths.catalog, label: 'Motos' },
 ];
 const total = motos.length;
+const hubs = activeHubs(motos);
+const description =
+  'Compará modelos de motos en Argentina por marca, tipo, motor, cilindrada y presupuesto, con fichas técnicas y precios de referencia con fecha.';
 ---
 
 <BaseLayout
   title="Motos en Argentina: catálogo con precios y fichas"
-  description="Compará modelos de motos en Argentina por marca, tipo, motor, cilindrada y presupuesto, con fichas técnicas y precios de referencia con fecha."
+  description={description}
   path={paths.catalog}
+  jsonLd={modelListingLd({ name: 'Motos en Argentina', description, path: paths.catalog, crumbs, models: motos })}
 >
   <div class="wrap">
     <PageHeader
@@ -180,6 +186,22 @@ const total = motos.length;
         </div>
       </section>
     </form>
+
+    <section class="section" aria-labelledby="explorar-tipos">
+      <div class="section-heading">
+        <div>
+          <h2 id="explorar-tipos">Explorá por tipo, cilindrada y precio</h2>
+          <p>Listados con tabla comparativa y preguntas frecuentes.</p>
+        </div>
+      </div>
+      <ul class="related-links">
+        {hubs.map((hub) => (
+          <li><a class="link-arrow" href={hub.path}>{hub.h1} <Icon name="arrow" size={16} /></a></li>
+        ))}
+        <li><a class="link-arrow" href={paths.electric}>Motos eléctricas en Argentina <Icon name="arrow" size={16} /></a></li>
+        <li><a class="link-arrow" href={paths.prices}>Precios de motos en Argentina <Icon name="arrow" size={16} /></a></li>
+      </ul>
+    </section>
   </div>
 </BaseLayout>
 <script>

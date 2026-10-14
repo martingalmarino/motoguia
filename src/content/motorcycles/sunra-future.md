@@ -85,7 +85,7 @@ accessoryCategoryIds:
 rankingReportNames: []
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
-seoTitle: SUNRA Future eléctrica Argentina
+seoTitle: "SUNRA Future eléctrica: autonomía, batería y ficha técnica"
 seoDescription: "SUNRA Future: moto eléctrica de 3.000 W con batería NCM de 72 V y 50 Ah, 80 km/h y hasta 150 km declarados a 40 km/h. Ficha técnica."
 licenceHint: "Con 3 kW declarados, corresponde la clase A 1.1 (hasta 4 kW) si es la potencia continua nominal. Verificá la cédula."
 warranty: null
