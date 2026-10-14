@@ -63,18 +63,18 @@ fuel:
     - honda-wave-pdf
 electric: null
 editorial:
-  summary: "Es la cub más patentada del año en Argentina, con lista oficial y dos versiones locales. Honda no publica la potencia: en esta ficha ese casillero queda vacío."
+  summary: "Una cub de 109 cc para el uso urbano, con CBS y dos versiones de freno delantero: tambor o disco."
   suitableFor:
     - Quien busca una primera moto urbana y una red de service amplia
     - Trámites, delivery liviano o el ida y vuelta al trabajo en ciudad
-    - Quien prefiere un precio de lista antes que cotizar a ciegas
+    - Quien prefiere partir de un precio de lista publicado
   strengths:
     - "Lidera el ranking ACARA enero-agosto 2026, con 59.184 patentamientos: hay volumen de calle y de recambio"
     - CBS declarado y dos frenos a elección, tambor o disco de 220 mm
     - Garantía Honda de 36 meses o 36.000 km, de las más largas del recorte 110
   limitations:
-    - Honda no informa potencia ni consumo; no se completan con cifras de otros mercados
-    - La fila WAVE 110S CD de ACARA queda afuera y no se suma a este recuento
+    - "Honda no informa potencia ni consumo"
+    - "La Cast Disc figura aparte en el ranking (WAVE 110S CD) y esas unidades no se suman a este recuento"
   ownershipNotes: El precio de lista del 18 de septiembre de 2026 no aclara si incluye patentamiento, flete o accesorios. Pedilo por escrito en el concesionario.
 images:
   - path: /images/motos/honda-wave-110s.webp
@@ -106,6 +106,15 @@ seoTitle: Honda Wave 110S ficha y precio en Argentina
 seoDescription: "Cómo leer la Honda Wave 110S en Argentina: lista oficial, dos versiones, CBS y el ranking ACARA 2026, con lo que Honda no publica."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV. Verificá la cédula.
 warranty: 36 meses o 36.000 km; batería 12 meses.
+versions:
+  - name: "Tambor"
+    priceARS: 3529707
+    note: "Freno delantero a tambor."
+  - name: "Cast Disc"
+    priceARS: 4020800
+    note: "Disco delantero de 220 mm. Es la versión de la ficha PDF de la que salen tanque, altura de asiento y peso."
+versionNote: "Honda publica precio de lista para las dos versiones. Los datos técnicos de esta ficha provienen de la ficha PDF de la Cast Disc; los frenos se detallan por versión."
+specVersion: Cast Disc
 ---
 
 Si en 2026 alguien te dice “la moto de la ciudad”, en Argentina suele estar hablando de esta. En el informe ACARA/SIOMAA de agosto, la Honda Wave 110S encabeza el acumulado del año con 59.184 patentamientos entre enero y agosto. Eso mide inscripciones, no si te va a resultar cómoda ni cómo anda el taller de tu barrio.

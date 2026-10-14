@@ -1,34 +1,33 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BrandTile from '../../components/catalog/BrandTile.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
 import { paths } from '../../config/site';
 import { getAllBrands, getPublishedMotorcycles } from '../../lib/content/catalog';
-import { formatInteger } from '../../lib/format';
 
 const motos = await getPublishedMotorcycles();
 const brands = getAllBrands()
   .map((brand) => ({ brand, count: motos.filter((moto) => moto.data.brandId === brand.id).length }))
   .filter((item) => item.count > 0);
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.brands, label: 'Marcas' },
+];
 ---
 
-<BaseLayout title="Marcas de motos en Argentina" description="Marcas con ficha publicada en MotoGuía AR. El origen de fábrica se declara solo con fuente." path={paths.brands}>
-  <article class="wrap editorial-article">
+<BaseLayout
+  title="Marcas de motos en Argentina"
+  description="Explorá las marcas de motos con modelos en MotoGuía: Honda, Motomel, Corven, Gilera, Zanella y más, con fichas técnicas y precios de referencia."
+  path={paths.brands}
+>
+  <div class="wrap">
     <PageHeader
-      eyebrow="Directorio"
-      title="Marcas"
-      lede="Solo aparecen marcas con al menos una ficha publicada. El origen de fábrica se declara únicamente con fuente."
+      crumbs={crumbs}
+      title="Marcas de motos"
+      lede="Elegí una marca para ver sus modelos, compararlos y conocer sus características principales."
     />
-    <ul class="guide-list">
-      {
-        brands.map(({ brand, count }) => (
-          <li>
-            <a class="card" href={`${paths.brands}${brand.slug}/`}>
-              {brand.name}
-              <span>{formatInteger(count)} ficha{count === 1 ? '' : 's'}</span>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </article>
+    <div class="brand-directory">
+      {brands.map(({ brand, count }) => <BrandTile brand={brand} count={count} />)}
+    </div>
+  </div>
 </BaseLayout>

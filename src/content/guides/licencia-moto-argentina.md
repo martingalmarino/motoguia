@@ -1,6 +1,6 @@
 ---
 title: Cómo sacar la licencia de moto en Argentina
-description: Clases A 1.1 a A 1.4, edades y antigüedad previa según la ANSV, con el recorte que importa para cub, 150 y eléctricas.
+description: "Clases A 1.1 a A 1.4, edades y antigüedad previa según la ANSV, y cuál corresponde para una cub, una 150 o una eléctrica."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published
@@ -16,7 +16,7 @@ relatedModelIds:
 relatedArticleIds:
   - primera-moto-argentina
 seoTitle: Licencia de moto en Argentina clases y pasos
-seoDescription: Clases A 1.1 a A 1.4 de la Licencia Nacional, umbrales en cm³ y kW, y qué no resuelve esta guía.
+seoDescription: "Clases A 1.1 a A 1.4 de la Licencia Nacional de Conducir, límites en cm³ y kW, y pasos para tramitarla."
 ---
 
 La fuente nacional de clases es la [ANSV](https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases), página modificada el 11/02/2026. Cada municipio o provincia suma turno, curso y costo. Esta guía no reemplaza el trámite local.

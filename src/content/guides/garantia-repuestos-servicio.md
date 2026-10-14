@@ -1,6 +1,6 @@
 ---
 title: Garantía, repuestos y servicio técnico
-description: Qué pedir por escrito antes de comprar una 0 km en Argentina, con los plazos que sí publican las marcas del catálogo.
+description: "Qué pedir por escrito antes de comprar una 0 km en Argentina y qué plazos de garantía publican las marcas del catálogo."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published

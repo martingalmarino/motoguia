@@ -43,16 +43,16 @@ dimensions: null
 fuel: null
 electric: null
 editorial:
-  summary: Sexta en patentamientos 2026, con CBS, USB, LED y baúl en la página del modelo. El resto de la ficha 2026 no se pudo extraer con números confiables.
+  summary: "Cub urbana de Mondial con CBS, iluminación LED, puerto USB y baúl, sexta entre las más patentadas de 2026."
   suitableFor:
     - Uso urbano con baúl, si te alcanza el ranking como señal de recambio y no pedís una ficha completa
   strengths:
     - "22.537 patentamientos en el acumulado ACARA 2026: sexto modelo del año"
     - CBS declarado en la página LD 110 Max AD
   limitations:
-    - Cilindrada, potencia, peso y tanque no están en un texto verificable
-    - Sin precio de lista hallado
-  ownershipNotes: CADECOM etiqueta el modelo como Ld 110 Max-ad en agosto. No se fusionan informes. El “110” del nombre no reemplaza una cilindrada medida.
+    - "La página consultada no informa cilindrada, potencia, peso ni tanque"
+    - "Mondial no publica precio de lista"
+  ownershipNotes: "Pedí la ficha completa en el concesionario para confirmar cilindrada, peso y tanque antes de comprar."
 images:
   - path: /images/motos/mondial-ld-110-max.jpg
     alt: Mondial LD 110 MAX gris, foto de catálogo de Mondial Argentina

@@ -2,9 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/editorial/Breadcrumbs.astro';
 import SourceList from '../../components/editorial/SourceList.astro';
+import ArticleToc from '../../components/editorial/ArticleToc.astro';
+import MotorcycleCard from '../../components/catalog/MotorcycleCard.astro';
 import AdSlot from '../../components/monetization/AdSlot.astro';
 import { paths } from '../../config/site';
-import { getPublishedGuides, render } from '../../lib/content/catalog';
+import { getPublishedGuides, getPublishedMotorcycles, render } from '../../lib/content/catalog';
 import { formatDate, isoDate } from '../../lib/format';
 import { articleLd, breadcrumbLd } from '../../lib/seo/jsonld';
 
@@ -14,13 +16,18 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 const path = `${paths.guides}${entry.id}/`;
 const crumbs = [
   { href: paths.home, label: 'Inicio' },
   { href: paths.guides, label: 'Guías' },
   { href: path, label: entry.data.title },
 ];
+const motos = await getPublishedMotorcycles();
+const related = entry.data.relatedModelIds
+  .map((id) => motos.find((moto) => moto.data.id === id))
+  .filter((moto): moto is (typeof motos)[number] => Boolean(moto))
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -39,14 +46,42 @@ const crumbs = [
     }),
   ]}
 >
-  <article class="wrap prose editorial-article">
-    <Breadcrumbs items={crumbs} />
-    <p class="eyebrow">Guía</p>
-    <p class="muted">{entry.data.author} · publicado {formatDate(entry.data.publishedAt)} · revisado {formatDate(entry.data.reviewedAt)}</p>
-    <h1>{entry.data.title}</h1>
-    <p class="lede">{entry.data.description}</p>
-    <AdSlot slot="article" />
-    <Content />
-    <SourceList ids={entry.data.sourceIds} />
-  </article>
+  <div class="wrap">
+    <div class="article-layout">
+      <article class="article">
+        <header class="article-header">
+          <Breadcrumbs items={crumbs} />
+          <p class="eyebrow">Guía</p>
+          <h1>{entry.data.title}</h1>
+          <p class="lede">{entry.data.description}</p>
+          <p class="article-meta">
+            {entry.data.author} · Actualizada el <time datetime={isoDate(entry.data.reviewedAt)}>{formatDate(entry.data.reviewedAt)}</time>
+          </p>
+        </header>
+        <AdSlot slot="article" />
+        <div class="prose">
+          <Content />
+        </div>
+        <SourceList ids={entry.data.sourceIds} />
+      </article>
+      <ArticleToc headings={headings} title="En esta guía" />
+    </div>
+
+    {
+      related.length > 0 && (
+        <section class="section" aria-labelledby="guia-motos">
+          <div class="section-heading">
+            <div>
+              <h2 id="guia-motos">Motos mencionadas en esta guía</h2>
+            </div>
+          </div>
+          <div class="card-grid card-grid--3">
+            {related.map((moto) => (
+              <MotorcycleCard entry={moto} />
+            ))}
+          </div>
+        </section>
+      )
+    }
+  </div>
 </BaseLayout>

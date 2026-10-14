@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
 import { paths } from '../../config/site';
 import { getPublishedMotorcycles } from '../../lib/content/catalog';
 import { displayName } from '../../lib/content/present';
@@ -7,52 +8,112 @@ import { displayName } from '../../lib/content/present';
 const motos = (await getPublishedMotorcycles()).filter(
   (entry) => entry.data.engineType === 'combustion' && entry.data.fuel?.consumptionL100km,
 );
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.tools, label: 'Herramientas' },
+  { href: paths.fuel, label: 'Combustible' },
+];
 ---
 
-<BaseLayout title="Calculadora de combustible para moto" description="Calculá litros y pesos de nafta con tus kilómetros y el precio que cargues. Un ejemplo no es el precio actual." path={paths.fuel}>
-  <article class="wrap prose editorial-article">
-    <p class="eyebrow">Herramientas</p>
-    <h1>Calculadora de combustible</h1>
-    <p>
-      Fórmula: litros al mes = km del mes × L/100 km / 100. El costo anual es ese mes por 12 a precio constante, no un pronóstico de inflación.
-      Podés cargar km mensuales, o km por día y días de uso: no los dos a la vez.
-    </p>
-    <form class="form-grid card form-card" data-fuel-form>
-      <fieldset>
-        <legend>Kilómetros</legend>
-        <label><input type="radio" name="modo" value="mes" checked /> Km al mes</label>
-        <label><input type="radio" name="modo" value="dia" /> Km por día × días</label>
-        <label>Km al mes <input name="kmMes" inputmode="decimal" /></label>
-        <label>Km por día <input name="kmDia" inputmode="decimal" /></label>
-        <label>Días de uso al mes <input name="dias" inputmode="numeric" /></label>
-      </fieldset>
-      <label>
-        Consumo
-        <select name="unidad">
-          <option value="l100">L/100 km</option>
-          <option value="kml">km/L</option>
-        </select>
-      </label>
-      <label>Valor de consumo <input name="consumo" inputmode="decimal" /></label>
-      <label>
-        Precargar consumo de una ficha (solo si hay fuente)
-        <select name="moto">
-          <option value="">Ninguna</option>
-          {motos.map((entry) => (
-            <option value={entry.data.fuel?.consumptionL100km ?? ''}>{displayName(entry)}</option>
-          ))}
-        </select>
-      </label>
-      <label>Precio del litro (ARS) <input name="precio" inputmode="decimal" placeholder="Ejemplo hipotético: 1500" /></label>
-      <p class="muted">Cualquier cifra de ejemplo es hipotética. No es el precio actual de nafta.</p>
-      <div class="cluster">
-        <button class="btn btn-primary" type="submit">Calcular</button>
-        <button class="btn btn-ghost" type="button" data-example>Cargar ejemplo</button>
-        <button class="btn btn-ghost" type="reset">Reset</button>
-      </div>
-    </form>
-    <p role="status" data-fuel-result></p>
-  </article>
+<BaseLayout
+  title="Calculadora de combustible para moto"
+  description="Calculá cuántos litros y cuánto dinero gastás en nafta por mes según tus kilómetros, el consumo de tu moto y el precio por litro."
+  path={paths.fuel}
+>
+  <div class="wrap">
+    <PageHeader
+      crumbs={crumbs}
+      eyebrow="Herramientas"
+      title="Calculá tu gasto en combustible"
+      lede="Estimá cuánto gastás según tus kilómetros y el precio por litro."
+    />
+
+    <div class="tool-layout">
+      <form class="tool-form" data-fuel-form novalidate>
+        <fieldset>
+          <legend>Tus kilómetros</legend>
+          <div class="choice-row" role="radiogroup" aria-label="Cómo querés cargar los kilómetros">
+            <label class="choice"><input type="radio" name="modo" value="mes" checked /> Por mes</label>
+            <label class="choice"><input type="radio" name="modo" value="dia" /> Por día</label>
+          </div>
+          <div class="field" data-mode="mes">
+            <label for="km-mes">Kilómetros por mes</label>
+            <input id="km-mes" name="kmMes" inputmode="decimal" autocomplete="off" placeholder="Ej.: 800" />
+          </div>
+          <div class="field-row" data-mode="dia" hidden>
+            <div class="field">
+              <label for="km-dia">Kilómetros por día</label>
+              <input id="km-dia" name="kmDia" inputmode="decimal" autocomplete="off" placeholder="Ej.: 30" />
+            </div>
+            <div class="field">
+              <label for="dias">Días de uso por mes</label>
+              <input id="dias" name="dias" inputmode="numeric" autocomplete="off" placeholder="Ej.: 22" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Consumo de la moto</legend>
+          {
+            motos.length > 0 && (
+              <div class="field">
+                <label for="moto-consumo">Usar el consumo de un modelo</label>
+                <select id="moto-consumo" name="moto">
+                  <option value="">Elegí un modelo (opcional)</option>
+                  {motos.map((entry) => (
+                    <option value={entry.data.fuel?.consumptionL100km ?? ''}>{displayName(entry)}</option>
+                  ))}
+                </select>
+                <span class="field__hint">Solo aparecen los modelos con consumo informado por la marca.</span>
+              </div>
+            )
+          }
+          <div class="field-row">
+            <div class="field">
+              <label for="consumo">Consumo</label>
+              <input id="consumo" name="consumo" inputmode="decimal" autocomplete="off" placeholder="Ej.: 2,5" />
+            </div>
+            <div class="field">
+              <label for="unidad">Unidad</label>
+              <select id="unidad" name="unidad">
+                <option value="l100">Litros cada 100 km</option>
+                <option value="kml">Kilómetros por litro</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Precio de la nafta</legend>
+          <div class="field">
+            <label for="precio">Precio por litro (ARS)</label>
+            <input id="precio" name="precio" inputmode="decimal" autocomplete="off" placeholder="Ej.: 1500" />
+            <span class="field__hint">Cargá el precio de tu estación de servicio.</span>
+          </div>
+        </fieldset>
+
+        <div class="tool-form__actions">
+          <button class="btn btn-primary" type="submit">Calcular</button>
+          <button class="btn btn-secondary" type="button" data-example>Cargar un ejemplo</button>
+          <button class="btn btn-ghost" type="reset">Limpiar</button>
+        </div>
+      </form>
+
+      <aside class="tool-result" aria-labelledby="resultado-combustible">
+        <h2 id="resultado-combustible">Tu gasto estimado</h2>
+        <div class="tool-result__output" data-fuel-result role="status" aria-live="polite">
+          <p>Completá tus datos y tocá “Calcular”.</p>
+        </div>
+      </aside>
+    </div>
+
+    <section class="section tool-explainer" aria-labelledby="como-calcula">
+      <h2 id="como-calcula">Cómo se calcula</h2>
+      <p>Litros por mes = kilómetros del mes × consumo en litros cada 100 km ÷ 100. El gasto mensual multiplica esos litros por el precio que cargaste.</p>
+      <p>El gasto anual es el mensual por 12 con el mismo precio por litro: sirve como referencia, no como pronóstico. El ejemplo usa valores ilustrativos, no el precio actual de la nafta.</p>
+      <p>¿Querés sumar seguro, patente y mantenimiento? Usá la calculadora de <a href={paths.monthlyCost}>costo mensual</a>.</p>
+    </section>
+  </div>
 </BaseLayout>
 <script>
   import '../../scripts/fuel';

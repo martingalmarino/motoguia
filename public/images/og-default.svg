@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#F5F7FA"/>
-  <rect width="1200" height="8" fill="#B93816"/>
-  <text x="88" y="268" fill="#17212B" font-size="84" font-family="Georgia, 'Times New Roman', serif" font-weight="700">MotoGuía AR</text>
-  <text x="88" y="338" fill="#526170" font-size="32" font-family="ui-sans-serif, system-ui, sans-serif">Guía editorial para elegir una moto en Argentina</text>
-  <text x="88" y="528" fill="#B93816" font-size="22" font-family="ui-sans-serif, system-ui, sans-serif" letter-spacing="1.2">Fichas · patentamientos ACARA/SIOMAA · calculadoras</text>
+  <rect width="1200" height="630" fill="#123D50"/>
+  <rect x="88" y="150" width="96" height="96" rx="21" fill="#FFFFFF"/>
+  <path d="M112 216V180l24 22.5L160 180v36" fill="none" stroke="#123D50" stroke-width="8.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="112" y="223.5" width="48" height="6" rx="3" fill="#006F9E"/>
+  <text x="88" y="360" fill="#FFFFFF" font-size="84" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="700">MotoGuía AR</text>
+  <text x="88" y="424" fill="#B8CCD6" font-size="34" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif">Encontrá la moto que va con vos.</text>
+  <text x="88" y="540" fill="#7CC4E4" font-size="24" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-weight="600" letter-spacing="1.5">MOTOS · MARCAS · COMPARADOR · HERRAMIENTAS</text>
 </svg>

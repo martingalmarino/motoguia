@@ -1,6 +1,6 @@
 ---
 title: Cómo elegir un casco de moto
-description: Talle, ajuste y criterios verificables. Sin ranking de marcas ni descuentos inventados.
+description: "Talle, forma de cabeza, tipo de casco y certificación: qué mirar antes de comprar."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published
@@ -16,7 +16,7 @@ relatedArticleIds:
 accessoryCategoryIds:
   - helmets
 seoTitle: Cómo elegir un casco de moto
-seoDescription: "Talle, forma de cabeza y certificación: una guía para comprar casco en Argentina sin copy de tienda."
+seoDescription: "Talle, forma de cabeza y certificación: cómo elegir un casco de moto en Argentina."
 ---
 
 Un casco barato que baila vale menos que uno usado en talle correcto. Esta guía no puntúa marcas y no completa homologaciones que no hayas leído en la etiqueta.

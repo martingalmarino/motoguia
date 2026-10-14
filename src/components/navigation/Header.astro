@@ -1,77 +1,131 @@
 ---
+import Icon from '../ui/Icon.astro';
+import Logo from './Logo.astro';
+import SearchForm from '../search/SearchForm.astro';
 import { navItems, paths } from '../../config/site';
+
+const current = Astro.url.pathname;
+const isCurrent = (href: string) => (href === '/' ? current === '/' : current.startsWith(href));
 ---
 
 <header class="site-header">
-  <div class="masthead-bar">
-    <div class="wrap masthead-bar-inner">
-      <span>Guía editorial · Argentina</span>
-      <span>Patentamientos ACARA/SIOMAA</span>
-      <a href={paths.methodology}>Cómo citamos las fuentes</a>
+  <div class="wrap site-header__inner">
+    <a class="site-header__logo" href={paths.home} aria-label="MotoGuía AR, inicio">
+      <Logo />
+    </a>
+
+    <nav class="main-nav" aria-label="Principal">
+      <ul class="main-nav__list">
+        {
+          navItems.map((item, index) =>
+            item.children ? (
+              <li class="main-nav__item has-sub" data-subnav>
+                <a class:list={['main-nav__link', { 'is-current': isCurrent(item.href) }]} href={item.href}>
+                  {item.label}
+                </a>
+                <button
+                  class="main-nav__toggle"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls={`subnav-${index}`}
+                  data-subnav-toggle
+                >
+                  <span class="visually-hidden">Más opciones de {item.label}</span>
+                  <Icon name="chevron" size={16} />
+                </button>
+                <ul class="main-nav__sub" id={`subnav-${index}`}>
+                  {item.children.map((child) => (
+                    <li>
+                      <a href={child.href}>{child.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ) : (
+              <li class="main-nav__item">
+                <a class:list={['main-nav__link', { 'is-current': isCurrent(item.href) }]} href={item.href}>
+                  {item.label}
+                </a>
+              </li>
+            ),
+          )
+        }
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" type="button" data-search-open aria-haspopup="dialog" aria-controls="dialogo-busqueda">
+        <Icon name="search" />
+        <span class="visually-hidden">Buscar motos</span>
+      </button>
+      <a class="header-compare" href={paths.comparator} data-compare-link hidden>
+        <Icon name="compare" />
+        <span class="header-compare__label">Comparador</span>
+        <span class="header-compare__count" data-compare-count aria-label="modelos elegidos">0</span>
+      </a>
+      <button class="icon-btn site-header__menu" type="button" data-drawer-open aria-haspopup="dialog" aria-controls="menu-movil">
+        <Icon name="menu" />
+        <span class="visually-hidden">Abrir menú</span>
+      </button>
     </div>
   </div>
-  <div class="wrap header-inner">
-    <a class="brand" href={paths.home}>
-      <img src="/favicon.svg" width="36" height="36" alt="" />
-      <span class="brand-name">MotoGuía <span>AR</span></span>
-    </a>
-    <form class="header-search" method="get" action={paths.search} role="search">
-      <label class="visually-hidden" for="busqueda-sitio">Buscar marca o modelo</label>
-      <input id="busqueda-sitio" type="search" name="q" placeholder="Wave, GLH, Smash…" />
-      <button class="btn btn-ghost" type="submit">Buscar</button>
-    </form>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-nav-toggle>
-      Menú
-    </button>
-    <nav class="nav" id="menu-principal" data-nav aria-label="Principal">
+</header>
+
+<dialog class="search-dialog" id="dialogo-busqueda" aria-labelledby="dialogo-busqueda-titulo" data-search-dialog>
+  <div class="search-dialog__panel">
+    <div class="search-dialog__head">
+      <h2 id="dialogo-busqueda-titulo" class="search-dialog__title">Buscar motos</h2>
+      <button class="icon-btn icon-btn--light" type="button" data-dialog-close>
+        <Icon name="close" />
+        <span class="visually-hidden">Cerrar búsqueda</span>
+      </button>
+    </div>
+    <SearchForm id="busqueda-dialogo" variant="dialog" />
+    <p class="search-dialog__more">
+      ¿Buscás una guía o una comparativa? <a href={paths.search}>Buscar en todo el sitio</a>
+    </p>
+  </div>
+</dialog>
+
+<dialog class="nav-drawer" id="menu-movil" aria-label="Menú" data-nav-drawer>
+  <div class="nav-drawer__panel">
+    <div class="nav-drawer__head">
+      <Logo />
+      <button class="icon-btn" type="button" data-dialog-close>
+        <Icon name="close" />
+        <span class="visually-hidden">Cerrar menú</span>
+      </button>
+    </div>
+    <nav aria-label="Menú móvil">
       {
-        navItems.map((item) =>
-          'children' in item ? (
-            <div class="nav-group">
-              <a class="nav-top" href={item.href}>
-                {item.label}
-              </a>
-              <div class="nav-panel">
-                {item.children.map((child) => (
-                  <a href={child.href}>{child.label}</a>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <a href={item.href}>{item.label}</a>
-          ),
-        )
+        navItems.map((item) => (
+          <div class="nav-drawer__group">
+            <a class="nav-drawer__link" href={item.href}>
+              {item.label}
+            </a>
+            {item.children && (
+              <ul class="nav-drawer__sub">
+                {item.children
+                  .filter((child) => child.href !== item.href)
+                  .map((child) => (
+                    <li>
+                      <a href={child.href}>{child.label}</a>
+                    </li>
+                  ))}
+              </ul>
+            )}
+          </div>
+        ))
       }
-      <a class="search-entry" href={paths.search}>Buscar</a>
+      <div class="nav-drawer__group">
+        <a class="nav-drawer__link" href={paths.comparator}>
+          Comparador <span class="nav-drawer__count" data-compare-count-drawer hidden></span>
+        </a>
+      </div>
     </nav>
   </div>
-</header>
+</dialog>
+
 <script>
-  const toggle = document.querySelector('[data-nav-toggle]');
-  const nav = document.querySelector('[data-nav]');
-  if (toggle instanceof HTMLButtonElement && nav instanceof HTMLElement) {
-    const setOpen = (open: boolean) => {
-      nav.classList.toggle('is-open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.textContent = open ? 'Cerrar' : 'Menú';
-      document.body.classList.toggle('is-nav-open', open);
-    };
-    const close = () => setOpen(false);
-    toggle.addEventListener('click', (event) => {
-      event.stopPropagation();
-      setOpen(!nav.classList.contains('is-open'));
-    });
-    nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', close);
-    });
-    document.addEventListener('click', (event) => {
-      if (!nav.classList.contains('is-open')) return;
-      const target = event.target;
-      if (target instanceof Node && (nav.contains(target) || toggle.contains(target))) return;
-      close();
-    });
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') close();
-    });
-  }
+  import '../../scripts/site-header';
 </script>

@@ -62,16 +62,16 @@ fuel:
     - gilera-sahel
 electric: null
 editorial:
-  summary: On-off 149 cc de Gilera, con 10,7 Hp y tanque de 8,6 litros en ficha. El precio que ves acá lo cotizó Ámbito, no el sitio de la marca.
+  summary: "Trail de 149 cc y 10,7 HP de Gilera, con caja de 5 marchas y tanque de 8,6 litros."
   suitableFor:
     - Ciudad y ripio liviano, si te cierra una 150 manual sin ABS declarado
   strengths:
     - "Gilera publica potencia, caja de 5 y tanque: 10,7 Hp, 8,6 litros, 120 kg en seco"
     - 5.807 patentamientos en el acumulado ACARA 2026
   limitations:
-    - "El precio no sale del sitio Gilera: Ámbito citó $2.630.000 el 8 de septiembre de 2026"
-    - ABS y CBS no figuran
-  ownershipNotes: "Esa cotización de Ámbito puede estar vieja el día que vayas a comprar. Pedí número fresco y por escrito. Garantía Gilera: 12 meses o 12.000 km."
+    - "El precio de referencia es una cotización publicada por Ámbito el 8 de septiembre de 2026, no un precio de lista de Gilera"
+    - "No informa ABS ni CBS"
+  ownershipNotes: "Una cotización periodística puede cambiar rápido: pedí un precio actualizado y por escrito. Garantía Gilera: 12 meses o 12.000 km."
 images:
   - path: /images/motos/gilera-sahel-150.png
     alt: Gilera Sahel 150 roja, foto de catálogo de Gilera Argentina

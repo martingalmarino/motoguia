@@ -1,0 +1,31 @@
+---
+import { priceReference } from '../../lib/content/present';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'motorcycles'>;
+  size?: 'card' | 'large';
+}
+
+const { entry, size = 'card' } = Astro.props;
+const ref = priceReference(entry);
+---
+
+{
+  ref ? (
+    <div class:list={['price-ref', `price-ref--${size}`]}>
+      <p class="price-ref__amount">
+        {ref.prefix && <span class="price-ref__prefix">{ref.prefix} </span>}
+        {ref.amount}
+      </p>
+      {ref.rangeNote && <p class="price-ref__range">{ref.rangeNote}</p>}
+      <p class="price-ref__date">
+        {ref.typeLabel} al <time datetime={ref.dateIso}>{ref.date}</time>
+      </p>
+    </div>
+  ) : (
+    <div class:list={['price-ref', 'price-ref--empty', `price-ref--${size}`]}>
+      <p class="price-ref__missing">Precio no disponible</p>
+    </div>
+  )
+}

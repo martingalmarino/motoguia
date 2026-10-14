@@ -54,16 +54,16 @@ fuel:
     - keller-crono-full
 electric: null
 editorial:
-  summary: "Cub Keller con ficha FULL 110 completa. No se iguala a la fila ACARA KN110-8: el ranking dice una cosa, el catálogo dice otra."
+  summary: "Cub semiautomática de 110 cc de Keller, con 7 HP declarados y disco hidráulico delantero."
   suitableFor:
     - Uso urbano, si te cierra una 110 semiautomática y cotizás sin lista
   strengths:
     - "La FULL publica potencia, asiento y tanque: 7 HP, 760 mm, 4 litros"
     - Disco hidráulico de 220 mm adelante y 89 kg en seco
   limitations:
-    - No hay cruce documental con KN110-8, la tercera más patentada del año
-    - Sin precio ni garantía en la página revisada
-  ownershipNotes: ACARA lista KELLER KN110-8 con 51.658 unidades en el acumulado. El sitio habla de Crono Classic. No se fusionan. Pedí en el local qué nombre lleva la unidad que estás mirando.
+    - "El ranking ACARA lista una KELLER KN110-8; no hay un documento que la iguale con la Crono Classic"
+    - "La página consultada no informa precio ni garantía"
+  ownershipNotes: "Keller no publica precio en la página consultada: pedí una cotización por escrito y confirmá cómo figura el modelo en la documentación de la unidad."
 images:
   - path: /images/motos/keller-crono-classic-110.jpg
     alt: Keller Crono Classic FULL 110 azul, foto de catálogo de Keller Motos

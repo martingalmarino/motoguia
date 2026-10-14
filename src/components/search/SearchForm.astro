@@ -1,0 +1,31 @@
+---
+import Icon from '../ui/Icon.astro';
+import { paths } from '../../config/site';
+
+interface Props {
+  id: string;
+  label?: string;
+  hideLabel?: boolean;
+  variant?: 'hero' | 'dialog';
+}
+
+const { id, label = '¿Qué moto estás buscando?', hideLabel = false, variant = 'hero' } = Astro.props;
+---
+
+<form class:list={['search-form', `search-form--${variant}`]} method="get" action={paths.catalog} role="search" data-model-search>
+  <label class:list={['search-form__label', { 'visually-hidden': hideLabel }]} for={id}>{label}</label>
+  <div class="search-form__row">
+    <span class="search-form__field">
+      <Icon name="search" />
+      <input
+        id={id}
+        type="search"
+        name="q"
+        autocomplete="off"
+        enterkeyhint="search"
+        placeholder="Buscá por marca o modelo"
+      />
+    </span>
+    <button class="btn btn-primary" type="submit">Buscar motos</button>
+  </div>
+</form>

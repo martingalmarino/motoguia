@@ -62,7 +62,7 @@ fuel:
     - honda-xr150l
 electric: null
 editorial:
-  summary: Trail 150 local, con ABS delantero y el asiento más alto del recorte Honda. Duodécima en el ranking 2026, y la más cara de lista en esta familia.
+  summary: "Trail 150 de fabricación nacional con ABS delantero, caja de 5 marchas y tanque de 12 litros."
   suitableFor:
     - Ciudad más algún camino de tierra liviano, no un enduro
     - Quien quiere ABS delantero en una 150 de producción nacional
@@ -71,9 +71,9 @@ editorial:
     - Precio de lista y origen Argentina en la ficha
     - Tanque de 12 litros y caja de 5
   limitations:
-    - Honda no publica la potencia
-    - "El asiento va a 834 mm: se siente más alta que una cub o una GLH"
-  ownershipNotes: ABS delantero no es ABS integral. Atrás sigue un tambor de 110 mm. El $6.051.456 de lista del 18 de septiembre de 2026 no aclara patentamiento.
+    - "Honda no publica la potencia"
+    - "El asiento está a 834 mm, más alto que en una cub o una GLH"
+  ownershipNotes: "El ABS actúa solo sobre la rueda delantera; atrás lleva freno a tambor de 110 mm. El precio de lista del 18 de septiembre de 2026 no aclara si incluye patentamiento."
 images:
   - path: /images/motos/honda-xr150l.webp
     alt: Honda XR150L roja y negra, foto de catálogo de Honda Motos Argentina

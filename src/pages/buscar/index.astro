@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
 import { getPublishedAccessoryGuides, getPublishedComparisons, getPublishedGuides, getPublishedMotorcycles, motorcycleUrl } from '../../lib/content/catalog';
 import { displayName } from '../../lib/content/present';
@@ -10,28 +12,42 @@ const guides = await getPublishedGuides();
 const comparisons = await getPublishedComparisons();
 const accessories = await getPublishedAccessoryGuides();
 const index = [
-  ...motos.map((entry) => ({ title: displayName(entry), url: motorcycleUrl(entry), summary: entry.data.editorial.summary })),
-  ...guides.map((entry) => ({ title: entry.data.title, url: `${paths.guides}${entry.id}/`, summary: entry.data.description })),
-  ...comparisons.map((entry) => ({ title: entry.data.title, url: `${paths.comparisons}${entry.id}/`, summary: entry.data.description })),
-  ...accessories.map((entry) => ({ title: entry.data.title, url: `${paths.accessories}${entry.id}/`, summary: entry.data.description })),
+  ...motos.map((entry) => ({ type: 'Moto', title: displayName(entry), url: motorcycleUrl(entry), summary: entry.data.editorial.summary })),
+  ...guides.map((entry) => ({ type: 'Guía', title: entry.data.title, url: `${paths.guides}${entry.id}/`, summary: entry.data.description })),
+  ...comparisons.map((entry) => ({ type: 'Comparativa', title: entry.data.title, url: `${paths.comparisons}${entry.id}/`, summary: entry.data.description })),
+  ...accessories.map((entry) => ({ type: 'Accesorios', title: entry.data.title, url: `${paths.accessories}${entry.id}/`, summary: entry.data.description })),
+];
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.search, label: 'Buscar' },
 ];
 ---
 
-<BaseLayout title="Buscar" description="Buscá fichas, guías y comparativas publicadas en MotoGuía AR." path={paths.search} noindex={true}>
-  <article class="wrap editorial-article">
-    <p class="eyebrow">Catálogo y lecturas</p>
-    <h1>Buscar</h1>
-    <p class="lede">Escribí marca, modelo o tema. No distingue mayúsculas ni tildes.</p>
-    <form class="search-inline" data-search-form>
-      <label>
-        Consulta
-        <input type="search" name="q" />
-      </label>
-      <button class="btn btn-primary" type="submit">Buscar</button>
+<BaseLayout title="Buscar en MotoGuía" description="Buscá motos, guías, comparativas y accesorios en MotoGuía AR." path={paths.search} noindex={true}>
+  <div class="wrap">
+    <PageHeader
+      crumbs={crumbs}
+      title="Buscar en MotoGuía"
+      lede="Buscá motos, guías, comparativas y accesorios por marca, modelo o tema."
+    />
+
+    <form class="search-form search-form--page" method="get" action={paths.search} role="search" data-search-form>
+      <label class="search-form__label" for="buscar-q">¿Qué estás buscando?</label>
+      <div class="search-form__row">
+        <span class="search-form__field">
+          <Icon name="search" />
+          <input id="buscar-q" type="search" name="q" autocomplete="off" enterkeyhint="search" placeholder="Ej.: Wave, casco, licencia" />
+        </span>
+        <button class="btn btn-primary" type="submit">Buscar</button>
+      </div>
     </form>
-    <ul data-search-results></ul>
+
+    <section class="section" aria-labelledby="resultados-busqueda">
+      <h2 id="resultados-busqueda" data-search-heading>Contenido destacado</h2>
+      <ul class="search-results" data-search-results></ul>
+    </section>
     <script type="application/json" id="search-index" set:html={jsonLdScript(index)} />
-  </article>
+  </div>
 </BaseLayout>
 <script>
   import '../../scripts/search';

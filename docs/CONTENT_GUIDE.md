@@ -6,8 +6,9 @@
 2. El `id` del frontmatter tiene que coincidir con el nombre de archivo.
 3. `status: published` solo con identidad local verificada, cuerpo editorial, fuentes y fechas reales.
 4. Specs desconocidos: `null`. Nunca 0 para “no sabemos”.
-5. Imagen: silueta local o foto con derechos anotados. Nada de hotlink.
-6. Corré `npm run validate` y `npm run build`.
+5. Imagen: silueta local o foto con derechos anotados. Nada de hotlink. Después corré `python3 scripts/normalize-images.py` para generar la versión sobre fondo blanco (`public/images/motos/stage/*-600.webp` y `*-1200.webp`) que usan tarjetas, fichas y comparador.
+6. Versiones: si la marca publica más de una, cargalas en `versions` (nombre, precio o `null`, nota corta). `versionNote` explica de dónde salen los datos y `specVersion` indica a qué versión corresponde la ficha técnica; se muestra junto a los datos clave.
+7. Corré `npm run validate` y `npm run build`.
 
 ## Ranking
 

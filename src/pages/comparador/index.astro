@@ -1,59 +1,154 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
-import { getPublishedMotorcycles, motorcycleUrl } from '../../lib/content/catalog';
-import { displayName } from '../../lib/content/present';
+import { getAllBrands, getPublishedMotorcycles, motorcycleUrl } from '../../lib/content/catalog';
+import {
+  NOT_INFORMED,
+  categoryLabel,
+  displayName,
+  engineLabel,
+  powerLabel,
+  priceReference,
+  specValue,
+  stageImage,
+} from '../../lib/content/present';
+import { formatInteger } from '../../lib/format';
 
 const motos = await getPublishedMotorcycles();
-const payload = motos.map((entry) => ({
-  id: entry.data.id,
-  name: displayName(entry),
-  href: motorcycleUrl(entry),
-  engineType: entry.data.engineType,
-  category: entry.data.category,
-  displacementCc: entry.data.engine?.displacementCc ?? null,
-  power: entry.data.engine?.declaredPowerOriginalValue ?? entry.data.electric?.nominalPowerKw ?? null,
-  powerUnit: entry.data.engine?.declaredPowerOriginalUnit ?? (entry.data.electric ? 'kW' : null),
-  transmission: entry.data.engine?.transmission ?? null,
-  brakesFront: entry.data.chassis?.brakesFront ?? null,
-  brakesRear: entry.data.chassis?.brakesRear ?? null,
-  abs: entry.data.chassis?.abs ?? null,
-  cbs: entry.data.chassis?.cbs ?? null,
-  tankLiters: entry.data.fuel?.tankLiters ?? null,
-  seatHeightMm: entry.data.dimensions?.seatHeightMm ?? null,
-  weightKg: entry.data.dimensions?.weightKg ?? null,
-  weightBasis: entry.data.dimensions?.weightBasis ?? null,
-  rangeKm: entry.data.electric?.declaredRangeKm ?? null,
-  priceMin: entry.data.price?.minARS ?? null,
-}));
+const num = (value: number | null | undefined, unit: string) =>
+  value === null || value === undefined ? NOT_INFORMED : `${value.toLocaleString('es-AR', { maximumFractionDigits: 2 })} ${unit}`;
+
+const rowLabels = [
+  ['price', 'Precio de referencia'],
+  ['category', 'Tipo'],
+  ['engine', 'Motor'],
+  ['cc', 'Cilindrada'],
+  ['power', 'Potencia'],
+  ['transmission', 'Transmisión'],
+  ['brakesFront', 'Freno delantero'],
+  ['brakesRear', 'Freno trasero'],
+  ['abs', 'ABS'],
+  ['cbs', 'CBS'],
+  ['tank', 'Tanque'],
+  ['seat', 'Altura de asiento'],
+  ['weight', 'Peso'],
+  ['range', 'Autonomía declarada'],
+  ['battery', 'Batería'],
+] as const;
+
+const payload = motos.map((entry) => {
+  const d = entry.data;
+  const image = stageImage(entry);
+  const price = priceReference(entry);
+  const isElectric = d.engineType === 'electric';
+  const rows: Record<string, string> = {
+    price: price ? `${price.prefix ? `${price.prefix} ` : ''}${price.amount}` : 'Precio no disponible',
+    category: categoryLabel(d.category),
+    engine: engineLabel(d.engineType),
+    cc: isElectric ? 'No aplica' : num(d.engine?.displacementCc, 'cc'),
+    power: isElectric ? num(d.electric?.nominalPowerKw, 'kW nominal') : powerLabel(entry),
+    transmission: specValue(d.engine?.transmission),
+    brakesFront: specValue(d.chassis?.brakesFront),
+    brakesRear: specValue(d.chassis?.brakesRear),
+    abs: specValue(d.chassis?.abs),
+    cbs: specValue(d.chassis?.cbs),
+    tank: isElectric ? 'No aplica' : num(d.fuel?.tankLiters, 'l'),
+    seat: d.dimensions?.seatHeightMm ? `${formatInteger(d.dimensions.seatHeightMm)} mm` : NOT_INFORMED,
+    weight: d.dimensions?.weightKg ? `${formatInteger(d.dimensions.weightKg)} kg` : NOT_INFORMED,
+    range: isElectric ? num(d.electric?.declaredRangeKm, 'km') : 'No aplica',
+    battery: isElectric
+      ? d.electric?.voltageV && d.electric.capacityAh
+        ? `${formatInteger(d.electric.voltageV)} V · ${formatInteger(d.electric.capacityAh)} Ah`
+        : NOT_INFORMED
+      : 'No aplica',
+  };
+  const notes: Record<string, string> = {};
+  if (price) notes.price = `${price.typeLabel} al ${price.date}`;
+  if (d.dimensions?.weightKg && d.dimensions.weightBasis) notes.weight = d.dimensions.weightBasis;
+  return {
+    id: d.id,
+    brandId: d.brandId,
+    name: displayName(entry),
+    href: motorcycleUrl(entry),
+    image: { src: image.src, alt: image.alt },
+    rows,
+    notes,
+  };
+});
+
+const groups = getAllBrands()
+  .map((brand) => ({ brand, items: payload.filter((item) => item.brandId === brand.id) }))
+  .filter((group) => group.items.length > 0);
+
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.comparator, label: 'Comparador' },
+];
 ---
 
-<BaseLayout title="Comparador de motos" description="Compará dos o tres fichas publicadas, lado a lado." path={paths.comparator} noindex={true}>
-  <article class="wrap editorial-article">
-    <p class="eyebrow">Herramientas</p>
-    <h1>Comparador</h1>
-    <p class="lede">
-      Elegí dos o tres modelos distintos del catálogo. Los campos vacíos se muestran como no informados; nunca como cero.
-      Más cilindrada o más potencia no se etiquetan como “mejor”.
-    </p>
-    <form class="form-grid card form-card" data-compare-form>
-      <label>
-        Modelo
-        <select name="modelo">
-          <option value="">Elegí una ficha</option>
-          {payload.map((item) => <option value={item.id}>{item.name}</option>)}
+<BaseLayout
+  title="Comparador de motos"
+  description="Elegí hasta tres motos y compará precio de referencia, motor, frenos, peso y autonomía lado a lado."
+  path={paths.comparator}
+  noindex={true}
+>
+  <div class="wrap">
+    <PageHeader
+      crumbs={crumbs}
+      eyebrow="Herramientas"
+      title="Comparador de motos"
+      lede="Compará las características de hasta 3 motos. Marcamos las filas donde los datos son distintos."
+    />
+
+    <form class="comparator-picker" data-compare-form>
+      <label class="search-form__label" for="comparador-modelo">Agregar una moto</label>
+      <div class="comparator-picker__row">
+        <select id="comparador-modelo" name="modelo">
+          <option value="">Elegí un modelo</option>
+          {
+            groups.map((group) => (
+              <optgroup label={group.brand.name}>
+                {group.items.map((item) => (
+                  <option value={item.id}>{item.name}</option>
+                ))}
+              </optgroup>
+            ))
+          }
         </select>
-      </label>
-      <button class="btn btn-primary" type="submit">Agregar</button>
+        <button class="btn btn-primary" type="submit"><Icon name="plus" size={18} /> Agregar</button>
+      </div>
+      <p class="comparator-error" data-compare-error role="alert" hidden></p>
+      <p class="field__hint" data-compare-status>Podés comparar hasta 3 motos.</p>
     </form>
-    <p data-compare-error class="muted" hidden></p>
-    <div class="cluster" data-chips></div>
-    <p class="muted">En el teléfono, la tabla se desplaza de costado. La primera columna queda fija.</p>
-    <div class="compare-scroll">
-      <table class="compare-table" data-compare-table></table>
-    </div>
-    <script type="application/json" id="compare-data" set:html={JSON.stringify(payload)} />
-  </article>
+
+    <section class="section" aria-labelledby="comparacion-titulo">
+      <div class="section-heading">
+        <div>
+          <h2 id="comparacion-titulo">Tu comparación</h2>
+        </div>
+        <label class="choice" data-diff-toggle hidden>
+          <input type="checkbox" data-only-diff />
+          Mostrar solo diferencias
+        </label>
+      </div>
+
+      <div class="comparator-empty" data-compare-empty>
+        <Icon name="compare" size={28} />
+        <p><strong>Todavía no elegiste motos para comparar.</strong></p>
+        <p class="muted">Agregalas desde el selector o con el botón “Comparar” de cada moto en el catálogo.</p>
+        <a class="btn btn-secondary btn-sm" href={paths.catalog}>Ir al catálogo</a>
+      </div>
+
+      <div class="table-region" data-compare-region role="region" aria-labelledby="comparacion-titulo" tabindex="0" hidden>
+        <table class="data-table compare-table" data-compare-table></table>
+      </div>
+      <p class="muted compare-hint" data-compare-hint hidden>En pantallas chicas, deslizá la tabla hacia los costados. La primera columna queda fija.</p>
+    </section>
+
+    <script type="application/json" id="compare-data" set:html={JSON.stringify({ rows: rowLabels, models: payload })} />
+  </div>
 </BaseLayout>
 <script>
   import '../../scripts/comparator';

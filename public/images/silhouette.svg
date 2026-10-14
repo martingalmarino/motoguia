@@ -21,6 +21,6 @@
   </g>
   <circle cx="318" cy="332" r="5" fill="#17212B"/>
   <circle cx="662" cy="332" r="5" fill="#17212B"/>
-  <path d="M430 244c28-14 72-16 96 4" fill="#B93816" opacity=".35"/>
+  <path d="M430 244c28-14 72-16 96 4" fill="#006F9E" opacity=".35"/>
   <text x="480" y="68" text-anchor="middle" fill="#526170" font-family="ui-sans-serif, system-ui, sans-serif" font-size="14" letter-spacing="2.4">IMAGEN DE REFERENCIA</text>
 </svg>

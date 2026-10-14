@@ -1,6 +1,6 @@
 ---
 title: SIAM N4 vs Motomel StratoE
-description: Dos eléctricas urbanas a la venta en Argentina. Una publica 50 km; la otra, no publica autonomía.
+description: "Dos motos eléctricas urbanas que se venden en Argentina. SIAM informa 50 km de autonomía; Motomel no publica ese dato."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published
@@ -21,7 +21,7 @@ modelIds:
   - siam-n4
   - motomel-stratoe
 seoTitle: SIAM N4 vs Motomel StratoE
-seoDescription: Potencia, batería y autonomía declarada —o ausente— entre N4 y StratoE.
+seoDescription: "Potencia, batería y autonomía declarada de la SIAM N4 y la Motomel StratoE, lado a lado."
 ---
 
 N4 declara motor Yadea 1800 W, 50 km sin ciclo y batería extraíble. StratoE declara 2000 W, 60 V 20 Ah extraíble y **no** publica km. Tratar a StratoE como “más autonomía porque tiene más watts” sería invento.

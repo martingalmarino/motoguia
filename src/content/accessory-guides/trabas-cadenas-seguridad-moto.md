@@ -1,6 +1,6 @@
 ---
 title: Trabas, cadenas y accesorios de seguridad
-description: Cómo comparar trabas y cadenas sin creer en el mito de la traba inviolable.
+description: "Cómo comparar trabas, cadenas y otros accesorios de seguridad para tu moto."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published
@@ -17,7 +17,7 @@ relatedArticleIds:
 accessoryCategoryIds:
   - security
 seoTitle: Trabas y cadenas para moto
-seoDescription: Anclaje, espesor y límites reales de trabas y cadenas para moto en Argentina.
+seoDescription: "Anclaje, espesor y uso de trabas y cadenas para moto en Argentina."
 ---
 
 Ninguna traba “a prueba de ladrones”. El objetivo es sumar tiempo y ruido, y no dejar la cub 110 atada a un palo de lona.

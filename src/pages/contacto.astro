@@ -1,23 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/editorial/PageHeader.astro';
 import { contactEmail, paths, site } from '../config/site';
+
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.contact, label: 'Contacto' },
+];
 ---
 
-<BaseLayout title="Contacto" description="Cómo escribir a la redacción de MotoGuía AR." path={paths.contact}>
-  <article class="wrap prose editorial-article">
-    <p class="eyebrow">Redacción</p>
-    <h1>Contacto</h1>
-    {
-      contactEmail ? (
-        <p>
-          Escribinos a <a href={`mailto:${contactEmail}?subject=${encodeURIComponent('Corrección MotoGuía AR')}`}>{contactEmail}</a>.
-        </p>
-      ) : (
-        <p>
-          Recibimos correcciones de fichas, ranking y enlaces. El correo de redacción se publica en esta página.
-        </p>
-      )
-    }
-    <p>{site.editorLabel} no intermedia compras ni patentamientos.</p>
-  </article>
+<BaseLayout title="Contacto" description="Cómo escribir a la redacción de MotoGuía AR para enviar correcciones o consultas." path={paths.contact}>
+  <div class="wrap">
+    <PageHeader
+      crumbs={crumbs}
+      eyebrow="Sobre MotoGuía"
+      title="Contacto"
+      lede="Recibimos correcciones de fichas, rankings y enlaces, y consultas sobre el sitio."
+    />
+    <div class="prose page-body">
+      {
+        contactEmail ? (
+          <p>
+            Escribinos a <a href={`mailto:${contactEmail}?subject=${encodeURIComponent('Consulta MotoGuía AR')}`}>{contactEmail}</a>.
+          </p>
+        ) : (
+          <p>Pronto vamos a publicar acá el correo de la redacción.</p>
+        )
+      }
+      <p>{site.editorLabel} no intermedia compras ni patentamientos: para comprar una moto, consultá con un concesionario oficial de la marca.</p>
+    </div>
+  </div>
 </BaseLayout>

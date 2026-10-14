@@ -112,7 +112,10 @@ export const paths = {
   affiliates: '/afiliados/',
 } as const;
 
-export const navItems = [
+export type NavLink = { href: string; label: string };
+export type NavItem = NavLink & { children?: NavLink[] };
+
+export const navItems: NavItem[] = [
   {
     label: 'Motos',
     href: paths.catalog,
@@ -121,55 +124,54 @@ export const navItems = [
       { href: paths.ranking, label: 'Más vendidas' },
       { href: paths.chinese, label: 'Motos chinas' },
       { href: paths.electric, label: 'Motos eléctricas' },
-      { href: paths.brands, label: 'Marcas' },
     ],
   },
-  {
-    label: 'Comparativas',
-    href: paths.comparisons,
-    children: [
-      { href: paths.comparisons, label: 'Comparativas editoriales' },
-      { href: paths.comparator, label: 'Comparador' },
-    ],
-  },
+  { label: 'Marcas', href: paths.brands },
+  { label: 'Comparativas', href: paths.comparisons },
   { label: 'Herramientas', href: paths.tools },
-  { label: 'Guías', href: paths.guides },
-  { label: 'Accesorios', href: paths.accessories },
-] as const;
+  {
+    label: 'Guías',
+    href: paths.guides,
+    children: [
+      { href: paths.guides, label: 'Guías de compra' },
+      { href: paths.accessories, label: 'Equipamiento y accesorios' },
+    ],
+  },
+];
 
-export const footerGroups = [
+export const footerGroups: { title: string; links: NavLink[] }[] = [
   {
     title: 'Motos',
     links: [
       { href: paths.catalog, label: 'Catálogo' },
-      { href: paths.ranking2026, label: 'Ranking 2026' },
+      { href: paths.brands, label: 'Marcas' },
+      { href: paths.ranking2026, label: 'Más vendidas 2026' },
       { href: paths.chinese, label: 'Motos chinas' },
       { href: paths.electric, label: 'Motos eléctricas' },
-      { href: paths.brands, label: 'Marcas' },
     ],
   },
   {
-    title: 'Herramientas',
+    title: 'Comparar y calcular',
     links: [
       { href: paths.comparator, label: 'Comparador' },
-      { href: paths.fuel, label: 'Calculadora de combustible' },
-      { href: paths.monthlyCost, label: 'Costo mensual' },
-      { href: paths.search, label: 'Buscar' },
-    ],
-  },
-  {
-    title: 'Editorial',
-    links: [
-      { href: paths.guides, label: 'Guías' },
       { href: paths.comparisons, label: 'Comparativas' },
-      { href: paths.accessories, label: 'Accesorios' },
-      { href: paths.methodology, label: 'Metodología' },
+      { href: paths.fuel, label: 'Gasto en combustible' },
+      { href: paths.monthlyCost, label: 'Costo mensual' },
     ],
   },
   {
-    title: 'Sitio',
+    title: 'Guías y equipamiento',
+    links: [
+      { href: paths.guides, label: 'Guías de compra' },
+      { href: paths.accessories, label: 'Accesorios' },
+      { href: paths.search, label: 'Buscar en el sitio' },
+    ],
+  },
+  {
+    title: 'Información',
     links: [
       { href: paths.about, label: 'Sobre nosotros' },
+      { href: paths.methodology, label: 'Metodología y fuentes' },
       { href: paths.contact, label: 'Contacto' },
       { href: paths.privacy, label: 'Privacidad' },
       { href: paths.cookies, label: 'Cookies' },
@@ -177,7 +179,7 @@ export const footerGroups = [
       { href: paths.affiliates, label: 'Afiliados' },
     ],
   },
-] as const;
+];
 
 export function motorcyclePath(brandSlug: string, modelSlug: string): string {
   return `/motos/${brandSlug}/${modelSlug}/`;

@@ -1,0 +1,85 @@
+---
+import Icon from '../ui/Icon.astro';
+import PriceReference from './PriceReference.astro';
+import { getBrand, motorcycleUrl } from '../../lib/content/catalog';
+import { cardSpecLine, categoryLabel, displayName, engineLabel, stageImage } from '../../lib/content/present';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'motorcycles'>;
+  showBrand?: boolean;
+  headingLevel?: 'h2' | 'h3';
+  eager?: boolean;
+}
+
+const { entry, showBrand = true, headingLevel = 'h3', eager = false } = Astro.props;
+const brand = getBrand(entry.data.brandId);
+const href = motorcycleUrl(entry);
+const image = stageImage(entry);
+const name = displayName(entry);
+const Heading = headingLevel;
+const searchText = [
+  brand?.name,
+  entry.data.name,
+  entry.data.variant,
+  entry.data.id,
+  entry.data.brandId,
+  categoryLabel(entry.data.category),
+  engineLabel(entry.data.engineType),
+  entry.data.category,
+  entry.data.engineType,
+]
+  .filter(Boolean)
+  .join(' ');
+---
+
+<article
+  class="moto-card"
+  data-moto-card
+  data-id={entry.data.id}
+  data-brand={entry.data.brandId}
+  data-category={entry.data.category}
+  data-engine={entry.data.engineType}
+  data-cc={entry.data.engine?.displacementCc ?? ''}
+  data-price={entry.data.price?.minARS ?? ''}
+  data-name={name}
+  data-search={searchText}
+>
+  <a class="moto-card__media" href={href} tabindex="-1" aria-hidden="true">
+    <img
+      src={image.src}
+      srcset={image.srcset ?? undefined}
+      sizes="(min-width: 1200px) 300px, (min-width: 640px) 45vw, 92vw"
+      alt=""
+      width="600"
+      height="450"
+      loading={eager ? 'eager' : 'lazy'}
+      decoding="async"
+    />
+  </a>
+  <div class="moto-card__body">
+    {showBrand && brand && <p class="moto-card__brand">{brand.name}</p>}
+    <Heading class="moto-card__title">
+      <a href={href}>{entry.data.name}</a>
+    </Heading>
+    <p class="moto-card__spec">{cardSpecLine(entry)}</p>
+    <PriceReference entry={entry} size="card" />
+    <div class="moto-card__actions">
+      <a class="btn btn-primary btn-sm" href={href}>
+        Ver moto<span class="visually-hidden">: {name}</span>
+      </a>
+      <button
+        class="compare-toggle"
+        type="button"
+        data-compare={entry.data.id}
+        data-compare-name={name}
+        aria-pressed="false"
+      >
+        <span class="compare-toggle__off"><Icon name="plus" size={18} /></span>
+        <span class="compare-toggle__on"><Icon name="check" size={18} /></span>
+        <span data-compare-label>Comparar</span>
+        <span class="visually-hidden">{name}</span>
+      </button>
+    </div>
+  </div>
+</article>

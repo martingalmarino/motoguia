@@ -1,19 +1,42 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/editorial/PageHeader.astro';
 import { paths } from '../config/site';
+
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.methodology, label: 'Metodología' },
+];
 ---
 
-<BaseLayout title="Metodología" description="Cómo se eligen ranking, fichas, precios y fechas en MotoGuía AR." path={paths.methodology}>
-  <article class="wrap prose editorial-article">
-    <p class="eyebrow">Confianza</p>
-    <h1>Metodología</h1>
-    <ol>
-      <li>Ranking: informe ACARA/SIOMAA más reciente verificable. Agosto 2026 es el mes cerrado al 18/09/2026. El acumulado y el mes no se mezclan. CADECOM se cita solo como contraste porque agrupa versiones.</li>
-      <li>Fichas: páginas y PDFs de fabricante o importador en Argentina. Si el ranking usa otro nombre (KN110-8, B110), no se cruza sin documento.</li>
-      <li>Precios: lista oficial con fecha de observación. Un precio de nota se etiqueta como cotización. No se completa con “alrededor de”.</li>
-      <li>Un dato ausente no se completa con cero ni se inventa para cerrar la tabla.</li>
-      <li>Las fechas de revisión se actualizan cuando cambia el contenido, no por el paso del calendario.</li>
-    </ol>
-    <p>Si un modelo del ranking no tiene ficha verificada, lo decimos en la tabla. No completamos el top 20 con suposiciones.</p>
-  </article>
+<BaseLayout title="Metodología y fuentes" description="Cómo se arman los rankings, las fichas técnicas y los precios de referencia de MotoGuía AR." path={paths.methodology}>
+  <div class="wrap">
+    <PageHeader
+      crumbs={crumbs}
+      eyebrow="Sobre MotoGuía"
+      title="Metodología y fuentes"
+      lede="Cómo armamos los rankings, las fichas técnicas y los precios de referencia."
+    />
+    <div class="prose page-body">
+      <h2>Rankings de patentamientos</h2>
+      <p>
+        Usamos el informe más reciente de ACARA/SIOMAA que podemos verificar. Agosto de 2026 es el último mes cerrado al 18 de septiembre de 2026. El acumulado del año y el mes se muestran por separado. El boletín de CADECOM se menciona solo como contraste, porque agrupa versiones.
+      </p>
+      <h2>Fichas técnicas</h2>
+      <p>
+        Los datos salen de las páginas y fichas PDF de cada fabricante o importador en Argentina. Cuando el ranking usa un nombre distinto al comercial (por ejemplo, KN110-8 o B110), solo vinculamos ambos si hay un documento que lo respalde.
+      </p>
+      <h2>Precios</h2>
+      <p>
+        Mostramos el precio de lista oficial con la fecha en que lo consultamos. Si el precio sale de una nota o de una cotización, lo indicamos. No redondeamos ni estimamos valores.
+      </p>
+      <h2>Datos faltantes</h2>
+      <p>
+        Si una marca no informa un dato, en la ficha aparece como “No informado”. No lo completamos con cero ni con valores de otra versión. Si un modelo del ranking todavía no tiene ficha en MotoGuía, lo aclaramos en la tabla.
+      </p>
+      <h2>Fechas de revisión</h2>
+      <p>Actualizamos la fecha de revisión cuando cambia el contenido de una página.</p>
+      <p>¿Encontraste un error? <a href={paths.contact}>Escribinos</a>.</p>
+    </div>
+  </div>
 </BaseLayout>

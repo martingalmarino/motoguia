@@ -62,7 +62,7 @@ fuel:
     - honda-navi
 electric: null
 editorial:
-  summary: "Automática de 109 cm³, con CBS y lista oficial. En el ranking 2026 queda 17.ª: no es cub ni scooter de baúl, es el formato Navi."
+  summary: "Moto automática y compacta de 109 cc, con CBS y precio de lista publicado por Honda."
   suitableFor:
     - Quien no quiere cambiar marchas en el semáforo
     - Ciudad, trayectos cortos y una primera moto sin embrague a mano
@@ -73,7 +73,7 @@ editorial:
   limitations:
     - Frenos a tambor adelante y atrás
     - Honda no publica la potencia
-  ownershipNotes: "No la leas como una Wave con baúl ni como un scooter clásico. Honda la vende como Navi: automática, compacta y con lista, sin pretender otra categoría."
+  ownershipNotes: "Es una moto automática compacta: no es una cub ni un scooter con baúl. Honda la ofrece con precio de lista y garantía de 36 meses o 36.000 km."
 images:
   - path: /images/motos/honda-navi.webp
     alt: Honda Navi roja, foto de catálogo de Honda Motos Argentina
@@ -103,6 +103,6 @@ warranty: 36 meses o 36.000 km; batería 12 meses.
 
 La Navi es la Honda para quien quiere olvidarse del embrague. En el acumulado ACARA 2026 suma 6.509 patentamientos y queda 17.ª: hay volumen, pero no el de una Wave. El formato es propio de la marca, a medio camino entre cub y scooter, sin el baúl grande que mucha gente espera al oír “automática”.
 
-La ficha local declara 109 cm³, transmisión V-Matic, tambores de 130 mm adelante y atrás, CBS, tanque de 3,5 litros, asiento a 762 mm y 104 kg en orden de marcha. Otra vez, sin potencia publicada.
+La ficha local declara 109 cm³, transmisión V-Matic, tambores de 130 mm adelante y atrás, CBS, tanque de 3,5 litros, asiento a 762 mm y 104 kg en orden de marcha. Honda no publica la potencia.
 
 El precio de lista observado el 18 de septiembre de 2026 es $3.434.700. Es de las pocas 110 del mercado en las que podés citar un número de fábrica; el patentamiento, como en el resto, no está desglosado.

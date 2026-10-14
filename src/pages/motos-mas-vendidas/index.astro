@@ -1,24 +1,42 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
+import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
+import { getRanking } from '../../lib/content/catalog';
+import { formatDate } from '../../lib/format';
+
+const ytd = await getRanking('2026-ytd');
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.ranking, label: 'Más vendidas' },
+];
 ---
 
-<BaseLayout title="Motos más vendidas en Argentina" description="Ranking de patentamientos ACARA/SIOMAA. El informe 2026 está en su propia página." path={paths.ranking}>
-  <article class="wrap editorial-article">
+<BaseLayout
+  title="Motos más vendidas en Argentina"
+  description="Rankings de patentamientos de motos en Argentina según ACARA/SIOMAA, por año y por mes."
+  path={paths.ranking}
+>
+  <div class="wrap">
     <PageHeader
-      eyebrow="Ranking"
-      title="Motos más vendidas"
-      lede="El ranking vigente es el acumulado enero-agosto 2026 de ACARA/SIOMAA. Agosto está publicado aparte."
+      crumbs={crumbs}
+      eyebrow="Rankings"
+      title="Motos más vendidas en Argentina"
+      lede="Los rankings de MotoGuía se arman con los patentamientos que informa ACARA/SIOMAA. Cada año tiene su propia página, con el acumulado y el último mes publicado."
     />
-    <ul class="guide-list">
-      <li>
-        <a class="card" href={paths.ranking2026}>
-          Ranking 2026 (acumulado y agosto)
-          <span>Patentamientos del universo Total Motos, con metodología a la vista.</span>
+
+    <section class="section" aria-labelledby="rankings-titulo">
+      <h2 id="rankings-titulo" class="visually-hidden">Rankings disponibles</h2>
+      <div class="editorial-cards">
+        <a class="editorial-card" href={paths.ranking2026}>
+          <span class="editorial-card__kicker"><Icon name="tag" size={16} /> Ranking 2026</span>
+          <h3>Motos más patentadas en 2026</h3>
+          <p>Acumulado de enero a agosto y el mes de agosto por separado, con las fichas de cada modelo cuando están en MotoGuía.</p>
+          {ytd && <span class="editorial-card__meta">Datos al {formatDate(ytd.data.periodEnd)}</span>}
         </a>
-      </li>
-    </ul>
-    <p class="muted">Los años anteriores se archivan en su propia ruta cuando exista un informe verificado. No se sobrescribe un año para “verse actual”.</p>
-  </article>
+      </div>
+      <p class="muted">Los rankings de años anteriores se suman en su propia página a medida que se verifican los informes.</p>
+    </section>
+  </div>
 </BaseLayout>

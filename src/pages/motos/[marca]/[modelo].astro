@@ -3,9 +3,14 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/editorial/Breadcrumbs.astro';
 import SourceList from '../../../components/editorial/SourceList.astro';
 import AdSlot from '../../../components/monetization/AdSlot.astro';
+import MotorcycleCard from '../../../components/catalog/MotorcycleCard.astro';
+import PriceReference from '../../../components/catalog/PriceReference.astro';
+import SpecificationGroup, { type SpecRow } from '../../../components/catalog/SpecificationGroup.astro';
+import Icon from '../../../components/ui/Icon.astro';
 import { paths } from '../../../config/site';
 import {
   getBrand,
+  getPublishedGuides,
   getPublishedMotorcycles,
   motorcycleUrl,
   relatedMotorcycles,
@@ -15,13 +20,13 @@ import {
   categoryLabel,
   displayName,
   engineLabel,
+  keyFacts,
   powerLabel,
-  priceLabel,
-  shortPrice,
-  shortSpec,
-  specValue,
+  priceTypeLabel,
+  registrationLabel,
+  stageImage,
 } from '../../../lib/content/present';
-import { formatDate } from '../../../lib/format';
+import { formatArs, formatDate, formatInteger } from '../../../lib/format';
 import { breadcrumbLd } from '../../../lib/seo/jsonld';
 
 export async function getStaticPaths() {
@@ -34,144 +39,364 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const brand = getBrand(entry.data.brandId);
+const d = entry.data;
+const brand = getBrand(d.brandId);
 if (!brand) throw new Error(`Missing brand for ${entry.id}`);
 const { Content } = await render(entry);
 const related = await relatedMotorcycles(entry);
+const guides = (await getPublishedGuides()).filter((guide) => d.relatedGuideIds.includes(guide.id)).slice(0, 3);
 const path = motorcycleUrl(entry);
-const title = displayName(entry);
+const name = displayName(entry);
+const image = stageImage(entry);
+const facts = keyFacts(entry);
+const isElectric = d.engineType === 'electric';
+const hasVersions = d.versions.length > 0 || Boolean(d.versionNote);
 const crumbs = [
   { href: paths.home, label: 'Inicio' },
   { href: paths.catalog, label: 'Motos' },
   { href: `${paths.brands}${brand.slug}/`, label: brand.name },
-  { href: path, label: entry.data.name },
+  { href: path, label: d.name },
+];
+
+const num = (value: number | null | undefined, unit: string) =>
+  value === null || value === undefined ? null : `${value.toLocaleString('es-AR', { maximumFractionDigits: 2 })} ${unit}`;
+const bool = (value: boolean | null | undefined) => (value === null || value === undefined ? null : value ? 'Sí' : 'No');
+
+const motorRows: SpecRow[] = isElectric
+  ? [
+      { label: 'Potencia nominal', value: num(d.electric?.nominalPowerKw, 'kW') },
+      { label: 'Potencia pico', value: num(d.electric?.peakPowerKw, 'kW') },
+      { label: 'Tensión', value: num(d.electric?.voltageV, 'V') },
+      { label: 'Capacidad', value: num(d.electric?.capacityAh, 'Ah') },
+      { label: 'Energía de la batería', value: num(d.electric?.batteryKwh, 'kWh'), note: d.electric?.capacityBasis },
+      { label: 'Química', value: d.electric?.batteryChemistry ?? null },
+      { label: 'Batería extraíble', value: bool(d.electric?.removableBattery) },
+      { label: 'Autonomía declarada', value: num(d.electric?.declaredRangeKm, 'km'), note: d.electric?.rangeConditions },
+      { label: 'Tiempo de carga', value: d.electric?.chargingTimeHours ?? null, note: d.electric?.chargingConditions },
+    ]
+  : [
+      { label: 'Cilindrada', value: num(d.engine?.displacementCc, 'cc') },
+      { label: 'Potencia', value: d.engine?.declaredPowerOriginalValue ? powerLabel(entry) : null },
+      { label: 'Torque', value: num(d.engine?.torqueNm, 'Nm') },
+      { label: 'Refrigeración', value: d.engine?.cooling ?? null },
+      { label: 'Alimentación', value: d.engine?.fuelSystem ?? null },
+      { label: 'Transmisión', value: d.engine?.transmission ?? null },
+      { label: 'Marchas', value: d.engine?.gears ? String(d.engine.gears) : null },
+    ];
+const chassisRows: SpecRow[] = [
+  { label: 'Freno delantero', value: d.chassis?.brakesFront ?? null },
+  { label: 'Freno trasero', value: d.chassis?.brakesRear ?? null },
+  { label: 'ABS', value: bool(d.chassis?.abs) },
+  { label: 'CBS (frenado combinado)', value: bool(d.chassis?.cbs) },
+  { label: 'Suspensión delantera', value: d.chassis?.suspensionFront ?? null },
+  { label: 'Suspensión trasera', value: d.chassis?.suspensionRear ?? null },
+  { label: 'Neumático delantero', value: d.chassis?.tireFront ?? null },
+  { label: 'Neumático trasero', value: d.chassis?.tireRear ?? null },
+];
+const dimensionRows: SpecRow[] = [
+  { label: 'Largo', value: num(d.dimensions?.lengthMm, 'mm') },
+  { label: 'Ancho', value: num(d.dimensions?.widthMm, 'mm') },
+  { label: 'Alto', value: num(d.dimensions?.heightMm, 'mm') },
+  { label: 'Distancia entre ejes', value: num(d.dimensions?.wheelbaseMm, 'mm') },
+  { label: 'Altura de asiento', value: num(d.dimensions?.seatHeightMm, 'mm') },
+  { label: 'Peso', value: num(d.dimensions?.weightKg, 'kg'), note: d.dimensions?.weightBasis },
+];
+const capacityRows: SpecRow[] = isElectric
+  ? []
+  : [
+      { label: 'Tanque', value: num(d.fuel?.tankLiters, 'litros') },
+      { label: 'Consumo declarado', value: num(d.fuel?.consumptionL100km, 'l/100 km'), note: d.fuel?.measurementBasis },
+    ];
+
+const sections = [
+  { id: 'resumen', label: 'Resumen' },
+  { id: 'ficha-tecnica', label: 'Ficha técnica' },
+  ...(hasVersions ? [{ id: 'versiones', label: 'Versiones' }] : []),
+  { id: 'costos', label: 'Costos' },
+  ...(related.length ? [{ id: 'alternativas', label: 'Alternativas' }] : []),
+  { id: 'fuentes', label: 'Fuentes' },
 ];
 const availability =
-  entry.data.availability === 'available'
-    ? `En catálogo local al ${formatDate(entry.data.availabilityCheckedAt)}`
-    : `${entry.data.availability} · ${formatDate(entry.data.availabilityCheckedAt)}`;
+  d.availability === 'available'
+    ? `Figura en el catálogo local de la marca al ${formatDate(d.availabilityCheckedAt)}.`
+    : d.availability === 'discontinued'
+      ? `Discontinuada según la marca al ${formatDate(d.availabilityCheckedAt)}.`
+      : `Disponibilidad sin confirmar al ${formatDate(d.availabilityCheckedAt)}.`;
 ---
 
 <BaseLayout
-  title={entry.data.seoTitle}
-  description={entry.data.seoDescription}
+  title={d.seoTitle}
+  description={d.seoDescription}
   path={path}
   jsonLd={[breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href })))]}
 >
   <article class="wrap">
     <Breadcrumbs items={crumbs} />
-    <p class="eyebrow">{brand.name} · {categoryLabel(entry.data.category)} · {engineLabel(entry.data.engineType)}</p>
-    <h1>{title}{entry.data.variant ? ` · ${entry.data.variant}` : ''}</h1>
-    <p class="lede">{entry.data.editorial.summary}</p>
-    <div class="profile-layout">
-      <div>
-        <div class="card profile-media">
-          <div class:list={['silhouette', { 'is-photo': !entry.data.images[0].path.includes('silhouette') }]}>
-            <img src={entry.data.images[0].path} alt={entry.data.images[0].alt} width="960" height="480" />
-          </div>
+
+    <div class="model-hero">
+      <div class="model-summary model-summary--head">
+        <a class="model-summary__brand" href={`${paths.brands}${brand.slug}/`}>{brand.name}</a>
+        <div class="model-summary__titles">
+          <h1>{name}</h1>
+          {
+            d.variant && (
+              <p class="model-summary__variant">
+                {d.versions.length > 1 ? 'Versiones' : 'Versión'}: <strong>{d.variant}</strong>
+              </p>
+            )
+          }
         </div>
-        <p class="ref-label">{entry.data.images[0].credit}</p>
-        <AdSlot slot="article" />
-        <div class="prose">
-          <Content />
-        </div>
-        <h2>Ficha técnica</h2>
-        <div class="table-wrap">
-          <table>
-            <tbody>
-              {
-                entry.data.engineType === 'combustion' && (
-                  <>
-                    <tr><th colspan="2">Motor</th></tr>
-                    <tr><td>Cilindrada</td><td>{specValue(entry.data.engine?.displacementCc, 'cm³')}</td></tr>
-                    <tr><td>Potencia</td><td>{powerLabel(entry)}</td></tr>
-                    <tr><td>Transmisión</td><td>{specValue(entry.data.engine?.transmission)}</td></tr>
-                    <tr><td>Marchas</td><td>{specValue(entry.data.engine?.gears)}</td></tr>
-                  </>
-                )
-              }
-              {
-                entry.data.engineType === 'electric' && entry.data.electric && (
-                  <>
-                    <tr><th colspan="2">Batería y carga</th></tr>
-                    <tr><td>Potencia nominal</td><td>{specValue(entry.data.electric.nominalPowerKw, 'kW')}</td></tr>
-                    <tr><td>Potencia pico</td><td>{specValue(entry.data.electric.peakPowerKw, 'kW')}</td></tr>
-                    <tr><td>Tensión</td><td>{specValue(entry.data.electric.voltageV, 'V')}</td></tr>
-                    <tr><td>Capacidad</td><td>{specValue(entry.data.electric.capacityAh, 'Ah')}</td></tr>
-                    <tr><td>Autonomía declarada</td><td>{specValue(entry.data.electric.declaredRangeKm, 'km')}</td></tr>
-                    <tr><td>Condiciones</td><td>{specValue(entry.data.electric.rangeConditions)}</td></tr>
-                    <tr><td>Carga</td><td>{specValue(entry.data.electric.chargingTimeHours)}</td></tr>
-                  </>
-                )
-              }
-              <tr><th colspan="2">Chasis</th></tr>
-              <tr><td>Freno delantero</td><td>{specValue(entry.data.chassis?.brakesFront)}</td></tr>
-              <tr><td>Freno trasero</td><td>{specValue(entry.data.chassis?.brakesRear)}</td></tr>
-              <tr><td>ABS</td><td>{specValue(entry.data.chassis?.abs)}</td></tr>
-              <tr><td>CBS</td><td>{specValue(entry.data.chassis?.cbs)}</td></tr>
-              <tr><th colspan="2">Dimensiones</th></tr>
-              <tr><td>Alto de asiento</td><td>{specValue(entry.data.dimensions?.seatHeightMm, 'mm')}</td></tr>
-              <tr><td>Peso</td><td>{entry.data.dimensions?.weightKg ? `${entry.data.dimensions.weightKg} kg (${entry.data.dimensions.weightBasis})` : 'No informado por la fuente'}</td></tr>
-              <tr><td>Tanque</td><td>{specValue(entry.data.fuel?.tankLiters, 'l')}</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <h2>Para quién tiene sentido</h2>
-        <ul>{entry.data.editorial.suitableFor.map((item) => <li>{item}</li>)}</ul>
-        <h2>Qué suma, con fuente</h2>
-        <ul>{entry.data.editorial.strengths.map((item) => <li>{item}</li>)}</ul>
-        <h2>Qué falta o no cierra</h2>
-        <ul>{entry.data.editorial.limitations.map((item) => <li>{item}</li>)}</ul>
-        <h2>Al momento de comprar</h2>
-        <p>{entry.data.editorial.ownershipNotes}</p>
-        {entry.data.warranty && <p><strong>Garantía.</strong> {entry.data.warranty}</p>}
-        {entry.data.licenceHint && <p><strong>Licencia.</strong> {entry.data.licenceHint} <a href={`${paths.guides}licencia-moto-argentina/`}>Guía de clases</a>.</p>}
-        <h2>Alternativas</h2>
-        <ul>
-          {related.map((item) => (
-            <li><a href={motorcycleUrl(item)}>{displayName(item)}</a></li>
-          ))}
-        </ul>
-        <p>Equipamiento: las guías de casco, guantes y trabas no afirman compatibilidad con este modelo.</p>
-        <SourceList ids={entry.data.sourceIds} />
-        <p class="muted">
-          Última revisión sustancial: {formatDate(entry.data.reviewedAt)}.
-          Si hay un error, escribinos en <a href={paths.contact}>contacto</a>.
-        </p>
       </div>
-      <aside class="profile-aside">
-        <div class="card fact-card">
-          <p class="eyebrow">Datos clave</p>
-          <dl class="fact-list">
-            <div>
-              <dt>Precio</dt>
-              <dd>{shortPrice(entry)}</dd>
-            </div>
-            <div>
-              <dt>Motor</dt>
-              <dd>{shortSpec(entry)}</dd>
-            </div>
-            <div>
-              <dt>Categoría</dt>
-              <dd>{categoryLabel(entry.data.category)}</dd>
-            </div>
-            <div>
-              <dt>ABS / CBS</dt>
-              <dd>{specValue(entry.data.chassis?.abs)} / {specValue(entry.data.chassis?.cbs)}</dd>
-            </div>
-            <div>
-              <dt>Disponibilidad</dt>
-              <dd>{availability}</dd>
-            </div>
-          </dl>
-          <p class="muted">{priceLabel(entry)}</p>
-          <p class="muted">Revisión editorial {formatDate(entry.data.reviewedAt)}.</p>
-          <div class="cluster">
-            <a class="btn btn-primary" href={`${paths.comparator}#ids=${entry.data.id}`}>Comparar</a>
-            <a class="btn btn-secondary" href={paths.monthlyCost}>Costo mensual</a>
+
+      <figure class="model-gallery">
+        <div class="model-gallery__stage">
+          <img
+            src={image.src}
+            srcset={image.srcset ?? undefined}
+            sizes="(min-width: 1024px) 720px, 100vw"
+            alt={image.alt}
+            width="1200"
+            height="900"
+            fetchpriority="high"
+          />
+        </div>
+        {image.credit && <figcaption>{image.credit}</figcaption>}
+      </figure>
+
+      <div class="model-summary model-summary--body">
+        <p class="model-summary__lead">{d.editorial.summary}</p>
+        <PriceReference entry={entry} size="large" />
+        {
+          facts.length > 0 && (
+            <dl class="key-facts">
+              {facts.map((fact) => (
+                <div>
+                  <dt>{fact.label}</dt>
+                  <dd>{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          )
+        }
+        {d.specVersion && <p class="key-facts__note">Datos técnicos de la versión {d.specVersion}.</p>}
+        <div class="model-actions">
+          <button
+            class="compare-toggle compare-toggle--large compare-toggle--primary"
+            type="button"
+            data-compare={d.id}
+            data-compare-name={name}
+            data-label-off="Comparar moto"
+            data-label-on="En el comparador"
+            aria-pressed="false"
+          >
+            <span class="compare-toggle__off"><Icon name="compare" size={18} /></span>
+            <span class="compare-toggle__on"><Icon name="check" size={18} /></span>
+            <span data-compare-label>Comparar moto</span>
+          </button>
+          <a class="btn btn-secondary" href={paths.monthlyCost}>Calcular costo mensual</a>
+          <div class="model-actions__links">
+            <a class="link-arrow" href={paths.comparator}>Ir al comparador <Icon name="arrow" size={16} /></a>
+            {
+              brand.website && (
+                <a class="link-arrow" href={brand.website} rel="noopener" target="_blank">
+                  Sitio oficial de {brand.name} <Icon name="external" size={16} />
+                  <span class="visually-hidden">(se abre en otra pestaña)</span>
+                </a>
+              )
+            }
           </div>
         </div>
-      </aside>
+      </div>
+    </div>
+
+    <nav class="anchor-nav" aria-label="Secciones de la ficha">
+      <ul>
+        {sections.map((section) => <li><a href={`#${section.id}`}>{section.label}</a></li>)}
+      </ul>
+    </nav>
+
+    <div class="model-body">
+      <section class="model-section" id="resumen" aria-labelledby="resumen-titulo">
+        <h2 id="resumen-titulo">Lo principal de esta moto</h2>
+        <div class="model-overview">
+          <div class="stack">
+            <div class="prose">
+              <Content />
+            </div>
+            {
+              d.editorial.suitableFor.length > 0 && (
+                <div class="highlights">
+                  <h3>Para quién tiene sentido</h3>
+                  <ul class="highlight-list">
+                    {d.editorial.suitableFor.map((item) => (
+                      <li>
+                        <Icon name="arrow" size={18} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            }
+          </div>
+          <aside class="stack" aria-label="Puntos destacados y consideraciones">
+            <div class="highlights card highlight-card">
+              <h3>Puntos destacados</h3>
+              <ul class="highlight-list">
+                {d.editorial.strengths.slice(0, 3).map((item) => (
+                  <li>
+                    <Icon name="check" size={18} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {
+              d.editorial.limitations.length > 0 && (
+                <div class="highlights card highlight-card consider-list">
+                  <h3>Qué tener en cuenta</h3>
+                  <ul class="highlight-list">
+                    {d.editorial.limitations.map((item) => (
+                      <li>
+                        <Icon name="tag" size={18} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            }
+          </aside>
+        </div>
+      </section>
+
+      <AdSlot slot="article" />
+
+      <section class="model-section" id="ficha-tecnica" aria-labelledby="ficha-titulo">
+        <h2 id="ficha-titulo">Ficha técnica</h2>
+        <div class="spec-groups">
+          <SpecificationGroup title={isElectric ? 'Motor eléctrico y batería' : 'Motor y transmisión'} rows={motorRows} />
+          <SpecificationGroup title="Frenos y chasis" rows={chassisRows} />
+          <SpecificationGroup title="Dimensiones y peso" rows={dimensionRows} />
+          {capacityRows.length > 0 && <SpecificationGroup title="Combustible" rows={capacityRows} />}
+        </div>
+        {d.specVersion && <p class="muted">Datos técnicos de la versión {d.specVersion}. Las diferencias entre versiones se detallan en “Versiones y diferencias”.</p>}
+      </section>
+
+      {
+        hasVersions && (
+          <section class="model-section versions" id="versiones" aria-labelledby="versiones-titulo">
+            <h2 id="versiones-titulo">Versiones y diferencias</h2>
+            {d.versions.length > 0 && (
+              <div class="version-grid">
+                {d.versions.map((version) => (
+                  <div class="version-card">
+                    <h3>{version.name}</h3>
+                    {version.priceARS !== null && d.price ? (
+                      <>
+                        <p class="version-card__price">{formatArs(version.priceARS)}</p>
+                        <p>
+                          {priceTypeLabel(d.price.priceType)} al {formatDate(d.price.observedAt)}
+                        </p>
+                      </>
+                    ) : (
+                      <p>Precio no disponible</p>
+                    )}
+                    {version.note && <p>{version.note}</p>}
+                  </div>
+                ))}
+              </div>
+            )}
+            {d.versionNote && <p class="lede">{d.versionNote}</p>}
+          </section>
+        )
+      }
+
+      <section class="model-section" id="costos" aria-labelledby="costos-titulo">
+        <h2 id="costos-titulo">Costos para tener en cuenta</h2>
+        <div class="cost-panel">
+          <div class="cost-panel__facts">
+            <p>{d.editorial.ownershipNotes}</p>
+            {d.price && !/patentamiento/i.test(d.editorial.ownershipNotes) && <p>{registrationLabel(entry)}</p>}
+            {d.warranty && <p><strong>Garantía:</strong> {d.warranty}</p>}
+            {
+              d.licenceHint && (
+                <p>
+                  <strong>Licencia:</strong> {d.licenceHint}{' '}
+                  <a href={`${paths.guides}licencia-moto-argentina/`}>Qué licencia necesitás</a>
+                </p>
+              )
+            }
+          </div>
+          <div class="cost-panel__actions">
+            <a class="btn btn-primary" href={paths.monthlyCost}>Calcular costo mensual</a>
+            {
+              !isElectric && (
+                <a class="btn btn-secondary" href={paths.fuel}>Calcular gasto en combustible</a>
+              )
+            }
+          </div>
+        </div>
+      </section>
+
+      {
+        related.length > 0 && (
+          <section class="model-section" id="alternativas" aria-labelledby="alternativas-titulo">
+            <div class="section-heading">
+              <div>
+                <h2 id="alternativas-titulo">Otras motos para comparar</h2>
+                <p>Modelos del mismo tipo o de la misma marca.</p>
+              </div>
+              <a class="link-arrow" href={paths.catalog}>Ver catálogo <Icon name="arrow" size={18} /></a>
+            </div>
+            <div class="card-grid card-grid--3">
+              {related.map((item) => <MotorcycleCard entry={item} />)}
+            </div>
+          </section>
+        )
+      }
+
+      {
+        guides.length > 0 && (
+          <section class="model-section" aria-labelledby="guias-titulo">
+            <h2 id="guias-titulo">Para seguir leyendo</h2>
+            <div class="editorial-cards">
+              {guides.map((guide) => (
+                <a class="editorial-card" href={`${paths.guides}${guide.id}/`}>
+                  <span class="editorial-card__kicker">
+                    <Icon name="book" size={16} /> Guía
+                  </span>
+                  <h3>{guide.data.title}</h3>
+                  <p>{guide.data.description}</p>
+                </a>
+              ))}
+            </div>
+          </section>
+        )
+      }
+
+      <section class="model-section source-notes" id="fuentes" aria-labelledby="fuentes-titulo">
+        <h2 id="fuentes-titulo">Fuentes y actualización</h2>
+        <p>
+          Ficha revisada el {formatDate(d.reviewedAt)}.
+          {d.price && ` ${priceTypeLabel(d.price.priceType)} observado el ${formatDate(d.price.observedAt)}.`}
+          {` ${availability}`}
+        </p>
+        <SourceList ids={d.sourceIds} title={null} />
+        <details>
+          <summary>Notas sobre los datos de esta ficha</summary>
+          <ul>
+            <li>{categoryLabel(d.category)} · {engineLabel(d.engineType)}{d.variant ? ` · ${d.variant}` : ''}.</li>
+            {d.dimensions?.weightBasis && d.dimensions.weightKg && <li>Peso: {formatInteger(d.dimensions.weightKg)} kg ({d.dimensions.weightBasis}).</li>}
+            {d.price && <li>{registrationLabel(entry)}</li>}
+            {d.rankingReportNames.length > 0 && <li>Nombre en el informe de patentamientos ACARA/SIOMAA: {d.rankingReportNames.join(', ')}.</li>}
+            <li>Los datos que la marca no publica figuran como “No informado”; no se completan con cifras de otros mercados.</li>
+          </ul>
+        </details>
+        <p class="muted">
+          ¿Encontraste un dato desactualizado? <a href={paths.contact}>Escribinos</a>. Cómo elegimos las fuentes: <a href={paths.methodology}>metodología</a>.
+        </p>
+      </section>
     </div>
   </article>
 </BaseLayout>

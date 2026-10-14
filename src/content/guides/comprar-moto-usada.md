@@ -1,6 +1,6 @@
 ---
 title: Qué revisar antes de comprar una moto usada
-description: Lista práctica para una moto usada en Argentina, sin checklist de taller disfrazado de peritaje.
+description: Qué revisar antes de comprar una moto usada en Argentina, de los papeles al estado mecánico.
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published
@@ -16,7 +16,7 @@ relatedArticleIds:
   - garantia-repuestos-servicio
   - cuanto-cuesta-mantener-moto
 seoTitle: Qué revisar antes de comprar una moto usada
-seoDescription: "Papeles, numeración, fugas y prueba corta: un orden para comprar moto usada en Argentina sin teatro de perito."
+seoDescription: "Papeles, numeración, fugas y prueba corta: qué revisar para comprar una moto usada en Argentina."
 ---
 
 Una usada barata puede salir más cara que una 0 km del ranking si el chasis está soldado o el motor fue “refaccionado” sin factura. Esta lista no reemplaza un mecánico de confianza. Sirve para no llegar a ciegas.

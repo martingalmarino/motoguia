@@ -55,16 +55,16 @@ fuel:
     - zanella-zb-full
 electric: null
 editorial:
-  summary: "Novena del ranking ACARA 2026, con CBS y 107 cm³ en el PDF FULL. En la misma marca conviven dos descripciones de la caja: no se elige una."
+  summary: "Cub de 107 cc de Zanella con CBS, disco delantero y tanque de 3,2 litros en la versión FULL."
   suitableFor:
     - Uso urbano, si te cierra una cub Zanella y cotizás la versión FULL
   strengths:
     - CBS, disco/tambor, tanque de 3,2 litros y 91 kg vacío en el PDF FULL
     - 11.476 patentamientos de la fila ZB 110, aparte de Z3 ST y Z3 FULL
   limitations:
-    - El PDF habla de caja manual y el copy web, de semiautomática
-    - Sin precio de lista hallado
-  ownershipNotes: ACARA separa ZB 110, Z3 ST y Z3 FULL. Esta ficha cubre FULL y no absorbe las otras filas. Pedí en el local cuál es la unidad y cómo está descripta la caja.
+    - "La ficha PDF describe la caja como manual y la web, como semiautomática"
+    - "Zanella no publica precio de lista"
+  ownershipNotes: "El ranking separa ZB 110, Z3 ST y Z3 FULL. Al cotizar, confirmá la versión y cómo está descripta la caja en la documentación de la unidad."
 images:
   - path: /images/motos/zanella-zb-110.png
     alt: Zanella ZB 110 FULL roja, foto de catálogo de Zanella Argentina
@@ -97,4 +97,4 @@ La ZB 110 es la cub Zanella de volumen: 11.476 patentamientos en el acumulado 20
 
 La ficha FULL indica 107 cm³, 6,5 hp, CBS, disco/tambor, tanque de 3,2 litros y 91 kg vacío. El problema no es lo que falta: es lo que se contradice. El PDF describe la caja como manual y el texto web habla de semiautomática. Se deja el conflicto a la vista, sin promediar ni elegir la versión más cómoda.
 
-Si estás por señar una, pedí que te muestren cómo está descripta en el documento de la unidad. En esta guía no se resuelve con un empate técnico.
+Si estás por señar una, pedí que te muestren cómo está descripta en el documento de la unidad.

@@ -54,16 +54,16 @@ fuel:
     - motomel-blitz
 electric: null
 editorial:
-  summary: "Cub comercial Blitz 110, con ficha START bastante completa. No se afirma que sea la fila ACARA MOTOMEL B110: el ranking usa otro nombre."
+  summary: "Cub de 110 cc y 7 HP pensada para el trabajo y la ciudad, con CBS en las versiones con disco delantero."
   suitableFor:
     - Primera moto urbana, si cotizás versión disco o tambor y no esperás lista de fábrica
   strengths:
     - Ficha START con 110 cm³, 7 HP, 3,5 litros y 99 kg vacío
     - CBS en las versiones de disco delantero
   limitations:
-    - Sin documento que iguale Blitz y B110
-    - Sin precio de lista
-  ownershipNotes: "MOTOMEL B110 es la cuarta del ranking 2026, con 38.811 unidades. Motomel no publica un modelo llamado B110. Esas unidades no se copian a esta ficha. Garantía 2026: 12 meses o 12.000 km."
+    - "El ranking lista una MOTOMEL B110; no hay un documento que la iguale con la Blitz 110"
+    - "Motomel no publica precio de lista"
+  ownershipNotes: "Garantía Motomel 2026: 12 meses o 12.000 km. Al cotizar, confirmá si la unidad es la versión con disco y CBS o la de tambor."
 images:
   - path: /images/motos/motomel-blitz-110.png
     alt: Motomel Blitz 110 gris, foto de catálogo de Motomel Argentina
@@ -88,6 +88,8 @@ seoTitle: Motomel Blitz 110 ficha Argentina
 seoDescription: "Motomel Blitz 110: 7 HP y CBS en disco, y por qué no se le asigna el ranking B110 de ACARA."
 licenceHint: 110 cm³, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km para unidades 2026.
+versionNote: "Los datos técnicos salen de la ficha de la versión START. La transmisión y el freno delantero cambian según la versión, y el CBS acompaña al disco delantero."
+specVersion: START
 ---
 
 Motomel vende la familia Blitz 110. La ficha START declara 110 cm³, 7 HP a 8.000 rpm, embrague automático, 4 velocidades (o automática, según versión), 99 kg vacío, tanque de 3,5 litros y CBS cuando el delantero es disco. Es una cub de trabajo, con más datos en papel que varias rivales del ranking.

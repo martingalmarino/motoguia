@@ -51,18 +51,18 @@ electric:
   rangeConditions: El sitio habla de autonomía sin publicar kilómetros.
   chargingTimeHours: null
   chargingConditions: null
-  warranty: Régimen Motomel 2026, 12 meses o 12.000 km. No hay recorte específico de batería en el extracto.
+  warranty: Régimen Motomel 2026, 12 meses o 12.000 km. La ficha no indica un plazo específico para la batería.
 editorial:
-  summary: Eléctrica Motomel de 2000 W, con batería extraíble de 60 V y 20 Ah. Habla de autonomía, pero no publica los kilómetros.
+  summary: "Scooter eléctrico de 2000 W con batería extraíble de 60 V y frenos a disco adelante y atrás."
   suitableFor:
     - Uso urbano, si podés validar la autonomía con el vendedor antes de firmar
   strengths:
     - Batería extraíble declarada, 60 V 20 Ah, y frenos disco/disco
     - 83 kg en seco y un régimen de garantía Motomel 2026 a la vista
   limitations:
-    - Autonomía no publicada en km
-    - Sin fila propia en el top 50 ACARA
-  ownershipNotes: 1,2 kWh es 60×20/1000; no afirma capacidad usable. Los 2 kW de ficha, si son continuos, quedan bajo el techo de 4 kW de la clase A 1.1. Confirmalo en la cédula.
+    - "Motomel no publica la autonomía en kilómetros"
+    - "No figura por modelo en el ranking de patentamientos"
+  ownershipNotes: "La batería de 60 V y 20 Ah equivale a 1,2 kWh nominales. Si los 2 kW son la potencia continua nominal, entra en la clase A 1.1 (hasta 4 kW): confirmalo en la cédula."
 images:
   - path: /images/motos/motomel-stratoe.png
     alt: Motomel StratoE negra, foto de catálogo de Motomel Argentina
@@ -92,4 +92,4 @@ La StratoE es la eléctrica de Motomel que sí llega a catálogo con números de
 
 El sitio habla de autonomía sin publicar la cifra. Hasta que Motomel la escriba con condiciones, no se inventa un alcance. Tampoco aparece como modelo en el top 50 ACARA de agosto 2026.
 
-Si te la muestran, pedí por escrito cuántos km declaran y en qué ciclo. La garantía del régimen 2026 es 12 meses o 12.000 km; el extracto no recorta un plazo específico de batería.
+Si te la muestran, pedí por escrito cuántos km declaran y en qué ciclo. La garantía del régimen 2026 es 12 meses o 12.000 km; la ficha no indica un plazo específico para la batería.

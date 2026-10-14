@@ -1,96 +1,185 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import MotoCard from '../../components/catalog/MotoCard.astro';
+import MotorcycleCard from '../../components/catalog/MotorcycleCard.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
+import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
 import { getAllBrands, getPublishedMotorcycles } from '../../lib/content/catalog';
+import { categoryLabel } from '../../lib/content/present';
 import { formatInteger } from '../../lib/format';
 
 const motos = await getPublishedMotorcycles();
 const brands = getAllBrands().filter((brand) => motos.some((moto) => moto.data.brandId === brand.id));
+const categoryOrder = ['cub', 'scooter', 'street', 'trail', 'adventure', 'sport', 'touring', 'other'];
+const categories = categoryOrder.filter((category) => motos.some((moto) => moto.data.category === category));
+const engines = [
+  { value: 'combustion', label: 'Combustión' },
+  { value: 'electric', label: 'Eléctrica' },
+].filter((engine) => motos.some((moto) => moto.data.engineType === engine.value));
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.catalog, label: 'Motos' },
+];
+const total = motos.length;
 ---
 
-<BaseLayout title="Catálogo de motos en Argentina" description="Fichas publicadas con filtros de marca, categoría, motor y cilindrada. Las motos sin precio de lista siguen a la vista, salvo que filtres por presupuesto." path={paths.catalog}>
-  <div class="wrap catalog-page">
+<BaseLayout
+  title="Motos en Argentina: catálogo con precios y fichas"
+  description="Compará modelos de motos en Argentina por marca, tipo, motor, cilindrada y presupuesto, con fichas técnicas y precios de referencia con fecha."
+  path={paths.catalog}
+>
+  <div class="wrap">
     <PageHeader
-      eyebrow="Catálogo"
-      title="Motos publicadas"
-      lede={`${formatInteger(motos.length)} fichas con fuente. Si filtrás por precio, se ocultan las que no tienen lista oficial.`}
+      crumbs={crumbs}
+      title="Motos en Argentina"
+      lede="Compará modelos, conocé sus características y encontrá opciones para tu próximo recorrido."
     />
-    <form class="card catalog-toolbar" id="filtros" data-filters role="search">
-      <div class="catalog-search-row">
-        <label for="catalogo-q">
-          Buscar marca o modelo
+
+    <form class="catalog-layout" id="filtros" data-filters aria-label="Buscar y filtrar motos">
+      <div class="catalog-search">
+        <div class="catalog-search__head filters__head-desktop">
+          <h2 class="filters__title">Filtrar motos</h2>
+          <button class="filters__clear" type="button" data-clear>Limpiar</button>
+        </div>
+        <label class="search-form__label" for="catalogo-q">Buscar modelo</label>
+        <span class="search-form__field">
+          <Icon name="search" />
           <input
             id="catalogo-q"
             type="search"
             name="q"
             autocomplete="off"
             enterkeyhint="search"
-            placeholder="Wave, GLH, Smash…"
+            placeholder="Marca o modelo"
           />
-        </label>
-        <button class="btn btn-primary" type="submit">Buscar</button>
+        </span>
       </div>
-      <details class="catalog-filters" open>
-        <summary>Filtros</summary>
-        <div class="catalog-filters-grid">
-          <label>
-            Marca
-            <select name="marca">
-              <option value="">Todas</option>
-              {brands.map((brand) => <option value={brand.id}>{brand.name}</option>)}
-            </select>
-          </label>
-          <label>
-            Categoría
-            <select name="categoria">
-              <option value="">Todas</option>
-              <option value="cub">Cub</option>
-              <option value="street">Street</option>
-              <option value="scooter">Scooter</option>
-              <option value="trail">Trail</option>
-            </select>
-          </label>
-          <label>
-            Motor
-            <select name="motor">
-              <option value="">Todos</option>
-              <option value="combustion">Combustión</option>
-              <option value="electric">Eléctrico</option>
-            </select>
-          </label>
-          <label>
-            Cilindrada
-            <select name="cc">
-              <option value="">Todas</option>
-              <option value="110">Hasta 115 cc</option>
-              <option value="150">116 a 150 cc</option>
-            </select>
-          </label>
-          <label>
-            Precio máx.
-            <input type="number" name="precio" min="0" step="1000" inputmode="numeric" placeholder="ARS" />
-          </label>
-          <label>
-            Orden
+
+      <div class="filters" id="panel-filtros" data-filter-panel>
+        <div class="filters__panel" data-filter-dialog aria-labelledby="filtros-titulo">
+          <div class="filters__head">
+            <h2 class="filters__title" id="filtros-titulo">Filtrar motos</h2>
+            <button class="filters__clear" type="button" data-clear>Limpiar</button>
+            <button class="icon-btn filters__close" type="button" data-filters-close>
+              <Icon name="close" />
+              <span class="visually-hidden">Cerrar filtros</span>
+            </button>
+          </div>
+          <div class="filters__scroll">
+            <details class="filter-group" open>
+              <summary>Marca <Icon name="chevron" size={18} /></summary>
+              <fieldset class="filter-group__body">
+                <legend class="visually-hidden">Marca</legend>
+                {
+                  brands.map((brand) => (
+                    <label class="filter-option">
+                      <input type="checkbox" name="marca" value={brand.id} />
+                      {brand.name}
+                      <span class="filter-option__count" data-facet={`marca:${brand.id}`} />
+                    </label>
+                  ))
+                }
+              </fieldset>
+            </details>
+            <details class="filter-group" open>
+              <summary>Tipo <Icon name="chevron" size={18} /></summary>
+              <fieldset class="filter-group__body">
+                <legend class="visually-hidden">Tipo de moto</legend>
+                {
+                  categories.map((category) => (
+                    <label class="filter-option">
+                      <input type="checkbox" name="categoria" value={category} />
+                      {categoryLabel(category)}
+                      <span class="filter-option__count" data-facet={`categoria:${category}`} />
+                    </label>
+                  ))
+                }
+              </fieldset>
+            </details>
+            <details class="filter-group" open>
+              <summary>Motor <Icon name="chevron" size={18} /></summary>
+              <fieldset class="filter-group__body">
+                <legend class="visually-hidden">Motor</legend>
+                {
+                  engines.map((engine) => (
+                    <label class="filter-option">
+                      <input type="checkbox" name="motor" value={engine.value} />
+                      {engine.label}
+                      <span class="filter-option__count" data-facet={`motor:${engine.value}`} />
+                    </label>
+                  ))
+                }
+              </fieldset>
+            </details>
+            <details class="filter-group" open>
+              <summary>Cilindrada <Icon name="chevron" size={18} /></summary>
+              <fieldset class="filter-group__body">
+                <legend class="visually-hidden">Cilindrada</legend>
+                <label class="filter-option"><input type="radio" name="cc" value="" checked /> Todas</label>
+                <label class="filter-option">
+                  <input type="radio" name="cc" value="110" /> Hasta 115 cc
+                  <span class="filter-option__count" data-facet="cc:110" />
+                </label>
+                <label class="filter-option">
+                  <input type="radio" name="cc" value="150" /> De 116 a 150 cc
+                  <span class="filter-option__count" data-facet="cc:150" />
+                </label>
+              </fieldset>
+            </details>
+            <details class="filter-group" data-budget-group>
+              <summary>Presupuesto <Icon name="chevron" size={18} /></summary>
+              <div class="filter-group__body filter-budget">
+                <label for="catalogo-precio">Precio máximo (ARS)</label>
+                <input id="catalogo-precio" type="number" name="precio" min="0" step="10000" inputmode="numeric" placeholder="Ej.: 4000000" />
+                <p class="filter-budget__note" data-budget-note hidden>
+                  Con este filtro solo aparecen motos con precio de referencia publicado.
+                </p>
+              </div>
+            </details>
+          </div>
+          <div class="filters__footer">
+            <button class="btn btn-primary" type="button" data-filters-apply>
+              Ver <span data-preview-count>{formatInteger(total)}</span> resultados
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <section class="catalog-results" id="resultados" aria-labelledby="resultados-titulo">
+        <h2 class="visually-hidden" id="resultados-titulo">Resultados</h2>
+        <div class="results-toolbar">
+          <p class="results-toolbar__count" data-count aria-live="polite">{formatInteger(total)} modelos</p>
+          <button
+            class="btn btn-ghost btn-sm filters-open"
+            type="button"
+            data-filters-open
+            aria-controls="panel-filtros"
+            aria-expanded="false"
+          >
+            <Icon name="filter" size={18} />
+            Filtros
+            <span class="filters-open__count" data-active-count hidden></span>
+          </button>
+          <label class="results-toolbar__sort">
+            Ordenar por
             <select name="orden">
-              <option value="nombre">Alfabético</option>
+              <option value="nombre">Nombre (A-Z)</option>
               <option value="precio-asc">Menor precio</option>
               <option value="precio-desc">Mayor precio</option>
             </select>
           </label>
         </div>
-      </details>
-      <div class="catalog-toolbar-actions">
-        <p data-count aria-live="polite">{formatInteger(motos.length)} fichas</p>
-        <button class="btn btn-ghost" type="reset" data-clear>Limpiar</button>
-      </div>
-      <p class="muted catalog-empty" data-empty hidden>No hay fichas con esos filtros. Si pusiste un tope de precio, las motos sin lista oficial no entran.</p>
+        <div class="active-filters" data-active-filters hidden></div>
+        <div class="catalog-empty" data-empty hidden>
+          <p><strong>No encontramos motos con esos filtros.</strong></p>
+          <p class="muted">Probá quitar algún filtro o buscar otro modelo.</p>
+          <button class="btn btn-secondary btn-sm" type="button" data-clear>Ver todas las motos</button>
+        </div>
+        <div class="catalog-grid" data-catalog>
+          {motos.map((entry, index) => <MotorcycleCard entry={entry} eager={index < 3} />)}
+        </div>
+      </section>
     </form>
-    <div class="grid grid-3 catalog-grid" data-catalog>
-      {motos.map((entry) => <MotoCard entry={entry} />)}
-    </div>
   </div>
 </BaseLayout>
 <script>

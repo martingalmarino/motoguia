@@ -55,7 +55,7 @@ fuel:
     - corven-energy
 electric: null
 editorial:
-  summary: Una de las cub de más volumen del ranking 2026. La ficha AD publica 106,7 cm³ y 6,7 HP; lo que no aparece es el precio de lista ni si hay CBS.
+  summary: "Cub de 106,7 cc y 6,7 HP de Corven, una de las motos más patentadas del país en 2026."
   suitableFor:
     - Uso urbano, si te cierra el segmento 110 y el recambio de Corven
     - Presupuesto de cub, sabiendo que vas a cotizar sin lista de fábrica
@@ -63,9 +63,9 @@ editorial:
     - Quinta del acumulado ACARA 2026, con 33.193 patentamientos
     - Cilindrada y potencia publicadas en la ficha AD
   limitations:
-    - No hay precio de lista en las páginas revisadas
-    - ABS y CBS no figuran; el tipo de peso (seco u orden de marcha) tampoco está aclarado
-  ownershipNotes: Corven se presenta como capitales nacionales. Eso habla de la empresa, no del origen de cada pieza. Existe una Energy 110 RT con otro rodado; no se le atribuyen estas unidades.
+    - "Corven no publica precio de lista"
+    - "No informa ABS ni CBS, ni si el peso es en seco o en orden de marcha"
+  ownershipNotes: "Corven ofrece también una Energy 110 RT con otro rodado delantero. Al cotizar, confirmá por escrito qué versión estás comprando."
 images:
   - path: /images/motos/corven-energy-110.jpg
     alt: Corven Energy 110 AD roja, foto de catálogo de Corven Motos

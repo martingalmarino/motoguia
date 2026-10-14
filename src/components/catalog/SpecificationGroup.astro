@@ -1,0 +1,29 @@
+---
+export type SpecRow = { label: string; value: string | null; note?: string | null };
+
+interface Props {
+  title: string;
+  rows: SpecRow[];
+}
+
+const { title, rows } = Astro.props;
+---
+
+<div class="spec-group">
+  <table>
+    <caption>{title}</caption>
+    <tbody>
+      {
+        rows.map((row) => (
+          <tr>
+            <th scope="row">{row.label}</th>
+            <td class:list={{ 'is-missing': !row.value }}>
+              {row.value ?? 'No informado'}
+              {row.value && row.note && <span class="spec-note">{row.note}</span>}
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

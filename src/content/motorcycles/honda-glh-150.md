@@ -63,7 +63,7 @@ fuel:
     - honda-glh
 electric: null
 editorial:
-  summary: Una street 150 de producción local, con CBS, tanque grande y lista oficial. Queda décima en el ranking 2026; Honda, otra vez, no publica la potencia.
+  summary: "Street 150 de fabricación nacional con CBS, caja de 5 y tanque de 12,7 litros, con precio de lista publicado por Honda."
   suitableFor:
     - Quien ya está en ciudad todos los días y quiere una caja de 5
     - Quien prioriza red Honda y un precio que se puede citar
@@ -72,8 +72,8 @@ editorial:
     - CBS, disco delantero de 240 mm y un tanque de 12,7 litros que estira los días entre cargas
     - Garantía de 36 meses o 36.000 km
   limitations:
-    - Honda no publica la potencia
-    - "No hay ABS: el auxilio de frenado declarado es CBS"
+    - "Honda no publica la potencia"
+    - "Tiene frenado combinado CBS, no ABS"
   ownershipNotes: El $4.737.555 de lista del 18 de septiembre de 2026 no aclara si incluye patentamiento. Confirmalo en la cotización.
 images:
   - path: /images/motos/honda-glh-150.webp

@@ -1,6 +1,6 @@
 ---
 title: Honda Wave 110S vs Gilera Smash
-description: Dos cub de alto volumen en Argentina. El ranking las separa por poco; las fichas, por red de servicio y por cómo ACARA agrupa Smash.
+description: "Dos de las cub más patentadas de Argentina: en qué se diferencian sus fichas, la red de servicio y cómo aparecen en el ranking."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published
@@ -21,7 +21,7 @@ modelIds:
   - honda-wave-110s
   - gilera-smash
 seoTitle: Honda Wave 110S vs Gilera Smash
-seoDescription: Diferencias documentadas entre Wave 110S y Smash en Argentina, sin inventar un ganador.
+seoDescription: "Diferencias entre la Honda Wave 110S y la Gilera Smash en Argentina: motor, frenos, servicio y patentamientos."
 ---
 
 Si el criterio es “qué se patentó más”, Wave 110S lidera el acumulado 2026 con 59.184 unidades y Smash sigue con 51.687. La distancia existe; no convierte a una en la cub correcta.

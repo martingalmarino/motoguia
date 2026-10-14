@@ -48,16 +48,16 @@ fuel:
     - corven-triax
 electric: null
 editorial:
-  summary: On-off 150 de Corven, con tanque de 12 litros y caja de 5 en la ficha ONE. ACARA no separa ONE y MAX, y la potencia no está publicada.
+  summary: "Trail 150 de Corven con caja de 5 marchas y tanque de 12 litros, para ciudad y caminos de tierra livianos."
   suitableFor:
     - Uso mixto de ciudad y tierra liviana, si te cierra una 150 sin ABS declarado
   strengths:
     - La ONE detalla transmisión, carburador Euro 2 y un tanque de 12 litros
     - 7.461 patentamientos de la fila TRIAX 150 en el acumulado 2026
   limitations:
-    - Potencia, peso y precio de lista no están en la página revisada
-    - El ranking agrupa versiones
-  ownershipNotes: Existe una Triax 150 MAX. Esta ficha es la ONE y no hereda las unidades de la otra.
+    - "La ficha no informa potencia, peso ni precio de lista"
+    - "El ranking de patentamientos agrupa las versiones ONE y MAX"
+  ownershipNotes: "Existe también una Triax 150 MAX. Al cotizar, confirmá cuál de las dos versiones te ofrecen."
 images:
   - path: /images/motos/corven-triax-150.png
     alt: Corven Triax 150 ONE blanca, foto de catálogo de Corven Motos

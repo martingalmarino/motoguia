@@ -1,6 +1,6 @@
 ---
 title: Honda XR150L vs Corven Triax 150
-description: Trail 150 locales. Una trae ABS delantero y precio Honda; la otra, tanque de 12 litros y ficha incompleta de potencia.
+description: "Dos trail 150 que se venden en Argentina: qué cambia en frenos, asiento, precio y datos publicados."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published
@@ -20,7 +20,7 @@ modelIds:
   - honda-xr150l
   - corven-triax-150
 seoTitle: Honda XR150L vs Corven Triax 150
-seoDescription: ABS, asiento y vacíos de ficha entre XR150L y Triax 150 ONE en Argentina.
+seoDescription: "ABS, altura de asiento, tanque y precio de la Honda XR150L y la Corven Triax 150 ONE en Argentina."
 ---
 
 XR150L es la trail Honda de 149 cc con ABS delantero, asiento a 834 mm y lista de $6.051.456. Triax 150 ONE declara 150 cc, 5 velocidades con embrague húmedo y 12 litros, sin potencia ni precio.

@@ -46,7 +46,7 @@ electric:
   chargingConditions: Carga declarada en torno a 8 h.
   warranty: null
 editorial:
-  summary: "Eléctrica urbana de 800 W, con 45 km en condiciones ideales y batería extraíble. La máxima declarada es 40 km/h: es ciudad chica, no ruta."
+  summary: "Eléctrica urbana de 800 W con batería extraíble y hasta 45 km declarados, con velocidad máxima de 40 km/h."
   suitableFor:
     - Tramos cortos, si 40 km/h te alcanza y podés cargar en casa
   strengths:
@@ -55,7 +55,7 @@ editorial:
   limitations:
     - 40 km/h de velocidad máxima declarada
     - Sin ranking por modelo
-  ownershipNotes: 0,8 kW, si es continua nominal, entra en clase A 1.1. Confirmalo en la cédula. No hay importador legal identificado en la página revisada.
+  ownershipNotes: "Con 0,8 kW, si es la potencia continua nominal, entra en la clase A 1.1: verificalo en la cédula. Antes de comprar, confirmá quién da el servicio técnico."
 images:
   - path: /images/motos/sunra-miku-max.jpg
     alt: SUNRA Miku Max, foto de catálogo de SUNRA Argentina

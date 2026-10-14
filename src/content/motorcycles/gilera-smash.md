@@ -2,7 +2,7 @@
 id: gilera-smash
 brandId: gilera
 name: Smash
-variant: Informe ACARA agrupado; ficha citada Full II
+variant: "Full II"
 modelYear: 2026
 market: AR
 status: published
@@ -55,7 +55,7 @@ fuel:
     - gilera-smash
 electric: null
 editorial:
-  summary: "Segunda en patentamientos 2026, pero ACARA junta todas las Smash. La ficha que citamos es la Full II: 107 cm³, 7,2 hp y doble disco, sin lista oficial."
+  summary: "La segunda moto más patentada de Argentina en 2026: una cub semiautomática de 107 cc con CBS y discos adelante y atrás en la versión Full II."
   suitableFor:
     - Uso urbano de todos los días, si te cierra una cub semiautomática
     - Quien busca volumen de recambio más que una lista de fábrica
@@ -63,9 +63,9 @@ editorial:
     - "51.687 patentamientos en el acumulado ACARA 2026: es la cub que más se ve después de la Wave"
     - La Full II declara CBS y disco adelante y atrás
   limitations:
-    - No hay precio de lista en la página revisada
-    - El ranking no abre versiones; no todas las Smash de la calle son Full II
-  ownershipNotes: "Gilera declara 12 meses o 12.000 km. Pedí qué versión estás comprando: el ranking dice Smash, el mostrador puede decir otra cosa."
+    - "Gilera no publica precio de lista"
+    - "El ranking cuenta todas las versiones de Smash juntas; la ficha técnica es la de la Full II"
+  ownershipNotes: "Gilera declara una garantía de 12 meses o 12.000 km. Al cotizar, confirmá qué versión de Smash te ofrecen."
 images:
   - path: /images/motos/gilera-smash.png
     alt: Gilera Smash Full II roja, foto de catálogo de Gilera Argentina
@@ -94,6 +94,7 @@ seoTitle: Gilera Smash ficha técnica en Argentina
 seoDescription: "Cómo leer la Gilera Smash en Argentina: ranking ACARA agrupado, ficha Full II y lo que la marca no publica de precio."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km, según Gilera.
+versionNote: "La ficha técnica corresponde a la versión Full II. El ranking de patentamientos ACARA/SIOMAA cuenta todas las Smash en una sola fila, sin separar versiones."
 ---
 
 La Smash es, después de la Wave, la cub que más se inscribe en el país. En el acumulado ACARA enero-agosto 2026, GILERA SMASH suma 51.687 patentamientos y queda segunda. El informe no abre esa fila por versión: en la calle hay más de una Smash, y el ranking las cuenta juntas.

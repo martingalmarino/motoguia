@@ -1,6 +1,6 @@
 ---
 title: Guantes e impermeables para usar la moto todos los días
-description: Cómo elegir guantes e impermeable para commuting, sin talles inventados ni claims de impermeabilidad absoluta.
+description: "Cómo elegir guantes e impermeable para usar la moto todos los días: talle, materiales y protección contra la lluvia."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published

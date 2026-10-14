@@ -55,7 +55,7 @@ fuel:
     - motomel-s2
 electric: null
 editorial:
-  summary: "Street 150 con embrague a mano, CBS y tanque de 11 litros. Séptima del ranking 2026: es el salto natural desde una cub, no otra cub alta."
+  summary: "Street 150 con embrague manual, 5 marchas, CBS y tanque de 11 litros: un paso natural después de una cub."
   suitableFor:
     - Ciudad y alguna ruta corta, si ya te llevás bien con la caja
     - Quien viene de una 110 semiautomática y quiere probar el embrague a mano
@@ -64,9 +64,9 @@ editorial:
     - 12.701 patentamientos en el acumulado ACARA 2026
     - Garantía Motomel 2026 de 12 meses o 12.000 km
   limitations:
-    - Sin precio de lista hallado
-    - Consumo no publicado
-  ownershipNotes: No se le atribuyen las unidades MOTOMEL B110 ni CX 150. El punto a probar en el local es el embrague, no un salto de prestaciones que la ficha no cuantifica.
+    - "Motomel no publica precio de lista"
+    - "Consumo no publicado"
+  ownershipNotes: "Si venís de una cub semiautomática, probá el embrague manual antes de decidir. Garantía Motomel 2026: 12 meses o 12.000 km."
 images:
   - path: /images/motos/motomel-s2-150.png
     alt: Motomel S2 150 gris, foto de catálogo de Motomel Argentina

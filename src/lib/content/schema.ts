@@ -135,6 +135,17 @@ export const motorcycleSchema = z
     seoDescription: z.string(),
     licenceHint: z.string().nullable(),
     warranty: z.string().nullable(),
+    versions: z
+      .array(
+        z.object({
+          name: z.string(),
+          priceARS: z.number().nonnegative().nullable(),
+          note: z.string().nullable(),
+        }),
+      )
+      .default([]),
+    versionNote: z.string().nullable().default(null),
+    specVersion: z.string().nullable().default(null),
   })
   .superRefine((value, ctx) => {
     if (value.engineType === 'electric' && value.engine?.displacementCc) {

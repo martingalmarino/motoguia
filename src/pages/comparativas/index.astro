@@ -1,29 +1,49 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
+import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
 import { getPublishedComparisons } from '../../lib/content/catalog';
+import { formatDate } from '../../lib/format';
 
 const items = await getPublishedComparisons();
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.comparisons, label: 'Comparativas' },
+];
 ---
 
-<BaseLayout title="Comparativas de motos" description="Comparativas editoriales entre fichas publicadas." path={paths.comparisons}>
-  <article class="wrap editorial-article">
+<BaseLayout
+  title="Comparativas de motos"
+  description="Comparativas entre motos que se venden en Argentina: motor, frenos, peso, precio de referencia y para quién conviene cada una."
+  path={paths.comparisons}
+>
+  <div class="wrap">
     <PageHeader
-      eyebrow="Editoriales"
-      title="Comparativas"
-      lede="Textos entre modelos publicados. También podés armar tu propia comparación en el comparador."
-    />
-    <p><a class="btn btn-secondary" href={paths.comparator}>Ir al comparador interactivo</a></p>
-    <ul class="guide-list">
-      {items.map((item) => (
-        <li>
-          <a class="card" href={`${paths.comparisons}${item.id}/`}>
-            {item.data.title}
-            <span>{item.data.description}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-  </article>
+      crumbs={crumbs}
+      eyebrow="Comparativas"
+      title="Comparativas de motos"
+      lede="Enfrentamos modelos que suelen competir entre sí y te contamos en qué se diferencian."
+    >
+      <p><a class="btn btn-secondary" href={paths.comparator}><Icon name="compare" size={18} /> Armá tu propia comparación</a></p>
+    </PageHeader>
+
+    <section class="section" aria-labelledby="comparativas-lista">
+      <h2 id="comparativas-lista" class="visually-hidden">Todas las comparativas</h2>
+      <div class="editorial-cards">
+        {
+          items.map((item) => (
+            <a class="editorial-card" href={`${paths.comparisons}${item.id}/`}>
+              <span class="editorial-card__kicker">
+                <Icon name="compare" size={16} /> Comparativa
+              </span>
+              <h3>{item.data.title}</h3>
+              <p>{item.data.description}</p>
+              <span class="editorial-card__meta">Actualizada el {formatDate(item.data.reviewedAt)}</span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
 </BaseLayout>

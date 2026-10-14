@@ -1,29 +1,51 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
+import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
 import { getPublishedAccessoryGuides } from '../../lib/content/catalog';
+import { formatDate } from '../../lib/format';
 
 const items = await getPublishedAccessoryGuides();
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.guides, label: 'Guías' },
+  { href: paths.accessories, label: 'Accesorios' },
+];
 ---
 
-<BaseLayout title="Guías de accesorios" description="Cómo elegir casco, guantes y trabas para moto en Argentina." path={paths.accessories}>
-  <article class="wrap editorial-article">
+<BaseLayout
+  title="Guías de accesorios para moto"
+  description="Cómo elegir casco, guantes y trabas para moto en Argentina: normas, talles y qué mirar antes de comprar."
+  path={paths.accessories}
+>
+  <div class="wrap">
     <PageHeader
+      crumbs={crumbs}
       eyebrow="Equipamiento"
-      title="Accesorios"
-      lede="Casco, guantes y trabas, con criterios verificables."
+      title="Equipamiento y accesorios"
+      lede="Casco, guantes y trabas: qué mirar antes de comprar para andar más seguro."
     />
-    <p class="muted">Si un enlace de compra es de afiliado, lo marcamos. <a href={paths.affiliates}>Cómo declaramos esos enlaces</a>.</p>
-    <ul class="guide-list">
-      {items.map((item) => (
-        <li>
-          <a class="card" href={`${paths.accessories}${item.id}/`}>
-            {item.data.title}
-            <span>{item.data.description}</span>
-          </a>
-        </li>
-      ))}
-    </ul>
-  </article>
+
+    <section class="section" aria-labelledby="accesorios-lista">
+      <h2 id="accesorios-lista" class="visually-hidden">Guías de accesorios</h2>
+      <div class="editorial-cards">
+        {
+          items.map((item) => (
+            <a class="editorial-card" href={`${paths.accessories}${item.id}/`}>
+              <span class="editorial-card__kicker">
+                <Icon name="helmet" size={16} /> Accesorios
+              </span>
+              <h3>{item.data.title}</h3>
+              <p>{item.data.description}</p>
+              <span class="editorial-card__meta">Actualizada el {formatDate(item.data.reviewedAt)}</span>
+            </a>
+          ))
+        }
+      </div>
+      <p class="muted">
+        Si un enlace de compra es de afiliado, lo indicamos. <a href={paths.affiliates}>Cómo trabajamos con afiliados</a>.
+      </p>
+    </section>
+  </div>
 </BaseLayout>

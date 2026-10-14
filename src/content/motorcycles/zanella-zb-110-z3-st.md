@@ -43,15 +43,15 @@ dimensions: null
 fuel: null
 electric: null
 editorial:
-  summary: Fila propia en ACARA (Z3 ST), distinta de la ZB 110 y de la FULL. La web ST publica 107 cm³, 6,5 HP y CBS; tanque y peso no estaban en el extracto.
+  summary: "Cub semiautomática de 107 cc y 6,5 HP de Zanella, con CBS y 4 velocidades."
   suitableFor:
     - Uso urbano, si estás cotizando la ST y no una FULL
   strengths:
     - "Identidad de ranking separada: 5.743 unidades y puesto 19 del acumulado 2026"
     - CBS, 107 cm³ y 4 velocidades declarados en la web ST
   limitations:
-    - Tanque, peso y detalle de frenos no estaban en el extracto revisado
-  ownershipNotes: No se le asignan las unidades de ZB 110 ni Z3 FULL. Zanella comercializa ZB 110 ST; ACARA la lista como Z3 ST. Pedí cómo figura en la cédula.
+    - "La página consultada no informa tanque, peso ni el detalle de frenos"
+  ownershipNotes: "Zanella la vende como ZB 110 ST y el ranking la lista como Z3 ST. Al cotizar, confirmá cómo figura en la documentación de la unidad."
 images:
   - path: /images/motos/zanella-zb-110-z3-st.png
     alt: Zanella ZB 110 ST gris, foto de catálogo de Zanella Argentina
@@ -80,6 +80,6 @@ warranty: null
 
 Zanella vende más de una ZB 110, y ACARA las cuenta como si fueran vecinas de ranking, no la misma moto. La fila ZANELLA ZB 110 Z3 ST suma 5.743 unidades en el acumulado 2026 y queda 19.ª. La marca la comercializa como ZB 110 ST.
 
-La web declara 107 cm³, 6,5 HP, 4 velocidades y CBS. Tanque, peso y detalle de frenos no estaban en el extracto revisado. Hasta completar ese papel, no se rellenan con los números de la FULL: son fichas distintas.
+La web declara 107 cm³, 6,5 HP, 4 velocidades y CBS. La página consultada no informa tanque, peso ni el detalle de frenos. Hasta completar ese papel, no se rellenan con los números de la FULL: son fichas distintas.
 
 Si te cotizan una ZB 110 a secas, preguntá ST o FULL. En el ranking no se mezclan, y acá tampoco.

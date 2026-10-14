@@ -1,6 +1,6 @@
 ---
 title: Cómo elegir tu primera moto en Argentina
-description: Criterios verificables para elegir una primera moto 0 km en Argentina, sin inflar el inventario ni copiar folletos.
+description: "Qué mirar para elegir tu primera moto 0 km en Argentina: licencia, uso, presupuesto y ficha técnica."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published

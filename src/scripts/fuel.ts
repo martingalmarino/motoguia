@@ -2,7 +2,8 @@ import { calculateFuelCost, consumptionFromKmPerLiter, parseArNumber } from '../
 import { formatArs } from '../lib/format';
 
 const form = document.querySelector<HTMLFormElement>('[data-fuel-form]');
-const out = document.querySelector('[data-fuel-result]');
+const out = document.querySelector<HTMLElement>('[data-fuel-result]');
+const initialMessage = out?.innerHTML ?? '';
 
 function field(name: string): HTMLInputElement | HTMLSelectElement | null {
   const el = form?.elements.namedItem(name);
@@ -14,6 +15,30 @@ function num(raw: string) {
   return parsed.ok ? parsed.value : null;
 }
 
+function decimal(value: number) {
+  return value.toLocaleString('es-AR', { maximumFractionDigits: 2 });
+}
+
+function showError(message: string) {
+  if (!out) return;
+  out.innerHTML = '';
+  const p = document.createElement('p');
+  p.className = 'tool-result__error';
+  p.textContent = message;
+  out.append(p);
+}
+
+function syncMode() {
+  const mode = form?.querySelector<HTMLInputElement>('input[name="modo"]:checked')?.value ?? 'mes';
+  form?.querySelectorAll<HTMLElement>('[data-mode]').forEach((block) => {
+    block.hidden = block.dataset.mode !== mode;
+  });
+}
+
+form?.addEventListener('change', (event) => {
+  if ((event.target as HTMLInputElement).name === 'modo') syncMode();
+});
+
 form?.addEventListener('submit', (event) => {
   event.preventDefault();
   if (!out) return;
@@ -24,7 +49,7 @@ form?.addEventListener('submit', (event) => {
     const kmDia = num(String(data.get('kmDia') ?? ''));
     const dias = num(String(data.get('dias') ?? ''));
     if (kmDia === null || dias === null) {
-      out.textContent = 'Completá km por día y días de uso, o pasate a km al mes.';
+      showError('Completá los kilómetros por día y los días de uso por mes.');
       return;
     }
     monthlyKm = kmDia * dias;
@@ -35,18 +60,37 @@ form?.addEventListener('submit', (event) => {
   if (String(data.get('unidad')) === 'kml' && consumption !== null) {
     try {
       consumption = consumptionFromKmPerLiter(consumption);
-    } catch (error) {
-      out.textContent = error instanceof Error ? error.message : 'Consumo inválido';
+    } catch {
+      showError('El consumo en kilómetros por litro tiene que ser mayor que cero.');
       return;
     }
   }
   const price = num(String(data.get('precio') ?? ''));
   try {
     const result = calculateFuelCost({ monthlyKm, consumptionL100km: consumption, pricePerLiter: price });
-    out.textContent = `Litros al mes: ${result.litersPerMonth.toLocaleString('es-AR', { maximumFractionDigits: 2 })}. Costo mensual: ${formatArs(result.monthlyFuelCost)}. Costo por km: ${result.costPerKm.toLocaleString('es-AR', { maximumFractionDigits: 2 })} ARS. Escenario anual a precio constante: ${formatArs(result.annualFuelCost)}.`;
+    out.innerHTML = `
+      <p>Gasto mensual en combustible</p>
+      <p class="tool-result__total">${formatArs(result.monthlyFuelCost)}</p>
+      <ul class="tool-result__rows">
+        <li><span>Litros por mes</span><strong>${decimal(result.litersPerMonth)} l</strong></li>
+        <li><span>Costo por kilómetro</span><strong>$ ${decimal(result.costPerKm)}</strong></li>
+        <li><span>Gasto anual (mismo precio)</span><strong>${formatArs(result.annualFuelCost)}</strong></li>
+      </ul>`;
   } catch (error) {
-    out.textContent = error instanceof Error ? error.message : 'No se pudo calcular';
+    const message = error instanceof Error ? error.message : '';
+    showError(
+      message.startsWith('Faltan')
+        ? 'Completá kilómetros, consumo y precio por litro para calcular.'
+        : message || 'Revisá los valores cargados.',
+    );
   }
+});
+
+form?.addEventListener('reset', () => {
+  window.setTimeout(() => {
+    syncMode();
+    if (out) out.innerHTML = initialMessage;
+  });
 });
 
 form?.querySelector('[data-example]')?.addEventListener('click', () => {
@@ -60,10 +104,16 @@ form?.querySelector('[data-example]')?.addEventListener('click', () => {
   if (precio) precio.value = '1500';
   const mes = form.querySelector<HTMLInputElement>('input[name="modo"][value="mes"]');
   if (mes) mes.checked = true;
+  syncMode();
+  form.requestSubmit();
 });
 
 field('moto')?.addEventListener('change', (event) => {
   const value = (event.currentTarget as HTMLSelectElement).value;
   const consumo = field('consumo');
+  const unidad = field('unidad');
   if (value && consumo) consumo.value = value.replace('.', ',');
+  if (value && unidad) unidad.value = 'l100';
 });
+
+syncMode();

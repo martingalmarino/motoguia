@@ -1,8 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import MotoCard from '../../components/catalog/MotoCard.astro';
+import Breadcrumbs from '../../components/editorial/Breadcrumbs.astro';
+import MotorcycleCard from '../../components/catalog/MotorcycleCard.astro';
+import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
-import { getAllBrands, getPublishedMotorcycles } from '../../lib/content/catalog';
+import { getAllBrands, getPublishedComparisons, getPublishedMotorcycles } from '../../lib/content/catalog';
+import { categoryLabel } from '../../lib/content/present';
+import { breadcrumbLd } from '../../lib/seo/jsonld';
 
 export async function getStaticPaths() {
   const motos = await getPublishedMotorcycles();
@@ -14,16 +18,164 @@ export async function getStaticPaths() {
 }
 
 const { brand, motos } = Astro.props;
+const path = `${paths.brands}${brand.slug}/`;
+const count = motos.length;
+const categories = [...new Set(motos.map((moto) => moto.data.category))];
+const ids = new Set(motos.map((moto) => moto.data.id));
+const comparisons = (await getPublishedComparisons()).filter((item) => item.data.modelIds.some((id) => ids.has(id)));
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.brands, label: 'Marcas' },
+  { href: path, label: brand.name },
+];
 ---
 
-<BaseLayout title={`${brand.name} en Argentina`} description={brand.originNote} path={`${paths.brands}${brand.slug}/`}>
-  <article class="wrap editorial-article">
-    <p class="eyebrow">Marca</p>
-    <h1>{brand.name}</h1>
-    <p class="lede">{brand.originNote}</p>
-    {brand.website && <p><a href={brand.website} rel="noopener">Sitio oficial</a></p>}
-    <div class="grid grid-3">
-      {motos.map((entry) => <MotoCard entry={entry} />)}
+<BaseLayout
+  title={`Motos ${brand.name} en Argentina`}
+  description={`Explorá ${count} ${count === 1 ? 'modelo' : 'modelos'} ${brand.name} con ficha técnica, precio de referencia y comparación con otras motos del mercado argentino.`}
+  path={path}
+  jsonLd={[breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href })))]}
+>
+  <section class="brand-masthead">
+    <div class="wrap">
+      <Breadcrumbs items={crumbs} />
+      <div class="brand-masthead__inner">
+        <div class="brand-masthead__mark" aria-hidden="true">
+          <span class="brand-wordmark">{brand.name}</span>
+        </div>
+        <div class="brand-masthead__copy">
+          <h1>Motos {brand.name} en Argentina</h1>
+          <p class="lede">Explorá los modelos {brand.name} del catálogo y compará sus características.</p>
+          <div class="brand-masthead__meta">
+            <span class="brand-masthead__count">{count} {count === 1 ? 'modelo' : 'modelos'} en MotoGuía</span>
+            {
+              brand.website && (
+                <a class="link-arrow" href={brand.website} rel="noopener" target="_blank">
+                  Sitio oficial de {brand.name}
+                  <Icon name="external" size={16} />
+                  <span class="visually-hidden">(se abre en otra pestaña)</span>
+                </a>
+              )
+            }
+          </div>
+        </div>
+      </div>
     </div>
-  </article>
+  </section>
+
+  <div class="wrap" data-brand-page>
+    <div class="brand-toolbar">
+      {
+        categories.length > 1 ? (
+          <div class="chip-row" role="group" aria-label="Filtrar por tipo">
+            <button class="chip" type="button" aria-pressed="true" data-brand-filter="">
+              Todas
+            </button>
+            {categories.map((category) => (
+              <button class="chip" type="button" aria-pressed="false" data-brand-filter={category}>
+                {categoryLabel(category)}
+              </button>
+            ))}
+          </div>
+        ) : (
+          <p class="muted">Tipo: {categoryLabel(categories[0])}</p>
+        )
+      }
+      <label class="results-toolbar__sort">
+        Ordenar por
+        <select data-brand-sort>
+          <option value="nombre">Nombre (A-Z)</option>
+          <option value="precio-asc">Menor precio</option>
+          <option value="precio-desc">Mayor precio</option>
+        </select>
+      </label>
+    </div>
+    <h2 class="visually-hidden">Modelos {brand.name}</h2>
+    <p class="visually-hidden" aria-live="polite" data-brand-status></p>
+    <div class="brand-grid" data-brand-grid>
+      {motos.map((entry, index) => <MotorcycleCard entry={entry} showBrand={false} eager={index < 4} />)}
+    </div>
+
+    {
+      comparisons.length > 0 && (
+        <section class="section">
+          <div class="section-heading">
+            <div>
+              <h2>Comparativas con {brand.name}</h2>
+              <p>Modelos {brand.name} frente a rivales directos, dato por dato.</p>
+            </div>
+            <a class="link-arrow" href={paths.comparator}>
+              Armar tu comparación <Icon name="arrow" size={18} />
+            </a>
+          </div>
+          <div class="editorial-cards">
+            {comparisons.slice(0, 3).map((item) => (
+              <a class="editorial-card" href={`${paths.comparisons}${item.id}/`}>
+                <span class="editorial-card__kicker">
+                  <Icon name="compare" size={16} /> Comparativa
+                </span>
+                <h3>{item.data.title}</h3>
+                <p>{item.data.description}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2>Sobre {brand.name} en Argentina</h2>
+        </div>
+      </div>
+      <div class="prose">
+        <p>{brand.originNote}</p>
+        {brand.importer && <p>Comercializa en el país: {brand.importer}.</p>}
+      </div>
+    </section>
+  </div>
 </BaseLayout>
+<script>
+  const root = document.querySelector('[data-brand-page]');
+  const grid = root?.querySelector<HTMLElement>('[data-brand-grid]');
+  const status = root?.querySelector<HTMLElement>('[data-brand-status]');
+  const cards = grid ? [...grid.querySelectorAll<HTMLElement>('[data-moto-card]')] : [];
+  let category = '';
+  let order = 'nombre';
+
+  function render() {
+    if (!grid) return;
+    const sorted = [...cards].sort((a, b) => {
+      if (order !== 'nombre') {
+        const pa = a.dataset.price ? Number(a.dataset.price) : null;
+        const pb = b.dataset.price ? Number(b.dataset.price) : null;
+        if (pa === null && pb === null) return (a.dataset.name ?? '').localeCompare(b.dataset.name ?? '', 'es');
+        if (pa === null) return 1;
+        if (pb === null) return -1;
+        return order === 'precio-asc' ? pa - pb : pb - pa;
+      }
+      return (a.dataset.name ?? '').localeCompare(b.dataset.name ?? '', 'es');
+    });
+    let visible = 0;
+    sorted.forEach((card) => {
+      const show = !category || card.dataset.category === category;
+      card.hidden = !show;
+      if (show) visible += 1;
+      grid.append(card);
+    });
+    if (status) status.textContent = `${visible} ${visible === 1 ? 'modelo' : 'modelos'}`;
+  }
+
+  root?.querySelectorAll<HTMLButtonElement>('[data-brand-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      category = button.dataset.brandFilter ?? '';
+      root.querySelectorAll('[data-brand-filter]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+      render();
+    });
+  });
+  root?.querySelector<HTMLSelectElement>('[data-brand-sort]')?.addEventListener('change', (event) => {
+    order = (event.currentTarget as HTMLSelectElement).value;
+    render();
+  });
+</script>

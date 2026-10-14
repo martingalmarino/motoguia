@@ -53,15 +53,15 @@ electric:
   chargingConditions: Según comunicación web SIAM, no un ensayo normalizado.
   warranty: Motor 24 meses; batería 12; resto 12.
 editorial:
-  summary: "Eléctrica SIAM/Newsan con motor Yadea de 1800 W y 50 km declarados. Esos kilómetros no traen ciclo de ensayo: se leen como cifra de catálogo."
+  summary: "Scooter eléctrico con motor Yadea de 1800 W, batería de litio extraíble y 50 km de autonomía declarada."
   suitableFor:
     - Tramos urbanos cortos, si podés cargar en casa y no necesitás un número de homologación
   strengths:
-    - Batería de litio extraíble, 60 V, y un motor Yadea publicado
-    - "Autonomía y peso a la vista: 50 km y 81 kg, con las condiciones que faltan"
+    - "Batería de litio extraíble de 60 V y motor Yadea publicado"
+    - "Autonomía y peso publicados: 50 km y 81 kg"
   limitations:
-    - Los 50 km no citan ciclo, velocidad ni carga
-    - Sin unidades por modelo en el top 50 ACARA
+    - "Los 50 km declarados no indican velocidad, carga ni ciclo de medición"
+    - "No figura por modelo en el ranking de patentamientos"
   ownershipNotes: "Si 1,8 kW es la potencia máxima continua nominal, caería en clase A 1.1. Confirmalo con la cédula, no con el folleto. Garantía de ficha: motor 24 meses, batería 12, resto 12."
 images:
   - path: /images/motos/siam-n4.webp

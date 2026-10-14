@@ -2,9 +2,10 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/editorial/Breadcrumbs.astro';
 import SourceList from '../../components/editorial/SourceList.astro';
+import MotorcycleCard from '../../components/catalog/MotorcycleCard.astro';
+import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
-import { getPublishedComparisons, getMotorcycle, motorcycleUrl, render } from '../../lib/content/catalog';
-import { displayName } from '../../lib/content/present';
+import { getMotorcycle, getPublishedComparisons, render } from '../../lib/content/catalog';
 import { formatDate, isoDate } from '../../lib/format';
 import { articleLd, breadcrumbLd } from '../../lib/seo/jsonld';
 
@@ -19,13 +20,14 @@ const path = `${paths.comparisons}${entry.id}/`;
 const models = [];
 for (const id of entry.data.modelIds) {
   const model = await getMotorcycle(id);
-  if (model) models.push(model);
+  if (model && model.data.status === 'published') models.push(model);
 }
 const crumbs = [
   { href: paths.home, label: 'Inicio' },
   { href: paths.comparisons, label: 'Comparativas' },
   { href: path, label: entry.data.title },
 ];
+const comparatorHref = `${paths.comparator}#ids=${models.map((model) => model.data.id).join(',')}`;
 ---
 
 <BaseLayout
@@ -44,19 +46,45 @@ const crumbs = [
     }),
   ]}
 >
-  <article class="wrap prose editorial-article">
-    <Breadcrumbs items={crumbs} />
-    <p class="eyebrow">Comparativa</p>
-    <p class="muted">{entry.data.author} · {formatDate(entry.data.reviewedAt)}</p>
-    <h1>{entry.data.title}</h1>
-    <p class="lede">{entry.data.description}</p>
-    <p>Fichas usadas (los números técnicos salen del catálogo, no se reescriben acá):</p>
-    <ul>
-      {models.map((model) => (
-        <li><a href={motorcycleUrl(model)}>{displayName(model)}</a></li>
-      ))}
-    </ul>
-    <Content />
-    <SourceList ids={entry.data.sourceIds} />
-  </article>
+  <div class="wrap">
+    <header class="article-header article-header--wide">
+      <Breadcrumbs items={crumbs} />
+      <p class="eyebrow">Comparativa</p>
+      <h1>{entry.data.title}</h1>
+      <p class="lede">{entry.data.description}</p>
+      <p class="article-meta">
+        {entry.data.author} · Actualizada el <time datetime={isoDate(entry.data.reviewedAt)}>{formatDate(entry.data.reviewedAt)}</time>
+      </p>
+    </header>
+
+    {
+      models.length > 0 && (
+        <section class="section section--tight" aria-labelledby="comparativa-motos">
+          <div class="section-heading">
+            <div>
+              <h2 id="comparativa-motos">Las motos de esta comparativa</h2>
+              <p>Los datos técnicos y los precios salen de la ficha de cada moto.</p>
+            </div>
+            {models.length > 1 && (
+              <a class="btn btn-secondary" href={comparatorHref}>
+                <Icon name="compare" size={18} /> Ver lado a lado
+              </a>
+            )}
+          </div>
+          <div class="card-grid card-grid--3">
+            {models.map((model) => (
+              <MotorcycleCard entry={model} />
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <article class="article section" aria-label={entry.data.title}>
+      <div class="prose">
+        <Content />
+      </div>
+      <SourceList ids={entry.data.sourceIds} />
+    </article>
+  </div>
 </BaseLayout>

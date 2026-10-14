@@ -1,33 +1,69 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
+import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
+
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.tools, label: 'Herramientas' },
+];
+const tools = [
+  {
+    href: paths.comparator,
+    icon: 'compare',
+    title: 'Compará motos',
+    text: 'Compará las características de hasta 3 motos.',
+    cta: 'Ir al comparador',
+  },
+  {
+    href: paths.fuel,
+    icon: 'fuel',
+    title: 'Calculá tu gasto en combustible',
+    text: 'Estimá cuánto gastás según tus kilómetros y el precio por litro.',
+    cta: 'Calcular combustible',
+  },
+  {
+    href: paths.monthlyCost,
+    icon: 'wallet',
+    title: 'Estimá el costo mensual',
+    text: 'Sumá combustible, seguro, patente y mantenimiento.',
+    cta: 'Calcular costo mensual',
+  },
+] as const;
 ---
 
-<BaseLayout title="Herramientas" description="Comparador y calculadoras de combustible y costo mensual para motos en Argentina." path={paths.tools}>
-  <article class="wrap editorial-article">
+<BaseLayout
+  title="Herramientas para elegir moto"
+  description="Comparador de motos y calculadoras de combustible y costo mensual para motos en Argentina."
+  path={paths.tools}
+>
+  <div class="wrap">
     <PageHeader
-      eyebrow="Calculadoras"
-      title="Herramientas"
-      lede="Compará fichas publicadas y estimá nafta o gasto mensual con los números que vos cargues."
+      crumbs={crumbs}
+      eyebrow="Herramientas"
+      title="Herramientas para decidir"
+      lede="Compará modelos y hacé tus cuentas antes de elegir. Las calculadoras usan los valores que cargás vos."
     />
-    <div class="grid grid-3">
-      <a class="card tool-card" href={paths.comparator}>
-        <span class="tool-kicker">Comparador</span>
-        <h3>Comparador de fichas</h3>
-        <p class="muted">Dos o tres modelos publicados, lado a lado.</p>
-      </a>
-      <a class="card tool-card" href={paths.fuel}>
-        <span class="tool-kicker">Combustible</span>
-        <h3>Calculadora de combustible</h3>
-        <p class="muted">Litros y pesos con el precio del litro que indiques.</p>
-      </a>
-      <a class="card tool-card" href={paths.monthlyCost}>
-        <span class="tool-kicker">Costo</span>
-        <h3>Costo mensual</h3>
-        <p class="muted">Nafta, seguro, patente prorrateada y service.</p>
-      </a>
-    </div>
-    <p class="muted">La patente se carga a mano: no estimamos el monto por jurisdicción.</p>
-  </article>
+
+    <section class="section" aria-labelledby="herramientas-lista">
+      <h2 id="herramientas-lista" class="visually-hidden">Herramientas disponibles</h2>
+      <div class="tool-tiles">
+        {
+          tools.map((tool) => (
+            <a class="tool-tile" href={tool.href}>
+              <span class="tool-tile__icon">
+                <Icon name={tool.icon} size={24} />
+              </span>
+              <h3>{tool.title}</h3>
+              <p>{tool.text}</p>
+              <span class="tool-tile__cta">
+                {tool.cta} <Icon name="arrow" size={16} />
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
 </BaseLayout>

@@ -46,16 +46,16 @@ electric:
   chargingConditions: Carga declarada en torno a 10 h.
   warranty: null
 editorial:
-  summary: "Eléctrica SUNRA con 150 km declarados, pero a 40 km/h y 75 kg. La marca patentó unidades en 2026; este modelo no tiene fila propia en el top 50."
+  summary: "Eléctrica de 3000 W con batería de 72 V y hasta 150 km declarados a 40 km/h."
   suitableFor:
     - Uso urbano, si el ciclo de 40 km/h te representa más que la velocidad máxima de catálogo
   strengths:
     - La FAQ publica condiciones de autonomía, no solo un número suelto
     - CBS adelante y atrás, batería NCM 72 V 50 Ah
   limitations:
-    - 150 km no es un ciclo mixto a 80 km/h
-    - El importador legal no está identificado en la página revisada
-  ownershipNotes: 3 kW, si es continua nominal, sigue en A 1.1 (hasta 4 kW). Verificá la cédula. Pedí quién factura y quién da servicio antes de dejar seña.
+    - "Los 150 km se declaran a 40 km/h; a mayor velocidad la autonomía baja"
+    - "La página consultada no identifica al importador"
+  ownershipNotes: "Con 3 kW, si es la potencia continua nominal, entra en la clase A 1.1 (hasta 4 kW): verificalo en la cédula. Antes de señar, confirmá quién factura y quién da el servicio técnico."
 images:
   - path: /images/motos/sunra-future.jpg
     alt: SUNRA Future verde, foto de catálogo de SUNRA Argentina

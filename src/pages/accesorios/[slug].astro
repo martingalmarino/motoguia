@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/editorial/Breadcrumbs.astro';
+import SourceList from '../../components/editorial/SourceList.astro';
+import ArticleToc from '../../components/editorial/ArticleToc.astro';
 import { paths } from '../../config/site';
 import { getPublishedAccessoryGuides, render } from '../../lib/content/catalog';
 import { formatDate, isoDate } from '../../lib/format';
@@ -12,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 const path = `${paths.accessories}${entry.id}/`;
 const crumbs = [
   { href: paths.home, label: 'Inicio' },
@@ -37,13 +39,27 @@ const crumbs = [
     }),
   ]}
 >
-  <article class="wrap prose editorial-article">
-    <Breadcrumbs items={crumbs} />
-    <p class="eyebrow">Accesorios</p>
-    <p class="muted">{entry.data.author} · {formatDate(entry.data.reviewedAt)}</p>
-    <h1>{entry.data.title}</h1>
-    <p class="lede">{entry.data.description}</p>
-    <p class="notice">Algunos enlaces de compra pueden ser de afiliado. Podemos recibir una comisión si comprás a través de ellos. <a href={paths.affiliates}>Más información</a>.</p>
-    <Content />
-  </article>
+  <div class="wrap">
+    <div class="article-layout">
+      <article class="article">
+        <header class="article-header">
+          <Breadcrumbs items={crumbs} />
+          <p class="eyebrow">Equipamiento</p>
+          <h1>{entry.data.title}</h1>
+          <p class="lede">{entry.data.description}</p>
+          <p class="article-meta">
+            {entry.data.author} · Actualizada el <time datetime={isoDate(entry.data.reviewedAt)}>{formatDate(entry.data.reviewedAt)}</time>
+          </p>
+        </header>
+        <p class="notice">
+          Algunos enlaces de compra pueden ser de afiliado: si comprás a través de ellos, podemos recibir una comisión. <a href={paths.affiliates}>Más información</a>.
+        </p>
+        <div class="prose">
+          <Content />
+        </div>
+        <SourceList ids={entry.data.sourceIds} />
+      </article>
+      <ArticleToc headings={headings} title="En esta guía" />
+    </div>
+  </div>
 </BaseLayout>

@@ -1,6 +1,6 @@
 ---
 title: Cuánto cuesta mantener una moto en Argentina
-description: Cómo armar un presupuesto de nafta, seguro, patente y service sin disfrazar un prorrateo de impuesto.
+description: Cómo armar un presupuesto mensual de nafta, seguro, patente y service para tu moto.
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published
@@ -18,7 +18,7 @@ relatedArticleIds:
   - primera-moto-argentina
   - moto-110-125-150
 seoTitle: Cuánto cuesta mantener una moto en Argentina
-seoDescription: Presupuesto de combustible, seguro, patente y mantenimiento, con calculadoras y sin inflación inventada.
+seoDescription: "Presupuesto mensual de combustible, seguro, patente y mantenimiento para una moto en Argentina, con calculadoras."
 ---
 
 Mantener una moto no es el valor de la cuota. Es nafta o energía, seguro, patente, service y, si aplica, cochera. El precio de compra, el patentamiento inicial, el crédito y la depreciación quedan afuera hasta que los cargues aparte.

@@ -1,39 +1,113 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
 import { paths } from '../../config/site';
+
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.tools, label: 'Herramientas' },
+  { href: paths.monthlyCost, label: 'Costo mensual' },
+];
 ---
 
-<BaseLayout title="Costo mensual de tener una moto" description="Sumá nafta o energía, seguro, patente prorrateada, service y cochera. La patente anual/12 no es un estimador legal." path={paths.monthlyCost}>
-  <article class="wrap prose editorial-article">
-    <p class="eyebrow">Herramientas</p>
-    <h1>Costo mensual de tener una moto</h1>
-    <p>
-      Total mensual = combustible o energía + seguro + patente anual/12 + previsión de service + cochera + otros.
-      Quedan afuera precio de compra, patentamiento inicial, financiación y depreciación, salvo que los cargues en otros.
-      El prorrateo de patente es contable, no el calendario de vencimientos.
-    </p>
-    <p>Para eléctricas, cargá el gasto de energía a mano. Esta calculadora no estima kWh por carga.</p>
-    <form class="form-grid card form-card" data-own-form>
-      <label>Combustible o energía mensual (ARS) <input name="fuel" inputmode="decimal" /></label>
-      <label>Seguro mensual (ARS) <input name="insurance" inputmode="decimal" /></label>
-      <label>Patente anual conocida (ARS) <input name="tax" inputmode="decimal" /></label>
-      <fieldset>
-        <legend>Mantenimiento (un modo)</legend>
-        <label><input type="radio" name="maintMode" value="monthly" checked /> Previsión mensual</label>
-        <label><input type="radio" name="maintMode" value="service" /> Service / meses</label>
-        <label>Previsión mensual <input name="maintMonthly" inputmode="decimal" /></label>
-        <label>Costo de service <input name="serviceCost" inputmode="decimal" /></label>
-        <label>Intervalo en meses <input name="serviceEvery" inputmode="numeric" /></label>
-      </fieldset>
-      <label>Cochera mensual (opcional) <input name="parking" inputmode="decimal" value="0" /></label>
-      <label>Otros mensuales (opcional) <input name="other" inputmode="decimal" value="0" /></label>
-      <div class="cluster">
-        <button class="btn btn-primary" type="submit">Calcular</button>
-        <button class="btn btn-ghost" type="reset">Reset</button>
-      </div>
-    </form>
-    <div role="status" data-own-result></div>
-  </article>
+<BaseLayout
+  title="Costo mensual de tener una moto"
+  description="Sumá combustible o energía, seguro, patente, mantenimiento y cochera para estimar cuánto cuesta tener una moto por mes."
+  path={paths.monthlyCost}
+>
+  <div class="wrap">
+    <PageHeader
+      crumbs={crumbs}
+      eyebrow="Herramientas"
+      title="Estimá el costo mensual de tu moto"
+      lede="Estimá tus gastos mensuales de uso y mantenimiento."
+    />
+
+    <div class="tool-layout">
+      <form class="tool-form" data-own-form novalidate>
+        <fieldset>
+          <legend>Uso y seguro</legend>
+          <div class="field">
+            <label for="own-fuel">Combustible o energía por mes (ARS)</label>
+            <input id="own-fuel" name="fuel" inputmode="decimal" autocomplete="off" placeholder="Ej.: 37500" />
+            <span class="field__hint">
+              Si no lo sabés, calculalo con la <a href={paths.fuel}>calculadora de combustible</a>. Para una eléctrica, cargá tu gasto de energía.
+            </span>
+          </div>
+          <div class="field">
+            <label for="own-insurance">Seguro por mes (ARS)</label>
+            <input id="own-insurance" name="insurance" inputmode="decimal" autocomplete="off" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Patente</legend>
+          <div class="field">
+            <label for="own-tax">Patente anual (ARS)</label>
+            <input id="own-tax" name="tax" inputmode="decimal" autocomplete="off" />
+            <span class="field__hint">Se reparte en 12 meses. Consultá el monto en el organismo de tu provincia o municipio.</span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mantenimiento</legend>
+          <div class="choice-row" role="radiogroup" aria-label="Cómo querés cargar el mantenimiento">
+            <label class="choice"><input type="radio" name="maintMode" value="monthly" checked /> Monto por mes</label>
+            <label class="choice"><input type="radio" name="maintMode" value="service" /> Por service</label>
+          </div>
+          <div class="field" data-maint="monthly">
+            <label for="own-maint">Mantenimiento por mes (ARS)</label>
+            <input id="own-maint" name="maintMonthly" inputmode="decimal" autocomplete="off" />
+          </div>
+          <div class="field-row" data-maint="service" hidden>
+            <div class="field">
+              <label for="own-service">Costo de cada service (ARS)</label>
+              <input id="own-service" name="serviceCost" inputmode="decimal" autocomplete="off" />
+            </div>
+            <div class="field">
+              <label for="own-every">Cada cuántos meses</label>
+              <input id="own-every" name="serviceEvery" inputmode="numeric" autocomplete="off" placeholder="Ej.: 6" />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Otros gastos (opcional)</legend>
+          <div class="field-row">
+            <div class="field">
+              <label for="own-parking">Cochera por mes (ARS)</label>
+              <input id="own-parking" name="parking" inputmode="decimal" autocomplete="off" value="0" />
+            </div>
+            <div class="field">
+              <label for="own-other">Otros por mes (ARS)</label>
+              <input id="own-other" name="other" inputmode="decimal" autocomplete="off" value="0" />
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="tool-form__actions">
+          <button class="btn btn-primary" type="submit">Calcular</button>
+          <button class="btn btn-ghost" type="reset">Limpiar</button>
+        </div>
+      </form>
+
+      <aside class="tool-result" aria-labelledby="resultado-costo">
+        <h2 id="resultado-costo">Tu costo mensual estimado</h2>
+        <div class="tool-result__output" data-own-result role="status" aria-live="polite">
+          <p>Completá combustible, seguro, patente y mantenimiento, y tocá “Calcular”.</p>
+        </div>
+      </aside>
+    </div>
+
+    <section class="section tool-explainer" aria-labelledby="como-calcula-costo">
+      <h2 id="como-calcula-costo">Cómo se calcula</h2>
+      <p>Total mensual = combustible o energía + seguro + patente anual ÷ 12 + mantenimiento + cochera + otros gastos.</p>
+      <p>
+        No incluye el precio de compra, el patentamiento inicial, la financiación ni la depreciación; si querés sumarlos, cargalos en “Otros”. La patente dividida en 12 sirve para presupuestar: no reemplaza el calendario de vencimientos de tu jurisdicción.
+      </p>
+      <p>El gasto anual es el total mensual por 12 con los mismos valores.</p>
+    </section>
+  </div>
 </BaseLayout>
 <script>
   import '../../scripts/ownership';
