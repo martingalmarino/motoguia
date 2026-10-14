@@ -16,7 +16,7 @@ Dominio canónico: `https://www.motoguia.com.ar`.
 
 1. En Vercel (Project → Settings → Domains), agregar `www.motoguia.com.ar` y `motoguia.com.ar`.
 2. En NIC.ar, cargar los registros que indique Vercel (CNAME de `www` y A del dominio raíz) o delegar los NS a Vercel.
-3. Dejar `www.motoguia.com.ar` como dominio principal, con redirección 301 desde `motoguia.com.ar` y `motoguia.vercel.app`.
+3. Dejar `www.motoguia.com.ar` como dominio principal, con redirección 301 desde `motoguia.com.ar` (en el panel de Vercel). La de `motoguia.vercel.app` está en `vercel.json`.
 4. Cuando `https://www.motoguia.com.ar` responda, configurar en Vercel (Production) y volver a desplegar:
    - `SITE_URL=https://www.motoguia.com.ar`
    - `PUBLIC_INDEXING_ENABLED=true`
