@@ -48,16 +48,17 @@ fuel:
     - corven-triax
 electric: null
 editorial:
-  summary: "Trail 150 de Corven con caja de 5 marchas y tanque de 12 litros, para ciudad y caminos de tierra livianos."
+  summary: "La Corven Triax 150 es una trail de 150 cc refrigerada por aire, con caja de 5 velocidades y tanque de 12 litros. La versión ONE combina disco hidráulico delantero y tambor trasero."
   suitableFor:
-    - Uso mixto de ciudad y tierra liviana, si te cierra una 150 sin ABS declarado
+    - "Uso mixto de asfalto y tierra en una trail 150 con tanque de 12 litros"
   strengths:
-    - La ONE detalla transmisión, carburador Euro 2 y un tanque de 12 litros
-    - 7.461 patentamientos de la fila TRIAX 150 en el acumulado 2026
+    - "Tanque de 12 litros"
+    - "Caja de 5 velocidades con embrague multidisco en baño de aceite"
+    - "Disco hidráulico delantero"
   limitations:
-    - "La ficha no informa potencia, peso ni precio de lista"
-    - "El ranking de patentamientos agrupa las versiones ONE y MAX"
-  ownershipNotes: "Existe también una Triax 150 MAX. Al cotizar, confirmá cuál de las dos versiones te ofrecen."
+    - "Corven no publica potencia, peso ni precio de lista"
+    - "Existe también una Triax 150 MAX: confirmá qué versión te ofrecen"
+  ownershipNotes: "Pedí por escrito el precio, la versión (ONE o MAX) y el peso de la unidad."
 images:
   - path: /images/motos/corven-triax-150.png
     alt: Corven Triax 150 ONE blanca, foto de catálogo de Corven Motos
@@ -78,15 +79,17 @@ accessoryCategoryIds:
 rankingReportNames:
   - CORVEN TRIAX 150
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Corven Triax 150 ficha Argentina
-seoDescription: "Corven Triax 150 ONE: tanque de 12 litros, caja de 5 y un ranking ACARA que no separa versiones."
+seoDescription: "Corven Triax 150 ONE: trail de 150 cc refrigerada por aire, con caja de 5, disco hidráulico delantero y tanque de 12 litros. Ficha técnica."
 licenceHint: 150 cc, clase A 1.2 según ANSV.
 warranty: null
+dataNotes:
+  - "El informe de patentamientos agrupa las versiones ONE y MAX en la fila CORVEN TRIAX 150."
 ---
 
-La Triax 150 es la on-off Corven del ranking: 7.461 patentamientos en 2026. En la calle se la compara con la XR150L; en el papel, la distancia es otra. Honda publica ABS delantero y lista; Corven publica un 150 de aire y un tanque de 12 litros, sin potencia ni peso en la página ONE.
+La Corven Triax 150 es una trail de 150 cc, un formato de uso mixto entre asfalto y tierra. Tiene motor refrigerado por aire, alimentación a carburador con norma de emisiones Euro 2 y caja de 5 velocidades con embrague multidisco en baño de aceite. Los datos de esta ficha corresponden a la versión ONE.
 
-Esa ficha describe motor 150 cc 4T refrigerado por aire, carburador Euro 2, 5 velocidades con embrague húmedo, disco hidráulico delantero y tambor trasero. Es un recorte de ciudad y ripio, no un enduro. ACARA no abre ONE y MAX: el número del ranking es de la fila, no de esta versión sola.
+Frena con disco de accionamiento hidráulico adelante y tambor atrás. El tanque de 12 litros es igual al de la Honda XR150L, otra trail 150 de este catálogo.
 
-Si te la cotizan, preguntá cuál. La MAX existe y no absorbe estas unidades.
+La diferencia con la XR150L está en lo que declara cada marca: Honda publica ABS delantero, peso y altura de asiento; Corven no informa esos datos para la Triax ONE, ni la potencia. Si estás entre las dos, pedí en el concesionario el peso y la altura de asiento para compararlas en igualdad.

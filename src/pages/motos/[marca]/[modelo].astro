@@ -317,7 +317,14 @@ const availability =
         <div class="cost-panel">
           <div class="cost-panel__facts">
             <p>{d.editorial.ownershipNotes}</p>
-            {d.price && !/patentamiento/i.test(d.editorial.ownershipNotes) && <p>{registrationLabel(entry)}</p>}
+            {
+              d.price &&
+                (d.price.includesRegistration === null ? (
+                  <p>Confirmá con el vendedor el precio final y los gastos de entrega y patentamiento.</p>
+                ) : (
+                  <p>{registrationLabel(entry)}</p>
+                ))
+            }
             {d.warranty && <p><strong>Garantía:</strong> {d.warranty}</p>}
             {
               d.licenceHint && (
@@ -390,7 +397,8 @@ const availability =
             {d.dimensions?.weightBasis && d.dimensions.weightKg && <li>Peso: {formatInteger(d.dimensions.weightKg)} kg ({d.dimensions.weightBasis}).</li>}
             {d.price && <li>{registrationLabel(entry)}</li>}
             {d.rankingReportNames.length > 0 && <li>Nombre en el informe de patentamientos ACARA/SIOMAA: {d.rankingReportNames.join(', ')}.</li>}
-            <li>Los datos que la marca no publica figuran como “No informado”; no se completan con cifras de otros mercados.</li>
+            {d.dataNotes.map((note) => <li>{note}</li>)}
+            <li>Los datos que la marca no publica figuran como “No informado”.</li>
           </ul>
         </details>
         <p class="muted">

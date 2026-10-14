@@ -1,16 +1,18 @@
 ---
 title: Honda Wave 110S vs Gilera Smash
-description: "Dos de las cub más patentadas de Argentina: en qué se diferencian sus fichas, la red de servicio y cómo aparecen en el ranking."
+description: "Dos cub de 110 cc: en qué se diferencian sus frenos, medidas, potencia publicada, precio y garantía."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published
 indexable: true
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-18
+reviewedAt: 2026-10-14
 sourceIds:
   - honda-wave
   - gilera-smash
   - acara-siomaa-2026-08
+  - honda-wave-pdf
+  - honda-garantia
 relatedModelIds:
   - honda-wave-110s
   - gilera-smash
@@ -21,26 +23,21 @@ modelIds:
   - honda-wave-110s
   - gilera-smash
 seoTitle: Honda Wave 110S vs Gilera Smash
-seoDescription: "Diferencias entre la Honda Wave 110S y la Gilera Smash en Argentina: motor, frenos, servicio y patentamientos."
+seoDescription: "Honda Wave 110S vs Gilera Smash: frenos, potencia, tanque, peso, precio publicado y garantía de dos cub de 110 cc en Argentina."
 ---
 
-Si el criterio es “qué se patentó más”, Wave 110S lidera el acumulado 2026 con 59.184 unidades y Smash sigue con 51.687. La distancia existe; no convierte a una en la cub correcta.
+La Honda Wave 110S y la Gilera Smash son dos cub de cilindrada muy parecida: 109 cc la Honda y 107 cc la Gilera. Las dos tienen 4 marchas y CBS; la Smash declara caja semiautomática. Los datos de la Smash corresponden a la versión Full II, y los de la Wave, a la Cast Disc.
 
-## Para qué sirve cada una
+## Frenos
 
-Wave conviene si valorás lista de precios publicada, origen Argentina en ficha y garantía Honda de 36 meses. Smash Full II conviene si priorizás doble disco y 7,2 hp declarados, sabiendo que ACARA mezcla versiones Smash en una sola fila.
+La Smash Full II lleva disco adelante y atrás. La Wave Cast Disc tiene disco delantero de 220 mm y tambor trasero de 110 mm, y la Wave también se vende con tambor adelante.
 
-## Lo que sí se puede comparar
+## Potencia, tanque y peso
 
-- Cilindrada: 109 cm³ (ficha disco Wave) versus 107 cm³ (Smash Full II).
-- CBS: ambas lo declaran en las fichas usadas.
-- Tanque: 3,7 l Wave disco; 3,5 l Smash Full II.
-- Precio: Wave tiene lista; Smash no en la página revisada.
+Gilera declara 7,2 hp para la Smash; Honda no publica la potencia de la Wave, así que en ese punto no se pueden comparar. Los tanques son similares: 3,7 litros la Wave y 3,5 la Smash. Los pesos tienen bases distintas, 102 kg en orden de marcha la Wave y 87 kg en seco la Smash, y no se pueden restar directamente.
 
-## Lo que no
+## Precio y garantía
 
-Honda no publica potencia de Wave. No se puede decir que Smash “tiene más caballos que Wave” con fuente Honda. El peso 102 kg de Wave es orden de marcha y el 87 kg de Smash es en seco: no se restan.
+Honda publica precio de lista para las dos versiones de la Wave; Gilera no publica precio de la Smash. La garantía de la Wave es de 36 meses o 36.000 km, y la de la Smash, de 12 meses o 12.000 km.
 
-Tampoco hay un veredicto de frenos: Smash Full II trae disco atrás; Wave disco, tambor 110 mm. Otra Smash del ranking podría no ser Full II.
-
-Elegí según taller cercano y tipo de caja que ya sabés usar. El [comparador](/comparador/) muestra la tabla; esta nota no puntúa.
+El [comparador](/comparador/) muestra las dos fichas completas lado a lado.

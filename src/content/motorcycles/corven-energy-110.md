@@ -46,7 +46,7 @@ dimensions:
   wheelbaseMm: null
   seatHeightMm: null
   weightKg: 97
-  weightBasis: no aclarado en la ficha
+  weightBasis: base no informada
 fuel:
   tankLiters: 4
   consumptionL100km: null
@@ -55,16 +55,16 @@ fuel:
     - corven-energy
 electric: null
 editorial:
-  summary: "Cub de 106,7 cc y 6,7 HP de Corven, una de las motos más patentadas del país en 2026."
+  summary: "La Corven Energy 110 es una cub de 106,7 cc y 6,7 hp con caja de 4 velocidades. La versión AD combina disco delantero y tambor trasero, con un tanque de 4 litros."
   suitableFor:
-    - Uso urbano, si te cierra el segmento 110 y el recambio de Corven
-    - Presupuesto de cub, sabiendo que vas a cotizar sin lista de fábrica
+    - "Uso urbano en una cub con disco delantero y tanque de 4 litros"
   strengths:
-    - Quinta del acumulado ACARA 2026, con 33.193 patentamientos
-    - Cilindrada y potencia publicadas en la ficha AD
+    - "Disco delantero en la versión AD"
+    - "6,7 hp a 8.000 rpm declarados"
+    - "Tanque de 4 litros"
   limitations:
     - "Corven no publica precio de lista"
-    - "No informa ABS ni CBS, ni si el peso es en seco o en orden de marcha"
+    - "El peso declarado no indica si es en seco o en orden de marcha"
   ownershipNotes: "Corven ofrece también una Energy 110 RT con otro rodado delantero. Al cotizar, confirmá por escrito qué versión estás comprando."
 images:
   - path: /images/motos/corven-energy-110.jpg
@@ -89,15 +89,19 @@ accessoryCategoryIds:
 rankingReportNames:
   - CORVEN ENERGY 110
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Corven Energy 110 ficha técnica Argentina
-seoDescription: "Corven Energy 110 AD en Argentina: 106,7 cm³, 6,7 HP y el quinto puesto del ranking ACARA, con lo que la marca no publica."
+seoDescription: "Corven Energy 110 AD: cub de 106,7 cc y 6,7 hp con caja de 4, disco delantero y tanque de 4 litros. Ficha técnica en Argentina."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null
+dataNotes:
+  - "El informe de patentamientos lista una sola fila CORVEN ENERGY 110, sin separar las versiones AD y RT."
 ---
 
-La Energy 110 es, en volumen, la cub Corven del año: quinto lugar del ranking ACARA enero-agosto 2026, con 33.193 patentamientos. El informe no separa AD y RT, así que el número cuenta la familia, no esta ficha sola.
+La Corven Energy 110 es una cub de 106,7 cc con caja de 4 velocidades. Los datos de esta ficha corresponden a la versión AD, que combina disco delantero y tambor trasero.
 
-La versión AD declara 106,7 cm³, 6,7 HP a 8.000 rpm, 4 velocidades, disco delantero, tambor trasero, tanque de 4 litros y 97 kg. Corven no aclara si ese peso es en seco o en orden de marcha. Tampoco figuran ABS ni CBS. Hay una Energy 110 RT con otro rodado delantero: no le asignamos estas unidades.
+Corven declara 6,7 hp a 8.000 rpm, un tanque de 4 litros y un peso de 97 kg, sin aclarar si es en seco o en orden de marcha. Esa base importa al comparar: una moto pesada en orden de marcha incluye combustible y fluidos, y suma algunos kilos frente a una medida en seco.
 
-Sin lista oficial, el precio sale de la cotización del día. Pedí por escrito de qué versión se trata.
+El tanque de 4 litros está entre los más grandes de las cub de este catálogo, a la par del de la Keller Crono Classic 110.
+
+También existe la Energy 110 RT, con otro rodado delantero. Si te ofrecen una Energy, preguntá cuál de las dos es: los datos de esta ficha no se aplican automáticamente a la RT.

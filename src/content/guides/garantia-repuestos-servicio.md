@@ -42,7 +42,7 @@ Zanella, Corven, Mondial, Keller y SIAM no tenían un recorte de garantía tan c
 
 ## Repuestos y “motos chinas”
 
-Varias marcas del volumen son argentinas de catálogo con suministro no declarado. Eso no prueba que “no hay piezas” ni que “hay de sobra”. El proxy más honesto es el propio ranking: una Wave o una Smash se ven todos los días; una IKA P110 patentó volumen pero no tiene ficha oficial localizada. Más unidades suelen significar más recambio en el mercado paralelo; no reemplazan el taller en garantía.
+Varias marcas con muchos patentamientos venden con marca argentina sin declarar el origen de sus piezas. Eso no prueba que falten repuestos ni que sobren. Antes de comprar, preguntá en el concesionario por la disponibilidad de las piezas de desgaste más comunes (pastillas o cintas de freno, kit de transmisión, filtros) y dónde se hace el service en garantía.
 
 ## Cómo anotarlo
 

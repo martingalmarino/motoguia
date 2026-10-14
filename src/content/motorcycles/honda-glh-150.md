@@ -63,18 +63,18 @@ fuel:
     - honda-glh
 electric: null
 editorial:
-  summary: "Street 150 de fabricación nacional con CBS, caja de 5 y tanque de 12,7 litros, con precio de lista publicado por Honda."
+  summary: "La Honda GLH 150 es una moto de calle de 149 cc con caja de 5 velocidades, disco delantero de 240 mm y frenado combinado CBS. Honda la fabrica en Argentina y declara un tanque de 12,7 litros."
   suitableFor:
-    - Quien ya está en ciudad todos los días y quiere una caja de 5
-    - Quien prioriza red Honda y un precio que se puede citar
+    - "Quien pasa de una cub a una moto de calle con caja de 5 velocidades"
+    - "Quien prioriza un precio de lista publicado y una garantía de 36 meses"
   strengths:
-    - Ficha argentina y precio de lista a la vista, algo poco habitual en este segmento
-    - CBS, disco delantero de 240 mm y un tanque de 12,7 litros que estira los días entre cargas
-    - Garantía de 36 meses o 36.000 km
+    - "Disco delantero de 240 mm con CBS"
+    - "Tanque de 12,7 litros"
+    - "Garantía de 36 meses o 36.000 km"
   limitations:
-    - "Honda no publica la potencia"
-    - "Tiene frenado combinado CBS, no ABS"
-  ownershipNotes: El $4.737.555 de lista del 18 de septiembre de 2026 no aclara si incluye patentamiento. Confirmalo en la cotización.
+    - "Honda no publica potencia ni consumo"
+    - "El CBS no reemplaza a un ABS: si es prioridad, compará con la XR150L, que lo declara adelante"
+  ownershipNotes: "Para conservar la garantía, consultá en el concesionario el plan de services y dónde se hacen."
 images:
   - path: /images/motos/honda-glh-150.webp
     alt: Honda GLH 150 roja, foto de catálogo de Honda Motos Argentina
@@ -98,15 +98,17 @@ accessoryCategoryIds:
 rankingReportNames:
   - HONDA GLH 150
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Honda GLH 150 ficha y precio Argentina
-seoDescription: "Honda GLH 150 en Argentina: lista oficial, CBS, tanque de 12,7 litros y el puesto 10 del ranking ACARA 2026."
+seoDescription: "Honda GLH 150: moto de calle de 149 cc fabricada en Argentina, con caja de 5, disco de 240 mm con CBS y tanque de 12,7 litros."
 licenceHint: 149 cc, clase A 1.2 según ANSV.
 warranty: 36 meses o 36.000 km; batería 12 meses.
 ---
 
-La GLH 150 es la street Honda que más se ve en el ranking: décima del acumulado ACARA 2026, con 10.440 patentamientos. No es una cub alta ni una trail: es una 150 de calle, armada en el país, pensada para uso diario.
+La Honda GLH 150 es una moto de calle de 149 cc con caja de 5 velocidades, un formato distinto al de las cub de 110 cc. Honda la fabrica en Argentina.
 
-La ficha local declara 149 cm³, cinco velocidades, disco delantero de 240 mm, tambor trasero de 130 mm, CBS, tanque de 12,7 litros, asiento a 757 mm y 129 kg en orden de marcha. El tanque es el dato que más la separa de una 110: hay litros de sobra para la semana. Lo que no hay es potencia publicada, y no se inventa.
+Para frenar combina un disco delantero de 240 mm y un tambor trasero de 130 mm, con CBS. Ese sistema acciona los dos frenos en conjunto desde el comando combinado y ayuda a repartir la frenada; no es un ABS.
 
-El 18 de septiembre de 2026 el precio de lista era $4.737.555, el mismo que había citado Ámbito el 8 de septiembre. Como en el resto de las Honda de este recorte, la lista no aclara patentamiento.
+El tanque de 12,7 litros es más del triple que el de la Wave 110S (3,7 litros). Es un dato a tener en cuenta si comparás autonomía, aunque Honda no publica el consumo que permitiría calcularla.
+
+El asiento está a 757 mm y el peso declarado es de 129 kg en orden de marcha. Si venís de una cub, la diferencia está más en el peso y en la caja de 5 que en la altura: la Wave tiene el asiento a 763 mm y pesa 102 kg con la misma base de medición.

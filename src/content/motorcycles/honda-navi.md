@@ -62,18 +62,18 @@ fuel:
     - honda-navi
 electric: null
 editorial:
-  summary: "Moto automática y compacta de 109 cc, con CBS y precio de lista publicado por Honda."
+  summary: "La Honda Navi es una moto automática compacta de 109 cc: con su transmisión V-Matic no hay que cambiar marchas ni usar embrague. Tiene frenos a tambor con CBS y Honda la fabrica en Argentina."
   suitableFor:
-    - Quien no quiere cambiar marchas en el semáforo
-    - Ciudad, trayectos cortos y una primera moto sin embrague a mano
+    - "Quien prefiere no usar embrague ni cambiar marchas"
+    - "Traslados urbanos con una moto compacta de precio de lista publicado"
   strengths:
-    - "Precio de lista a la vista: $3.434.700 al 18 de septiembre de 2026"
-    - Transmisión automática V-Matic declarada en la ficha local
-    - CBS, con la misma garantía Honda de 36 meses o 36.000 km
+    - "Transmisión automática V-Matic, sin cambios ni embrague"
+    - "CBS con tambores de 130 mm adelante y atrás"
+    - "Garantía de 36 meses o 36.000 km"
   limitations:
-    - Frenos a tambor adelante y atrás
-    - Honda no publica la potencia
-  ownershipNotes: "Es una moto automática compacta: no es una cub ni un scooter con baúl. Honda la ofrece con precio de lista y garantía de 36 meses o 36.000 km."
+    - "Frenos a tambor adelante y atrás"
+    - "Honda no publica potencia ni consumo"
+  ownershipNotes: "Para conservar la garantía, consultá en el concesionario el plan de services y dónde se hacen."
 images:
   - path: /images/motos/honda-navi.webp
     alt: Honda Navi roja, foto de catálogo de Honda Motos Argentina
@@ -94,15 +94,17 @@ accessoryCategoryIds:
 rankingReportNames:
   - HONDA NAVI
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Honda Navi ficha y precio Argentina
-seoDescription: "Honda Navi en Argentina: automática V-Matic, CBS, lista oficial y el puesto 17 del ranking ACARA 2026."
+seoDescription: "Honda Navi: moto automática V-Matic de 109 cc fabricada en Argentina, con frenos a tambor y CBS. Ficha técnica, precio de lista y garantía."
 licenceHint: 109 cc, clase A 1.2 según ANSV.
 warranty: 36 meses o 36.000 km; batería 12 meses.
 ---
 
-La Navi es la Honda para quien quiere olvidarse del embrague. En el acumulado ACARA 2026 suma 6.509 patentamientos y queda 17.ª: hay volumen, pero no el de una Wave. El formato es propio de la marca, a medio camino entre cub y scooter, sin el baúl grande que mucha gente espera al oír “automática”.
+La Honda Navi es una moto urbana de 109 cc con transmisión automática V-Matic: no tiene palanca de cambios ni embrague, se maneja solo con acelerador y frenos. Esa es la diferencia principal con la Wave 110S, que tiene una cilindrada similar pero usa caja de 4 velocidades.
 
-La ficha local declara 109 cm³, transmisión V-Matic, tambores de 130 mm adelante y atrás, CBS, tanque de 3,5 litros, asiento a 762 mm y 104 kg en orden de marcha. Honda no publica la potencia.
+Frena con tambores de 130 mm adelante y atrás, y suma CBS, que acciona los dos frenos en conjunto desde el comando combinado.
 
-El precio de lista observado el 18 de septiembre de 2026 es $3.434.700. Es de las pocas 110 del mercado en las que podés citar un número de fábrica; el patentamiento, como en el resto, no está desglosado.
+Las medidas son de moto compacta: asiento a 762 mm, 104 kg en orden de marcha y tanque de 3,5 litros. Comparte con la Wave la altura de asiento y la garantía Honda de 36 meses o 36.000 km.
+
+Si dudás entre una Navi y una cub, la decisión pasa sobre todo por la transmisión. Probá las dos antes de elegir.

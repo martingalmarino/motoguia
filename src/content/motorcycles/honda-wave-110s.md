@@ -54,7 +54,7 @@ dimensions:
   wheelbaseMm: null
   seatHeightMm: 763
   weightKg: 102
-  weightBasis: orden de marcha, ficha versión disco
+  weightBasis: en orden de marcha, versión Cast Disc
 fuel:
   tankLiters: 3.7
   consumptionL100km: null
@@ -63,19 +63,18 @@ fuel:
     - honda-wave-pdf
 electric: null
 editorial:
-  summary: "Una cub de 109 cc para el uso urbano, con CBS y dos versiones de freno delantero: tambor o disco."
+  summary: "La Honda Wave 110S es una cub de 109 cc con caja de 4 velocidades y frenado combinado CBS. Honda la fabrica en Argentina y la ofrece con freno delantero a tambor o con disco de 220 mm."
   suitableFor:
-    - Quien busca una primera moto urbana y una red de service amplia
-    - Trámites, delivery liviano o el ida y vuelta al trabajo en ciudad
-    - Quien prefiere partir de un precio de lista publicado
+    - "Traslados urbanos, si querés una cub con precio de lista publicado por la marca"
+    - "Quien valora una garantía larga: 36 meses o 36.000 km"
   strengths:
-    - "Lidera el ranking ACARA enero-agosto 2026, con 59.184 patentamientos: hay volumen de calle y de recambio"
-    - CBS declarado y dos frenos a elección, tambor o disco de 220 mm
-    - Garantía Honda de 36 meses o 36.000 km, de las más largas del recorte 110
+    - "Dos versiones de freno delantero: tambor o disco de 220 mm"
+    - "CBS en las dos versiones"
+    - "Garantía de 36 meses o 36.000 km, con 12 meses para la batería"
   limitations:
-    - "Honda no informa potencia ni consumo"
-    - "La Cast Disc figura aparte en el ranking (WAVE 110S CD) y esas unidades no se suman a este recuento"
-  ownershipNotes: El precio de lista del 18 de septiembre de 2026 no aclara si incluye patentamiento, flete o accesorios. Pedilo por escrito en el concesionario.
+    - "Honda no publica potencia ni consumo, así que no se puede comparar en esos datos"
+    - "Tanque, asiento y peso corresponden a la versión Cast Disc"
+  ownershipNotes: "Al cotizar, confirmá si la unidad es la versión a tambor o la Cast Disc: cambian el freno delantero y el precio."
 images:
   - path: /images/motos/honda-wave-110s.webp
     alt: Honda Wave 110S roja, foto de catálogo de Honda Motos Argentina
@@ -101,9 +100,9 @@ accessoryCategoryIds:
 rankingReportNames:
   - HONDA WAVE 110S
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Honda Wave 110S ficha y precio en Argentina
-seoDescription: "Cómo leer la Honda Wave 110S en Argentina: lista oficial, dos versiones, CBS y el ranking ACARA 2026, con lo que Honda no publica."
+seoDescription: "Honda Wave 110S: cub de 109 cc con CBS, versiones con tambor o disco de 220 mm, ficha técnica, precio de lista y garantía de 36 meses."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV. Verificá la cédula.
 warranty: 36 meses o 36.000 km; batería 12 meses.
 versions:
@@ -112,15 +111,17 @@ versions:
     note: "Freno delantero a tambor."
   - name: "Cast Disc"
     priceARS: 4020800
-    note: "Disco delantero de 220 mm. Es la versión de la ficha PDF de la que salen tanque, altura de asiento y peso."
-versionNote: "Honda publica precio de lista para las dos versiones. Los datos técnicos de esta ficha provienen de la ficha PDF de la Cast Disc; los frenos se detallan por versión."
+    note: "Disco delantero de 220 mm. Tanque, altura de asiento y peso de la ficha técnica corresponden a esta versión."
+versionNote: "Las dos versiones comparten motor de 109 cc, caja de 4 velocidades y CBS. Cambia el freno delantero."
 specVersion: Cast Disc
+dataNotes:
+  - "En el informe de patentamientos, la Cast Disc figura en una fila aparte (HONDA WAVE 110S CD), que no se suma a la fila HONDA WAVE 110S."
 ---
 
-Si en 2026 alguien te dice “la moto de la ciudad”, en Argentina suele estar hablando de esta. En el informe ACARA/SIOMAA de agosto, la Honda Wave 110S encabeza el acumulado del año con 59.184 patentamientos entre enero y agosto. Eso mide inscripciones, no si te va a resultar cómoda ni cómo anda el taller de tu barrio.
+La Honda Wave 110S es una moto de formato cub con motor de 109 cc y caja de 4 velocidades. Honda la ofrece en dos configuraciones: con freno delantero a tambor o con disco de 220 mm en la versión Cast Disc. Esa diferencia es uno de los puntos que conviene revisar al comparar equipamiento y precio.
 
-Honda Motos Argentina la vende al menos en dos configuraciones: tambor y Wave Cast Disc. La ficha PDF que usamos es la versión disco: 109 cm³, tanque de 3,7 litros, asiento a 763 mm, 102 kg en orden de marcha y CBS. La potencia no está publicada. No la completamos con números de Brasil, India u otro catálogo: si Honda Argentina no la declara, acá no aparece.
+Las dos versiones tienen CBS, un sistema que acciona en conjunto los frenos delantero y trasero desde el comando combinado. Ayuda a repartir la frenada, pero no es un ABS: no impide que la rueda se bloquee.
 
-El 18 de septiembre de 2026 el sitio de la marca mostraba $3.529.707 para el tambor y $4.020.800 para el disco. Ámbito había citado los mismos valores el 8 de septiembre. Ninguna de las dos fuentes aclara si entra patentamiento, flete o extras.
+En la Cast Disc, Honda declara un tanque de 3,7 litros, asiento a 763 mm y 102 kg en orden de marcha, es decir, con fluidos y combustible. Si la comparás con otras cub, fijate en la base de cada peso: una medida en seco no incluye esos litros y suele dar menos.
 
-Hay un detalle de ranking que conviene no mezclar: ACARA abre una fila HONDA WAVE 110S CD, fuera del top 20 anual. Esas unidades no se suman a esta ficha.
+La garantía es de 36 meses o 36.000 km, con 12 meses para la batería. Es más larga que los 12 meses o 12.000 km que declaran otras marcas del segmento, como Gilera o Motomel.

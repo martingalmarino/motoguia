@@ -54,17 +54,16 @@ fuel:
     - keller-crono-full
 electric: null
 editorial:
-  summary: "Cub semiautomática de 110 cc de Keller. Es la KN110-8 del ranking: tercera más patentada del país en 2026, con disco hidráulico en la versión FULL."
+  summary: "La Keller Crono Classic 110 es una cub semiautomática de 107 cc y 7 hp, con caja de 4 velocidades. Se vende en versiones ECO, PLUS y FULL, que cambian frenos y equipamiento."
   suitableFor:
-    - Uso urbano y trabajo diario, si te cierra una 110 semiautomática y cotizás sin lista de precios
+    - "Quien quiere una cub semiautomática y elegir el nivel de equipamiento"
   strengths:
-    - "Las tres versiones publican la misma base: 7 HP, 4 litros de tanque, 760 mm de asiento y 89 kg en seco"
-    - Disco hidráulico de 220 mm adelante en la FULL
-    - "51.658 patentamientos en el acumulado 2026, tercera del ranking ACARA"
+    - "Tres versiones con la misma base técnica"
+    - "Disco hidráulico de 220 mm en la FULL"
+    - "Tanque de 4 litros y 89 kg en seco"
   limitations:
     - "Keller no publica precio de lista"
-    - "El ranking no separa versiones: no se sabe cuántas KN110-8 son ECO, PLUS o FULL"
-    - "El manual de la FULL y la web no coinciden en neumático trasero ni en horquilla"
+    - "La garantía cubre piezas del motor, no la mano de obra"
   ownershipNotes: "El manual fija services a los 500, 1.500, 4.000, 7.000 y 10.000 km, con aceite SAE 20W50 (0,8 litros). La garantía se pierde si salteás un service obligatorio, usás repuestos no originales o le agregás accesorios. Pedí la cotización por escrito y confirmá la versión."
 images:
   - path: /images/motos/keller-crono-classic-110.jpg
@@ -92,7 +91,7 @@ rankingReportNames:
 publishedAt: 2026-09-18
 reviewedAt: 2026-10-14
 seoTitle: Keller Crono Classic 110 (KN110-8) ficha Argentina
-seoDescription: "Keller Crono Classic 110, la KN110-8 de ACARA: tercera más patentada de 2026, versiones ECO, PLUS y FULL, ficha completa y garantía."
+seoDescription: "Keller Crono Classic 110: cub semiautomática de 107 cc y 7 hp en versiones ECO, PLUS y FULL, con disco hidráulico en la FULL. Ficha y garantía."
 licenceHint: 107 cc, clase A 1.2 si la cédula indica hasta 150 cc.
 warranty: 1 año o 10.000 km de garantía mecánica, según el manual del usuario.
 versions:
@@ -105,14 +104,18 @@ versions:
   - name: "FULL"
     priceARS: null
     note: "Disco hidráulico de 220 mm adelante, tambor de 110 mm atrás y llantas de aleación. Es la versión de la ficha técnica."
-versionNote: "Motor, medidas, peso y tanque son iguales en las tres versiones según Keller; cambian frenos y equipamiento. El ranking ACARA/SIOMAA cuenta la Crono Classic 110 en una sola fila, KELLER KN110-8, sin separar versiones."
+versionNote: "Motor, medidas, peso y tanque son iguales en las tres versiones según Keller; cambian frenos y equipamiento."
 specVersion: FULL
+dataNotes:
+  - "El código KN110-8 sale del manual del usuario de la versión FULL, que identifica el modelo como “CRONO CLASSIC 110 (KN110-8)”."
+  - "El informe de patentamientos no separa las versiones ECO, PLUS y FULL."
+  - "El manual de la FULL indica neumático trasero 2.75 x 14 y horquilla invertida; la web actual de Keller, 80/100-14 y horquilla telescópica hidráulica. La ficha toma los datos de la web."
 ---
 
-KELLER KN110-8 es la tercera moto más patentada de la Argentina: 51.658 unidades entre enero y agosto de 2026, y 5.555 solo en agosto. Ese código no aparece en la web de Keller, pero sí en el manual del usuario de la Crono Classic FULL: “CRONO CLASSIC 110 (KN110-8)”. Con ese documento, la fila del ranking queda vinculada a esta ficha.
+La Keller Crono Classic 110 es una cub de 107 cc con caja semiautomática de 4 velocidades: el embrague multidisco trabaja solo y los cambios se pasan con el pie. Keller la vende en tres versiones, ECO, PLUS y FULL, con el mismo motor UNNITEC de 7 hp a 8.000 rpm y carburador de 19 mm.
 
-Keller, que tiene su planta industrial en Córdoba, la vende en tres versiones: ECO, PLUS y FULL. Las tres comparten el motor UNNITEC de 107 cc, con 7 HP a 8.000 rpm, carburador de 19 mm, caja de 4 marchas y embrague semiautomático. También comparten 4 litros de tanque, 760 mm de asiento, 150 mm de despeje y 89 kg en seco. Lo que cambia es el freno delantero: tambor en la ECO y la PLUS, disco hidráulico de 220 mm en la FULL. La PLUS y la FULL suman llantas de aleación, y la PLUS trae alarma con control remoto.
+Las tres comparten medidas: tanque de 4 litros, asiento a 760 mm, 150 mm de despeje y 89 kg en seco. Lo que cambia es el freno delantero, a tambor en la ECO y la PLUS y con disco hidráulico de 220 mm en la FULL. La PLUS y la FULL suman llantas de aleación, y la PLUS trae alarma con control remoto.
 
-Un detalle si comparás papeles: el manual de la FULL indica neumático trasero 2.75 x 14 y horquilla invertida, mientras que la web actual dice 80/100-14 y horquilla telescópica hidráulica. Tomamos la web porque es la ficha vigente. Revisá la unidad que te entregan.
+El tanque de 4 litros está entre los más grandes de las cub de este catálogo, a la par del de la Corven Energy 110.
 
-La garantía del manual es de 1 año o 10.000 km y cubre las piezas del motor, no la mano de obra. Keller no publica precio, así que pedí la cotización por escrito y que diga la versión.
+La garantía es de 1 año o 10.000 km y cubre las piezas del motor, sin mano de obra. Keller no publica precio de lista: pedí la cotización por escrito y que indique la versión.

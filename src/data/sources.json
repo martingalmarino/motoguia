@@ -225,7 +225,7 @@
     "url": "https://siammotos.com.ar/n4",
     "publisher": "SIAM / Newsan",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-14",
     "countryScope": "AR",
     "supports": ["n4-electrica"]
   },
@@ -245,7 +245,17 @@
     "url": "https://zanellaglobal.com/ar/producto/zb-110-full/",
     "publisher": "Zanella",
     "publishedAt": "2025-08-11",
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["zb-110-full"]
+  },
+  {
+    "id": "zanella-zb-full-pdf",
+    "title": "Ficha técnica Zanella ZB 110 Z3 FULL 2025 (PDF)",
+    "url": "https://zanellaglobal.com/ar/wp-content/uploads/2025/08/FT-ZB-110-Z3-FULL-2025_compressed.pdf",
+    "publisher": "Zanella",
+    "publishedAt": null,
+    "accessedAt": "2026-10-14",
     "countryScope": "AR",
     "supports": ["zb-110-full"]
   },
@@ -255,7 +265,17 @@
     "url": "https://zanellaglobal.com/ar/producto/zb-110-st/",
     "publisher": "Zanella",
     "publishedAt": "2026-08-12",
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["zb-110-st"]
+  },
+  {
+    "id": "zanella-zb-st-pdf",
+    "title": "Ficha técnica Zanella ZB 110 Z3 ST 2025 (PDF)",
+    "url": "https://zanellaglobal.com/ar/wp-content/uploads/2025/08/FT-ZB-110-Z3-ST-2025_.pdf",
+    "publisher": "Zanella",
+    "publishedAt": null,
+    "accessedAt": "2026-10-14",
     "countryScope": "AR",
     "supports": ["zb-110-st"]
   },
@@ -335,7 +355,7 @@
     "url": "https://motomel.com.ar/productos/stratoe/",
     "publisher": "Motomel Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-14",
     "countryScope": "AR",
     "supports": ["stratoe"]
   },
@@ -415,7 +435,7 @@
     "url": "https://mondial.com.ar/modelos/ld-110-max-ad/",
     "publisher": "Mondial",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-14",
     "countryScope": "AR",
     "supports": ["ld-110-max"]
   },
@@ -435,7 +455,7 @@
     "url": "https://sunra.com.ar/moto-electrica-future/",
     "publisher": "SUNRA Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-14",
     "countryScope": "AR",
     "supports": ["sunra-future"]
   },
@@ -445,7 +465,7 @@
     "url": "https://sunra.com.ar/moto-electrica-miku-max/",
     "publisher": "SUNRA Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-14",
     "countryScope": "AR",
     "supports": ["sunra-miku-max"]
   }

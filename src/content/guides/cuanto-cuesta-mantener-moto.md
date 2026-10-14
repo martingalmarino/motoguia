@@ -27,7 +27,7 @@ Mantener una moto no es el valor de la cuota. Es nafta o energía, seguro, paten
 
 La fórmula es lineal: litros al mes = km del mes × L/100 km / 100. El precio del litro lo ponés vos. Un ejemplo de $1.500 no es “el precio actual”.
 
-Casi ninguna ficha del catálogo publica consumo. Wave, GLH y Smash no traen L/100 km oficiales en las páginas revisadas. Si la calculadora precarga un consumo, es porque hay fuente; si no, el campo queda vacío.
+Pocas marcas publican el consumo de sus motos: Honda no lo informa para la Wave ni la GLH, y Gilera tampoco para la Smash. Si la calculadora precarga un consumo, es un dato declarado por la marca; si no, el campo queda vacío para que cargues el tuyo.
 
 Para eléctricas, esta fase pide un gasto de energía mensual a mano. No hay calculadora de kWh por carga.
 

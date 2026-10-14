@@ -45,24 +45,25 @@ electric:
   capacityBasis: 60 V × 20 Ah, sin aclarar si es usable o nominal
   voltageV: 60
   capacityAh: 20
-  batteryChemistry: null
+  batteryChemistry: litio
   removableBattery: true
   declaredRangeKm: null
-  rangeConditions: El sitio habla de autonomía sin publicar kilómetros.
+  rangeConditions: Motomel no publica kilómetros de autonomía.
   chargingTimeHours: null
   chargingConditions: null
   warranty: Régimen Motomel 2026, 12 meses o 12.000 km. La ficha no indica un plazo específico para la batería.
 editorial:
-  summary: "Scooter eléctrico de 2000 W con batería extraíble de 60 V y frenos a disco adelante y atrás."
+  summary: "La Motomel StratoE es un scooter eléctrico con motor de 2.000 W y batería de litio extraíble de 60 V y 20 Ah. Tiene frenos a disco adelante y atrás y pesa 83 kg en seco."
   suitableFor:
-    - Uso urbano, si podés validar la autonomía con el vendedor antes de firmar
+    - "Uso urbano, si podés cargar la batería extraíble en casa o en el trabajo"
   strengths:
-    - Batería extraíble declarada, 60 V 20 Ah, y frenos disco/disco
-    - 83 kg en seco y un régimen de garantía Motomel 2026 a la vista
+    - "Batería de litio extraíble de 60 V y 20 Ah"
+    - "Frenos a disco adelante y atrás"
+    - "83 kg en seco"
   limitations:
     - "Motomel no publica la autonomía en kilómetros"
-    - "No figura por modelo en el ranking de patentamientos"
-  ownershipNotes: "La batería de 60 V y 20 Ah equivale a 1,2 kWh nominales. Si los 2 kW son la potencia continua nominal, entra en la clase A 1.1 (hasta 4 kW): confirmalo en la cédula."
+    - "La garantía no indica un plazo específico para la batería"
+  ownershipNotes: "La ficha no indica un plazo de garantía específico para la batería: pedilo por escrito antes de comprar."
 images:
   - path: /images/motos/motomel-stratoe.png
     alt: Motomel StratoE negra, foto de catálogo de Motomel Argentina
@@ -81,15 +82,15 @@ accessoryCategoryIds:
   - helmets
 rankingReportNames: []
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Motomel StratoE eléctrica Argentina
-seoDescription: "Motomel StratoE: 2000 W, batería extraíble 60 V 20 Ah y una autonomía que la marca no publica en kilómetros."
-licenceHint: 2 kW de ficha, por debajo de 4 kW. Confirmá la potencia continua en la cédula.
-warranty: 12 meses o 12.000 km según régimen Motomel 2026.
+seoDescription: "Motomel StratoE: scooter eléctrico de 2.000 W con batería de litio extraíble de 60 V y 20 Ah, frenos a disco y 83 kg. Ficha técnica."
+licenceHint: "Con 2 kW declarados, corresponde la clase A 1.1 (hasta 4 kW) si es la potencia continua nominal. Verificá la cédula."
+warranty: "12 meses o 12.000 km, régimen Motomel para unidades 2026."
 ---
 
-La StratoE es la eléctrica de Motomel que sí llega a catálogo con números de batería. Motor de 2000 W, paquete 60 V 20 Ah extraíble en baulera, 83 kg en seco y disco adelante y atrás. Para un scooter de ciudad, el dato que más pesa es el que falta: no hay kilómetros de autonomía en la ficha revisada.
+La Motomel StratoE es un scooter eléctrico urbano con motor de 2.000 W y batería de litio de 60 V y 20 Ah. La batería se puede extraer, así que podés cargarla fuera de la moto, por ejemplo dentro de casa si no tenés un enchufe donde la estacionás.
 
-El sitio habla de autonomía sin publicar la cifra. Hasta que Motomel la escriba con condiciones, no se inventa un alcance. Tampoco aparece como modelo en el top 50 ACARA de agosto 2026.
+Esa batería equivale a unos 1,2 kWh nominales (60 V por 20 Ah). La capacidad es uno de los datos que definen la autonomía, pero Motomel no publica kilómetros por carga: pedile ese dato al vendedor, con las condiciones en que se midió.
 
-Si te la muestran, pedí por escrito cuántos km declaran y en qué ciclo. La garantía del régimen 2026 es 12 meses o 12.000 km; la ficha no indica un plazo específico para la batería.
+Frena con disco adelante y atrás, pesa 83 kg en seco y suma iluminación full LED y un cargador USB en la baulera.

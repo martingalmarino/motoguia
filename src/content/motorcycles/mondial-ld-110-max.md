@@ -43,16 +43,17 @@ dimensions: null
 fuel: null
 electric: null
 editorial:
-  summary: "Cub urbana de Mondial con CBS, iluminación LED, puerto USB y baúl, sexta entre las más patentadas de 2026."
+  summary: "La Mondial LD 110 MAX es una cub urbana con frenado combinado CBS, luces LED, puerto USB y baúl de guardado. Los datos de esta ficha corresponden a la versión AD."
   suitableFor:
-    - Uso urbano con baúl, si te alcanza el ranking como señal de recambio y no pedís una ficha completa
+    - "Uso urbano, si valorás tener baúl y puerto USB"
   strengths:
-    - "22.537 patentamientos en el acumulado ACARA 2026: sexto modelo del año"
-    - CBS declarado en la página LD 110 Max AD
+    - "Frenado combinado CBS"
+    - "Luces LED y puerto USB"
+    - "Baúl de guardado"
   limitations:
-    - "La página consultada no informa cilindrada, potencia, peso ni tanque"
+    - "Cilindrada, potencia, peso y tanque figuran como “No informado”"
     - "Mondial no publica precio de lista"
-  ownershipNotes: "Pedí la ficha completa en el concesionario para confirmar cilindrada, peso y tanque antes de comprar."
+  ownershipNotes: "Antes de comprar, pedí en el concesionario la ficha completa para confirmar cilindrada, peso y tanque."
 images:
   - path: /images/motos/mondial-ld-110-max.jpg
     alt: Mondial LD 110 MAX gris, foto de catálogo de Mondial Argentina
@@ -74,15 +75,15 @@ accessoryCategoryIds:
 rankingReportNames:
   - MONDIAL LD 110 MAX
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Mondial LD 110 MAX en Argentina
-seoDescription: "Mondial LD 110 MAX: sexta del ranking ACARA 2026, con CBS en la web y una ficha técnica que todavía no se puede citar completa."
+seoDescription: "Mondial LD 110 MAX AD: cub urbana con frenado combinado CBS, luces LED, puerto USB y baúl. Equipamiento y ficha en Argentina."
 licenceHint: Si la cédula indica hasta 150 cc, clase A 1.2. Confirmá el dato en el documento.
 warranty: null
 ---
 
-Hay motos que se conocen más por el ranking que por la ficha. La Mondial LD 110 MAX es una de esas: 22.537 patentamientos entre enero y agosto de 2026, sexto modelo del acumulado. En la calle se la ve; en el papel, Mondial muestra menos de lo que el volumen sugiere.
+La Mondial LD 110 MAX es una cub de uso urbano. En la versión AD, Mondial destaca cuatro elementos de equipamiento: frenado combinado CBS, luces LED, puerto USB y baúl de guardado.
 
-La página de LD 110 Max AD menciona puerto USB, luces LED, baúl y frenos CBS. El PDF 2026 es una imagen: no copiamos cilindrada, potencia, tanque ni peso porque el OCR no entregó números confiables. El nombre comercial incluye “110”, pero eso no reemplaza una medida de ficha.
+El CBS acciona en conjunto los frenos delantero y trasero desde el comando combinado, lo que ayuda a repartir la frenada; no es un ABS. El puerto USB permite cargar el celular mientras andás, y el baúl suma lugar para objetos chicos.
 
-Hasta extraer un documento limpio, esta página dice lo que se puede afirmar y deja el resto en blanco. No es un olvido: es el estándar de la guía.
+Cilindrada, potencia, peso y tanque figuran como “No informado” en esta ficha. Si vas a compararla con otras cub, pedí esos datos en el concesionario antes de decidir.

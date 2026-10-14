@@ -26,32 +26,46 @@ engine:
   declaredPowerOriginalUnit: hp
   declaredPowerOriginalValue: 6.5
   torqueNm: null
-  cooling: null
+  cooling: Aire
   fuelSystem: null
-  transmission: 4 velocidades
+  transmission: 4 velocidades, manual según la ficha técnica
   gears: 4
 chassis:
-  brakesFront: null
-  brakesRear: null
+  brakesFront: Tambor
+  brakesRear: Tambor
   abs: null
   cbs: true
-  suspensionFront: null
-  suspensionRear: null
-  tireFront: null
-  tireRear: null
-dimensions: null
-fuel: null
+  suspensionFront: Horquilla telescópica hidráulica
+  suspensionRear: Doble amortiguador hidráulico
+  tireFront: 2.50-17
+  tireRear: 2.75-14
+dimensions:
+  lengthMm: 1860
+  widthMm: 680
+  heightMm: 1075
+  wheelbaseMm: null
+  seatHeightMm: null
+  weightKg: 88
+  weightBasis: vacío
+fuel:
+  tankLiters: 3.2
+  consumptionL100km: 1.8
+  measurementBasis: Declarado por Zanella, sin método de medición informado
+  sourceIds:
+    - zanella-zb-st-pdf
 electric: null
 editorial:
-  summary: "Cub semiautomática de 107 cc y 6,5 HP de Zanella, con CBS y 4 velocidades."
+  summary: "La Zanella ZB 110 ST es una cub de 107 cc y 6,5 hp con caja de 4 velocidades y frenos a tambor con CBS. Es la versión más simple de la ZB 110, con llantas de rayos y puertos USB."
   suitableFor:
-    - Uso urbano, si estás cotizando la ST y no una FULL
+    - "Quien busca la versión más simple de la ZB 110, con CBS y USB"
   strengths:
-    - "Identidad de ranking separada: 5.743 unidades y puesto 19 del acumulado 2026"
-    - CBS, 107 cm³ y 4 velocidades declarados en la web ST
+    - "CBS con tambor adelante y atrás"
+    - "Puertos USB A y C con soporte para celular"
+    - "88 kg vacío y 1,8 litros cada 100 km declarados"
   limitations:
-    - "La página consultada no informa tanque, peso ni el detalle de frenos"
-  ownershipNotes: "Zanella la vende como ZB 110 ST y el ranking la lista como Z3 ST. Al cotizar, confirmá cómo figura en la documentación de la unidad."
+    - "Frenos a tambor en las dos ruedas"
+    - "Zanella no publica precio de lista"
+  ownershipNotes: "Al cotizar, confirmá que la unidad sea la ST y no la FULL, y cómo funciona el embrague."
 images:
   - path: /images/motos/zanella-zb-110-z3-st.png
     alt: Zanella ZB 110 ST gris, foto de catálogo de Zanella Argentina
@@ -60,6 +74,7 @@ images:
     credit: Foto del catálogo de Zanella Argentina.
 sourceIds:
   - zanella-zb-st
+  - zanella-zb-st-pdf
   - acara-siomaa-2026-08
 relatedModelIds:
   - zanella-zb-110
@@ -71,15 +86,19 @@ accessoryCategoryIds:
 rankingReportNames:
   - ZANELLA ZB 110 Z3 ST
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Zanella ZB 110 Z3 ST Argentina
-seoDescription: "Zanella ZB 110 ST: puesto 19 de ACARA, aparte de la ZB 110 y la FULL, con CBS en la web y una ficha todavía incompleta."
+seoDescription: "Zanella ZB 110 ST: cub de 107 cc y 6,5 hp con frenos a tambor y CBS, puertos USB y 88 kg. Ficha técnica y diferencias con la FULL."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null
+dataNotes:
+  - "Zanella la comercializa como ZB 110 ST, sin la sigla Z3 que usa el informe de patentamientos."
 ---
 
-Zanella vende más de una ZB 110, y ACARA las cuenta como si fueran vecinas de ranking, no la misma moto. La fila ZANELLA ZB 110 Z3 ST suma 5.743 unidades en el acumulado 2026 y queda 19.ª. La marca la comercializa como ZB 110 ST.
+La Zanella ZB 110 ST es una cub de 107 cc y 6,5 hp con caja de 4 velocidades. Comparte motor, tanque de 3,2 litros y medidas con la ZB 110 FULL; la diferencia está en el equipamiento.
 
-La web declara 107 cm³, 6,5 HP, 4 velocidades y CBS. La página consultada no informa tanque, peso ni el detalle de frenos. Hasta completar ese papel, no se rellenan con los números de la FULL: son fichas distintas.
+La ST frena con tambor adelante y atrás, con CBS, y usa llantas de rayos. La FULL suma disco delantero, llantas de aleación, tablero digital e iluminación full LED. Las dos tienen puertos USB A y C con soporte para celular.
 
-Si te cotizan una ZB 110 a secas, preguntá ST o FULL. En el ranking no se mezclan, y acá tampoco.
+Zanella declara 88 kg vacío, tres menos que la FULL, una velocidad máxima de 82 km/h y un consumo de 1,8 litros cada 100 km, sin informar el método de medición.
+
+La ficha técnica indica transmisión manual de 4 velocidades. Antes de comprar, confirmá en el concesionario si el embrague es a mano o semiautomático.

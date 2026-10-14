@@ -146,6 +146,7 @@ export const motorcycleSchema = z
       .default([]),
     versionNote: z.string().nullable().default(null),
     specVersion: z.string().nullable().default(null),
+    dataNotes: z.array(z.string()).default([]),
   })
   .superRefine((value, ctx) => {
     if (value.engineType === 'electric' && value.engine?.displacementCc) {

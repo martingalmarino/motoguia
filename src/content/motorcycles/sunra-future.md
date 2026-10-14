@@ -29,33 +29,41 @@ chassis:
   suspensionRear: null
   tireFront: null
   tireRear: null
-dimensions: null
+dimensions:
+  lengthMm: 1940
+  widthMm: 750
+  heightMm: 1200
+  wheelbaseMm: 1350
+  seatHeightMm: null
+  weightKg: null
+  weightBasis: null
 fuel: null
 electric:
   nominalPowerKw: 3
   peakPowerKw: null
   batteryKwh: 3.6
-  capacityBasis: 72 V × 50 Ah, química NCM, sin aclarar usable vs nominal
+  capacityBasis: 72 V × 50 Ah; la marca no aclara si es capacidad usable o nominal
   voltageV: 72
   capacityAh: 50
   batteryChemistry: NCM
   removableBattery: null
   declaredRangeKm: 150
-  rangeConditions: Hasta 150 km a 40 km/h con carga estándar 75 kg. A velocidad máxima, más peso o mal clima puede ser menos, según FAQ.
+  rangeConditions: A 40 km/h con un conductor de 75 kg. Según la marca, la cifra baja a velocidad máxima, con más peso o con mal clima.
   chargingTimeHours: "~10"
   chargingConditions: Carga declarada en torno a 10 h.
   warranty: null
 editorial:
-  summary: "Eléctrica de 3000 W con batería de 72 V y hasta 150 km declarados a 40 km/h."
+  summary: "La SUNRA Future es una moto eléctrica de calle con motor de 3.000 W, batería de litio NCM de 72 V y 50 Ah y 80 km/h de máxima. SUNRA declara hasta 150 km de autonomía a 40 km/h."
   suitableFor:
-    - Uso urbano, si el ciclo de 40 km/h te representa más que la velocidad máxima de catálogo
+    - "Uso urbano, si podés dejarla cargando unas 10 horas"
   strengths:
-    - La FAQ publica condiciones de autonomía, no solo un número suelto
-    - CBS adelante y atrás, batería NCM 72 V 50 Ah
+    - "Batería NCM de 72 V y 50 Ah"
+    - "Autonomía declarada con condiciones de medición"
+    - "Frenos a disco en las dos ruedas con CBS"
   limitations:
-    - "Los 150 km se declaran a 40 km/h; a mayor velocidad la autonomía baja"
-    - "La página consultada no identifica al importador"
-  ownershipNotes: "Con 3 kW, si es la potencia continua nominal, entra en la clase A 1.1 (hasta 4 kW): verificalo en la cédula. Antes de señar, confirmá quién factura y quién da el servicio técnico."
+    - "Los 150 km se declaran a 40 km/h; a más velocidad, la autonomía baja"
+    - "La carga completa demora unas 10 horas"
+  ownershipNotes: "Antes de señar, confirmá quién factura, quién da el servicio técnico y qué garantía cubre la batería."
 images:
   - path: /images/motos/sunra-future.jpg
     alt: SUNRA Future verde, foto de catálogo de SUNRA Argentina
@@ -76,15 +84,17 @@ accessoryCategoryIds:
   - helmets
 rankingReportNames: []
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: SUNRA Future eléctrica Argentina
-seoDescription: "SUNRA Future: 150 km a 40 km/h y 75 kg, batería 72 V 50 Ah y los límites que aclara la propia FAQ."
-licenceHint: 3 kW de ficha. Confirmá si es potencia continua nominal.
+seoDescription: "SUNRA Future: moto eléctrica de 3.000 W con batería NCM de 72 V y 50 Ah, 80 km/h y hasta 150 km declarados a 40 km/h. Ficha técnica."
+licenceHint: "Con 3 kW declarados, corresponde la clase A 1.1 (hasta 4 kW) si es la potencia continua nominal. Verificá la cédula."
 warranty: null
 ---
 
-La Future es la eléctrica SUNRA que más números pone sobre la mesa, y también la que más hay que leer en letra chica. La marca declara motor de 3000 W, batería NCM 72 V 50 Ah, 80 km/h de máxima y hasta 150 km. Esos 150 km son a 40 km/h, con 75 kg. La FAQ aclara que a velocidad máxima, con más peso o mal clima, la cifra baja.
+La SUNRA Future es una moto eléctrica con formato de moto de calle, motor de 3.000 W y una velocidad máxima declarada de 80 km/h. Frena con disco adelante y atrás, con CBS, y suma luces LED y baúl de guardado.
 
-Eso es más honesto que un alcance suelto. No es un ciclo mixto, y no se vende acá como si lo fuera. La carga se declara en torno a las 10 horas. CBS en ambos discos.
+Su batería de litio NCM (níquel, cobalto y manganeso) es de 72 V y 50 Ah, unos 3,6 kWh nominales: la de mayor capacidad entre las eléctricas de este catálogo que publican ese dato.
 
-ACARA registró 367 patentamientos de la marca SUNRA en enero-agosto 2026, sin desglose de este modelo en el top 50. La Future existe en catálogo; el volumen por unidad, no.
+La autonomía declarada es de hasta 150 km, a 40 km/h y con un conductor de 75 kg. SUNRA aclara que a velocidad máxima, con más peso o con mal clima, el alcance baja. Si vas a circular más rápido que 40 km/h, contá con menos kilómetros.
+
+La carga completa demora alrededor de 10 horas, según la marca.

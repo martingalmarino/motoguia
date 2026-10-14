@@ -45,6 +45,6 @@ Honda publica lista. La mayoría de las cub del ranking no. Un precio de redes o
 
 ## 5. Servicio y garantía, por escrito
 
-Honda declara 36 meses o 36.000 km. Gilera y Motomel 2026 declaran 12 meses o 12.000 km en las páginas revisadas. Eso no se compara como si fueran el mismo contrato: leé exclusiones, red de talleres y qué pasa con la batería.
+Honda declara 36 meses o 36.000 km; Gilera y Motomel, 12 meses o 12.000 km. Más allá del plazo, cada garantía tiene sus propias condiciones: leé las exclusiones, dónde se hacen los services y qué cubre la batería.
 
 Si una marca no publica el listado, preguntá el taller más cercano y pedí el certificado. “Se consigue todo” no es una fuente.

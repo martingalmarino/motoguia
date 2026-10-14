@@ -62,16 +62,17 @@ fuel:
     - gilera-sahel
 electric: null
 editorial:
-  summary: "Trail de 149 cc y 10,7 HP de Gilera, con caja de 5 marchas y tanque de 8,6 litros."
+  summary: "La Gilera Sahel 150 es una trail de 149 cc y 10,7 hp con caja manual de 5 marchas. Combina disco delantero y tambor trasero, con un tanque de 8,6 litros y 120 kg en seco."
   suitableFor:
-    - Ciudad y ripio liviano, si te cierra una 150 manual sin ABS declarado
+    - "Quien compara trail 150 y quiere una con potencia declarada por la marca"
   strengths:
-    - "Gilera publica potencia, caja de 5 y tanque: 10,7 Hp, 8,6 litros, 120 kg en seco"
-    - 5.807 patentamientos en el acumulado ACARA 2026
+    - "10,7 hp a 8.500 rpm declarados"
+    - "Caja manual de 5 marchas"
+    - "120 kg en seco"
   limitations:
-    - "El precio de referencia es una cotización publicada por Ámbito el 8 de septiembre de 2026, no un precio de lista de Gilera"
-    - "No informa ABS ni CBS"
-  ownershipNotes: "Una cotización periodística puede cambiar rápido: pedí un precio actualizado y por escrito. Garantía Gilera: 12 meses o 12.000 km."
+    - "Tanque de 8,6 litros, menor que los 12 litros de la XR150L o la Triax 150"
+    - "El precio de referencia es una cotización de prensa, no una lista de Gilera"
+  ownershipNotes: "El precio de referencia es una cotización publicada por la prensa, no una lista de Gilera: pedí un presupuesto actualizado y por escrito."
 images:
   - path: /images/motos/gilera-sahel-150.png
     alt: Gilera Sahel 150 roja, foto de catálogo de Gilera Argentina
@@ -94,15 +95,17 @@ accessoryCategoryIds:
 rankingReportNames:
   - GILERA SAHEL 150
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Gilera Sahel 150 ficha técnica Argentina
-seoDescription: "Gilera Sahel 150: 10,7 Hp, tanque de 8,6 litros y un precio de Ámbito que no sale de la ficha de la marca."
+seoDescription: "Gilera Sahel 150: trail de 149 cc y 10,7 hp con caja de 5, disco delantero y tanque de 8,6 litros. Ficha técnica y precio de referencia."
 licenceHint: 149 cc, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km, según Gilera.
+dataNotes:
+  - "El precio de referencia proviene de una nota de Ámbito del 8 de septiembre de 2026; no figura en el sitio de Gilera."
 ---
 
-La Sahel 150 es la on-off Gilera del ranking: 5.807 patentamientos en el acumulado 2026. En el papel se parece más a una Triax que a una XR: disco adelante, tambor atrás, sin ABS ni CBS informados, y un tanque más chico que el de las Honda 150.
+La Gilera Sahel 150 es una trail de 149 cc, del mismo segmento que la Corven Triax 150 y la Honda XR150L: un formato de uso mixto, con caja manual de 5 marchas. Los datos de esta ficha corresponden al modelo 2025.
 
-La ficha de la marca indica 149 cm³, 10,7 Hp a 8.500 rpm, manual de 5, disco/tambor, tanque de 8,6 litros y 120 kg en seco. Eso alcanza para ubicarla en el recorte; no alcanza para hablar de prestaciones de ruta.
+Gilera declara 10,7 hp a 8.500 rpm. Es la única trail 150 de este catálogo con la potencia publicada por la marca, lo que permite ubicarla en ese dato frente a otras 150.
 
-El $2.630.000 no está en el sitio Gilera. Lo cotizó Ámbito el 8 de septiembre de 2026. Tratalo como una foto de ese día, no como lista de fábrica.
+Frena con disco adelante y tambor atrás. Pesa 120 kg en seco y tiene un tanque de 8,6 litros, más chico que los 12 litros de la XR150L y la Triax 150.

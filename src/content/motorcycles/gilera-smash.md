@@ -46,7 +46,7 @@ dimensions:
   wheelbaseMm: null
   seatHeightMm: null
   weightKg: 87
-  weightBasis: en seco, Smash Full II
+  weightBasis: en seco, versión Full II
 fuel:
   tankLiters: 3.5
   consumptionL100km: null
@@ -55,17 +55,17 @@ fuel:
     - gilera-smash
 electric: null
 editorial:
-  summary: "La segunda moto más patentada de Argentina en 2026: una cub semiautomática de 107 cc con CBS y discos adelante y atrás en la versión Full II."
+  summary: "La Gilera Smash es una cub semiautomática de 107 cc. En la versión Full II declara 7,2 hp y frenos a disco adelante y atrás con CBS, la única cub de este catálogo con disco también en la rueda trasera."
   suitableFor:
-    - Uso urbano de todos los días, si te cierra una cub semiautomática
-    - Quien busca volumen de recambio más que una lista de fábrica
+    - "Quien busca una cub semiautomática con disco en las dos ruedas"
   strengths:
-    - "51.687 patentamientos en el acumulado ACARA 2026: es la cub que más se ve después de la Wave"
-    - La Full II declara CBS y disco adelante y atrás
+    - "Disco adelante y atrás con CBS en la Full II"
+    - "7,2 hp a 7.500 rpm declarados"
+    - "87 kg en seco"
   limitations:
     - "Gilera no publica precio de lista"
-    - "El ranking cuenta todas las versiones de Smash juntas; la ficha técnica es la de la Full II"
-  ownershipNotes: "Gilera declara una garantía de 12 meses o 12.000 km. Al cotizar, confirmá qué versión de Smash te ofrecen."
+    - "Los datos técnicos son de la Full II; otras Smash pueden tener otro equipamiento"
+  ownershipNotes: "Al cotizar, confirmá qué versión de Smash te ofrecen."
 images:
   - path: /images/motos/gilera-smash.png
     alt: Gilera Smash Full II roja, foto de catálogo de Gilera Argentina
@@ -89,16 +89,21 @@ accessoryCategoryIds:
 rankingReportNames:
   - GILERA SMASH
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Gilera Smash ficha técnica en Argentina
-seoDescription: "Cómo leer la Gilera Smash en Argentina: ranking ACARA agrupado, ficha Full II y lo que la marca no publica de precio."
+seoDescription: "Gilera Smash Full II: cub semiautomática de 107 cc y 7,2 hp, con disco adelante y atrás y CBS. Ficha técnica y garantía en Argentina."
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km, según Gilera.
-versionNote: "La ficha técnica corresponde a la versión Full II. El ranking de patentamientos ACARA/SIOMAA cuenta todas las Smash en una sola fila, sin separar versiones."
+versionNote: "Los datos técnicos corresponden a la versión Full II."
+dataNotes:
+  - "El informe de patentamientos cuenta todas las Smash en una sola fila, sin separar versiones."
+  - "La potencia se convirtió a kW con el caballo métrico (0,7355 kW por hp)."
 ---
 
-La Smash es, después de la Wave, la cub que más se inscribe en el país. En el acumulado ACARA enero-agosto 2026, GILERA SMASH suma 51.687 patentamientos y queda segunda. El informe no abre esa fila por versión: en la calle hay más de una Smash, y el ranking las cuenta juntas.
+La Gilera Smash es una cub de 107 cc con caja semiautomática de 4 marchas: los cambios se pasan con el pie, sin embrague a mano. Hay más de una Smash en el mercado; los datos técnicos de esta ficha corresponden a la Full II.
 
-La ficha que usamos es la Full II: 107 cm³, 7,2 hp a 7.500 r/min, semiautomática de 4 marchas, CBS, discos adelante y atrás, tanque de 3,5 litros y 87 kg en seco. Los 1.070 mm de la ficha son el alto total, no la altura de asiento. La conversión a kW usa caballo métrico (0,7355 kW/hp), para no mezclar unidades.
+La Full II declara 7,2 hp a 7.500 rpm, frenos a disco adelante y atrás y CBS, que acciona los dos frenos en conjunto. Entre las cub de este catálogo es la única con disco también en la rueda trasera; el resto combina disco o tambor adelante con tambor atrás.
 
-No hay precio de lista en la página revisada. Si te cotizan una Smash, preguntá cuál: Full II no es un apodo del ranking, es una versión concreta.
+Pesa 87 kg en seco, es decir, sin combustible ni fluidos, y tiene un tanque de 3,5 litros. Los 1.070 mm que publica Gilera son la altura total de la moto, no la del asiento.
+
+Gilera no publica precio de lista. Si te interesan los dos discos, confirmá al cotizar que la unidad sea una Full II.

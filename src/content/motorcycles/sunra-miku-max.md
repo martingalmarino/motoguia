@@ -27,9 +27,16 @@ chassis:
   cbs: null
   suspensionFront: null
   suspensionRear: null
-  tireFront: null
-  tireRear: null
-dimensions: null
+  tireFront: 3.0-10
+  tireRear: 3.0-10
+dimensions:
+  lengthMm: 1685
+  widthMm: 780
+  heightMm: 1065
+  wheelbaseMm: 1205
+  seatHeightMm: null
+  weightKg: null
+  weightBasis: null
 fuel: null
 electric:
   nominalPowerKw: 0.8
@@ -41,21 +48,22 @@ electric:
   batteryChemistry: null
   removableBattery: true
   declaredRangeKm: 45
-  rangeConditions: "45 km en condiciones ideales. FAQ: menos a velocidad máxima, más peso o mal clima."
+  rangeConditions: En condiciones ideales. Según la marca, la cifra baja a velocidad máxima, con más peso o con mal clima.
   chargingTimeHours: "~8"
   chargingConditions: Carga declarada en torno a 8 h.
   warranty: null
 editorial:
-  summary: "Eléctrica urbana de 800 W con batería extraíble y hasta 45 km declarados, con velocidad máxima de 40 km/h."
+  summary: "La SUNRA Miku Max es un scooter eléctrico urbano de 800 W con batería extraíble de 60 V y 20 Ah. Declara 40 km/h de máxima y hasta 45 km de autonomía en condiciones ideales."
   suitableFor:
-    - Tramos cortos, si 40 km/h te alcanza y podés cargar en casa
+    - "Trayectos cortos en ciudad, si 40 km/h te alcanza y podés cargar en casa"
   strengths:
-    - Batería extraíble 60 V 20 Ah y unas 8 h de carga declaradas
-    - La FAQ aclara que los 45 km bajan a máxima, con más peso o mal clima
+    - "Batería de litio extraíble de 60 V y 20 Ah"
+    - "Frenos a disco adelante y atrás"
+    - "Control de velocidad crucero"
   limitations:
-    - 40 km/h de velocidad máxima declarada
-    - Sin ranking por modelo
-  ownershipNotes: "Con 0,8 kW, si es la potencia continua nominal, entra en la clase A 1.1: verificalo en la cédula. Antes de comprar, confirmá quién da el servicio técnico."
+    - "Velocidad máxima declarada de 40 km/h"
+    - "Los 45 km se declaran en condiciones ideales"
+  ownershipNotes: "Antes de comprar, confirmá quién da el servicio técnico y qué garantía cubre la batería."
 images:
   - path: /images/motos/sunra-miku-max.jpg
     alt: SUNRA Miku Max, foto de catálogo de SUNRA Argentina
@@ -74,15 +82,15 @@ accessoryCategoryIds:
   - helmets
 rankingReportNames: []
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: SUNRA Miku Max eléctrica Argentina
-seoDescription: "SUNRA Miku Max: 800 W, 40 km/h de máxima y 45 km en condiciones ideales, con batería extraíble."
-licenceHint: 0,8 kW de ficha. Confirmá la potencia continua en la cédula.
+seoDescription: "SUNRA Miku Max: scooter eléctrico de 800 W con batería extraíble de 60 V, 40 km/h de máxima y hasta 45 km declarados. Ficha técnica."
+licenceHint: "Con 0,8 kW declarados, corresponde la clase A 1.1 (hasta 4 kW) si es la potencia continua nominal. Verificá la cédula."
 warranty: null
 ---
 
-La Miku Max es la SUNRA chica: 800 W, 40 km/h de máxima, 45 km en condiciones ideales, batería extraíble 60 V 20 Ah y carga de alrededor de 8 horas. No es una Future recortada. Es otro uso: manzana a manzana, no un intento de reemplazar una 110 de ruta corta.
+La SUNRA Miku Max es un scooter eléctrico para trayectos cortos en ciudad. Tiene motor de 800 W, una velocidad máxima declarada de 40 km/h, frenos a disco adelante y atrás y control de velocidad crucero.
 
-La FAQ, como en la Future, avisa que a velocidad máxima, con más peso o mal clima, los 45 km bajan. Ese aviso vale más que el número redondo.
+La batería de litio es de 60 V y 20 Ah, unos 1,2 kWh nominales, y se puede extraer para cargarla fuera de la moto. La carga completa demora alrededor de 8 horas. SUNRA declara hasta 45 km de autonomía en condiciones ideales y aclara que la cifra baja a velocidad máxima, con más peso o con mal clima.
 
-No hay unidades de este modelo en el top 50 ACARA. Si te la cotizan, el dato a pedir no es el ranking: es quién factura, quién da service y qué ciclo de autonomía están usando.
+Frente a la Future, de la misma marca, tiene menos potencia (800 W contra 3.000 W) y un tercio de la capacidad de batería. Antes de elegirla, pensá si 40 km/h te alcanza para las calles por las que circulás.

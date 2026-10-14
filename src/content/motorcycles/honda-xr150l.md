@@ -62,18 +62,19 @@ fuel:
     - honda-xr150l
 electric: null
 editorial:
-  summary: "Trail 150 de fabricación nacional con ABS delantero, caja de 5 marchas y tanque de 12 litros."
+  summary: "La Honda XR150L es una trail de 149 cc con caja de 5 velocidades y ABS en la rueda delantera. Honda la fabrica en Argentina, con asiento a 834 mm y tanque de 12 litros."
   suitableFor:
-    - Ciudad más algún camino de tierra liviano, no un enduro
-    - Quien quiere ABS delantero en una 150 de producción nacional
+    - "Uso mixto de asfalto y caminos de tierra, si te queda cómoda la altura del asiento"
+    - "Quien busca ABS delantero en una 150"
   strengths:
-    - ABS en el disco delantero de 240 mm, el único del recorte Honda 150 publicado acá
-    - Precio de lista y origen Argentina en la ficha
-    - Tanque de 12 litros y caja de 5
+    - "ABS en el disco delantero de 240 mm"
+    - "Caja de 5 velocidades y tanque de 12 litros"
+    - "Garantía de 36 meses o 36.000 km"
   limitations:
-    - "Honda no publica la potencia"
-    - "El asiento está a 834 mm, más alto que en una cub o una GLH"
-  ownershipNotes: "El ABS actúa solo sobre la rueda delantera; atrás lleva freno a tambor de 110 mm. El precio de lista del 18 de septiembre de 2026 no aclara si incluye patentamiento."
+    - "Asiento a 834 mm: probá si apoyás bien los pies"
+    - "El ABS actúa solo sobre la rueda delantera"
+    - "Honda no publica potencia ni consumo"
+  ownershipNotes: "Para conservar la garantía, consultá en el concesionario el plan de services y dónde se hacen."
 images:
   - path: /images/motos/honda-xr150l.webp
     alt: Honda XR150L roja y negra, foto de catálogo de Honda Motos Argentina
@@ -97,15 +98,17 @@ accessoryCategoryIds:
 rankingReportNames:
   - HONDA XR150L
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
+reviewedAt: 2026-10-14
 seoTitle: Honda XR150L ficha y precio Argentina
-seoDescription: "Honda XR150L en Argentina: ABS delantero, asiento a 834 mm, lista oficial y el puesto 12 del ranking 2026."
+seoDescription: "Honda XR150L: trail de 149 cc fabricada en Argentina, con ABS delantero, caja de 5 y asiento a 834 mm. Ficha técnica, precio de lista y garantía."
 licenceHint: 149 cc, clase A 1.2 según ANSV.
 warranty: 36 meses o 36.000 km; batería 12 meses.
 ---
 
-Si la GLH es la 150 de asfalto, la XR150L es la que Honda arma para salir un poco de la ciudad. En el acumulado ACARA 2026 suma 9.148 patentamientos y queda 12.ª. El salto de precio también se nota: el 18 de septiembre de 2026 la lista era $6.051.456, la más alta de las Honda publicadas acá.
+La Honda XR150L es una trail de 149 cc, un formato de uso mixto entre asfalto y caminos de tierra. Comparte cilindrada y caja de 5 velocidades con la GLH 150, pero cambia la postura y el equipamiento de frenos.
 
-La ficha local indica 149 cm³, cinco velocidades, disco delantero de 240 mm con ABS, tambor trasero de 110 mm, tanque de 12 litros, asiento a 834 mm y 131 kg en orden de marcha. Ese asiento cambia la moto: no es la altura de una cub, y conviene sentarse antes de comprar. La potencia, otra vez, no está publicada.
+Su rasgo distintivo es el ABS en el freno delantero, un disco de 240 mm. El ABS evita que esa rueda se bloquee en una frenada fuerte. Atrás lleva un tambor de 110 mm, sin ABS.
 
-El ABS es delantero. No lo leas como un sistema integral: atrás sigue el tambor. Para mucha gente igual es el argumento que la separa de las on-off 150 del ranking, donde ese dato suele faltar.
+El asiento está a 834 mm, 77 mm más alto que el de la GLH 150. Es la medida que más conviene comprobar en persona: sentate y fijate si apoyás bien los pies. El peso declarado es de 131 kg en orden de marcha, casi igual al de la GLH, y el tanque es de 12 litros.
+
+Como el resto de la línea Honda, tiene garantía de 36 meses o 36.000 km.
