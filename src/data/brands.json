@@ -26,22 +26,22 @@
     "name": "Keller",
     "slug": "keller",
     "originCountry": null,
-    "originNote": "El sitio local describe motores UNNITEC en la línea Crono. ACARA lista KN110-8; no hay fuente que iguale ambos nombres.",
+    "originNote": "El sitio local describe motores UNNITEC en la línea Crono y una planta industrial en Córdoba. El KN110-8 de ACARA es la Crono Classic 110, según su manual del usuario.",
     "importer": null,
     "chineseHub": true,
     "website": "https://motoskeller.com.ar/",
-    "sourceIds": ["keller-ar"]
+    "sourceIds": ["keller-ar", "keller-crono-manual"]
   },
   {
     "id": "motomel",
     "name": "Motomel",
     "slug": "motomel",
     "originCountry": null,
-    "originNote": "Motomel Argentina publica garantía y políticas asociadas a La Emilia. ACARA usa códigos B110, CX 150 y C110 DLX que no siempre coinciden con el nombre comercial.",
+    "originNote": "Motomel Argentina publica garantía y políticas asociadas a La Emilia. ACARA usa códigos como B110, CX 150 y C110 DLX que no siempre coinciden con el nombre comercial; concesionarios y prensa identifican la B110 con la Blitz 110.",
     "importer": "Motomel Argentina",
     "chineseHub": true,
     "website": "https://motomel.com.ar/",
-    "sourceIds": ["motomel-ar", "motomel-garantia"]
+    "sourceIds": ["motomel-ar", "motomel-garantia", "fava-blitz-b110", "losandes-b110"]
   },
   {
     "id": "corven",

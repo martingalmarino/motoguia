@@ -31,7 +31,7 @@ Si mirás una eléctrica, la norma habla de potencia máxima continua nominal en
 
 ## 2. El ranking no elige por vos
 
-El informe ACARA/SIOMAA de agosto 2026 muestra que el volumen sigue en cub 110. Honda Wave 110S, Gilera Smash y Keller KN110-8 concentran una parte enorme de los patentamientos. Eso dice qué se inscribe, no qué te va a resultar cómoda ni qué taller tenés a cinco cuadras.
+El informe ACARA/SIOMAA de agosto 2026 muestra que el volumen sigue en cub 110. Honda Wave 110S, Gilera Smash y Keller Crono Classic 110 (KN110-8 en el informe) concentran una parte enorme de los patentamientos. Eso dice qué se inscribe, no qué te va a resultar cómoda ni qué taller tenés a cinco cuadras.
 
 Usá el ranking para saber qué hay en la calle y qué repuestos circulan. No lo uses como nota de “la mejor moto”.
 

@@ -295,9 +295,39 @@
     "url": "https://motomel.com.ar/productos/blitz-110-v8-start/",
     "publisher": "Motomel Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-14",
     "countryScope": "AR",
     "supports": ["blitz-110"]
+  },
+  {
+    "id": "motomel-blitz-manual",
+    "title": "Manual de usuario Motomel Blitz 110 START / FULL / Automática MY26",
+    "url": "https://motomel.com.ar/manuales/manual-de-usuario-blitz-110-full.pdf",
+    "publisher": "Motomel Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["blitz-110", "versiones-blitz-110"]
+  },
+  {
+    "id": "fava-blitz-b110",
+    "title": "Motomel Blitz B110 Automática",
+    "url": "https://fava.com.ar/moto-blitz-b110-automatica-fmotmot100",
+    "publisher": "Fava (concesionario)",
+    "publishedAt": null,
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["nombre-ranking-b110"]
+  },
+  {
+    "id": "losandes-b110",
+    "title": "Cuánto sale la moto Motomel B110 con precio actualizado en marzo de 2026",
+    "url": "https://www.losandes.com.ar/automotores/cuanto-sale-la-moto-motomel-b110-precio-actualizado-marzo-2026-n5984978",
+    "publisher": "Los Andes",
+    "publishedAt": null,
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["nombre-ranking-b110"]
   },
   {
     "id": "motomel-stratoe",
@@ -335,9 +365,39 @@
     "url": "https://motoskeller.com.ar/crono-classic-full-110/",
     "publisher": "Keller Motos",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-14",
     "countryScope": "AR",
     "supports": ["crono-classic-110"]
+  },
+  {
+    "id": "keller-crono-eco",
+    "title": "Keller Crono Classic ECO 110",
+    "url": "https://motoskeller.com.ar/crono-classic-eco-110/",
+    "publisher": "Keller Motos",
+    "publishedAt": null,
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["crono-classic-110", "versiones-crono-classic"]
+  },
+  {
+    "id": "keller-crono-plus",
+    "title": "Keller Crono Classic PLUS 110",
+    "url": "https://motoskeller.com.ar/crono-classic-plus-110/",
+    "publisher": "Keller Motos",
+    "publishedAt": null,
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["crono-classic-110", "versiones-crono-classic"]
+  },
+  {
+    "id": "keller-crono-manual",
+    "title": "Manual del usuario y garantía Keller Crono Classic 110 (KN110-8), versión FULL",
+    "url": "https://www.cordobamotos.com.ar/Areas/ContentAdmin/Content/Archivos/Manuales/CRONO110-FULL-MANUAL.pdf",
+    "publisher": "Keller Motos (PDF publicado por el concesionario Córdoba Motos)",
+    "publishedAt": null,
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["crono-classic-110", "nombre-ranking-kn110-8"]
   },
   {
     "id": "mondial-ar",

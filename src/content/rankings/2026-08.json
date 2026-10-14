@@ -17,8 +17,8 @@
   "rows": [
     { "rank": 1, "reportModelName": "HONDA WAVE 110S", "modelIds": ["honda-wave-110s"], "units": 8337, "comparableChange": -108, "comparisonPeriod": "julio 2026" },
     { "rank": 2, "reportModelName": "GILERA SMASH", "modelIds": ["gilera-smash"], "units": 6513, "comparableChange": 178, "comparisonPeriod": "julio 2026" },
-    { "rank": 3, "reportModelName": "KELLER KN110-8", "modelIds": [], "units": 5555, "comparableChange": -807, "comparisonPeriod": "julio 2026" },
-    { "rank": 4, "reportModelName": "MOTOMEL B110", "modelIds": [], "units": 4755, "comparableChange": -81, "comparisonPeriod": "julio 2026" },
+    { "rank": 3, "reportModelName": "KELLER KN110-8", "modelIds": ["keller-crono-classic-110"], "units": 5555, "comparableChange": -807, "comparisonPeriod": "julio 2026" },
+    { "rank": 4, "reportModelName": "MOTOMEL B110", "modelIds": ["motomel-blitz-110"], "units": 4755, "comparableChange": -81, "comparisonPeriod": "julio 2026" },
     { "rank": 5, "reportModelName": "CORVEN ENERGY 110", "modelIds": ["corven-energy-110"], "units": 3674, "comparableChange": -288, "comparisonPeriod": "julio 2026" },
     { "rank": 6, "reportModelName": "MONDIAL LD 110 MAX", "modelIds": ["mondial-ld-110-max"], "units": 3148, "comparableChange": 148, "comparisonPeriod": "julio 2026" },
     { "rank": 7, "reportModelName": "ZANELLA ZB 110", "modelIds": ["zanella-zb-110"], "units": 2142, "comparableChange": 591, "comparisonPeriod": "julio 2026" },

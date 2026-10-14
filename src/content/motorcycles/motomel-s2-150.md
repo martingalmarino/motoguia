@@ -102,4 +102,4 @@ La S2 150 es la street Motomel que sí entra al ranking con nombre propio: MOTOM
 
 La ficha START declara 150 cm³, 13,4 HP a 8.500 rpm, caja de 5 con embrague manual, disco delantero, tambor trasero, CBS, tanque de 11 litros y 115 kg vacío. Hay litros y hay marchas; no hay lista de precio.
 
-Tampoco se le atribuyen las unidades B110 ni CX 150. Cada fila de ACARA se lee aparte.
+Las unidades B110 son de la Blitz 110 y las CX 150 quedan en su propia fila: ninguna se le suma a la S2. Cada fila de ACARA se lee aparte.

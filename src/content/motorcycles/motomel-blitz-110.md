@@ -54,16 +54,18 @@ fuel:
     - motomel-blitz
 electric: null
 editorial:
-  summary: "Cub de 110 cc y 7 HP pensada para el trabajo y la ciudad, con CBS en las versiones con disco delantero."
+  summary: "Cub de 110 cc y 7 HP para trabajo y ciudad. Es la B110 del ranking: cuarta más patentada del país en 2026, con CBS en las versiones con disco delantero."
   suitableFor:
     - Primera moto urbana, si cotizás versión disco o tambor y no esperás lista de fábrica
   strengths:
     - Ficha START con 110 cm³, 7 HP, 3,5 litros y 99 kg vacío
     - CBS en las versiones de disco delantero
+    - "38.811 patentamientos en el acumulado 2026, cuarta del ranking ACARA"
   limitations:
-    - "El ranking lista una MOTOMEL B110; no hay un documento que la iguale con la Blitz 110"
     - "Motomel no publica precio de lista"
-  ownershipNotes: "Garantía Motomel 2026: 12 meses o 12.000 km. Al cotizar, confirmá si la unidad es la versión con disco y CBS o la de tambor."
+    - "El vínculo B110 = Blitz sale de concesionarios y prensa; Motomel no escribe B110 en su web ni en el manual"
+    - "El ranking no separa versiones de la Blitz"
+  ownershipNotes: "Garantía Motomel 2026: 12 meses o 12.000 km. El manual pide 0,9 litros de aceite de motor. Al cotizar, confirmá si la unidad es la versión con disco y CBS o la de tambor, y si es de cambios o automática."
 images:
   - path: /images/motos/motomel-blitz-110.png
     alt: Motomel Blitz 110 gris, foto de catálogo de Motomel Argentina
@@ -72,28 +74,33 @@ images:
     credit: Foto del catálogo de Motomel Argentina.
 sourceIds:
   - motomel-blitz
+  - motomel-blitz-manual
   - motomel-garantia
+  - fava-blitz-b110
+  - losandes-b110
   - acara-siomaa-2026-08
 relatedModelIds:
   - motomel-c110-dlx
+  - keller-crono-classic-110
   - honda-wave-110s
 relatedGuideIds:
   - primera-moto-argentina
 accessoryCategoryIds:
   - helmets
-rankingReportNames: []
+rankingReportNames:
+  - MOTOMEL B110
 publishedAt: 2026-09-18
-reviewedAt: 2026-09-19
-seoTitle: Motomel Blitz 110 ficha Argentina
-seoDescription: "Motomel Blitz 110: 7 HP y CBS en disco, y por qué no se le asigna el ranking B110 de ACARA."
+reviewedAt: 2026-10-14
+seoTitle: Motomel Blitz 110 (B110) ficha Argentina
+seoDescription: "Motomel Blitz 110, la B110 de ACARA: cuarta más patentada de 2026, 7 HP, CBS con disco, versiones de cambios y automática, y garantía."
 licenceHint: 110 cm³, clase A 1.2 según ANSV.
 warranty: 12 meses o 12.000 km para unidades 2026.
-versionNote: "Los datos técnicos salen de la ficha de la versión START. La transmisión y el freno delantero cambian según la versión, y el CBS acompaña al disco delantero."
+versionNote: "Los datos técnicos salen de la ficha de la versión START. El manual MY26 cubre START, FULL y Automática: la transmisión (4 velocidades o automática) y el freno delantero (tambor o disco con CBS) cambian según la versión. El ranking ACARA/SIOMAA cuenta la Blitz en una sola fila, MOTOMEL B110, sin separar versiones."
 specVersion: START
 ---
 
-Motomel vende la familia Blitz 110. La ficha START declara 110 cm³, 7 HP a 8.000 rpm, embrague automático, 4 velocidades (o automática, según versión), 99 kg vacío, tanque de 3,5 litros y CBS cuando el delantero es disco. Es una cub de trabajo, con más datos en papel que varias rivales del ranking.
+MOTOMEL B110 es la cuarta moto más patentada de la Argentina: 38.811 unidades entre enero y agosto de 2026, y 4.755 solo en agosto. Motomel no usa ese código en su web ni en el manual, pero sí lo usan los concesionarios y la prensa. Fava vende la “Motomel Blitz B110 Automática” con la ficha de la Blitz 110, y Los Andes presenta a la B110 como parte de la familia Blitz 110. Con esos documentos vinculamos la fila del ranking a esta ficha. Si Motomel publica otra cosa, la corregimos.
 
-El cruce con ACARA, en cambio, no está. El informe lista MOTOMEL B110 con 38.811 patentamientos, cuarta del acumulado 2026. Motomel no publica un modelo llamado B110. Sin un documento que iguale los nombres, las unidades del ranking no se copian acá.
+La ficha START declara 110 cm³, 7 HP a 8.000 rpm, embrague automático, 99 kg vacío y tanque de 3,5 litros. El manual de usuario MY26 coincide en peso, tanque y medidas: 1.900 mm de largo, 660 mm de ancho, 1.068 mm de alto y 1.280 mm entre ejes. En potencia da otro número: 7,1 hp a 8.500 rpm. Las dos son publicaciones de Motomel; en la ficha dejamos el dato de la página de producto.
 
-En el local, preguntá cómo figura en la cédula. Blitz y B110 pueden ser la misma conversación de mostrador; en esta guía no se fusionan.
+La familia Blitz tiene versiones de cambios y automática, y con freno delantero a tambor o a disco. El CBS reparte la frenada entre las dos ruedas cuando el delantero es disco. En el local, preguntá qué versión es exactamente y cómo figura en la cédula: el ranking no las separa.

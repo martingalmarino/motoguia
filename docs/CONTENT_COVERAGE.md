@@ -9,13 +9,16 @@ Filas del top 20 YTD **sin ficha publicada** (no hay cruce o no hay sitio):
 
 | Ranking | Unidades YTD | Motivo |
 | --- | --- | --- |
-| KELLER KN110-8 | 51.658 | Catálogo Keller = Crono Classic. Sin documento KN110-8. |
-| MOTOMEL B110 | 38.811 | Catálogo = Blitz 110. Sin documento B110. |
 | MOTOMEL CX 150 | 9.181 | URL /productos/cx-150/ en 404. |
 | IKA IKA P110 | 8.859 | Sin sitio oficial de motos localizado. |
 | GUERRERO G110 TRIP | 6.763 | Dominios consultados no entregaron ficha. |
 
-Fichas extra publicadas (no heredan unidades de esas filas): Keller Crono Classic 110, Motomel Blitz 110.
+Filas vinculadas el 14/10/2026:
+
+| Ranking | Ficha | Documento |
+| --- | --- | --- |
+| KELLER KN110-8 | Keller Crono Classic 110 | Manual del usuario de la FULL: “CRONO CLASSIC 110 (KN110-8)”. |
+| MOTOMEL B110 | Motomel Blitz 110 | Concesionario Fava (“Blitz B110 Automática”) y Los Andes. Motomel no publica el código. |
 
 ## Fichas publicadas
 
@@ -35,6 +38,6 @@ Eléctricas: 4 fichas. SUNRA 367 u. YTD a nivel marca. Ningún modelo eléctrico
 ## Bloqueos de lanzamiento editorial
 
 - Contacto, dominio canónico real, AdSense, GA4, afiliados Mercado Libre.
-- Cruce KN110-8 / B110 / CX 150 / IKA / Guerrero.
+- Cruce CX 150 / IKA / Guerrero.
 - Precios de lista de casi todas las no-Honda.
 - Informe ACARA de septiembre 2026 aún no estaba al 18/09/2026.

@@ -17,8 +17,8 @@
   "rows": [
     { "rank": 1, "reportModelName": "HONDA WAVE 110S", "modelIds": ["honda-wave-110s"], "units": 59184, "comparableChange": null, "comparisonPeriod": null },
     { "rank": 2, "reportModelName": "GILERA SMASH", "modelIds": ["gilera-smash"], "units": 51687, "comparableChange": null, "comparisonPeriod": null },
-    { "rank": 3, "reportModelName": "KELLER KN110-8", "modelIds": [], "units": 51658, "comparableChange": null, "comparisonPeriod": null },
-    { "rank": 4, "reportModelName": "MOTOMEL B110", "modelIds": [], "units": 38811, "comparableChange": null, "comparisonPeriod": null },
+    { "rank": 3, "reportModelName": "KELLER KN110-8", "modelIds": ["keller-crono-classic-110"], "units": 51658, "comparableChange": null, "comparisonPeriod": null },
+    { "rank": 4, "reportModelName": "MOTOMEL B110", "modelIds": ["motomel-blitz-110"], "units": 38811, "comparableChange": null, "comparisonPeriod": null },
     { "rank": 5, "reportModelName": "CORVEN ENERGY 110", "modelIds": ["corven-energy-110"], "units": 33193, "comparableChange": null, "comparisonPeriod": null },
     { "rank": 6, "reportModelName": "MONDIAL LD 110 MAX", "modelIds": ["mondial-ld-110-max"], "units": 22537, "comparableChange": null, "comparisonPeriod": null },
     { "rank": 7, "reportModelName": "MOTOMEL S2 150", "modelIds": ["motomel-s2-150"], "units": 12701, "comparableChange": null, "comparisonPeriod": null },
