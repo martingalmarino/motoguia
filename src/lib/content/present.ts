@@ -45,12 +45,10 @@ export function isDealerPrice(entry: Moto): boolean {
 }
 
 export function priceTypeLabel(type: string, entry?: Moto): string {
-  const baseLabel = PRICE_TYPE_LABELS[type] ?? 'Precio de referencia';
   if (entry && isDealerPrice(entry)) {
-    const suffix = type === 'promotional' ? ' de concesionario (oferta)' : type === 'cash' ? ' de concesionario (contado)' : ' de concesionario';
-    return baseLabel.replace(/^Precio /, 'Precio') + suffix.replace('Precio ', '');
+    return 'Precio de referencia';
   }
-  return baseLabel;
+  return PRICE_TYPE_LABELS[type] ?? 'Precio de referencia';
 }
 
 function decimal(value: number): string {
