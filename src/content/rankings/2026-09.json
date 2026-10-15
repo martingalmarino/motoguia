@@ -8,8 +8,8 @@
   "verifiedAt": "2026-10-14",
   "sourceIds": ["acara-siomaa-2026-09", "motonews-patentamientos-septiembre-2026"],
   "metric": "registrations",
-  "reportScope": "Total motos ACARA/SIOMAA, Argentina, septiembre 2026. Universo 80.113 unidades.",
-  "methodology": "Orden original de la Tabla 3 de ACARA (unidades de septiembre). La variación mostrada es la diferencia de unidades frente a agosto 2026, tomada de la misma tabla. No se usa el boletín CADECOM en estas cifras: CADECOM agrupa versiones y usa otro universo DNRPA.",
+  "reportScope": "Top 25 modelos ACARA/SIOMAA, Argentina, septiembre 2026. Universo 80.113 unidades.",
+  "methodology": "Orden original de la Tabla 3 de ACARA (unidades de septiembre), primeros 25 modelos. La variación mostrada es la diferencia de unidades frente a agosto 2026, tomada de la misma tabla. No se usa el boletín CADECOM en estas cifras: CADECOM agrupa versiones y usa otro universo DNRPA.",
   "status": "published",
   "indexable": true,
   "seoTitle": "Motos más patentadas en septiembre 2026",
@@ -35,6 +35,11 @@
     { "rank": 17, "reportModelName": "HONDA NAVI", "modelIds": ["honda-navi"], "units": 818, "comparableChange": 104, "comparisonPeriod": "agosto 2026" },
     { "rank": 18, "reportModelName": "HONDA WAVE 110S CD", "modelIds": ["honda-wave-110s"], "units": 741, "comparableChange": -234, "comparisonPeriod": "agosto 2026" },
     { "rank": 19, "reportModelName": "HONDA XR190L", "modelIds": ["honda-xr190l"], "units": 739, "comparableChange": 48, "comparisonPeriod": "agosto 2026" },
-    { "rank": 20, "reportModelName": "HONDA XR300L TORNADO", "modelIds": ["honda-xr300l-tornado"], "units": 732, "comparableChange": 116, "comparisonPeriod": "agosto 2026" }
+    { "rank": 20, "reportModelName": "HONDA XR300L TORNADO", "modelIds": ["honda-xr300l-tornado"], "units": 732, "comparableChange": 116, "comparisonPeriod": "agosto 2026" },
+    { "rank": 21, "reportModelName": "GILERA SAHEL 150", "modelIds": ["gilera-sahel-150"], "units": 731, "comparableChange": 46, "comparisonPeriod": "agosto 2026" },
+    { "rank": 22, "reportModelName": "BAJAJ BOXER CT 100", "modelIds": ["bajaj-boxer-ct100"], "units": 725, "comparableChange": -71, "comparisonPeriod": "agosto 2026" },
+    { "rank": 23, "reportModelName": "MOTOMEL C110 DLX", "modelIds": ["motomel-c110-dlx"], "units": 671, "comparableChange": 15, "comparisonPeriod": "agosto 2026" },
+    { "rank": 24, "reportModelName": "ZANELLA ZB 110 Z3 FULL", "modelIds": ["zanella-zb-110"], "units": 663, "comparableChange": -159, "comparisonPeriod": "agosto 2026" },
+    { "rank": 25, "reportModelName": "HONDA CB125F TWISTER", "modelIds": ["honda-cb125f-twister"], "units": 632, "comparableChange": 49, "comparisonPeriod": "agosto 2026" }
   ]
 }
