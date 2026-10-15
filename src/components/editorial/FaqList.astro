@@ -1,0 +1,93 @@
+---
+import Icon from '../ui/Icon.astro';
+
+export type FaqItem = {
+  id?: string;
+  question: string;
+  answer: string;
+  link?: { href: string; label: string };
+};
+
+interface Props {
+  faqs: FaqItem[];
+  /** Preguntas visibles antes de "Ver más". */
+  visible?: number;
+}
+
+const { faqs, visible = 3 } = Astro.props;
+const extra = Math.max(0, faqs.length - visible);
+const moreLabel = extra === 1 ? 'Ver 1 pregunta más' : `Ver ${extra} preguntas más`;
+---
+
+{
+  faqs.length > 0 && (
+    <div class="faq-list" data-faq>
+      {faqs.map((faq, index) => (
+        <div class="faq-item" id={faq.id ? `pregunta-${faq.id}` : undefined} data-faq-extra={index >= visible ? '' : undefined}>
+          <h3>{faq.question}</h3>
+          <p>
+            {faq.answer}
+            {faq.link && (
+              <>
+                {' '}
+                <a href={faq.link.href}>{faq.link.label}</a>
+              </>
+            )}
+          </p>
+        </div>
+      ))}
+      {extra > 0 && (
+        <button
+          type="button"
+          class="toggle-more"
+          aria-expanded="true"
+          data-faq-toggle
+          data-more={moreLabel}
+          data-less="Ver menos preguntas"
+          hidden
+        >
+          <span data-faq-label>{moreLabel}</span>
+          <Icon name="chevron" size={18} />
+        </button>
+      )}
+    </div>
+  )
+}
+
+<script>
+  function setup(list: HTMLElement) {
+    const extras = [...list.querySelectorAll<HTMLElement>('[data-faq-extra]')];
+    const toggle = list.querySelector<HTMLButtonElement>('[data-faq-toggle]');
+    const label = toggle?.querySelector<HTMLElement>('[data-faq-label]');
+    if (!extras.length || !toggle || !label) return;
+
+    const hiddenValue = 'onbeforematch' in document.body ? 'until-found' : '';
+    const setOpen = (open: boolean) => {
+      extras.forEach((item) => (open ? item.removeAttribute('hidden') : item.setAttribute('hidden', hiddenValue)));
+      toggle.setAttribute('aria-expanded', String(open));
+      label.textContent = (open ? toggle.dataset.less : toggle.dataset.more) ?? '';
+    };
+
+    const openForHash = () => {
+      const id = decodeURIComponent(location.hash.slice(1));
+      const target = extras.find((item) => id && item.id === id);
+      if (!target) return;
+      setOpen(true);
+      target.scrollIntoView();
+    };
+
+    setOpen(false);
+    toggle.hidden = false;
+    openForHash();
+
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') !== 'true';
+      setOpen(open);
+      if (!open && toggle.getBoundingClientRect().top < 0) toggle.scrollIntoView({ block: 'center' });
+    });
+    extras.forEach((item) => item.addEventListener('beforematch', () => setOpen(true)));
+    window.addEventListener('hashchange', openForHash);
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-faq]').forEach(setup);
+</script>

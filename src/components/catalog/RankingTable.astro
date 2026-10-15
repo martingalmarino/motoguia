@@ -1,0 +1,74 @@
+---
+import { formatInteger } from '../../lib/format';
+
+export type RankingTableRow = {
+  rank: number;
+  units: number;
+  brand: string;
+  model: string;
+  href: string | null;
+  note?: string | null;
+  change?: number | null;
+};
+
+interface Props {
+  rows: RankingTableRow[];
+  /** Unidades del primer puesto: la barra de cada fila es proporcional a este valor. */
+  maxUnits: number;
+  labelledBy?: string;
+  label?: string;
+  changeLabel?: string | null;
+}
+
+const { rows, maxUnits, labelledBy, label, changeLabel = null } = Astro.props;
+const fill = (units: number) => `--fill: ${Math.max(4, Math.round((units / maxUnits) * 100))}%`;
+const formatChange = (value: number | null | undefined) =>
+  value === null || value === undefined ? 'Sin dato' : `${value > 0 ? '+' : ''}${formatInteger(value)}`;
+---
+
+<div class="table-region" role="region" aria-labelledby={labelledBy} aria-label={label} tabindex="0">
+  <table class="data-table rank-table">
+    <thead>
+      <tr>
+        <th scope="col" class="rank-table__pos">Puesto</th>
+        <th scope="col">Modelo</th>
+        <th scope="col" class="num rank-table__units">Patentamientos</th>
+        {changeLabel && <th scope="col" class="num rank-table__change">{changeLabel}</th>}
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((row) => (
+          <tr>
+            <td class="rank-table__pos">
+              <span class="rank-badge">{row.rank}</span>
+            </td>
+            <th scope="row">
+              {row.brand && <span class="brand-kicker">{row.brand}</span>}
+              {row.href ? (
+                <a class="model-link" href={row.href}>
+                  {row.model}
+                  {row.brand && <span class="visually-hidden"> de {row.brand}</span>}
+                </a>
+              ) : (
+                <span class="model-link">{row.model}</span>
+              )}
+              {row.note && <span class="note">{row.note}</span>}
+            </th>
+            <td class="num rank-table__units">
+              <strong>{formatInteger(row.units)}</strong>
+              <span class="meter" aria-hidden="true">
+                <span style={fill(row.units)} />
+              </span>
+            </td>
+            {changeLabel && (
+              <td class:list={['num', 'rank-table__change', { 'is-up': (row.change ?? 0) > 0, 'is-down': (row.change ?? 0) < 0 }]}>
+                {formatChange(row.change)}
+              </td>
+            )}
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

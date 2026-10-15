@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import MotorcycleCard from '../components/catalog/MotorcycleCard.astro';
+import FaqList, { type FaqItem } from '../components/editorial/FaqList.astro';
 import PageHeader from '../components/editorial/PageHeader.astro';
 import Icon from '../components/ui/Icon.astro';
 import { paths } from '../config/site';
 import { getPublishedMotorcycles } from '../lib/content/catalog';
-import { modelListingLd } from '../lib/seo/jsonld';
+import { faqLd, modelListingLd } from '../lib/seo/jsonld';
 
 const motos = (await getPublishedMotorcycles()).filter((entry) => entry.data.chineseHub);
 const crumbs = [
@@ -15,13 +16,27 @@ const crumbs = [
 ];
 const description =
   'Modelos de marcas que en Argentina suelen asociarse a motos chinas, con ficha técnica, precio de referencia y datos de origen solo cuando hay fuente.';
+const faqs: FaqItem[] = [
+  {
+    id: 'fabricacion',
+    question: '¿Todas estas motos se fabrican en China?',
+    answer: 'No necesariamente. La mayoría de las fichas no informa la planta de fabricación, por eso no lo afirmamos modelo por modelo.',
+  },
+  {
+    id: 'honda',
+    question: '¿Son peores que una Honda?',
+    answer:
+      'Depende de qué compares. MotoGuía no hace pruebas de manejo, pero podés poner lado a lado garantía, equipamiento, precio de referencia y patentamientos.',
+    link: { href: paths.comparator, label: 'Abrir el comparador' },
+  },
+];
 ---
 
 <BaseLayout
   title="Motos chinas en Argentina"
   description={description}
   path={paths.chinese}
-  jsonLd={modelListingLd({ name: 'Motos chinas en Argentina', description, path: paths.chinese, crumbs, models: motos })}
+  jsonLd={[...modelListingLd({ name: 'Motos chinas en Argentina', description, path: paths.chinese, crumbs, models: motos }), faqLd(faqs)]}
 >
   <div class="wrap">
     <PageHeader
@@ -56,14 +71,12 @@ const description =
         <p>
           Honda publica origen Argentina en varias fichas; Grupo Corven se presenta como empresa de capitales nacionales y SIAM es una marca argentina de Newsan. Son datos sobre cada empresa: no indican el origen de las piezas de un modelo puntual.
         </p>
-        <h2>Preguntas frecuentes</h2>
-        <h3>¿Todas estas motos se fabrican en China?</h3>
-        <p>No necesariamente. La mayoría de las fichas no informa la planta de fabricación, por eso no lo afirmamos modelo por modelo.</p>
-        <h3>¿Son peores que una Honda?</h3>
-        <p>
-          Depende de qué compares. MotoGuía no hace pruebas de manejo, pero podés poner lado a lado garantía, equipamiento, precio de referencia y patentamientos en el <a href={paths.comparator}>comparador</a>.
-        </p>
       </div>
+    </section>
+
+    <section class="section" aria-labelledby="chinas-preguntas">
+      <h2 id="chinas-preguntas">Preguntas frecuentes</h2>
+      <FaqList faqs={faqs} />
     </section>
   </div>
 </BaseLayout>

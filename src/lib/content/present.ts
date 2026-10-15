@@ -200,3 +200,10 @@ export function reportModelLabel(reportName: string): string {
   const brand = brandNamesByUpper.get(first);
   return brand ? `${brand} ${rest.join(' ')}` : reportName;
 }
+
+/** Los informes de ACARA nombran cada fila como "MARCA MODELO". */
+export function reportModelParts(reportName: string): { brand: string; model: string } {
+  const [first, ...rest] = reportName.split(' ');
+  if (!rest.length) return { brand: '', model: reportName };
+  return { brand: brandNamesByUpper.get(first) ?? first, model: rest.join(' ') };
+}

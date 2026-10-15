@@ -115,8 +115,8 @@ const registration = (value: boolean | null) =>
                 <img src={image.src} alt="" width="160" height="120" loading="lazy" decoding="async" />
               </a>
               <div class="price-row__model">
-                <span class="price-row__brand">{brand?.name ?? entry.data.brandId}</span>
-                <a class="price-row__name" href={url}>
+                <span class="brand-kicker">{brand?.name ?? entry.data.brandId}</span>
+                <a class="price-row__name model-link" href={url}>
                   {entry.data.name}
                   <span class="visually-hidden"> de {brand?.name}</span>
                 </a>
@@ -127,7 +127,7 @@ const registration = (value: boolean | null) =>
                   {isRange && <span class="price-row__from">Desde</span>}
                   {formatArs(price.minARS)}
                 </span>
-                <span class="price-row__bar" aria-hidden="true">
+                <span class="meter" aria-hidden="true">
                   <span style={`--fill: ${Math.max(6, Math.round((price.minARS / maxPrice) * 100))}%`} />
                 </span>
                 {versions.length > 1 && (

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqList from '../../components/editorial/FaqList.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
 import PriceList from '../../components/catalog/PriceList.astro';
 import Icon from '../../components/ui/Icon.astro';
@@ -107,16 +108,7 @@ const faqs = [
 
     <section class="section" aria-labelledby="precios-preguntas">
       <h2 id="precios-preguntas">Preguntas frecuentes</h2>
-      <div class="faq-list">
-        {
-          faqs.map((faq) => (
-            <div class="faq-item" id={`pregunta-${faq.id}`}>
-              <h3>{faq.question}</h3>
-              <p>{faq.answer}</p>
-            </div>
-          ))
-        }
-      </div>
+      <FaqList faqs={faqs} />
     </section>
 
     <section class="section" aria-labelledby="precios-mas">

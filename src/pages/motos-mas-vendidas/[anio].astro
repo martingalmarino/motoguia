@@ -2,15 +2,18 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
 import SourceList from '../../components/editorial/SourceList.astro';
+import RankingTable, { type RankingTableRow } from '../../components/catalog/RankingTable.astro';
+import Icon from '../../components/ui/Icon.astro';
 import { paths, rankingYearPath } from '../../config/site';
 import {
+  getBrand,
   getLatestMonthlyRanking,
   getLatestSummaryRanking,
   getPublishedMotorcycles,
   getRankingYears,
   motorcycleUrl,
 } from '../../lib/content/catalog';
-import { displayName, reportModelLabel } from '../../lib/content/present';
+import { reportModelParts } from '../../lib/content/present';
 import { periodLabel } from '../../lib/content/ranking-period';
 import { formatDate, formatInteger } from '../../lib/format';
 import { breadcrumbLd, itemListLd } from '../../lib/seo/jsonld';
@@ -28,12 +31,21 @@ if (!summary) throw new Error(`Missing summary ranking for ${year}`);
 const motos = await getPublishedMotorcycles();
 const byId = new Map(motos.map((entry) => [entry.data.id, entry]));
 
-function rowInfo(row: { reportModelName: string; modelIds: string[] }) {
-  const entry = row.modelIds.map((id) => byId.get(id)).find(Boolean);
+type ReportRow = { rank: number; units: number; reportModelName: string; modelIds: string[]; comparableChange?: number | null };
+
+const entryFor = (row: { modelIds: string[] }) => row.modelIds.map((id) => byId.get(id)).find(Boolean);
+
+function tableRow(row: ReportRow, withReportName: boolean): RankingTableRow {
+  const entry = entryFor(row);
+  const parts = reportModelParts(row.reportModelName);
   return {
+    rank: row.rank,
+    units: row.units,
+    brand: entry ? (getBrand(entry.data.brandId)?.name ?? parts.brand) : parts.brand,
+    model: entry ? entry.data.name : parts.model,
     href: entry ? motorcycleUrl(entry) : null,
-    name: entry ? displayName(entry) : reportModelLabel(row.reportModelName),
-    reportName: row.reportModelName,
+    note: entry ? (withReportName ? `En el informe: ${row.reportModelName}` : null) : 'Sin ficha en MotoGuía',
+    change: row.comparableChange ?? null,
   };
 }
 
@@ -52,8 +64,7 @@ const crumbs = [
   { href: path, label: String(year) },
 ];
 const sourceIds = [...new Set([...summary.data.sourceIds, ...(showMonth && month ? month.data.sourceIds : [])])];
-const formatChange = (value: number | null) =>
-  value === null ? 'Sin dato' : `${value > 0 ? '+' : ''}${formatInteger(value)}`;
+const summaryMax = Math.max(...summary.data.rows.map((row) => row.units));
 const description = showMonth
   ? `Ranking acumulado ${summaryLabel} de patentamientos de motos ACARA/SIOMAA, con el mes de ${monthLabel} aparte.`
   : `Ranking ${summaryLabel} de patentamientos de motos en Argentina según ACARA/SIOMAA.`;
@@ -73,7 +84,10 @@ const lede = [
     breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
     itemListLd(
       `Patentamientos de motos en Argentina, ${summaryLabel}`,
-      summary.data.rows.map((row) => ({ name: row.reportModelName, path: rowInfo(row).href ?? undefined })),
+      summary.data.rows.map((row) => {
+        const entry = entryFor(row);
+        return { name: row.reportModelName, path: entry ? motorcycleUrl(entry) : undefined };
+      }),
     ),
   ]}
 >
@@ -92,62 +106,14 @@ const lede = [
           <p>Los 10 modelos con más patentamientos {isAnnual ? 'del año' : 'en lo que va del año'}.</p>
         </div>
       </div>
-      <div class="table-region" role="region" aria-labelledby="acumulado-titulo" tabindex="0">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th scope="col">Puesto</th>
-              <th scope="col">Modelo</th>
-              <th scope="col" class="num">Patentamientos</th>
-            </tr>
-          </thead>
-          <tbody>
-            {topRows.map((row) => {
-              const info = rowInfo(row);
-              return (
-                <tr>
-                  <td class="pos">{row.rank}</td>
-                  <th scope="row">
-                    {info.href ? <a href={info.href}>{info.name}</a> : info.name}
-                    <span class="note">{info.href ? `En el informe: ${info.reportName}` : 'Sin ficha en MotoGuía'}</span>
-                  </th>
-                  <td class="num">{formatInteger(row.units)}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
+      <RankingTable rows={topRows.map((row) => tableRow(row, true))} maxUnits={summaryMax} labelledBy="acumulado-titulo" />
       {
         moreRows.length > 0 && (
           <details class="more-rows">
-            <summary>Ver puestos 11 a {summary.data.rows.length}</summary>
-            <div class="table-region" role="region" aria-label="Puestos 11 en adelante" tabindex="0">
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th scope="col">Puesto</th>
-                    <th scope="col">Modelo</th>
-                    <th scope="col" class="num">Patentamientos</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {moreRows.map((row) => {
-                    const info = rowInfo(row);
-                    return (
-                      <tr>
-                        <td class="pos">{row.rank}</td>
-                        <th scope="row">
-                          {info.href ? <a href={info.href}>{info.name}</a> : info.name}
-                          {!info.href && <span class="note">Sin ficha en MotoGuía</span>}
-                        </th>
-                        <td class="num">{formatInteger(row.units)}</td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
+            <summary class="toggle-more">
+              Ver puestos 11 a {summary.data.rows.length} <Icon name="chevron" size={18} />
+            </summary>
+            <RankingTable rows={moreRows.map((row) => tableRow(row, false))} maxUnits={summaryMax} label="Puestos 11 en adelante" />
           </details>
         )
       }
@@ -165,31 +131,12 @@ const lede = [
               </p>
             </div>
           </div>
-          <div class="table-region" role="region" aria-labelledby="mes-titulo" tabindex="0">
-            <table class="data-table">
-              <thead>
-                <tr>
-                  <th scope="col">Puesto</th>
-                  <th scope="col">Modelo</th>
-                  <th scope="col" class="num">Patentamientos</th>
-                  {comparisonPeriod && <th scope="col" class="num">Vs. {comparisonPeriod.replace(/\s\d{4}$/, '')}</th>}
-                </tr>
-              </thead>
-              <tbody>
-                {month.data.rows.map((row) => {
-                  const info = rowInfo(row);
-                  return (
-                    <tr>
-                      <td class="pos">{row.rank}</td>
-                      <th scope="row">{info.href ? <a href={info.href}>{info.name}</a> : info.name}</th>
-                      <td class="num">{formatInteger(row.units)}</td>
-                      {comparisonPeriod && <td class="num">{formatChange(row.comparableChange)}</td>}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+          <RankingTable
+            rows={month.data.rows.map((row) => tableRow(row, false))}
+            maxUnits={Math.max(...month.data.rows.map((row) => row.units))}
+            labelledBy="mes-titulo"
+            changeLabel={comparisonPeriod ? `Vs. ${comparisonPeriod.replace(/\s\d{4}$/, '')}` : null}
+          />
         </section>
       )
     }

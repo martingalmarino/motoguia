@@ -1,11 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FaqList from '../editorial/FaqList.astro';
 import PageHeader from '../editorial/PageHeader.astro';
 import MotorcycleCard from './MotorcycleCard.astro';
 import Icon from '../ui/Icon.astro';
 import { paths } from '../../config/site';
-import { motorcycleUrl } from '../../lib/content/catalog';
+import { getBrand, motorcycleUrl } from '../../lib/content/catalog';
 import { activeHubs, type Hub } from '../../lib/content/hubs';
 import { hubFaqs } from '../../lib/content/hub-faq';
 import { displayName, powerLabel, priceTypeLabel, shortPrice } from '../../lib/content/present';
@@ -29,6 +30,7 @@ const crumbs = [
 const faqs = hubFaqs(hub, models);
 const newest = models.map((entry) => entry.data.reviewedAt).sort((a, b) => b.valueOf() - a.valueOf())[0];
 const siblings = activeHubs(allModels).filter((item) => item.key !== hub.key);
+const rangeHeading = models.some((entry) => entry.data.engineType === 'electric') ? 'Tanque o autonomía' : 'Tanque';
 const decimal = (value: number) => value.toLocaleString('es-AR', { maximumFractionDigits: 2 });
 
 function motorCell(entry: Moto) {
@@ -87,15 +89,15 @@ function brakeCell(entry: Moto) {
           <p>Datos declarados por cada marca. Los precios figuran con su tipo y fecha.</p>
         </div>
       </div>
-      <div class="table-region" role="region" aria-labelledby="hub-tabla-titulo" tabindex="0">
-        <table class="data-table">
+      <div class="table-region table-region--stack" role="region" aria-labelledby="hub-tabla-titulo" tabindex="0">
+        <table class="data-table data-table--stack">
           <thead>
             <tr>
               <th scope="col">Modelo</th>
               <th scope="col">Motor</th>
               <th scope="col">Freno delantero</th>
               <th scope="col" class="num">Peso</th>
-              <th scope="col">{models.some((entry) => entry.data.engineType === 'electric') ? 'Tanque o autonomía' : 'Tanque'}</th>
+              <th scope="col">{rangeHeading}</th>
               <th scope="col">Precio</th>
             </tr>
           </thead>
@@ -104,22 +106,27 @@ function brakeCell(entry: Moto) {
               models.map((entry) => {
                 const motor = motorCell(entry);
                 const brake = brakeCell(entry);
+                const brand = getBrand(entry.data.brandId)?.name;
                 return (
                   <tr>
                     <th scope="row">
-                      <a href={motorcycleUrl(entry)}>{displayName(entry)}</a>
+                      {brand && <span class="brand-kicker">{brand}</span>}
+                      <a class="model-link" href={motorcycleUrl(entry)}>
+                        {entry.data.name}
+                        {brand && <span class="visually-hidden"> de {brand}</span>}
+                      </a>
                     </th>
-                    <td>
+                    <td data-label="Motor">
                       {motor.main}
                       <span class="note">{motor.note}</span>
                     </td>
-                    <td>
+                    <td data-label="Freno delantero">
                       {brake.main}
                       {brake.note && <span class="note">{brake.note}</span>}
                     </td>
-                    <td class="num">{entry.data.dimensions?.weightKg ? `${formatInteger(entry.data.dimensions.weightKg)} kg` : 'No informado'}</td>
-                    <td>{rangeCell(entry)}</td>
-                    <td>
+                    <td class="num" data-label="Peso">{entry.data.dimensions?.weightKg ? `${formatInteger(entry.data.dimensions.weightKg)} kg` : 'No informado'}</td>
+                    <td data-label={rangeHeading}>{rangeCell(entry)}</td>
+                    <td class:list={{ 'price-cell': Boolean(entry.data.price) }} data-label="Precio">
                       {shortPrice(entry)}
                       {entry.data.price && (
                         <span class="note">
@@ -151,16 +158,7 @@ function brakeCell(entry: Moto) {
 
     <section class="section" aria-labelledby="hub-preguntas-titulo">
       <h2 id="hub-preguntas-titulo">Preguntas frecuentes</h2>
-      <div class="faq-list">
-        {
-          faqs.map((faq) => (
-            <div class="faq-item" id={`pregunta-${faq.id}`}>
-              <h3>{faq.question}</h3>
-              <p>{faq.answer}</p>
-            </div>
-          ))
-        }
-      </div>
+      <FaqList faqs={faqs} />
     </section>
 
     {

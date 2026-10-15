@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/editorial/Breadcrumbs.astro';
+import FaqList from '../../../components/editorial/FaqList.astro';
 import SourceList from '../../../components/editorial/SourceList.astro';
 import AdSlot from '../../../components/monetization/AdSlot.astro';
 import MotorcycleCard from '../../../components/catalog/MotorcycleCard.astro';
@@ -469,14 +470,7 @@ const availability =
 
       <section class="model-section" id="preguntas" aria-labelledby="preguntas-titulo">
         <h2 id="preguntas-titulo">Preguntas frecuentes sobre la {name}</h2>
-        <div class="faq-list">
-          {faqs.map((faq) => (
-            <div class="faq-item" id={`pregunta-${faq.id}`}>
-              <h3>{faq.question}</h3>
-              <p>{faq.answer}</p>
-            </div>
-          ))}
-        </div>
+        <FaqList faqs={faqs} />
       </section>
 
       <section class="model-section source-notes" id="fuentes" aria-labelledby="fuentes-titulo">
