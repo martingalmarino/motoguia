@@ -3,6 +3,10 @@ import { MAX_COMPARE, onCompareChange, readCompare, toggleCompare } from './comp
 const toast = document.querySelector<HTMLElement>('[data-toast]');
 let toastTimer: number | undefined;
 
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
+}
+
 function notify(html: string) {
   if (!toast) return;
   toast.innerHTML = html;
@@ -11,15 +15,15 @@ function notify(html: string) {
   toastTimer = window.setTimeout(() => {
     toast.classList.remove('is-visible');
     toast.innerHTML = '';
-  }, 5000);
+  }, 6000);
 }
 
 function sync(ids: string[]) {
-  document.querySelectorAll<HTMLButtonElement>('[data-compare]').forEach((button) => {
+  document.querySelectorAll<HTMLButtonElement>('.compare-toggle[data-compare]').forEach((button) => {
     const selected = ids.includes(button.dataset.compare ?? '');
-    button.setAttribute('aria-pressed', String(selected));
+    button.toggleAttribute('data-selected', selected);
     const label = button.querySelector('[data-compare-label]');
-    if (label) label.textContent = selected ? button.dataset.labelOn ?? 'En comparador' : button.dataset.labelOff ?? 'Comparar';
+    if (label) label.textContent = selected ? button.dataset.labelOn ?? 'Quitar' : button.dataset.labelOff ?? 'Comparar';
   });
 }
 
@@ -28,7 +32,7 @@ document.addEventListener('click', (event) => {
   if (!button) return;
   const id = button.dataset.compare;
   if (!id) return;
-  const name = button.dataset.compareName ?? 'La moto';
+  const name = escapeHtml(button.dataset.compareName ?? 'La moto');
   const result = toggleCompare(id);
   if (result.full) {
     notify(`Ya elegiste ${MAX_COMPARE} motos. Quitá una para sumar otra. <a href="/comparador/">Ir al comparador</a>`);
@@ -36,7 +40,9 @@ document.addEventListener('click', (event) => {
   }
   notify(
     result.added
-      ? `${name} se sumó al comparador (${result.ids.length} de ${MAX_COMPARE}). <a href="/comparador/">Ver comparación</a>`
+      ? `${name} se sumó al comparador (${result.ids.length} de ${MAX_COMPARE}).
+        <span class="toast__actions"><a href="/comparador/">Ver comparación</a>
+        <button type="button" class="toast__action" data-compare="${escapeHtml(id)}" data-compare-name="${name}">Quitar</button></span>`
       : `${name} salió del comparador.`,
   );
 });

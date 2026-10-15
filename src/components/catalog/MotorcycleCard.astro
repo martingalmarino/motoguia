@@ -73,12 +73,13 @@ const searchText = [
         type="button"
         data-compare={entry.data.id}
         data-compare-name={name}
-        aria-pressed="false"
+        data-label-off="Comparar"
+        data-label-on="Quitar"
       >
         <span class="compare-toggle__off"><Icon name="plus" size={18} /></span>
-        <span class="compare-toggle__on"><Icon name="check" size={18} /></span>
+        <span class="compare-toggle__on"><Icon name="close" size={18} /></span>
         <span data-compare-label>Comparar</span>
-        <span class="visually-hidden">{name}</span>
+        <span class="visually-hidden"> {name}</span>
       </button>
     </div>
   </div>

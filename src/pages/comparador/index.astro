@@ -128,10 +128,15 @@ const crumbs = [
         <div>
           <h2 id="comparacion-titulo">Tu comparación</h2>
         </div>
-        <label class="choice" data-diff-toggle hidden>
-          <input type="checkbox" data-only-diff />
-          Mostrar solo diferencias
-        </label>
+        <div class="comparator-actions">
+          <label class="choice" data-diff-toggle hidden>
+            <input type="checkbox" data-only-diff />
+            Mostrar solo diferencias
+          </label>
+          <button class="compare-clear" type="button" data-compare-clear hidden>
+            <Icon name="close" size={16} /> Quitar todas
+          </button>
+        </div>
       </div>
 
       <div class="comparator-empty" data-compare-empty>

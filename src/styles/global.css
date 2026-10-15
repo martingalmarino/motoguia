@@ -1094,6 +1094,36 @@ input[type='radio'] {
   padding: 0;
 }
 
+.toast__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+  margin-top: 6px;
+}
+
+.toast__action {
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: var(--radius-sm);
+  background: none;
+  color: #fff;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.toast__action:hover {
+  background: rgb(255 255 255 / 12%);
+}
+
+.toast__action:focus-visible {
+  outline: 2px solid #9fd5ee;
+  outline-offset: 2px;
+}
+
 /* ---------- Volver arriba ---------- */
 
 #contenido:focus {
@@ -1400,18 +1430,12 @@ input[type='radio'] {
 }
 
 .compare-toggle__on,
-.compare-toggle[aria-pressed='true'] .compare-toggle__off {
+.compare-toggle[data-selected] .compare-toggle__off {
   display: none;
 }
 
-.compare-toggle[aria-pressed='true'] .compare-toggle__on {
+.compare-toggle[data-selected] .compare-toggle__on {
   display: inline-flex;
-}
-
-.compare-toggle[aria-pressed='true'] {
-  background: var(--brand-tint);
-  border-color: var(--brand-primary);
-  color: var(--brand-primary-hover);
 }
 
 .compare-toggle--large {
@@ -1430,6 +1454,18 @@ input[type='radio'] {
   background: var(--brand-primary-hover);
   border-color: var(--brand-primary-hover);
   color: #fff;
+}
+
+.compare-toggle[data-selected] {
+  background: var(--brand-tint);
+  border-color: var(--brand-primary);
+  color: var(--brand-primary-hover);
+}
+
+.compare-toggle[data-selected]:hover {
+  background: #fff;
+  border-color: var(--brand-primary-hover);
+  color: var(--brand-primary-hover);
 }
 
 /* ---------- Price ---------- */
@@ -4035,21 +4071,46 @@ details.more-rows[open] > summary {
   color: var(--text);
 }
 
-.compare-remove {
-  justify-self: start;
-  border: 0;
-  background: none;
-  padding: 0;
-  min-height: 36px;
-  color: var(--brand-primary);
+.compare-remove,
+.compare-clear {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--text);
   font: inherit;
   font-size: 0.875rem;
   font-weight: 600;
   cursor: pointer;
+  white-space: nowrap;
 }
 
-.compare-remove:hover {
-  text-decoration: underline;
+.compare-remove {
+  justify-self: start;
+}
+
+.compare-remove:hover,
+.compare-clear:hover {
+  border-color: #9a2b16;
+  color: #9a2b16;
+}
+
+.compare-remove:focus-visible,
+.compare-clear:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.section-heading > .comparator-actions {
+  display: flex;
+  max-width: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
 }
 
 .compare-diff {

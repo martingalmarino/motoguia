@@ -26,6 +26,10 @@ const table = document.querySelector<HTMLTableElement>('[data-compare-table]');
 const hint = document.querySelector<HTMLElement>('[data-compare-hint]');
 const diffToggle = document.querySelector<HTMLElement>('[data-diff-toggle]');
 const onlyDiff = document.querySelector<HTMLInputElement>('[data-only-diff]');
+const clearAll = document.querySelector<HTMLButtonElement>('[data-compare-clear]');
+
+const CLOSE_ICON =
+  '<svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12"/><path d="M18 6 6 18"/></svg>';
 
 function escapeHtml(value: string): string {
   return value.replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
@@ -57,7 +61,7 @@ function headCell(model: Model): string {
   return `<th scope="col"><div class="compare-head">
     <img src="${escapeHtml(model.image.src)}" alt="${escapeHtml(model.image.alt)}" width="220" height="165" loading="lazy" decoding="async" />
     <a href="${escapeHtml(model.href)}">${escapeHtml(model.name)}</a>
-    <button class="compare-remove" type="button" data-remove="${escapeHtml(model.id)}" aria-label="Quitar ${escapeHtml(model.name)} de la comparación">Quitar</button>
+    <button class="compare-remove" type="button" data-remove="${escapeHtml(model.id)}">${CLOSE_ICON}Quitar<span class="visually-hidden"> ${escapeHtml(model.name)} de la comparación</span></button>
   </div></th>`;
 }
 
@@ -82,6 +86,7 @@ function render() {
   if (region) region.hidden = models.length === 0;
   if (hint) hint.hidden = models.length < 2;
   if (diffToggle) diffToggle.hidden = models.length < 2;
+  if (clearAll) clearAll.hidden = models.length === 0;
   if (!table) return;
   if (!models.length) {
     table.innerHTML = '';
@@ -138,6 +143,12 @@ table?.addEventListener('click', (event) => {
   if (!id) return;
   showError(null);
   writeCompare(readCompare().filter((item) => item !== id));
+  select?.focus();
+});
+
+clearAll?.addEventListener('click', () => {
+  showError(null);
+  writeCompare([]);
   select?.focus();
 });
 
