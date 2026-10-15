@@ -9,8 +9,8 @@ import { paths } from '../../config/site';
 import { getBrand, motorcycleUrl } from '../../lib/content/catalog';
 import { activeHubs, type Hub } from '../../lib/content/hubs';
 import { hubFaqs } from '../../lib/content/hub-faq';
-import { displayName, powerLabel, priceTypeLabel, shortPrice } from '../../lib/content/present';
-import { formatDate, formatInteger } from '../../lib/format';
+import { displayName, powerLabel, priceReference, STALE_PRICE_NOTE, stageImage } from '../../lib/content/present';
+import { formatInteger } from '../../lib/format';
 import { breadcrumbLd, collectionPageLd, faqLd, itemListLd } from '../../lib/seo/jsonld';
 
 type Moto = CollectionEntry<'motorcycles'>;
@@ -99,6 +99,7 @@ function brakeCell(entry: Moto) {
               <th scope="col" class="num">Peso</th>
               <th scope="col">{rangeHeading}</th>
               <th scope="col">Precio</th>
+              <th scope="col"><span class="visually-hidden">Ficha</span></th>
             </tr>
           </thead>
           <tbody>
@@ -107,14 +108,24 @@ function brakeCell(entry: Moto) {
                 const motor = motorCell(entry);
                 const brake = brakeCell(entry);
                 const brand = getBrand(entry.data.brandId)?.name;
+                const price = priceReference(entry);
+                const image = stageImage(entry);
+                const url = motorcycleUrl(entry);
                 return (
                   <tr>
                     <th scope="row">
-                      {brand && <span class="brand-kicker">{brand}</span>}
-                      <a class="model-link" href={motorcycleUrl(entry)}>
-                        {entry.data.name}
-                        {brand && <span class="visually-hidden"> de {brand}</span>}
-                      </a>
+                      <div class="model-cell">
+                        <a class="model-thumb" href={url} tabindex="-1" aria-hidden="true">
+                          <img src={image.src} alt="" width="160" height="120" loading="lazy" decoding="async" />
+                        </a>
+                        <div>
+                          {brand && <span class="brand-kicker">{brand}</span>}
+                          <a class="model-link" href={url}>
+                            {entry.data.name}
+                            {brand && <span class="visually-hidden"> de {brand}</span>}
+                          </a>
+                        </div>
+                      </div>
                     </th>
                     <td data-label="Motor">
                       {motor.main}
@@ -125,14 +136,29 @@ function brakeCell(entry: Moto) {
                       {brake.note && <span class="note">{brake.note}</span>}
                     </td>
                     <td class="num" data-label="Peso">{entry.data.dimensions?.weightKg ? `${formatInteger(entry.data.dimensions.weightKg)} kg` : 'No informado'}</td>
-                    <td data-label={rangeHeading}>{rangeCell(entry)}</td>
-                    <td class:list={{ 'price-cell': Boolean(entry.data.price) }} data-label="Precio">
-                      {shortPrice(entry)}
-                      {entry.data.price && (
-                        <span class="note">
-                          {priceTypeLabel(entry.data.price.priceType, entry)} al {formatDate(entry.data.price.observedAt)}
-                        </span>
+                    <td class="nowrap" data-label={rangeHeading}>{rangeCell(entry)}</td>
+                    <td class="price-cell" data-label="Precio">
+                      {price ? (
+                        <>
+                          <span class="price-figure">
+                            {price.prefix && <span class="price-figure__from">{price.prefix}</span>}
+                            {price.amount}
+                          </span>
+                          <span class="price-tag">{price.typeLabel}</span>
+                          <span class="note">
+                            al <time datetime={price.dateIso}>{price.date}</time>
+                          </span>
+                          {price.stale && <span class="price-stale">{STALE_PRICE_NOTE}</span>}
+                        </>
+                      ) : (
+                        <span class="price-missing">Precio no disponible</span>
                       )}
+                    </td>
+                    <td class="cta-cell">
+                      <a class="cta-outline" href={url}>
+                        Ver ficha <Icon name="arrow" size={16} />
+                        <span class="visually-hidden"> de la {displayName(entry)}</span>
+                      </a>
                     </td>
                   </tr>
                 );

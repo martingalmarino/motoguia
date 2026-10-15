@@ -3301,6 +3301,10 @@ input[type='radio'] {
 
 .price-row__thumb {
   grid-area: thumb;
+}
+
+.price-row__thumb,
+.model-thumb {
   display: block;
   aspect-ratio: 4 / 3;
   border-radius: var(--radius-sm);
@@ -3308,7 +3312,8 @@ input[type='radio'] {
   overflow: hidden;
 }
 
-.price-row__thumb img {
+.price-row__thumb img,
+.model-thumb img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -3345,7 +3350,8 @@ input[type='radio'] {
   border-top: 1px solid var(--border);
 }
 
-.price-row__amount {
+.price-row__amount,
+.price-figure {
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
@@ -3357,7 +3363,8 @@ input[type='radio'] {
   font-variant-numeric: tabular-nums;
 }
 
-.price-row__from {
+.price-row__from,
+.price-figure__from {
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-secondary);
@@ -3396,7 +3403,8 @@ input[type='radio'] {
   color: var(--text-secondary);
 }
 
-.price-row__type {
+.price-row__type,
+.price-tag {
   padding: 2px 8px;
   border-radius: var(--radius-sm);
   background: var(--brand-tint);
@@ -3411,6 +3419,10 @@ input[type='radio'] {
 
 .price-row__cta {
   grid-area: cta;
+}
+
+.price-row__cta,
+.cta-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3423,7 +3435,8 @@ input[type='radio'] {
   text-decoration: none;
 }
 
-.price-row__cta:hover {
+.price-row__cta:hover,
+.cta-outline:hover {
   background: var(--brand-tint);
 }
 
@@ -3689,6 +3702,73 @@ details[open] > .toggle-more .icon {
   color: var(--text-secondary);
 }
 
+.model-cell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 200px;
+}
+
+.model-cell .model-thumb {
+  flex: none;
+  width: 80px;
+}
+
+.data-table .price-cell {
+  min-width: 150px;
+}
+
+.price-cell .price-figure {
+  font-size: 1.125rem;
+  white-space: nowrap;
+}
+
+.price-cell .price-tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+}
+
+.price-cell .price-stale {
+  font-size: 0.75rem;
+}
+
+.price-missing {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.data-table .cta-cell {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.data-table .nowrap,
+.price-cell .note {
+  white-space: nowrap;
+}
+
+@media (min-width: 720px) and (max-width: 1199px) {
+  .data-table--stack th,
+  .data-table--stack td {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .data-table--stack .model-cell {
+    min-width: 0;
+  }
+
+  .data-table--stack .model-cell .model-thumb {
+    display: none;
+  }
+}
+
+.cta-cell .cta-outline {
+  min-height: 40px;
+  padding: 0 12px;
+}
+
 /* Ranking de patentamientos */
 
 .rank-table .rank-table__pos {
@@ -3828,9 +3908,26 @@ details[open] > .toggle-more .icon {
     color: var(--text-secondary);
   }
 
-  .data-table--stack td.price-cell {
-    font-weight: 700;
-    color: var(--brand-navy);
+  .data-table--stack td[data-label] > * {
+    grid-column: 2;
+  }
+
+  .data-table--stack .model-cell .model-thumb {
+    width: 96px;
+  }
+
+  .data-table--stack td.price-cell .price-tag {
+    justify-self: start;
+  }
+
+  .data-table--stack td.cta-cell {
+    width: auto;
+    padding: 12px 0 14px;
+  }
+
+  .data-table--stack .cta-outline {
+    display: flex;
+    min-height: 44px;
   }
 
   .data-table--stack tbody tr > :last-child {
