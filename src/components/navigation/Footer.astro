@@ -18,7 +18,7 @@ import { author, footerGroups, paths } from '../../config/site';
               {group.links.map((link) => (
                 <li>
                   {link.href.startsWith('http') ? (
-                    <a href={link.href} rel="noopener">
+                    <a href={link.href} target="_blank" rel="noopener">
                       {link.label}
                     </a>
                   ) : (
