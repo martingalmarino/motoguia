@@ -4,14 +4,6 @@
   "outputDirectory": "dist",
   "installCommand": "npm ci",
   "trailingSlash": true,
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "motoguia.vercel.app" }],
-      "destination": "https://www.motoguia.com.ar/:path*",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
