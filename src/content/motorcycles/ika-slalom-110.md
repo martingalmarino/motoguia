@@ -1,5 +1,5 @@
 ---
-id: "ika-slalom-110"
+id: ika-slalom-110
 brandId: "ika"
 name: "Slalom 110"
 variant: "Full"

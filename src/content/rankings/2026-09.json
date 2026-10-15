@@ -25,16 +25,16 @@
     { "rank": 7, "reportModelName": "ZANELLA ZB 110", "modelIds": ["zanella-zb-110"], "units": 2493, "comparableChange": 313, "comparisonPeriod": "agosto 2026" },
     { "rank": 8, "reportModelName": "MOTOMEL S2 150", "modelIds": ["motomel-s2-150"], "units": 1812, "comparableChange": 108, "comparisonPeriod": "agosto 2026" },
     { "rank": 9, "reportModelName": "HONDA GLH 150", "modelIds": ["honda-glh-150"], "units": 1530, "comparableChange": -31, "comparisonPeriod": "agosto 2026" },
-    { "rank": 10, "reportModelName": "IKA IKA P110", "modelIds": [], "units": 1499, "comparableChange": 206, "comparisonPeriod": "agosto 2026" },
+    { "rank": 10, "reportModelName": "IKA IKA P110", "modelIds": ["ika-slalom-110"], "units": 1499, "comparableChange": 206, "comparisonPeriod": "agosto 2026" },
     { "rank": 11, "reportModelName": "SIAM QU 110", "modelIds": ["siam-qu-110"], "units": 1427, "comparableChange": 181, "comparisonPeriod": "agosto 2026" },
     { "rank": 12, "reportModelName": "CORVEN TRIAX 150", "modelIds": ["corven-triax-150"], "units": 1287, "comparableChange": 224, "comparisonPeriod": "agosto 2026" },
-    { "rank": 13, "reportModelName": "MOTOMEL CX 150", "modelIds": [], "units": 1249, "comparableChange": 41, "comparisonPeriod": "agosto 2026" },
+    { "rank": 13, "reportModelName": "MOTOMEL CX 150", "modelIds": ["motomel-skua-150"], "units": 1249, "comparableChange": 41, "comparisonPeriod": "agosto 2026" },
     { "rank": 14, "reportModelName": "CORVEN MIRAGE 110", "modelIds": ["corven-mirage-110"], "units": 1232, "comparableChange": 218, "comparisonPeriod": "agosto 2026" },
     { "rank": 15, "reportModelName": "HONDA XR150L", "modelIds": ["honda-xr150l"], "units": 1198, "comparableChange": 49, "comparisonPeriod": "agosto 2026" },
-    { "rank": 16, "reportModelName": "GUERRERO G110 TRIP", "modelIds": [], "units": 931, "comparableChange": 68, "comparisonPeriod": "agosto 2026" },
+    { "rank": 16, "reportModelName": "GUERRERO G110 TRIP", "modelIds": ["guerrero-trip-110"], "units": 931, "comparableChange": 68, "comparisonPeriod": "agosto 2026" },
     { "rank": 17, "reportModelName": "HONDA NAVI", "modelIds": ["honda-navi"], "units": 818, "comparableChange": 104, "comparisonPeriod": "agosto 2026" },
     { "rank": 18, "reportModelName": "HONDA WAVE 110S CD", "modelIds": ["honda-wave-110s"], "units": 741, "comparableChange": -234, "comparisonPeriod": "agosto 2026" },
-    { "rank": 19, "reportModelName": "HONDA XR190L", "modelIds": [], "units": 739, "comparableChange": 48, "comparisonPeriod": "agosto 2026" },
-    { "rank": 20, "reportModelName": "HONDA XR300L TORNADO", "modelIds": [], "units": 732, "comparableChange": 116, "comparisonPeriod": "agosto 2026" }
+    { "rank": 19, "reportModelName": "HONDA XR190L", "modelIds": ["honda-xr190l"], "units": 739, "comparableChange": 48, "comparisonPeriod": "agosto 2026" },
+    { "rank": 20, "reportModelName": "HONDA XR300L TORNADO", "modelIds": ["honda-xr300l-tornado"], "units": 732, "comparableChange": 116, "comparisonPeriod": "agosto 2026" }
   ]
 }

@@ -1,5 +1,5 @@
 ---
-id: "honda-xr300l-tornado"
+id: honda-xr300l-tornado
 brandId: "honda"
 name: "XR300L Tornado"
 variant: null

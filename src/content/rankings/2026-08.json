@@ -25,16 +25,16 @@
     { "rank": 7, "reportModelName": "ZANELLA ZB 110", "modelIds": ["zanella-zb-110"], "units": 2142, "comparableChange": 591, "comparisonPeriod": "julio 2026" },
     { "rank": 8, "reportModelName": "MOTOMEL S2 150", "modelIds": ["motomel-s2-150"], "units": 1679, "comparableChange": 179, "comparisonPeriod": "julio 2026" },
     { "rank": 9, "reportModelName": "HONDA GLH 150", "modelIds": ["honda-glh-150"], "units": 1535, "comparableChange": 67, "comparisonPeriod": "julio 2026" },
-    { "rank": 10, "reportModelName": "IKA IKA P110", "modelIds": [], "units": 1266, "comparableChange": 160, "comparisonPeriod": "julio 2026" },
+    { "rank": 10, "reportModelName": "IKA IKA P110", "modelIds": ["ika-slalom-110"], "units": 1266, "comparableChange": 160, "comparisonPeriod": "julio 2026" },
     { "rank": 11, "reportModelName": "SIAM QU 110", "modelIds": ["siam-qu-110"], "units": 1234, "comparableChange": 30, "comparisonPeriod": "julio 2026" },
-    { "rank": 12, "reportModelName": "MOTOMEL CX 150", "modelIds": [], "units": 1191, "comparableChange": 211, "comparisonPeriod": "julio 2026" },
+    { "rank": 12, "reportModelName": "MOTOMEL CX 150", "modelIds": ["motomel-skua-150"], "units": 1191, "comparableChange": 211, "comparisonPeriod": "julio 2026" },
     { "rank": 13, "reportModelName": "HONDA XR150L", "modelIds": ["honda-xr150l"], "units": 1133, "comparableChange": -59, "comparisonPeriod": "julio 2026" },
     { "rank": 14, "reportModelName": "CORVEN TRIAX 150", "modelIds": ["corven-triax-150"], "units": 1048, "comparableChange": 63, "comparisonPeriod": "julio 2026" },
     { "rank": 15, "reportModelName": "CORVEN MIRAGE 110", "modelIds": ["corven-mirage-110"], "units": 998, "comparableChange": 40, "comparisonPeriod": "julio 2026" },
     { "rank": 16, "reportModelName": "HONDA WAVE 110S CD", "modelIds": ["honda-wave-110s"], "units": 959, "comparableChange": 170, "comparisonPeriod": "julio 2026" },
-    { "rank": 17, "reportModelName": "GUERRERO G110 TRIP", "modelIds": [], "units": 851, "comparableChange": -21, "comparisonPeriod": "julio 2026" },
+    { "rank": 17, "reportModelName": "GUERRERO G110 TRIP", "modelIds": ["guerrero-trip-110"], "units": 851, "comparableChange": -21, "comparisonPeriod": "julio 2026" },
     { "rank": 18, "reportModelName": "ZANELLA ZB 110 Z3 FULL", "modelIds": ["zanella-zb-110"], "units": 806, "comparableChange": -175, "comparisonPeriod": "julio 2026" },
-    { "rank": 19, "reportModelName": "BAJAJ BOXER CT 100", "modelIds": [], "units": 779, "comparableChange": 52, "comparisonPeriod": "julio 2026" },
+    { "rank": 19, "reportModelName": "BAJAJ BOXER CT 100", "modelIds": ["bajaj-boxer-ct100"], "units": 779, "comparableChange": 52, "comparisonPeriod": "julio 2026" },
     { "rank": 20, "reportModelName": "HONDA NAVI", "modelIds": ["honda-navi"], "units": 702, "comparableChange": -59, "comparisonPeriod": "julio 2026" }
   ]
 }

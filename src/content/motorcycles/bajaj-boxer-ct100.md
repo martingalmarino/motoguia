@@ -1,5 +1,5 @@
 ---
-id: "bajaj-boxer-ct100"
+id: bajaj-boxer-ct100
 brandId: "bajaj"
 name: "Boxer CT100"
 variant: null

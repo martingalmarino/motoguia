@@ -1,5 +1,5 @@
 ---
-id: "honda-cb125f-twister"
+id: honda-cb125f-twister
 brandId: "honda"
 name: "CB125F Twister"
 variant: null

@@ -1,5 +1,5 @@
 ---
-id: "guerrero-trip-110"
+id: guerrero-trip-110
 brandId: "guerrero"
 name: "Trip 110"
 variant: "Econo"

@@ -1,5 +1,5 @@
 ---
-id: "motomel-skua-150"
+id: motomel-skua-150
 brandId: "motomel"
 name: "Skua 150"
 variant: "V6"
