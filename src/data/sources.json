@@ -1059,5 +1059,191 @@
     "supports": [
       "precio-sunra-miku-max"
     ]
+  },
+  {
+    "id": "honda-xr300l-tornado",
+    "title": "Honda XR300L Tornado",
+    "url": "https://motos.honda.com.ar/modelos/xr300l-tornado",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "xr300l-tornado",
+      "precio-xr300l-tornado"
+    ]
+  },
+  {
+    "id": "honda-xr300l-tornado-pdf",
+    "title": "Ficha técnica Honda XR300L Tornado (PDF)",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20XR%20300L%20TORNADO%20digital.pdf",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "xr300l-tornado-specs"
+    ]
+  },
+  {
+    "id": "honda-xr190l",
+    "title": "Honda XR190L",
+    "url": "https://motos.honda.com.ar/modelos/xr190l",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "xr190l",
+      "precio-xr190l"
+    ]
+  },
+  {
+    "id": "honda-xr190l-pdf",
+    "title": "Ficha técnica Honda XR190L (PDF)",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20XR%20190%20digital.pdf",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "xr190l-specs"
+    ]
+  },
+  {
+    "id": "honda-cb125f-twister",
+    "title": "Honda CB125F Twister",
+    "url": "https://motos.honda.com.ar/modelos/cb125f-twister",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "cb125f-twister",
+      "precio-cb125f-twister"
+    ]
+  },
+  {
+    "id": "honda-cb125f-twister-pdf",
+    "title": "Ficha técnica Honda CB125F (PDF)",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20CB125%20digital.pdf",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "cb125f-twister-specs"
+    ]
+  },
+  {
+    "id": "motomel-skua-150-v6",
+    "title": "Motomel Skua 150 V6",
+    "url": "https://motomel.com.ar/productos/skua-150-v6/",
+    "publisher": "Motomel Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "skua-150-v6",
+      "skua-150-specs"
+    ]
+  },
+  {
+    "id": "motomel-skua-150-pdf",
+    "title": "Ficha técnica Motomel Skua 150 MY2026 (PDF)",
+    "url": "https://motomel.com.ar/fichas-tecnicas/ficha-tecnica-skua-150.pdf",
+    "publisher": "Motomel Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "skua-150-specs"
+    ]
+  },
+  {
+    "id": "ika-slalom-110-full",
+    "title": "IKA Slalom 110 Full",
+    "url": "https://ikamotos.com.ar/modelos/slalom-full",
+    "publisher": "IKA Motos",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "slalom-110"
+    ]
+  },
+  {
+    "id": "ika-slalom-110-full-pdf",
+    "title": "Ficha técnica IKA Slalom 110 Full (PDF)",
+    "url": "https://cdn.sanity.io/files/bifk3rao/production/d22bdad1246c22225d35784a5ef26af8c1209d59.pdf",
+    "publisher": "IKA Motos",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "slalom-110-specs",
+      "garantia-ika"
+    ]
+  },
+  {
+    "id": "guerrero-trip-110",
+    "title": "Guerrero Trip 110: versiones",
+    "url": "https://www.tuguerrero.com.ar/modelostrip110",
+    "publisher": "Guerrero",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "trip-110",
+      "versiones-trip-110"
+    ]
+  },
+  {
+    "id": "guerrero-trip-110-econo",
+    "title": "Guerrero Trip 110 Econo: características técnicas",
+    "url": "https://www.tuguerrero.com.ar/copia-de-trip-full",
+    "publisher": "Guerrero",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "trip-110-specs"
+    ]
+  },
+  {
+    "id": "guerrero-trip-110-full",
+    "title": "Guerrero Trip 110 Full: características técnicas",
+    "url": "https://www.tuguerrero.com.ar/tripfull",
+    "publisher": "Guerrero",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "trip-110-full-specs"
+    ]
+  },
+  {
+    "id": "bajaj-boxer-ct100",
+    "title": "Bajaj Boxer CT100",
+    "url": "https://bajaj.com.ar/boxer-ct100/",
+    "publisher": "Bajaj Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "boxer-ct100"
+    ]
+  },
+  {
+    "id": "bajaj-boxer-ct100-pdf",
+    "title": "Especificaciones técnicas Bajaj Boxer CT100 (PDF)",
+    "url": "https://bajaj.com.ar/wp-content/uploads/2026/01/BAJAJ_CT100-3.pdf",
+    "publisher": "Bajaj Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "boxer-ct100-specs"
+    ]
   }
 ]
