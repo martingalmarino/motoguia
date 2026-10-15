@@ -1,5 +1,5 @@
 ---
-id: "honda-xr190l"
+id: honda-xr190l
 brandId: "honda"
 name: "XR190L"
 variant: null
