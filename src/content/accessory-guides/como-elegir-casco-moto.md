@@ -26,209 +26,206 @@ seoDescription: "Talle, tipos y certificaciones IRAM/ECE/DOT. Guía concisa para
 ---
 
 <div class="quick-answer">
-
-**Lo esencial:** Medí tu cabeza, probá varios talles y buscá la etiqueta de certificación interna. En Argentina se admiten IRAM-AITA 3621, ECE R22.05/06 o DOT. Un casco que calza bien protege más que uno caro que baila.
-
+<strong>Lo esencial:</strong> Medí tu cabeza, probá varios talles y buscá la etiqueta de certificación interna. En Argentina se admiten IRAM-AITA 3621, ECE R22.05/06 o DOT. Un casco que calza bien protege más que uno caro que baila.
 </div>
 
-> **Enlaces de afiliado:** Esta guía contiene enlaces a Mercado Libre. Si comprás, MotoGuía AR puede recibir una comisión sin costo extra para vos.
+<blockquote class="affiliate-note">
+<strong>Enlaces de afiliado:</strong> Esta guía contiene enlaces a Mercado Libre. Si comprás, MotoGuía AR puede recibir una comisión sin costo extra para vos.
+</blockquote>
 
-**En esta guía:**  
-[Tipos de casco](#tipos) · [Cómo medir tu talle](#talle) · [Certificaciones](#certificacion) · [Productos recomendados](#productos) · [Preguntas frecuentes](#faq)
+<p><strong>En esta guía:</strong> <a href="#tipos">Tipos de casco</a> · <a href="#talle">Cómo medir tu talle</a> · <a href="#certificacion">Certificaciones</a> · <a href="#productos">Productos recomendados</a> · <a href="#faq">Preguntas frecuentes</a></p>
 
----
+<hr />
 
-## Tipos de casco {#tipos}
+<h2 id="tipos">Tipos de casco</h2>
 
 <div class="helmet-types">
-
-### Integral
-✓ Máxima protección (mentón cubierto)  
-✓ Ideal ruta y ciudad  
-✗ Más calor en verano
-
-### Modular
-✓ Mentonera levantable  
-✓ Versátil (integral o abierto)  
-✗ 100-200 g más pesado
-
-### Abierto / Jet
-✓ Liviano y fresco  
-✓ Popular en ciudad  
-✗ Mentón sin protección
-
-### Cross
-✓ Ventilación extrema  
-✓ Para tierra y enduro  
-✗ Incómodo en asfalto
-
-### Adventure
-✓ Híbrido (asfalto + ripio)  
-✓ Visera desmontable  
-✗ Menos aerodinámico
-
+<div class="helmet-card">
+<h3>Integral</h3>
+<p>✓ Máxima protección (mentón cubierto)<br />
+✓ Ideal ruta y ciudad<br />
+✗ Más calor en verano</p>
 </div>
 
----
+<div class="helmet-card">
+<h3>Modular</h3>
+<p>✓ Mentonera levantable<br />
+✓ Versátil (integral o abierto)<br />
+✗ 100-200 g más pesado</p>
+</div>
 
-## Cómo medir tu talle {#talle}
+<div class="helmet-card">
+<h3>Abierto / Jet</h3>
+<p>✓ Liviano y fresco<br />
+✓ Popular en ciudad<br />
+✗ Mentón sin protección</p>
+</div>
 
-### 3 pasos para medir
+<div class="helmet-card">
+<h3>Cross</h3>
+<p>✓ Ventilación extrema<br />
+✓ Para tierra y enduro<br />
+✗ Incómodo en asfalto</p>
+</div>
 
-1. **Medí la circunferencia de tu cabeza:** Pasá una cinta métrica por encima de las cejas, sobre las orejas y la parte más prominente de la nuca. Anotá la medida en cm.
+<div class="helmet-card">
+<h3>Adventure</h3>
+<p>✓ Híbrido (asfalto + ripio)<br />
+✓ Visera desmontable<br />
+✗ Menos aerodinámico</p>
+</div>
+</div>
 
-2. **Consultá la tabla del fabricante:** M en una marca puede ser L en otra. No asumas talles estándar. Cada fabricante tiene su propia tabla.
+<hr />
 
-3. **Probá el casco:** Debe entrar con leve resistencia. Si entra "fácil", es grande. Con la correa abrochada, girá la cabeza: el casco se mueve contigo, no sobre tu piel.
+<h2 id="talle">Cómo medir tu talle</h2>
 
-### Test de ajuste
+<h3>3 pasos para medir</h3>
 
-- Agarrá el casco por atrás e intentá girarlo hacia adelante: debe moverse muy poco
-- Llevalo puesto 10-15 minutos: presión uniforme es normal; dolor intenso indica que no es para tu forma de cabeza
-- No debe entrar un dedo entre la sien y el acolchado
+<ol>
+<li><strong>Medí la circunferencia de tu cabeza:</strong> Pasá una cinta métrica por encima de las cejas, sobre las orejas y la parte más prominente de la nuca. Anotá la medida en cm.</li>
+<li><strong>Consultá la tabla del fabricante:</strong> M en una marca puede ser L en otra. No asumas talles estándar. Cada fabricante tiene su propia tabla.</li>
+<li><strong>Probá el casco:</strong> Debe entrar con leve resistencia. Si entra "fácil", es grande. Con la correa abrochada, girá la cabeza: el casco se mueve contigo, no sobre tu piel.</li>
+</ol>
+
+<h3>Test de ajuste</h3>
+
+<ul>
+<li>Agarrá el casco por atrás e intentá girarlo hacia adelante: debe moverse muy poco</li>
+<li>Llevalo puesto 10-15 minutos: presión uniforme es normal; dolor intenso indica que no es para tu forma de cabeza</li>
+<li>No debe entrar un dedo entre la sien y el acolchado</li>
+</ul>
 
 <div class="callout tip">
-
-**Tip:** Si dudás entre dos talles y uno es muy ajustado, puede ser buena opción: el interior se asienta 5-10% en las primeras semanas.
-
+<strong>Tip:</strong> Si dudás entre dos talles y uno es muy ajustado, puede ser buena opción: el interior se asienta 5-10% en las primeras semanas.
 </div>
 
----
+<hr />
 
-## Certificaciones en Argentina {#certificacion}
+<h2 id="certificacion">Certificaciones en Argentina</h2>
 
-**Marco legal:** La [Ley 24.449 Art. 40](https://www.argentina.gob.ar/normativa/nacional/ley-24449-2449) exige casco reglamentario, siempre abrochado. El [Decreto 196/2025](https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/) reconoce tres estándares:
+<p><strong>Marco legal:</strong> La <a href="https://www.argentina.gob.ar/normativa/nacional/ley-24449-2449">Ley 24.449 Art. 40</a> exige casco reglamentario, siempre abrochado. El <a href="https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/">Decreto 196/2025</a> reconoce tres estándares:</p>
 
-- **IRAM-AITA 3621:** Norma argentina. Etiqueta interna cosida con número de certificado.
-- **ECE R22.05/06:** Reglamento europeo. Etiqueta blanca con "E" en círculo + número.
-- **DOT FMVSS 218:** Estándar estadounidense. Impresión "DOT" en la parte trasera exterior.
+<ul>
+<li><strong>IRAM-AITA 3621:</strong> Norma argentina. Etiqueta interna cosida con número de certificado.</li>
+<li><strong>ECE R22.05/06:</strong> Reglamento europeo. Etiqueta blanca con "E" en círculo + número.</li>
+<li><strong>DOT FMVSS 218:</strong> Estándar estadounidense. Impresión "DOT" en la parte trasera exterior.</li>
+</ul>
 
-### Cómo verificar
+<h3>Cómo verificar</h3>
 
-Mirá el interior del casco: debe haber una etiqueta **cosida o pegada permanentemente**. Papel suelto no cuenta. Si no tiene etiqueta legible, no tiene certificación verificable.
+<p>Mirá el interior del casco: debe haber una etiqueta <strong>cosida o pegada permanentemente</strong>. Papel suelto no cuenta. Si no tiene etiqueta legible, no tiene certificación verificable.</p>
 
 <div class="callout warning">
-
-**Importante:** Ningún casco garantiza protección absoluta. Las certificaciones son pruebas de laboratorio bajo condiciones controladas.
-
+<strong>Importante:</strong> Ningún casco garantiza protección absoluta. Las certificaciones son pruebas de laboratorio bajo condiciones controladas.
 </div>
 
 <details>
 <summary>Referencias legales completas</summary>
-
-- **Ley 24.449** - Art. 40: Uso obligatorio de casco reglamentario  
-- **Decreto 779/1995** - Especificaciones técnicas (exterior duro, EPS, correa)  
-- **Resolución 381/2008** - Provisión obligatoria con motos nuevas  
-- **Decreto 196/2025** - Reconoce IRAM, ECE y DOT sin homologación adicional
-
-Fuentes: [argentina.gob.ar/normativa](https://www.argentina.gob.ar/normativa), [motoblog.com](https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/), [iram.org.ar](https://www.iram.org.ar/servicio/elementos-de-proteccion-personal/)
-
+<ul>
+<li><strong>Ley 24.449</strong> - Art. 40: Uso obligatorio de casco reglamentario</li>
+<li><strong>Decreto 779/1995</strong> - Especificaciones técnicas (exterior duro, EPS, correa)</li>
+<li><strong>Resolución 381/2008</strong> - Provisión obligatoria con motos nuevas</li>
+<li><strong>Decreto 196/2025</strong> - Reconoce IRAM, ECE y DOT sin homologación adicional</li>
+</ul>
+<p>Fuentes: <a href="https://www.argentina.gob.ar/normativa">argentina.gob.ar/normativa</a>, <a href="https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/">motoblog.com</a>, <a href="https://www.iram.org.ar/servicio/elementos-de-proteccion-personal/">iram.org.ar</a></p>
 </details>
 
----
+<hr />
 
-## Productos recomendados {#productos}
+<h2 id="productos">Productos recomendados</h2>
 
 <div class="affiliate-products">
 
 <div class="product-card">
 <div class="product-badge">Opción integral</div>
+<div class="product-content">
+<h3>Vertigo V32 Vanguard</h3>
+<p class="product-subtitle">Negro mate · Talle L</p>
 
-### Vertigo V32 Vanguard
-**Negro mate · Talle L**
+<p><strong>Verificado del listing:</strong></p>
+<ul>
+<li>✓ Tipo integral (cobertura completa)</li>
+<li>✓ Acabado mate (menos reflejo solar)</li>
+<li>✓ Talle L</li>
+</ul>
 
-**Verificado:**
-- ✓ Marca argentina con distribución local
-- ✓ Tipo integral (cobertura completa)
-- ✓ Acabado mate (menos reflejo solar)
+<p><strong>Limitación:</strong></p>
+<ul>
+<li>Certificación no visible en publicación (verificar etiqueta interna)</li>
+</ul>
 
-**Limitación:**
-- Certificación no visible en publicación (verificar etiqueta interna)
-
-<a href="https://meli.la/2wYsFeG" class="cta-button" rel="sponsored nofollow noopener" target="_blank">
-Ver talles y precio en Mercado Libre
-</a>
-
+<a href="https://meli.la/2wYsFeG" class="cta-button" rel="sponsored nofollow noopener" target="_blank">Ver talles y precio en Mercado Libre</a>
+</div>
 </div>
 
 <div class="product-card">
 <div class="product-badge">Opción integral</div>
+<div class="product-content">
+<h3>Vertigo V32 Line</h3>
+<p class="product-subtitle">Negro brillante · Talle M</p>
 
-### Vertigo V32 Line
-**Negro brillante · Talle M**
+<p><strong>Verificado del listing:</strong></p>
+<ul>
+<li>✓ Tipo integral (cobertura completa)</li>
+<li>✓ Acabado brillante</li>
+<li>✓ Talle M</li>
+</ul>
 
-**Verificado:**
-- ✓ Marca argentina con distribución local
-- ✓ Tipo integral (cobertura completa)
-- ✓ Talle M (para cabezas más chicas)
+<p><strong>Limitación:</strong></p>
+<ul>
+<li>Certificación no visible en publicación (verificar etiqueta interna)</li>
+</ul>
 
-**Limitación:**
-- Certificación no visible en publicación (verificar etiqueta interna)
-
-<a href="https://meli.la/2L1KQG1" class="cta-button" rel="sponsored nofollow noopener" target="_blank">
-Ver talles y precio en Mercado Libre
-</a>
-
+<a href="https://meli.la/2L1KQG1" class="cta-button" rel="sponsored nofollow noopener" target="_blank">Ver talles y precio en Mercado Libre</a>
+</div>
 </div>
 
 </div>
 
 <div class="comparison-note">
-
-**Nota:** Ambos cascos son Vertigo V32 (misma línea). Diferencia principal: acabado (mate vs. brillante) y talle. **Precio y certificación:** No informados en las publicaciones al 15/10/2026. Verificá etiqueta interna antes de comprar.
-
+<strong>Nota:</strong> Ambos cascos son Vertigo V32 (misma línea). Diferencia principal: acabado (mate vs. brillante) y talle. <strong>Precio y certificación:</strong> No informados en las publicaciones al 15/10/2026. Verificá etiqueta interna antes de comprar.
 </div>
 
----
+<hr />
 
-## Preguntas frecuentes {#faq}
+<h2 id="faq">Preguntas frecuentes</h2>
 
 <details>
 <summary>¿Puedo usar un casco sin certificación en Argentina?</summary>
-
-No. La Ley 24.449 exige casco reglamentario. Circular sin certificación admitida (IRAM, ECE o DOT) puede ser motivo de infracción. Además, no tenés garantía de que haya pasado pruebas de impacto.
-
+<p>No. La Ley 24.449 exige casco reglamentario. Circular sin certificación admitida (IRAM, ECE o DOT) puede ser motivo de infracción. Además, no tenés garantía de que haya pasado pruebas de impacto.</p>
 </details>
 
 <details>
 <summary>¿Un casco más caro es más seguro?</summary>
-
-No necesariamente. Si ambos tienen la misma certificación (ej: ECE R22.05), pasaron las mismas pruebas básicas. La diferencia está en materiales (peso), confort (ventilación) y calidad de terminación.
-
+<p>No necesariamente. Si ambos tienen la misma certificación (ej: ECE R22.05), pasaron las mismas pruebas básicas. La diferencia está en materiales (peso), confort (ventilación) y calidad de terminación.</p>
 </details>
 
 <details>
 <summary>¿Cuándo debo cambiar el casco?</summary>
-
-Inmediatamente si sufrió un golpe fuerte (el EPS interno se comprime y pierde capacidad). Considerá reemplazarlo después de 5-7 años de uso regular, o si la correa está dañada o el EPS se siente blando.
-
+<p>Inmediatamente si sufrió un golpe fuerte (el EPS interno se comprime y pierde capacidad). Considerá reemplazarlo después de 5-7 años de uso regular, o si la correa está dañada o el EPS se siente blando.</p>
 </details>
 
 <details>
 <summary>¿Los cascos modulares protegen menos?</summary>
-
-Un modular certificado ECE R22 **con mentonera cerrada** pasó las mismas pruebas que un integral. Nunca circules con la mentonera levantada a velocidad.
-
+<p>Un modular certificado ECE R22 <strong>con mentonera cerrada</strong> pasó las mismas pruebas que un integral. Nunca circules con la mentonera levantada a velocidad.</p>
 </details>
 
 <details>
 <summary>Cuidado básico del casco</summary>
-
-**Limpieza:** Interior desmontable lavar con agua tibia y jabón neutro. Visera limpiar con paño suave, nunca alcohol o amoníaco.
-
-**Almacenamiento:** Lugar fresco y seco, alejado de sol directo. No dejarlo en el baúl expuesto a calor extremo.
-
+<p><strong>Limpieza:</strong> Interior desmontable lavar con agua tibia y jabón neutro. Visera limpiar con paño suave, nunca alcohol o amoníaco.</p>
+<p><strong>Almacenamiento:</strong> Lugar fresco y seco, alejado de sol directo. No dejarlo en el baúl expuesto a calor extremo.</p>
 </details>
 
----
+<hr />
 
-## Fuentes
+<h2>Fuentes</h2>
 
-Esta guía se basa en normativa oficial argentina: [Ley 24.449](https://www.argentina.gob.ar/normativa/nacional/ley-24449-2449), [Decreto 779/1995](https://www.argentina.gob.ar/normativa/nacional/decreto-779-1995), [Resolución 381/2008](https://www.argentina.gob.ar/normativa/nacional/norma-147595/texto), [Decreto 196/2025](https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/), y [IRAM](https://www.iram.org.ar/servicio/elementos-de-proteccion-personal/).
+<p>Esta guía se basa en normativa oficial argentina: <a href="https://www.argentina.gob.ar/normativa/nacional/ley-24449-2449">Ley 24.449</a>, <a href="https://www.argentina.gob.ar/normativa/nacional/decreto-779-1995">Decreto 779/1995</a>, <a href="https://www.argentina.gob.ar/normativa/nacional/norma-147595/texto">Resolución 381/2008</a>, <a href="https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/">Decreto 196/2025</a>, y <a href="https://www.iram.org.ar/servicio/elementos-de-proteccion-personal/">IRAM</a>.</p>
 
-**Revisión:** Redacción MotoGuía AR, 15 de octubre de 2026.
+<p><strong>Revisión:</strong> Redacción MotoGuía AR, 15 de octubre de 2026.</p>
 
-**Más guías:** [Guantes impermeables](/accesorios/guantes-impermeables-moto/) · [Primera moto en Argentina](/guias/primera-moto-argentina/)
+<p><strong>Más guías:</strong> <a href="/accesorios/guantes-impermeables-moto/">Guantes impermeables</a> · <a href="/guias/primera-moto-argentina/">Primera moto en Argentina</a></p>
 
 <style>
 .quick-answer {
@@ -245,6 +242,14 @@ Esta guía se basa en normativa oficial argentina: [Ley 24.449](https://www.arge
   color: white;
 }
 
+.affiliate-note {
+  padding: 1rem 1.5rem;
+  background: #f3f4f6;
+  border-left: 4px solid #6366f1;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
 .helmet-types {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -252,18 +257,23 @@ Esta guía se basa en normativa oficial argentina: [Ley 24.449](https://www.arge
   margin: 2rem 0;
 }
 
-.helmet-types > div,
-.helmet-types > h3 {
+.helmet-card {
   padding: 1.5rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--surface, #f9fafb);
+  border: 1px solid var(--border, #e5e7eb);
   border-radius: 0.5rem;
 }
 
-.helmet-types h3 {
+.helmet-card h3 {
   margin: 0 0 1rem 0;
   font-size: 1.25rem;
-  color: var(--primary);
+  color: var(--primary, #2563eb);
+}
+
+.helmet-card p {
+  margin: 0;
+  line-height: 1.8;
+  font-size: 0.95rem;
 }
 
 .callout {
@@ -287,23 +297,24 @@ Esta guía se basa en normativa oficial argentina: [Ley 24.449](https://www.arge
 
 .affiliate-products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin: 2rem 0;
 }
 
 .product-card {
-  padding: 2rem;
-  background: var(--surface);
-  border: 2px solid var(--border);
+  padding: 0;
+  background: var(--surface, #ffffff);
+  border: 3px solid var(--primary, #2563eb);
   border-radius: 0.75rem;
   position: relative;
   transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
 }
 
 .product-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.2);
 }
 
 .product-badge {
@@ -311,29 +322,34 @@ Esta guía se basa en normativa oficial argentina: [Ley 24.449](https://www.arge
   top: 1rem;
   right: 1rem;
   padding: 0.5rem 1rem;
-  background: var(--primary);
+  background: var(--primary, #2563eb);
   color: white;
   font-size: 0.875rem;
   font-weight: 600;
   border-radius: 2rem;
+  z-index: 1;
+}
+
+.product-content {
+  padding: 2rem;
 }
 
 .product-card h3 {
   margin: 0 0 0.5rem 0;
   font-size: 1.5rem;
-  color: var(--text-primary);
+  color: var(--text-primary, #111827);
 }
 
-.product-card h3 + p {
+.product-subtitle {
   margin: 0 0 1.5rem 0;
-  color: var(--text-secondary);
+  color: var(--text-secondary, #6b7280);
   font-size: 0.95rem;
 }
 
 .product-card ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 0.5rem 0;
 }
 
 .product-card li {
@@ -344,7 +360,7 @@ Esta guía se basa en normativa oficial argentina: [Ley 24.449](https://www.arge
 .cta-button {
   display: block;
   padding: 1rem 1.5rem;
-  background: var(--primary);
+  background: var(--primary, #2563eb);
   color: white !important;
   text-align: center;
   text-decoration: none;
@@ -352,47 +368,47 @@ Esta guía se basa en normativa oficial argentina: [Ley 24.449](https://www.arge
   border-radius: 0.5rem;
   transition: background 0.2s;
   font-size: 1rem;
+  margin-top: 1.5rem;
 }
 
 .cta-button:hover {
-  background: var(--primary-hover, #1d4ed8);
-  transform: none;
+  background: #1d4ed8;
 }
 
 .comparison-note {
   padding: 1rem 1.5rem;
-  background: var(--bg-secondary);
-  border-left: 3px solid var(--primary);
+  background: #f9fafb;
+  border-left: 3px solid var(--primary, #2563eb);
   border-radius: 0.25rem;
   margin-top: 2rem;
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-secondary, #4b5563);
 }
 
 details {
   margin: 1rem 0;
   padding: 1rem 1.5rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
+  background: var(--surface, #f9fafb);
+  border: 1px solid var(--border, #e5e7eb);
   border-radius: 0.5rem;
 }
 
 summary {
   cursor: pointer;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--primary, #2563eb);
   user-select: none;
   margin: -1rem -1.5rem;
   padding: 1rem 1.5rem;
 }
 
 summary:hover {
-  background: var(--bg-hover, rgba(0,0,0,0.02));
+  background: rgba(0,0,0,0.02);
 }
 
 details[open] summary {
   margin-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border, #e5e7eb);
 }
 
 @media (max-width: 768px) {
