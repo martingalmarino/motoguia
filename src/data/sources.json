@@ -75,7 +75,7 @@
     "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases",
     "publisher": "ANSV / Argentina.gob.ar",
     "publishedAt": "2026-02-11",
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["licencia-clases-A"]
   },
@@ -95,7 +95,7 @@
     "url": "https://motos.honda.com.ar/modelos/wave-110s",
     "publisher": "Honda Motos Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-10-14",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["wave-110s"]
   },
@@ -105,7 +105,7 @@
     "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20WAVE%20110%20DISCO%20digital.pdf",
     "publisher": "Honda Motos Argentina",
     "publishedAt": "2026-07-13",
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["wave-110s-disco-specs"]
   },
@@ -115,7 +115,7 @@
     "url": "https://motos.honda.com.ar/modelos/glh-150",
     "publisher": "Honda Motos Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-10-14",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["glh-150"]
   },
@@ -125,7 +125,7 @@
     "url": "https://motos.honda.com.ar/modelos/xr150l",
     "publisher": "Honda Motos Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-10-14",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["xr150l"]
   },
@@ -135,7 +135,7 @@
     "url": "https://motos.honda.com.ar/modelos/navi",
     "publisher": "Honda Motos Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-10-14",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["navi"]
   },
@@ -145,7 +145,7 @@
     "url": "https://motos.honda.com.ar/garantia/",
     "publisher": "Honda Motos Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["garantia-honda"]
   },
@@ -165,7 +165,7 @@
     "url": "https://gilera.com.ar/modelo/smash-full-ii/",
     "publisher": "Gilera Motors Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["smash-full-ii"]
   },
@@ -325,7 +325,7 @@
     "url": "https://motomel.com.ar/productos/s2-150/",
     "publisher": "Motomel Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["s2-150"]
   },
@@ -355,7 +355,7 @@
     "url": "https://motomel.com.ar/manuales/manual-de-usuario-blitz-110-full.pdf",
     "publisher": "Motomel Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-10-14",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["blitz-110", "versiones-blitz-110"]
   },
@@ -395,7 +395,7 @@
     "url": "https://motomel.com.ar/garantia/",
     "publisher": "Motomel Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": ["garantia-motomel"]
   },
@@ -498,5 +498,235 @@
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
     "supports": ["sunra-miku-max"]
+  },
+  {
+    "id": "ley-24449",
+    "title": "Ley 24.449 de Tránsito y Seguridad Vial (texto actualizado)",
+    "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm",
+    "publisher": "InfoLEG — Ministerio de Justicia",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["licencia-edades-art11", "ciclomotor-definicion-art5", "requisitos-circular-art40", "seguro-obligatorio-art68", "licencia-emision-art13", "menores-art17", "escuelas-conducir-art12"]
+  },
+  {
+    "id": "decreto-196-2025",
+    "title": "Decreto 196/2025: modificación de la reglamentación de la Ley de Tránsito",
+    "url": "https://www.argentina.gob.ar/normativa/nacional/decreto-196-2025-410682/texto",
+    "publisher": "Boletín Oficial / Argentina.gob.ar",
+    "publishedAt": "2025-03-18",
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["licencia-domicilio-dni", "licencia-digital", "principiantes", "requisitos-examenes", "prestadores", "profundidad-minima-neumaticos"]
+  },
+  {
+    "id": "ley-24240",
+    "title": "Ley 24.240 de Defensa del Consumidor (texto actualizado)",
+    "url": "https://www.argentina.gob.ar/normativa/nacional/ley-24240-638/actualizacion",
+    "publisher": "Argentina.gob.ar",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["proveedor-art2", "garantia-legal-art11", "servicio-tecnico-repuestos-art12", "responsabilidad-solidaria-art13", "certificado-garantia-art14", "constancia-reparacion-art15", "prolongacion-art16", "reparacion-no-satisfactoria-art17"]
+  },
+  {
+    "id": "consumidor-consejos",
+    "title": "Consejos para consumidores",
+    "url": "https://www.argentina.gob.ar/produccion/consumidor/consejos",
+    "publisher": "Defensa del Consumidor / Argentina.gob.ar",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["garantia-legal-plazos"]
+  },
+  {
+    "id": "consumidor-reclamo",
+    "title": "Iniciar un reclamo ante Defensa del Consumidor",
+    "url": "https://www.argentina.gob.ar/servicio/iniciar-un-reclamo-ante-defensa-del-consumidor",
+    "publisher": "Defensa del Consumidor / Argentina.gob.ar",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["ventanilla-federal-unica"]
+  },
+  {
+    "id": "dnrpa-transferencia",
+    "title": "Hacer la transferencia de dominio de un auto, moto o maquinaria",
+    "url": "https://www.argentina.gob.ar/servicio/hacer-la-transferencia-de-dominio-de-un-auto-moto-o-maquinaria",
+    "publisher": "Registros de la Propiedad Automotor / Argentina.gob.ar",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["transferencia-requisitos", "verificacion-obligatoria-motos-2004", "plazo-30-dias", "costos-transferencia"]
+  },
+  {
+    "id": "dnrpa-informe-dominio",
+    "title": "Solicitar un informe de dominio del automotor",
+    "url": "https://www.argentina.gob.ar/servicio/solicitar-un-informe-de-dominio-del-automotor",
+    "publisher": "Registros de la Propiedad Automotor / Argentina.gob.ar",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["informe-dominio-contenido"]
+  },
+  {
+    "id": "dnrpa-guia-informe-dominio",
+    "title": "Informe de dominio (guía de trámites)",
+    "url": "https://www.dnrpa.gov.ar/portal_dnrpa/guia_tramites/informe_dominio.htm",
+    "publisher": "DNRPA",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["titular-registral-firma-08"]
+  },
+  {
+    "id": "dnrpa-guia-verificacion",
+    "title": "Verificación física (guía de trámites)",
+    "url": "https://www.dnrpa.gov.ar/portal_dnrpa/guia_tramites/verificacion.htm",
+    "publisher": "DNRPA",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["verificacion-recomendada", "verificacion-validez-150-dias"]
+  },
+  {
+    "id": "dnrpa-guia-transferencia",
+    "title": "Transferencia (guía de trámites)",
+    "url": "https://www.dnrpa.gov.ar/portal_dnrpa/guia_tramites/transferencia.htm",
+    "publisher": "DNRPA",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["patente-provincial-o-municipal"]
+  },
+  {
+    "id": "bahia-blanca-motovehiculos",
+    "title": "Motovehículos",
+    "url": "https://www.bahia.gob.ar/transitoytransporte/motovehiculos/",
+    "publisher": "Municipio de Bahía Blanca",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["patente-municipal-ejemplo"]
+  },
+  {
+    "id": "honda-wave-manual",
+    "title": "Manual del propietario Honda Wave 110S",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/Manual%20Wave%20110S%20-%20110S%20.pdf",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["inspeccion-previa-uso", "indicadores-desgaste", "programa-mantenimiento", "mantenimiento-costo-propietario"]
+  },
+  {
+    "id": "honda-navi-pdf",
+    "title": "Ficha técnica Honda Navi (PDF)",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20HONDA%20NAVI%20digital.pdf",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["navi-specs"]
+  },
+  {
+    "id": "honda-glh-pdf",
+    "title": "Ficha técnica Honda GLH 150 (PDF)",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20GLH%20150%20digital.pdf",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["glh-150-specs"]
+  },
+  {
+    "id": "honda-xr150l-pdf",
+    "title": "Ficha técnica Honda XR150L (PDF)",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20XR%20150%20digital.pdf",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["xr150l-specs"]
+  },
+  {
+    "id": "honda-elite-125",
+    "title": "Honda Elite 125",
+    "url": "https://motos.honda.com.ar/modelos/elite-125",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["elite-125"]
+  },
+  {
+    "id": "honda-elite-125-pdf",
+    "title": "Ficha técnica Honda Elite 125 (PDF)",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20ELITE%20125%20digital.pdf",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["elite-125-specs"]
+  },
+  {
+    "id": "honda-cb125f",
+    "title": "Honda CB125F Twister",
+    "url": "https://motos.honda.com.ar/modelos/cb125f-twister",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["cb125f"]
+  },
+  {
+    "id": "honda-cb125f-pdf",
+    "title": "Ficha técnica Honda CB125F (PDF)",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20CB125%20digital.pdf",
+    "publisher": "Honda Motor de Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["cb125f-specs"]
+  },
+  {
+    "id": "ansv-municipios-licencia",
+    "title": "Municipios que otorgan la Licencia Nacional de Conducir",
+    "url": "https://www.argentina.gob.ar/seguridadvial/municipios-licencia-nacional",
+    "publisher": "ANSV / Argentina.gob.ar",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["centros-emisores"]
+  },
+  {
+    "id": "ansv-curso-educacion-vial",
+    "title": "Realizar el Curso Nacional de Seguridad Vial para obtener la licencia",
+    "url": "https://www.argentina.gob.ar/servicio/realizar-el-curso-nacional-de-seguridad-vial-para-obtener-la-licencia",
+    "publisher": "ANSV / Argentina.gob.ar",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["curso-primera-licencia"]
+  },
+  {
+    "id": "ansv-renovar-ampliar",
+    "title": "Renovar y/o ampliar la Licencia Nacional de Conducir",
+    "url": "https://www.argentina.gob.ar/servicio/renovar-yo-ampliar-la-licencia-nacional-de-conducir",
+    "publisher": "ANSV / Argentina.gob.ar",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["renovacion-ampliacion-online"]
+  },
+  {
+    "id": "argentina-licencia-digital-2025",
+    "title": "Comienza a implementarse la nueva modalidad para la renovación online de licencias de conducir",
+    "url": "https://www.argentina.gob.ar/noticias/comienza-implementarse-la-nueva-modalidad-para-renovacion-online-de-licencias-de-conducir",
+    "publisher": "Argentina.gob.ar",
+    "publishedAt": "2025-05-19",
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": ["licencia-digital-primera-vez", "licencia-fisica-opcional"]
   }
 ]
