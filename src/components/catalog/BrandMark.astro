@@ -1,0 +1,34 @@
+---
+import type { Brand } from '../../lib/content/catalog';
+
+interface Props {
+  brand: Brand;
+  size?: 'md' | 'lg';
+}
+
+const { brand, size = 'md' } = Astro.props;
+const logo = 'logo' in brand ? brand.logo : undefined;
+
+// Mismo peso visual para logos anchos y cuadrados: se apunta a un área fija, con topes de ancho y alto.
+const box = size === 'lg' ? { area: 5600, maxW: 136, maxH: 64 } : { area: 3000, maxW: 112, maxH: 44 };
+const width = logo
+  ? Math.round(Math.min(box.maxW, Math.sqrt(box.area * (logo.width / logo.height)), box.maxH * (logo.width / logo.height)))
+  : 0;
+---
+
+{
+  logo ? (
+    <img
+      class="brand-logo"
+      src={logo.src}
+      alt={brand.name}
+      width={logo.width}
+      height={logo.height}
+      style={`width: ${width}px`}
+      loading={size === 'lg' ? 'eager' : 'lazy'}
+      decoding="async"
+    />
+  ) : (
+    <span class="brand-wordmark">{brand.name}</span>
+  )
+}

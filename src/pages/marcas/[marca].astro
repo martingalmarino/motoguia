@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BrandMark from '../../components/catalog/BrandMark.astro';
 import Breadcrumbs from '../../components/editorial/Breadcrumbs.astro';
 import FaqList from '../../components/editorial/FaqList.astro';
 import MotorcycleCard from '../../components/catalog/MotorcycleCard.astro';
@@ -74,7 +75,7 @@ const faqs = [
       <Breadcrumbs items={crumbs} />
       <div class="brand-masthead__inner">
         <div class="brand-masthead__mark" aria-hidden="true">
-          <span class="brand-wordmark">{brand.name}</span>
+          <BrandMark brand={brand} size="lg" />
         </div>
         <div class="brand-masthead__copy">
           <h1>Motos {brand.name} en Argentina</h1>

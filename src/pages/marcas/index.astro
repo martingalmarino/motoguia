@@ -27,7 +27,7 @@ const crumbs = [
       lede="Elegí una marca para ver sus modelos, compararlos y conocer sus características principales."
     />
     <div class="brand-directory">
-      {brands.map(({ brand, count }) => <BrandTile brand={brand} count={count} />)}
+      {brands.map(({ brand, count }) => <BrandTile brand={brand} count={count} size="lg" />)}
     </div>
   </div>
 </BaseLayout>

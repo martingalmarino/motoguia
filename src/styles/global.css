@@ -2415,6 +2415,33 @@ input[type='radio'] {
   color: var(--text-secondary);
 }
 
+.brand-tile__mark {
+  display: grid;
+  place-items: center;
+  min-height: 44px;
+  max-width: 100%;
+}
+
+.brand-logo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.brand-tile .brand-logo {
+  transition: transform 0.15s ease;
+}
+
+.brand-tile:hover .brand-logo {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-tile .brand-logo {
+    transition: none;
+  }
+}
+
 .brand-masthead {
   background: var(--surface-muted);
   border-bottom: 1px solid var(--border);
@@ -2433,6 +2460,7 @@ input[type='radio'] {
   place-items: center;
   width: 128px;
   height: 88px;
+  padding: 12px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: #fff;
@@ -2490,7 +2518,13 @@ input[type='radio'] {
   margin-top: 24px;
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+}
+
+@media (min-width: 768px) {
+  .brand-directory {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
 }
 
 .brand-directory .brand-tile {

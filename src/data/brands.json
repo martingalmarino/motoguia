@@ -8,6 +8,7 @@
     "importer": "Honda Motor de Argentina S.A.",
     "chineseHub": false,
     "website": "https://motos.honda.com.ar/",
+    "logo": { "src": "/images/marcas/honda.svg", "width": 911, "height": 143, "sourceUrl": "https://motos.honda.com.ar/assets/img/logo.svg" },
     "sourceIds": ["honda-motos-ar", "honda-garantia"]
   },
   {
@@ -19,6 +20,7 @@
     "importer": "Gilera Motors Argentina",
     "chineseHub": true,
     "website": "https://gilera.com.ar/",
+    "logo": { "src": "/images/marcas/gilera.png", "width": 160, "height": 160, "sourceUrl": "https://gilera.com.ar/wp-content/uploads/2025/09/logo_gilera_white_border_ok-1024x1021.png" },
     "sourceIds": ["gilera-ar"]
   },
   {
@@ -30,6 +32,7 @@
     "importer": null,
     "chineseHub": true,
     "website": "https://motoskeller.com.ar/",
+    "logo": { "src": "/images/marcas/keller.png", "width": 185, "height": 53, "sourceUrl": "https://motoskeller.com.ar/wp-content/uploads/2025/08/image001.png" },
     "sourceIds": ["keller-ar", "keller-crono-manual"]
   },
   {
@@ -41,6 +44,7 @@
     "importer": "Motomel Argentina",
     "chineseHub": true,
     "website": "https://motomel.com.ar/",
+    "logo": { "src": "/images/marcas/motomel.png", "width": 440, "height": 160, "sourceUrl": "https://motomel.com.ar/wp-content/uploads/2023/01/logo-motomel.png" },
     "sourceIds": ["motomel-ar", "motomel-garantia", "fava-blitz-b110", "losandes-b110"]
   },
   {
@@ -52,6 +56,7 @@
     "importer": "Corven Motos",
     "chineseHub": true,
     "website": "https://corvenmotos.com.ar/",
+    "logo": { "src": "/images/marcas/corven.png", "width": 252, "height": 160, "sourceUrl": "https://corvenmotos.com.ar/wp-content/uploads/2024/10/Logotipo-Corven-Fondo-oscuro.jpg" },
     "sourceIds": ["corven-motos", "grupo-corven"]
   },
   {
@@ -63,6 +68,7 @@
     "importer": null,
     "chineseHub": true,
     "website": "https://mondial.com.ar/",
+    "logo": { "src": "/images/marcas/mondial.svg", "width": 458, "height": 88, "sourceUrl": "https://mondial.com.ar/wp-content/uploads/2025/11/logo-mondial-navbar-2.svg" },
     "sourceIds": ["mondial-ar"]
   },
   {
@@ -74,6 +80,7 @@
     "importer": "Newsan",
     "chineseHub": true,
     "website": "https://siammotos.com.ar/",
+    "logo": { "src": "/images/marcas/siam.svg", "width": 165, "height": 40, "sourceUrl": "https://siammotos.com.ar/img/siam_logo.svg" },
     "sourceIds": ["siam-motos"]
   },
   {
@@ -85,6 +92,7 @@
     "importer": null,
     "chineseHub": true,
     "website": "https://zanellaglobal.com/ar/",
+    "logo": { "src": "/images/marcas/zanella.svg", "width": 222, "height": 53, "sourceUrl": "https://zanellaglobal.com/ar/wp-content/uploads/2025/07/new-logo-zanella-bl.svg" },
     "sourceIds": ["zanella-ar"]
   },
   {
@@ -129,6 +137,7 @@
     "importer": null,
     "chineseHub": true,
     "website": "https://sunra.com.ar/",
+    "logo": { "src": "/images/marcas/sunra.png", "width": 255, "height": 56, "sourceUrl": "https://sunra.com.ar/wp-content/uploads/2025/06/logo-sunra-blanco.png" },
     "sourceIds": ["sunra-ar", "acara-siomaa-2026-08"]
   }
 ]
