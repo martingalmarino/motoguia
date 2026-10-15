@@ -38,6 +38,7 @@ const imageType = image.type ?? (image.src.endsWith('.png') ? 'image/png' : 'ima
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
 <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
+{site.googleSiteVerification && <meta name="google-site-verification" content={site.googleSiteVerification} />}
 <meta property="og:type" content={ogType} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />

@@ -82,6 +82,8 @@ export const site = {
   indexingEnabled,
   deploymentStage,
   contactEmail,
+  googleSiteVerification:
+    envValue('PUBLIC_GOOGLE_SITE_VERIFICATION') ?? 'SQoTmZlSdJ4aZeZoHGEdTKJORX9Eai4AdOG19by9k_8',
   defaultOgImage: '/images/og-default.png',
   defaultOgImageAlt: 'MotoGuía AR, guía para elegir y comparar motos en Argentina',
   priceReviewDays: 30,
