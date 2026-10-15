@@ -142,7 +142,7 @@ const registration = (value: boolean | null) =>
                 )}
               </div>
               <div class="price-row__meta">
-                <span class="price-row__type">{priceTypeLabel(price.priceType)}</span>
+                <span class="price-row__type">{priceTypeLabel(price.priceType, entry)}</span>
                 <span>
                   al <time datetime={price.observedAt.toISOString().slice(0, 10)}>{formatDate(price.observedAt)}</time>
                 </span>

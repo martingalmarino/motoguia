@@ -19,7 +19,14 @@ brandOriginCountry: null
 manufacturingCountry: null
 assemblyCountry: null
 importer: null
-price: null
+price:
+  minARS: 1739000
+  maxARS: 1739000
+  priceType: promotional
+  includesRegistration: null
+  observedAt: 2026-10-15
+  sourceIds:
+    - yuhmak-ofertas-2026-10
 engine:
   displacementCc: 107
   powerKw: 4.780742
@@ -64,7 +71,7 @@ editorial:
     - "88 kg vacío y 1,8 litros cada 100 km declarados"
   limitations:
     - "Frenos a tambor en las dos ruedas"
-    - "Zanella no publica precio de lista"
+    - "Zanella no publica precio de lista; el precio de referencia es una oferta de concesionario, no oficial"
   ownershipNotes: "Al cotizar, confirmá que la unidad sea la ST y no la FULL, y cómo funciona el embrague."
 images:
   - path: /images/motos/zanella-zb-110-z3-st.png
@@ -76,6 +83,7 @@ sourceIds:
   - zanella-zb-st
   - zanella-zb-st-pdf
   - acara-siomaa-2026-08
+  - yuhmak-ofertas-2026-10
 relatedModelIds:
   - zanella-zb-110
   - siam-qu-110
@@ -92,6 +100,7 @@ seoDescription: "Zanella ZB 110 ST: cub de 107 cc y 6,5 hp con frenos a tambor y
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null
 dataNotes:
+  - "Precio de concesionario, no oficial: oferta publicada por Yuhmak Motos para la ZANELLA ZB 110 Z3 ST – 2026, vista el 15 de octubre de 2026. Zanella no publica precio de lista."
   - "Zanella la comercializa como ZB 110 ST, sin la sigla Z3 que usa el informe de patentamientos."
 ---
 

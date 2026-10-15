@@ -32,7 +32,7 @@ export const GET: APIRoute = async () => {
     }
     if (d.chassis?.abs) facts.push('ABS');
     else if (d.chassis?.cbs) facts.push('CBS');
-    if (d.price) facts.push(`${priceTypeLabel(d.price.priceType).toLowerCase()} ${shortPrice(entry)} al ${formatDate(d.price.observedAt)}`);
+    if (d.price) facts.push(`${priceTypeLabel(d.price.priceType, entry).toLowerCase()} ${shortPrice(entry)} al ${formatDate(d.price.observedAt)}`);
     return `- [${displayName(entry)}](${absoluteUrl(motorcycleUrl(entry))}): ${facts.join(', ')}.`;
   };
 

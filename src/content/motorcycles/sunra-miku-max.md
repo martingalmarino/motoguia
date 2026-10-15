@@ -18,7 +18,14 @@ brandOriginCountry: null
 manufacturingCountry: null
 assemblyCountry: null
 importer: null
-price: null
+price:
+  minARS: 4140000
+  maxARS: 4140000
+  priceType: cash
+  includesRegistration: null
+  observedAt: 2026-10-15
+  sourceIds:
+    - sunra-nordelta-miku-max-2026-10
 engine: null
 chassis:
   brakesFront: Disco
@@ -63,6 +70,7 @@ editorial:
   limitations:
     - "Velocidad máxima declarada de 40 km/h"
     - "Los 45 km se declaran en condiciones ideales"
+    - "Sunra no publica precio de lista; el precio de referencia es de contado en un concesionario, no oficial"
   ownershipNotes: "Antes de comprar, confirmá quién da el servicio técnico y qué garantía cubre la batería."
 images:
   - path: /images/motos/sunra-miku-max.jpg
@@ -73,6 +81,7 @@ images:
 sourceIds:
   - sunra-miku
   - ansv-clases
+  - sunra-nordelta-miku-max-2026-10
 relatedModelIds:
   - siam-n4
   - sunra-future
@@ -87,6 +96,8 @@ seoTitle: "SUNRA Miku Max eléctrica: autonomía y ficha técnica"
 seoDescription: "SUNRA Miku Max: scooter eléctrico de 800 W con batería extraíble de 60 V, 40 km/h de máxima y hasta 45 km declarados. Ficha técnica."
 licenceHint: "Con 0,8 kW declarados, corresponde la clase A 1.1 (hasta 4 kW) si es la potencia continua nominal. Verificá la cédula."
 warranty: null
+dataNotes:
+  - "Precio de concesionario, no oficial: precio de contado publicado por Sunra Nordelta (\"Miku Max PRECIO CONTADO $4.140.000\"), visto el 15 de octubre de 2026. La misma página muestra $4.640.000 sin aclarar condiciones. Sunra no publica precio en su sitio."
 ---
 
 La SUNRA Miku Max es un scooter eléctrico para trayectos cortos en ciudad. Tiene motor de 800 W, una velocidad máxima declarada de 40 km/h, frenos a disco adelante y atrás y control de velocidad crucero.

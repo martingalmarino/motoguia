@@ -330,7 +330,7 @@ const availability =
                       <>
                         <p class="version-card__price">{formatArs(version.priceARS)}</p>
                         <p>
-                          {priceTypeLabel(d.price.priceType)} al {formatDate(d.price.observedAt)}
+                          {priceTypeLabel(d.price.priceType, entry)} al {formatDate(d.price.observedAt)}
                         </p>
                       </>
                     ) : (
@@ -477,7 +477,7 @@ const availability =
         <h2 id="fuentes-titulo">Fuentes y actualización</h2>
         <p>
           Ficha revisada el {formatDate(d.reviewedAt)}.
-          {d.price && ` ${priceTypeLabel(d.price.priceType)} observado el ${formatDate(d.price.observedAt)}.`}
+          {d.price && ` ${priceTypeLabel(d.price.priceType, entry)} observado el ${formatDate(d.price.observedAt)}.`}
           {` ${availability}`}
         </p>
         <SourceList ids={d.sourceIds} title={null} />

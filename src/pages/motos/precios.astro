@@ -33,7 +33,7 @@ const faqs = [
         {
           id: 'mas-barata',
           question: '¿Cuál es la moto más barata con precio publicado?',
-          answer: `Entre los modelos con precio en MotoGuía, la ${displayName(cheapest)} arranca en ${formatArs(cheapest.data.price!.minARS)} (${priceTypeLabel(cheapest.data.price!.priceType).toLowerCase()} al ${formatDate(cheapest.data.price!.observedAt)}). Muchas marcas no publican precios, así que puede haber motos más baratas que no figuran en esta lista.`,
+          answer: `Entre los modelos con precio en MotoGuía, la ${displayName(cheapest)} arranca en ${formatArs(cheapest.data.price!.minARS)} (${priceTypeLabel(cheapest.data.price!.priceType, cheapest).toLowerCase()} al ${formatDate(cheapest.data.price!.observedAt)}). Muchas marcas no publican precios, así que puede haber motos más baratas que no figuran en esta lista.`,
         },
       ]
     : []),

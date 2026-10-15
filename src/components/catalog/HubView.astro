@@ -130,7 +130,7 @@ function brakeCell(entry: Moto) {
                       {shortPrice(entry)}
                       {entry.data.price && (
                         <span class="note">
-                          {priceTypeLabel(entry.data.price.priceType)} al {formatDate(entry.data.price.observedAt)}
+                          {priceTypeLabel(entry.data.price.priceType, entry)} al {formatDate(entry.data.price.observedAt)}
                         </span>
                       )}
                     </td>
