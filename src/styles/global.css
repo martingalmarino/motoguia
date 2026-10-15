@@ -2555,9 +2555,31 @@ input[type='radio'] {
 /* ---------- Home ---------- */
 
 .home-hero {
-  background: var(--brand-navy);
+  --hero-glow-pos: 50% 82%;
+  --hero-glow-size: 90% 38%;
+  --hero-grain-opacity: 0.1;
+  --hero-grain-mask: linear-gradient(180deg, rgb(0 0 0 / 55%), #000);
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse var(--hero-glow-size) at var(--hero-glow-pos), rgb(150 205 228 / 16%), rgb(150 205 228 / 0%) 70%),
+    linear-gradient(160deg, #154457 0%, var(--brand-navy) 50%, #0f3748 100%);
   color: #fff;
   overflow: hidden;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='1 1 1 0 -1 1 1 1 0 -1 1 1 1 0 -1 0 0 0 0 1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  mix-blend-mode: overlay;
+  opacity: var(--hero-grain-opacity);
+  -webkit-mask-image: var(--hero-grain-mask);
+  mask-image: var(--hero-grain-mask);
 }
 
 .home-hero__inner {
@@ -2666,6 +2688,13 @@ input[type='radio'] {
 }
 
 @media (min-width: 1024px) {
+  .home-hero {
+    --hero-glow-pos: 74% 52%;
+    --hero-glow-size: 48% 70%;
+    --hero-grain-opacity: 0.17;
+    --hero-grain-mask: radial-gradient(ellipse 30% 46% at 24% 50%, rgb(0 0 0 / 30%), #000 100%);
+  }
+
   .home-hero__inner {
     grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
     gap: 48px;
