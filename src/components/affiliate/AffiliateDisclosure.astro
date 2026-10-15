@@ -1,0 +1,33 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<aside class:list={['affiliate-disclosure', className]} role="note">
+  <p>
+    <strong>Transparencia:</strong> Esta guía puede contener enlaces de afiliado a Mercado Libre. Si comprás a través de estos enlaces, MotoGuía AR puede recibir una comisión sin costo adicional para vos. Esto ayuda a mantener el sitio y no influye en las recomendaciones editoriales.
+  </p>
+</aside>
+
+<style>
+  .affiliate-disclosure {
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    background: var(--surface);
+    border-left: 3px solid var(--primary);
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+
+  .affiliate-disclosure strong {
+    color: var(--text-primary);
+  }
+
+  .affiliate-disclosure p {
+    margin: 0;
+  }
+</style>
