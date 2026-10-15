@@ -138,8 +138,8 @@ seoDescription: "Talle, tipos y certificaciones IRAM/ECE/DOT. Guía concisa para
 <div class="affiliate-products">
 
 <div class="product-card">
-<div class="product-badge">Opción integral</div>
 <div class="product-content">
+<div class="product-badge">Opción integral</div>
 <h3>Vertigo V32 Vanguard</h3>
 <p class="product-subtitle">Negro mate · Talle L</p>
 
@@ -160,8 +160,8 @@ seoDescription: "Talle, tipos y certificaciones IRAM/ECE/DOT. Guía concisa para
 </div>
 
 <div class="product-card">
-<div class="product-badge">Opción integral</div>
 <div class="product-content">
+<div class="product-badge">Opción integral</div>
 <h3>Vertigo V32 Line</h3>
 <p class="product-subtitle">Negro brillante · Talle M</p>
 
@@ -216,14 +216,6 @@ seoDescription: "Talle, tipos y certificaciones IRAM/ECE/DOT. Guía concisa para
 <p><strong>Limpieza:</strong> Interior desmontable lavar con agua tibia y jabón neutro. Visera limpiar con paño suave, nunca alcohol o amoníaco.</p>
 <p><strong>Almacenamiento:</strong> Lugar fresco y seco, alejado de sol directo. No dejarlo en el baúl expuesto a calor extremo.</p>
 </details>
-
-<hr />
-
-<h2>Fuentes</h2>
-
-<p>Esta guía se basa en normativa oficial argentina: <a href="https://www.argentina.gob.ar/normativa/nacional/ley-24449-2449">Ley 24.449</a>, <a href="https://www.argentina.gob.ar/normativa/nacional/decreto-779-1995">Decreto 779/1995</a>, <a href="https://www.argentina.gob.ar/normativa/nacional/norma-147595/texto">Resolución 381/2008</a>, <a href="https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/">Decreto 196/2025</a>, y <a href="https://www.iram.org.ar/servicio/elementos-de-proteccion-personal/">IRAM</a>.</p>
-
-<p><strong>Revisión:</strong> Redacción MotoGuía AR, 15 de octubre de 2026.</p>
 
 <p><strong>Más guías:</strong> <a href="/accesorios/guantes-impermeables-moto/">Guantes impermeables</a> · <a href="/guias/primera-moto-argentina/">Primera moto en Argentina</a></p>
 
@@ -318,16 +310,14 @@ seoDescription: "Talle, tipos y certificaciones IRAM/ECE/DOT. Guía concisa para
 }
 
 .product-badge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+  display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--primary, #2563eb);
   color: white;
   font-size: 0.875rem;
   font-weight: 600;
   border-radius: 2rem;
-  z-index: 1;
+  margin-bottom: 1rem;
 }
 
 .product-content {
