@@ -1,0 +1,199 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icon from '../ui/Icon.astro';
+import { getBrand, motorcycleUrl } from '../../lib/content/catalog';
+import { categoryLabel, displayName, priceTypeLabel, stageImage } from '../../lib/content/present';
+import { formatArs, formatDate } from '../../lib/format';
+
+interface Props {
+  models: CollectionEntry<'motorcycles'>[];
+  labelledBy: string;
+}
+
+const { models, labelledBy } = Astro.props;
+const priced = models
+  .filter((entry) => entry.data.price)
+  .sort((a, b) => a.data.price!.minARS - b.data.price!.minARS);
+const maxPrice = Math.max(...priced.map((entry) => entry.data.price!.maxARS));
+const categories = [...new Set(priced.map((entry) => entry.data.category))];
+const cheapest = priced[0];
+const priciest = [...priced].sort((a, b) => b.data.price!.maxARS - a.data.price!.maxARS)[0];
+const newest = priced.map((entry) => entry.data.price!.observedAt).sort((a, b) => b.valueOf() - a.valueOf())[0];
+
+const registration = (value: boolean | null) =>
+  value === null ? 'La fuente no aclara si incluye patentamiento' : value ? 'Incluye patentamiento' : 'No incluye patentamiento';
+---
+
+{
+  priced.length > 0 && (
+    <div class="price-board" data-price-board>
+      <dl class="price-summary">
+        <div class="price-summary__item">
+          <dt>Más barata</dt>
+          <dd>
+            <strong>{formatArs(cheapest.data.price!.minARS)}</strong>
+            <a href={motorcycleUrl(cheapest)}>{displayName(cheapest)}</a>
+          </dd>
+        </div>
+        <div class="price-summary__item">
+          <dt>Más cara</dt>
+          <dd>
+            <strong>{formatArs(priciest.data.price!.maxARS)}</strong>
+            <a href={motorcycleUrl(priciest)}>{displayName(priciest)}</a>
+          </dd>
+        </div>
+        <div class="price-summary__item">
+          <dt>Modelos con precio</dt>
+          <dd>
+            <strong>{priced.length}</strong>
+            <span>de {models.length} en el catálogo</span>
+          </dd>
+        </div>
+        <div class="price-summary__item">
+          <dt>Último dato</dt>
+          <dd>
+            <strong>
+              <time datetime={newest.toISOString().slice(0, 10)}>{formatDate(newest)}</time>
+            </strong>
+            <span>Cada precio tiene su propia fecha</span>
+          </dd>
+        </div>
+      </dl>
+
+      <div class="price-controls">
+        {categories.length > 1 && (
+          <div class="chip-row" role="group" aria-label="Filtrar por tipo">
+            <button type="button" class="chip" aria-pressed="true" data-price-filter="all">
+              Todas
+            </button>
+            {categories.map((category) => (
+              <button type="button" class="chip" aria-pressed="false" data-price-filter={category}>
+                {categoryLabel(category)}
+              </button>
+            ))}
+          </div>
+        )}
+        <div class="price-sort" role="group" aria-label="Ordenar por precio">
+          <button type="button" class="price-sort__btn" aria-pressed="true" data-price-sort="asc">
+            Menor precio
+          </button>
+          <button type="button" class="price-sort__btn" aria-pressed="false" data-price-sort="desc">
+            Mayor precio
+          </button>
+        </div>
+      </div>
+      <p class="price-status" aria-live="polite" data-price-status>
+        {priced.length} modelos, del más barato al más caro.
+      </p>
+
+      <div class="price-list__head" aria-hidden="true">
+        <span>#</span>
+        <span>Modelo</span>
+        <span>Precio</span>
+        <span>Tipo de precio y fecha</span>
+        <span />
+      </div>
+      <ol class="price-list" aria-labelledby={labelledBy} data-price-list>
+        {priced.map((entry) => {
+          const price = entry.data.price!;
+          const image = stageImage(entry);
+          const brand = getBrand(entry.data.brandId);
+          const versions = entry.data.versions.filter((version) => version.priceARS !== null);
+          const isRange = price.minARS !== price.maxARS;
+          const url = motorcycleUrl(entry);
+          return (
+            <li class="price-row" data-category={entry.data.category} data-price={price.minARS}>
+              <span class="price-row__pos" aria-hidden="true" />
+              <a class="price-row__thumb" href={url} tabindex="-1" aria-hidden="true">
+                <img src={image.src} alt="" width="160" height="120" loading="lazy" decoding="async" />
+              </a>
+              <div class="price-row__model">
+                <span class="price-row__brand">{brand?.name ?? entry.data.brandId}</span>
+                <a class="price-row__name" href={url}>
+                  {entry.data.name}
+                  <span class="visually-hidden"> de {brand?.name}</span>
+                </a>
+                <span class="price-row__tag">{categoryLabel(entry.data.category)}</span>
+              </div>
+              <div class="price-row__price">
+                <span class="price-row__amount">
+                  {isRange && <span class="price-row__from">Desde</span>}
+                  {formatArs(price.minARS)}
+                </span>
+                <span class="price-row__bar" aria-hidden="true">
+                  <span style={`--fill: ${Math.max(6, Math.round((price.minARS / maxPrice) * 100))}%`} />
+                </span>
+                {versions.length > 1 && (
+                  <ul class="price-row__versions">
+                    {versions.map((version) => (
+                      <li>
+                        <span>{version.name}</span>
+                        <span>{formatArs(version.priceARS!)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+              <div class="price-row__meta">
+                <span class="price-row__type">{priceTypeLabel(price.priceType)}</span>
+                <span>
+                  al <time datetime={price.observedAt.toISOString().slice(0, 10)}>{formatDate(price.observedAt)}</time>
+                </span>
+                <span class="price-row__note">{registration(price.includesRegistration)}</span>
+              </div>
+              <a class="price-row__cta" href={url}>
+                Ver ficha <Icon name="arrow" size={16} />
+                <span class="visually-hidden"> de la {displayName(entry)}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  )
+}
+
+<script>
+  function setup(board: HTMLElement) {
+    const list = board.querySelector<HTMLOListElement>('[data-price-list]');
+    const status = board.querySelector<HTMLElement>('[data-price-status]');
+    if (!list || !status) return;
+    const rows = [...list.querySelectorAll<HTMLLIElement>(':scope > li')];
+    const filters = [...board.querySelectorAll<HTMLButtonElement>('[data-price-filter]')];
+    const sorts = [...board.querySelectorAll<HTMLButtonElement>('[data-price-sort]')];
+    let filter = 'all';
+    let order: 'asc' | 'desc' = 'asc';
+
+    const render = () => {
+      const sorted = [...rows].sort((a, b) => {
+        const diff = Number(a.dataset.price) - Number(b.dataset.price);
+        return order === 'asc' ? diff : -diff;
+      });
+      sorted.forEach((row) => {
+        row.hidden = filter !== 'all' && row.dataset.category !== filter;
+        list.append(row);
+      });
+      const visible = sorted.filter((row) => !row.hidden).length;
+      const label = filters.find((button) => button.dataset.priceFilter === filter)?.textContent?.trim();
+      const scope = filter === 'all' ? `${visible} modelos` : `${visible} ${visible === 1 ? 'modelo' : 'modelos'} (${label})`;
+      status.textContent = `${scope}, ${order === 'asc' ? 'del más barato al más caro' : 'del más caro al más barato'}.`;
+    };
+
+    filters.forEach((button) =>
+      button.addEventListener('click', () => {
+        filter = button.dataset.priceFilter ?? 'all';
+        filters.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        render();
+      }),
+    );
+    sorts.forEach((button) =>
+      button.addEventListener('click', () => {
+        order = button.dataset.priceSort === 'desc' ? 'desc' : 'asc';
+        sorts.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        render();
+      }),
+    );
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-price-board]').forEach(setup);
+</script>

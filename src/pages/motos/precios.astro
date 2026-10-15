@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
+import PriceList from '../../components/catalog/PriceList.astro';
 import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
 import { getPublishedMotorcycles, motorcycleUrl } from '../../lib/content/catalog';
 import { activeHubs } from '../../lib/content/hubs';
-import { categoryLabel, displayName, priceTypeLabel, shortPrice } from '../../lib/content/present';
+import { displayName, priceTypeLabel } from '../../lib/content/present';
 import { formatArs, formatDate } from '../../lib/format';
 import { breadcrumbLd, collectionPageLd, faqLd, itemListLd } from '../../lib/seo/jsonld';
 
@@ -76,51 +77,10 @@ const faqs = [
       <div class="section-heading">
         <div>
           <h2 id="precios-tabla">Motos con precio publicado</h2>
-          <p>{priced.length} modelos. El precio final puede cambiar según el concesionario, la forma de pago y los gastos de entrega.</p>
+          <p>El precio final puede cambiar según el concesionario, la forma de pago y los gastos de entrega.</p>
         </div>
       </div>
-      <div class="table-region" role="region" aria-labelledby="precios-tabla" tabindex="0">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <th scope="col">Modelo</th>
-              <th scope="col">Tipo</th>
-              <th scope="col" class="num">Precio</th>
-              <th scope="col">Dato</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              priced.map((entry) => {
-                const price = entry.data.price!;
-                const versions = entry.data.versions.filter((version) => version.priceARS !== null);
-                return (
-                  <tr>
-                    <th scope="row">
-                      <a href={motorcycleUrl(entry)}>{displayName(entry)}</a>
-                      {versions.length > 1 && (
-                        <span class="note">{versions.map((version) => `${version.name}: ${formatArs(version.priceARS!)}`).join(' · ')}</span>
-                      )}
-                    </th>
-                    <td>{categoryLabel(entry.data.category)}</td>
-                    <td class="num">{shortPrice(entry)}</td>
-                    <td>
-                      {priceTypeLabel(price.priceType)} al {formatDate(price.observedAt)}
-                      <span class="note">
-                        {price.includesRegistration === null
-                          ? 'La fuente no aclara si incluye patentamiento'
-                          : price.includesRegistration
-                            ? 'Incluye patentamiento'
-                            : 'No incluye patentamiento'}
-                      </span>
-                    </td>
-                  </tr>
-                );
-              })
-            }
-          </tbody>
-        </table>
-      </div>
+      <PriceList models={motos} labelledBy="precios-tabla" />
     </section>
 
     {
