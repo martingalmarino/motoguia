@@ -131,6 +131,7 @@ export const paths = {
   monthlyCost: '/herramientas/costo-mensual-moto/',
   guides: '/guias/',
   accessories: '/accesorios/',
+  blog: '/blog/',
   search: '/buscar/',
   about: '/sobre-nosotros/',
   methodology: '/metodologia/',
@@ -170,6 +171,7 @@ export const navItems: NavItem[] = [
       { href: paths.accessories, label: 'Equipamiento y accesorios' },
     ],
   },
+  { label: 'Blog', href: paths.blog },
 ];
 
 export const footerGroups: { title: string; links: NavLink[] }[] = [
@@ -247,4 +249,12 @@ export function comparisonPath(slug: string): string {
 
 export function accessoryPath(slug: string): string {
   return `/accesorios/${slug}/`;
+}
+
+export function blogPostPath(slug: string): string {
+  return `/blog/${slug}/`;
+}
+
+export function authorPath(slug: string): string {
+  return `/autores/${slug}/`;
 }

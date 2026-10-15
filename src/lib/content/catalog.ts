@@ -113,4 +113,18 @@ export async function relatedMotorcycles(entry: CollectionEntry<'motorcycles'>, 
   return [...picked, ...extras].slice(0, limit);
 }
 
+export async function getPublishedBlogPosts() {
+  const entries = await getCollection('blog', ({ data }) => data.status === 'published');
+  return entries.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+}
+
+export async function getIndexableBlogPosts() {
+  const entries = await getPublishedBlogPosts();
+  return entries.filter((entry) => entry.data.indexable);
+}
+
+export async function getBlogPost(id: string) {
+  return getEntry('blog', id);
+}
+
 export { render };

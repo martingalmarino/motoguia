@@ -1,6 +1,6 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { articleSchema, comparisonSchema, motorcycleSchema, rankingSchema } from './lib/content/schema';
+import { articleSchema, blogSchema, comparisonSchema, motorcycleSchema, rankingSchema } from './lib/content/schema';
 
 const motorcycles = defineCollection({
   loader: glob({ base: './src/content/motorcycles', pattern: '**/*.md' }),
@@ -29,10 +29,16 @@ const accessoryGuides = defineCollection({
   }),
 });
 
+const blog = defineCollection({
+  loader: glob({ base: './src/content/blog', pattern: '**/*.md' }),
+  schema: blogSchema,
+});
+
 export const collections = {
   motorcycles,
   rankings,
   guides,
   comparisons,
   accessoryGuides,
+  blog,
 };

@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/editorial/Breadcrumbs.astro';
+import ArticleToc from '../../components/editorial/ArticleToc.astro';
+import MotorcycleCard from '../../components/catalog/MotorcycleCard.astro';
+import AdSlot from '../../components/monetization/AdSlot.astro';
+import { authorPath, blogPostPath, paths } from '../../config/site';
+import { getPublishedBlogPosts, getPublishedMotorcycles, render } from '../../lib/content/catalog';
+import { formatDate, isoDate } from '../../lib/format';
+import { breadcrumbLd, newsArticleLd } from '../../lib/seo/jsonld';
+import { getImage } from 'astro:assets';
+
+export async function getStaticPaths() {
+  const posts = await getPublishedBlogPosts();
+  return posts.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const path = blogPostPath(entry.id);
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.blog, label: 'Blog' },
+  { href: path, label: entry.data.title },
+];
+
+const heroImagePath = entry.data.heroImage.path;
+const heroImageUrl = heroImagePath.startsWith('/')
+  ? heroImagePath
+  : `/images/blog/${heroImagePath}`;
+
+const heroImageOptimized = await getImage({
+  src: heroImageUrl,
+  alt: entry.data.heroImage.alt,
+  width: entry.data.heroImage.width,
+  height: entry.data.heroImage.height,
+  format: 'webp',
+});
+
+const ogImage = await getImage({
+  src: heroImageUrl,
+  width: 1200,
+  height: 675,
+  format: 'webp',
+});
+
+const motos = await getPublishedMotorcycles();
+const related = entry.data.relatedMotorcycles
+  .map((id) => motos.find((moto) => moto.data.id === id))
+  .filter((moto): moto is (typeof motos)[number] => Boolean(moto))
+  .slice(0, 3);
+
+const authorSlug = entry.data.author
+  .toLowerCase()
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .replace(/\s+/g, '-');
+const authorUrl = authorPath(authorSlug);
+---
+
+<BaseLayout
+  title={entry.data.seoTitle ?? entry.data.title}
+  description={entry.data.seoDescription ?? entry.data.description}
+  path={path}
+  ogType="article"
+  publishedTime={entry.data.pubDate}
+  modifiedTime={entry.data.updatedDate}
+  image={{
+    src: ogImage.src,
+    alt: entry.data.heroImage.alt,
+    width: ogImage.options.width ?? 1200,
+    height: ogImage.options.height ?? 675,
+    type: 'image/webp',
+  }}
+  jsonLd={[
+    breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
+    newsArticleLd({
+      headline: entry.data.title,
+      description: entry.data.description,
+      path,
+      datePublished: isoDate(entry.data.pubDate),
+      dateModified: entry.data.updatedDate ? isoDate(entry.data.updatedDate) : undefined,
+      image: ogImage.src,
+      authorName: entry.data.author,
+      authorUrl,
+    }),
+  ]}
+>
+  <div class="wrap">
+    <div class="article-layout">
+      <article class="article">
+        <header class="article-header">
+          <Breadcrumbs items={crumbs} />
+          <p class="eyebrow">Blog</p>
+          <h1>{entry.data.title}</h1>
+          <p class="lede">{entry.data.description}</p>
+          <p class="article-meta">
+            <a href={authorUrl}>{entry.data.author}</a> · Publicado el{' '}
+            <time datetime={isoDate(entry.data.pubDate)}>{formatDate(entry.data.pubDate)}</time>
+            {
+              entry.data.updatedDate && (
+                <>
+                  {' · '}Actualizado el{' '}
+                  <time datetime={isoDate(entry.data.updatedDate)}>
+                    {formatDate(entry.data.updatedDate)}
+                  </time>
+                </>
+              )
+            }
+          </p>
+        </header>
+        {
+          heroImageOptimized && (
+            <figure class="article-hero">
+              <img
+                src={heroImageOptimized.src}
+                alt={entry.data.heroImage.alt}
+                width={heroImageOptimized.options.width}
+                height={heroImageOptimized.options.height}
+                loading="eager"
+              />
+            </figure>
+          )
+        }
+        <AdSlot slot="article" />
+        <div class="prose">
+          <Content />
+        </div>
+        {entry.data.sources.length > 0 && (
+          <div class="article-sources">
+            <h2>Fuentes</h2>
+            <ul>
+              {entry.data.sources.map((source) => (
+                <li>
+                  <a href={source.url} target="_blank" rel="noopener noreferrer">
+                    {source.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </article>
+      <ArticleToc headings={headings} title="En este artículo" />
+    </div>
+
+    {
+      related.length > 0 && (
+        <section class="section" aria-labelledby="blog-motos">
+          <div class="section-heading">
+            <div>
+              <h2 id="blog-motos">Motos mencionadas en este artículo</h2>
+            </div>
+          </div>
+          <div class="card-grid card-grid--3">
+            {related.map((moto) => (
+              <MotorcycleCard entry={moto} />
+            ))}
+          </div>
+        </section>
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .article-hero {
+    margin: 2rem 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .article-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .article-sources {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .article-sources h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-sources ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .article-sources li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-sources a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .article-sources a:hover {
+    text-decoration: underline;
+  }
+</style>

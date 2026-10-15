@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import Icon from '../../components/ui/Icon.astro';
+import { authorPath, paths } from '../../config/site';
+import { getPublishedBlogPosts } from '../../lib/content/catalog';
+import { formatDate } from '../../lib/format';
+
+const authorName = 'Lautaro Diaz';
+const authorSlug = 'lautaro-diaz';
+const path = authorPath(authorSlug);
+
+const allPosts = await getPublishedBlogPosts();
+const posts = allPosts.filter((post) => {
+  const postAuthorSlug = post.data.author
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '-');
+  return postAuthorSlug === authorSlug;
+});
+
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.blog, label: 'Blog' },
+  { href: path, label: authorName },
+];
+---
+
+<BaseLayout
+  title={`${authorName} - Autor en MotoGuía AR`}
+  description={`Artículos escritos por ${authorName} en MotoGuía AR. Análisis, noticias y datos del mercado de motos en Argentina.`}
+  path={path}
+>
+  <div class="wrap">
+    <PageHeader
+      crumbs={crumbs}
+      eyebrow="Autor"
+      title={authorName}
+      lede="Redactor en MotoGuía AR. Analiza datos oficiales del mercado de motos en Argentina y escribe sobre lanzamientos, tendencias y novedades del sector."
+    />
+
+    <section class="section" aria-labelledby="autor-articulos">
+      <h2 id="autor-articulos" class="visually-hidden">Artículos de {authorName}</h2>
+      {
+        posts.length === 0 ? (
+          <div class="empty-state">
+            <p>Este autor aún no ha publicado artículos.</p>
+          </div>
+        ) : (
+          <div class="editorial-cards">
+            {posts.map((post) => (
+              <a class="editorial-card" href={`${paths.blog}${post.id}/`}>
+                <span class="editorial-card__kicker">
+                  <Icon name="book" size={16} /> Artículo
+                </span>
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <span class="editorial-card__meta">{formatDate(post.data.pubDate)}</span>
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .empty-state {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--surface);
+    border-radius: 0.5rem;
+  }
+</style>
