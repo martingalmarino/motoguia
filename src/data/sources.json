@@ -7,7 +7,11 @@
     "publishedAt": "2026-09-30",
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["ranking-ytd-2026", "ranking-septiembre-2026", "totales-mercado"]
+    "supports": [
+      "ranking-ytd-2026",
+      "ranking-septiembre-2026",
+      "totales-mercado"
+    ]
   },
   {
     "id": "motonews-patentamientos-septiembre-2026",
@@ -17,7 +21,10 @@
     "publishedAt": "2026-10-01",
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["ranking-septiembre-2026-top5", "totales-septiembre"]
+    "supports": [
+      "ranking-septiembre-2026-top5",
+      "totales-septiembre"
+    ]
   },
   {
     "id": "lanacion-motos-septiembre-2026",
@@ -27,7 +34,10 @@
     "publishedAt": "2026-10-09",
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["ranking-septiembre-2026-top10", "ranking-ytd-top10"]
+    "supports": [
+      "ranking-septiembre-2026-top10",
+      "ranking-ytd-top10"
+    ]
   },
   {
     "id": "acara-siomaa-2026-08",
@@ -37,7 +47,11 @@
     "publishedAt": "2026-08-31",
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["ranking-ytd-2026", "ranking-agosto-2026", "totales-mercado"]
+    "supports": [
+      "ranking-ytd-2026",
+      "ranking-agosto-2026",
+      "totales-mercado"
+    ]
   },
   {
     "id": "ambito-motos-2026-09-08",
@@ -47,7 +61,10 @@
     "publishedAt": "2026-09-08",
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["ranking-ytd-top10", "precios-honda-citados"]
+    "supports": [
+      "ranking-ytd-top10",
+      "precios-honda-citados"
+    ]
   },
   {
     "id": "tn-wave-agosto-2026",
@@ -57,7 +74,10 @@
     "publishedAt": "2026-09-01",
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["ranking-agosto-2026-top10", "totales-agosto"]
+    "supports": [
+      "ranking-agosto-2026-top10",
+      "totales-agosto"
+    ]
   },
   {
     "id": "cadecom-2026-08",
@@ -67,7 +87,10 @@
     "publishedAt": "2026-09-01",
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["ranking-dnrpa-agosto", "advertencia-agrupacion-versiones"]
+    "supports": [
+      "ranking-dnrpa-agosto",
+      "advertencia-agrupacion-versiones"
+    ]
   },
   {
     "id": "ansv-clases",
@@ -77,7 +100,9 @@
     "publishedAt": "2026-02-11",
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["licencia-clases-A"]
+    "supports": [
+      "licencia-clases-A"
+    ]
   },
   {
     "id": "honda-motos-ar",
@@ -87,7 +112,10 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["fichas-honda", "precios-honda"]
+    "supports": [
+      "fichas-honda",
+      "precios-honda"
+    ]
   },
   {
     "id": "honda-wave",
@@ -97,7 +125,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["wave-110s"]
+    "supports": [
+      "wave-110s"
+    ]
   },
   {
     "id": "honda-wave-pdf",
@@ -107,7 +137,9 @@
     "publishedAt": "2026-07-13",
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["wave-110s-disco-specs"]
+    "supports": [
+      "wave-110s-disco-specs"
+    ]
   },
   {
     "id": "honda-glh",
@@ -117,7 +149,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["glh-150"]
+    "supports": [
+      "glh-150"
+    ]
   },
   {
     "id": "honda-xr150l",
@@ -127,7 +161,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["xr150l"]
+    "supports": [
+      "xr150l"
+    ]
   },
   {
     "id": "honda-navi",
@@ -137,7 +173,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["navi"]
+    "supports": [
+      "navi"
+    ]
   },
   {
     "id": "honda-garantia",
@@ -147,7 +185,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["garantia-honda"]
+    "supports": [
+      "garantia-honda"
+    ]
   },
   {
     "id": "gilera-ar",
@@ -157,7 +197,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["catalogo-gilera"]
+    "supports": [
+      "catalogo-gilera"
+    ]
   },
   {
     "id": "gilera-smash",
@@ -167,7 +209,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["smash-full-ii"]
+    "supports": [
+      "smash-full-ii"
+    ]
   },
   {
     "id": "gilera-sahel",
@@ -177,7 +221,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["sahel-150"]
+    "supports": [
+      "sahel-150"
+    ]
   },
   {
     "id": "corven-motos",
@@ -187,7 +233,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["catalogo-corven"]
+    "supports": [
+      "catalogo-corven"
+    ]
   },
   {
     "id": "grupo-corven",
@@ -197,7 +245,10 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["historia-corven", "alianza-bajaj"]
+    "supports": [
+      "historia-corven",
+      "alianza-bajaj"
+    ]
   },
   {
     "id": "corven-energy",
@@ -207,7 +258,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["energy-110"]
+    "supports": [
+      "energy-110"
+    ]
   },
   {
     "id": "corven-mirage",
@@ -217,7 +270,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["mirage-110"]
+    "supports": [
+      "mirage-110"
+    ]
   },
   {
     "id": "corven-triax",
@@ -227,7 +282,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["triax-150"]
+    "supports": [
+      "triax-150"
+    ]
   },
   {
     "id": "siam-motos",
@@ -237,7 +294,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["catalogo-siam"]
+    "supports": [
+      "catalogo-siam"
+    ]
   },
   {
     "id": "siam-qu",
@@ -247,7 +306,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["qu-110"]
+    "supports": [
+      "qu-110"
+    ]
   },
   {
     "id": "siam-n4",
@@ -257,7 +318,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["n4-electrica"]
+    "supports": [
+      "n4-electrica"
+    ]
   },
   {
     "id": "zanella-ar",
@@ -267,7 +330,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["catalogo-zanella"]
+    "supports": [
+      "catalogo-zanella"
+    ]
   },
   {
     "id": "zanella-zb-full",
@@ -277,7 +342,9 @@
     "publishedAt": "2025-08-11",
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["zb-110-full"]
+    "supports": [
+      "zb-110-full"
+    ]
   },
   {
     "id": "zanella-zb-full-pdf",
@@ -287,7 +354,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["zb-110-full"]
+    "supports": [
+      "zb-110-full"
+    ]
   },
   {
     "id": "zanella-zb-st",
@@ -297,7 +366,9 @@
     "publishedAt": "2026-08-12",
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["zb-110-st"]
+    "supports": [
+      "zb-110-st"
+    ]
   },
   {
     "id": "zanella-zb-st-pdf",
@@ -307,7 +378,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["zb-110-st"]
+    "supports": [
+      "zb-110-st"
+    ]
   },
   {
     "id": "motomel-ar",
@@ -317,7 +390,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["catalogo-motomel"]
+    "supports": [
+      "catalogo-motomel"
+    ]
   },
   {
     "id": "motomel-s2",
@@ -327,7 +402,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["s2-150"]
+    "supports": [
+      "s2-150"
+    ]
   },
   {
     "id": "motomel-dlx",
@@ -337,7 +414,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["c110-dlx"]
+    "supports": [
+      "c110-dlx"
+    ]
   },
   {
     "id": "motomel-blitz",
@@ -347,7 +426,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["blitz-110"]
+    "supports": [
+      "blitz-110"
+    ]
   },
   {
     "id": "motomel-blitz-manual",
@@ -357,7 +438,10 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["blitz-110", "versiones-blitz-110"]
+    "supports": [
+      "blitz-110",
+      "versiones-blitz-110"
+    ]
   },
   {
     "id": "fava-blitz-b110",
@@ -367,7 +451,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["nombre-ranking-b110"]
+    "supports": [
+      "nombre-ranking-b110"
+    ]
   },
   {
     "id": "losandes-b110",
@@ -377,7 +463,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["nombre-ranking-b110"]
+    "supports": [
+      "nombre-ranking-b110"
+    ]
   },
   {
     "id": "motomel-stratoe",
@@ -387,7 +475,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["stratoe"]
+    "supports": [
+      "stratoe"
+    ]
   },
   {
     "id": "motomel-garantia",
@@ -397,7 +487,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["garantia-motomel"]
+    "supports": [
+      "garantia-motomel"
+    ]
   },
   {
     "id": "keller-ar",
@@ -407,7 +499,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["catalogo-keller"]
+    "supports": [
+      "catalogo-keller"
+    ]
   },
   {
     "id": "keller-crono-full",
@@ -417,7 +511,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["crono-classic-110"]
+    "supports": [
+      "crono-classic-110"
+    ]
   },
   {
     "id": "keller-crono-eco",
@@ -427,7 +523,10 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["crono-classic-110", "versiones-crono-classic"]
+    "supports": [
+      "crono-classic-110",
+      "versiones-crono-classic"
+    ]
   },
   {
     "id": "keller-crono-plus",
@@ -437,7 +536,10 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["crono-classic-110", "versiones-crono-classic"]
+    "supports": [
+      "crono-classic-110",
+      "versiones-crono-classic"
+    ]
   },
   {
     "id": "keller-crono-manual",
@@ -447,7 +549,10 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["crono-classic-110", "nombre-ranking-kn110-8"]
+    "supports": [
+      "crono-classic-110",
+      "nombre-ranking-kn110-8"
+    ]
   },
   {
     "id": "mondial-ar",
@@ -457,7 +562,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["catalogo-mondial"]
+    "supports": [
+      "catalogo-mondial"
+    ]
   },
   {
     "id": "mondial-ld",
@@ -467,7 +574,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["ld-110-max"]
+    "supports": [
+      "ld-110-max"
+    ]
   },
   {
     "id": "sunra-ar",
@@ -477,7 +586,9 @@
     "publishedAt": null,
     "accessedAt": "2026-09-18",
     "countryScope": "AR",
-    "supports": ["catalogo-sunra"]
+    "supports": [
+      "catalogo-sunra"
+    ]
   },
   {
     "id": "sunra-future",
@@ -487,7 +598,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["sunra-future"]
+    "supports": [
+      "sunra-future"
+    ]
   },
   {
     "id": "sunra-miku",
@@ -497,7 +610,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-14",
     "countryScope": "AR",
-    "supports": ["sunra-miku-max"]
+    "supports": [
+      "sunra-miku-max"
+    ]
   },
   {
     "id": "ley-24449",
@@ -507,7 +622,15 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["licencia-edades-art11", "ciclomotor-definicion-art5", "requisitos-circular-art40", "seguro-obligatorio-art68", "licencia-emision-art13", "menores-art17", "escuelas-conducir-art12"]
+    "supports": [
+      "licencia-edades-art11",
+      "ciclomotor-definicion-art5",
+      "requisitos-circular-art40",
+      "seguro-obligatorio-art68",
+      "licencia-emision-art13",
+      "menores-art17",
+      "escuelas-conducir-art12"
+    ]
   },
   {
     "id": "decreto-196-2025",
@@ -517,7 +640,14 @@
     "publishedAt": "2025-03-18",
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["licencia-domicilio-dni", "licencia-digital", "principiantes", "requisitos-examenes", "prestadores", "profundidad-minima-neumaticos"]
+    "supports": [
+      "licencia-domicilio-dni",
+      "licencia-digital",
+      "principiantes",
+      "requisitos-examenes",
+      "prestadores",
+      "profundidad-minima-neumaticos"
+    ]
   },
   {
     "id": "ley-24240",
@@ -527,7 +657,16 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["proveedor-art2", "garantia-legal-art11", "servicio-tecnico-repuestos-art12", "responsabilidad-solidaria-art13", "certificado-garantia-art14", "constancia-reparacion-art15", "prolongacion-art16", "reparacion-no-satisfactoria-art17"]
+    "supports": [
+      "proveedor-art2",
+      "garantia-legal-art11",
+      "servicio-tecnico-repuestos-art12",
+      "responsabilidad-solidaria-art13",
+      "certificado-garantia-art14",
+      "constancia-reparacion-art15",
+      "prolongacion-art16",
+      "reparacion-no-satisfactoria-art17"
+    ]
   },
   {
     "id": "consumidor-consejos",
@@ -537,7 +676,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["garantia-legal-plazos"]
+    "supports": [
+      "garantia-legal-plazos"
+    ]
   },
   {
     "id": "consumidor-reclamo",
@@ -547,7 +688,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["ventanilla-federal-unica"]
+    "supports": [
+      "ventanilla-federal-unica"
+    ]
   },
   {
     "id": "dnrpa-transferencia",
@@ -557,7 +700,12 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["transferencia-requisitos", "verificacion-obligatoria-motos-2004", "plazo-30-dias", "costos-transferencia"]
+    "supports": [
+      "transferencia-requisitos",
+      "verificacion-obligatoria-motos-2004",
+      "plazo-30-dias",
+      "costos-transferencia"
+    ]
   },
   {
     "id": "dnrpa-informe-dominio",
@@ -567,7 +715,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["informe-dominio-contenido"]
+    "supports": [
+      "informe-dominio-contenido"
+    ]
   },
   {
     "id": "dnrpa-guia-informe-dominio",
@@ -577,7 +727,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["titular-registral-firma-08"]
+    "supports": [
+      "titular-registral-firma-08"
+    ]
   },
   {
     "id": "dnrpa-guia-verificacion",
@@ -587,7 +739,10 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["verificacion-recomendada", "verificacion-validez-150-dias"]
+    "supports": [
+      "verificacion-recomendada",
+      "verificacion-validez-150-dias"
+    ]
   },
   {
     "id": "dnrpa-guia-transferencia",
@@ -597,7 +752,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["patente-provincial-o-municipal"]
+    "supports": [
+      "patente-provincial-o-municipal"
+    ]
   },
   {
     "id": "bahia-blanca-motovehiculos",
@@ -607,7 +764,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["patente-municipal-ejemplo"]
+    "supports": [
+      "patente-municipal-ejemplo"
+    ]
   },
   {
     "id": "honda-wave-manual",
@@ -617,7 +776,12 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["inspeccion-previa-uso", "indicadores-desgaste", "programa-mantenimiento", "mantenimiento-costo-propietario"]
+    "supports": [
+      "inspeccion-previa-uso",
+      "indicadores-desgaste",
+      "programa-mantenimiento",
+      "mantenimiento-costo-propietario"
+    ]
   },
   {
     "id": "honda-navi-pdf",
@@ -627,7 +791,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["navi-specs"]
+    "supports": [
+      "navi-specs"
+    ]
   },
   {
     "id": "honda-glh-pdf",
@@ -637,7 +803,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["glh-150-specs"]
+    "supports": [
+      "glh-150-specs"
+    ]
   },
   {
     "id": "honda-xr150l-pdf",
@@ -647,7 +815,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["xr150l-specs"]
+    "supports": [
+      "xr150l-specs"
+    ]
   },
   {
     "id": "honda-elite-125",
@@ -657,7 +827,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["elite-125"]
+    "supports": [
+      "elite-125"
+    ]
   },
   {
     "id": "honda-elite-125-pdf",
@@ -667,7 +839,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["elite-125-specs"]
+    "supports": [
+      "elite-125-specs"
+    ]
   },
   {
     "id": "honda-cb125f",
@@ -677,7 +851,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["cb125f"]
+    "supports": [
+      "cb125f"
+    ]
   },
   {
     "id": "honda-cb125f-pdf",
@@ -687,7 +863,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["cb125f-specs"]
+    "supports": [
+      "cb125f-specs"
+    ]
   },
   {
     "id": "ansv-municipios-licencia",
@@ -697,7 +875,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["centros-emisores"]
+    "supports": [
+      "centros-emisores"
+    ]
   },
   {
     "id": "ansv-curso-educacion-vial",
@@ -707,7 +887,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["curso-primera-licencia"]
+    "supports": [
+      "curso-primera-licencia"
+    ]
   },
   {
     "id": "ansv-renovar-ampliar",
@@ -717,7 +899,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["renovacion-ampliacion-online"]
+    "supports": [
+      "renovacion-ampliacion-online"
+    ]
   },
   {
     "id": "argentina-licencia-digital-2025",
@@ -727,7 +911,10 @@
     "publishedAt": "2025-05-19",
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["licencia-digital-primera-vez", "licencia-fisica-opcional"]
+    "supports": [
+      "licencia-digital-primera-vez",
+      "licencia-fisica-opcional"
+    ]
   },
   {
     "id": "corven-energy-pdf",
@@ -737,7 +924,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["energy-110-specs"]
+    "supports": [
+      "energy-110-specs"
+    ]
   },
   {
     "id": "corven-mirage-pdf",
@@ -747,7 +936,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["mirage-110-specs"]
+    "supports": [
+      "mirage-110-specs"
+    ]
   },
   {
     "id": "corven-triax-pdf",
@@ -757,7 +948,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["triax-150-specs"]
+    "supports": [
+      "triax-150-specs"
+    ]
   },
   {
     "id": "gilera-sahel-pdf",
@@ -767,7 +960,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["sahel-150-specs"]
+    "supports": [
+      "sahel-150-specs"
+    ]
   },
   {
     "id": "gilera-smash-pdf",
@@ -777,7 +972,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["smash-full-ii-specs"]
+    "supports": [
+      "smash-full-ii-specs"
+    ]
   },
   {
     "id": "mondial-ld-pdf",
@@ -787,7 +984,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["ld-110-max-specs"]
+    "supports": [
+      "ld-110-max-specs"
+    ]
   },
   {
     "id": "siam-qu-pdf",
@@ -797,7 +996,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["qu-110-specs"]
+    "supports": [
+      "qu-110-specs"
+    ]
   },
   {
     "id": "siam-qu-manual",
@@ -807,7 +1008,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["qu-110-specs"]
+    "supports": [
+      "qu-110-specs"
+    ]
   },
   {
     "id": "siam-n4-pdf",
@@ -817,7 +1020,9 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["n4-specs"]
+    "supports": [
+      "n4-specs"
+    ]
   },
   {
     "id": "sunra-future-manual",
@@ -827,6 +1032,8 @@
     "publishedAt": null,
     "accessedAt": "2026-10-15",
     "countryScope": "AR",
-    "supports": ["sunra-future-specs"]
+    "supports": [
+      "sunra-future-specs"
+    ]
   }
 ]
