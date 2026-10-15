@@ -25,9 +25,9 @@ engine:
   powerKw: 4.854292
   declaredPowerOriginalUnit: hp
   declaredPowerOriginalValue: 6.6
-  torqueNm: null
-  cooling: null
-  fuelSystem: null
+  torqueNm: 7.5
+  cooling: Aire
+  fuelSystem: Carburador
   transmission: Semiautomática 4 velocidades
   gears: 4
 chassis:
@@ -37,16 +37,16 @@ chassis:
   cbs: null
   suspensionFront: null
   suspensionRear: null
-  tireFront: null
-  tireRear: null
+  tireFront: 2.50-17
+  tireRear: 80/100-14
 dimensions:
-  lengthMm: null
-  widthMm: null
+  lengthMm: 1900
+  widthMm: 660
   heightMm: 1065
-  wheelbaseMm: null
+  wheelbaseMm: 1235
   seatHeightMm: null
   weightKg: 92
-  weightBasis: base no informada
+  weightBasis: vacío, según manual
 fuel:
   tankLiters: 3
   consumptionL100km: null
@@ -76,6 +76,8 @@ sourceIds:
   - siam-qu
   - siam-motos
   - acara-siomaa-2026-08
+  - siam-qu-pdf
+  - siam-qu-manual
 relatedModelIds:
   - honda-wave-110s
   - zanella-zb-110

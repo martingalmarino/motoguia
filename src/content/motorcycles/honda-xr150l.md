@@ -33,8 +33,8 @@ engine:
   declaredPowerOriginalUnit: null
   declaredPowerOriginalValue: null
   torqueNm: null
-  cooling: null
-  fuelSystem: null
+  cooling: Aire
+  fuelSystem: Carburador
   transmission: Cadena, 5 velocidades
   gears: 5
 chassis:
@@ -42,15 +42,15 @@ chassis:
   brakesRear: Tambor 110 mm
   abs: true
   cbs: null
-  suspensionFront: null
-  suspensionRear: null
-  tireFront: null
-  tireRear: null
+  suspensionFront: Horquilla telescópica, 160 mm de recorrido
+  suspensionRear: Monoamortiguador, 149 mm de recorrido
+  tireFront: 90/90-19
+  tireRear: 110/90-17
 dimensions:
-  lengthMm: null
-  widthMm: null
-  heightMm: null
-  wheelbaseMm: null
+  lengthMm: 2098
+  widthMm: 813
+  heightMm: 1129
+  wheelbaseMm: 1363
   seatHeightMm: 834
   weightKg: 131
   weightBasis: orden de marcha
@@ -85,6 +85,7 @@ sourceIds:
   - honda-xr150l
   - honda-garantia
   - acara-siomaa-2026-08
+  - honda-xr150l-pdf
 relatedModelIds:
   - corven-triax-150
   - honda-glh-150

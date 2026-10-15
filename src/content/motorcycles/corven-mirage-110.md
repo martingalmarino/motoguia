@@ -26,7 +26,7 @@ engine:
   declaredPowerOriginalUnit: hp
   declaredPowerOriginalValue: 7.5
   torqueNm: null
-  cooling: null
+  cooling: Aire
   fuelSystem: null
   transmission: 4 velocidades, embrague semiautomático
   gears: 4
@@ -34,9 +34,9 @@ chassis:
   brakesFront: Disco hidráulico
   brakesRear: Tambor
   abs: null
-  cbs: null
-  suspensionFront: null
-  suspensionRear: null
+  cbs: true
+  suspensionFront: Horquilla hidráulica
+  suspensionRear: Doble amortiguador
   tireFront: null
   tireRear: null
 dimensions:
@@ -47,7 +47,12 @@ dimensions:
   seatHeightMm: null
   weightKg: 99
   weightBasis: “en seco/orden de marcha”, sin precisar
-fuel: null
+fuel:
+  tankLiters: 4
+  consumptionL100km: null
+  measurementBasis: null
+  sourceIds:
+    - corven-mirage-pdf
 electric: null
 editorial:
   summary: "La Corven Mirage 110 es una cub semiautomática de 110 cc con caja de 4 velocidades y disco hidráulico delantero en la versión AD. Corven declara una potencia aproximada de 7,5 hp."
@@ -71,6 +76,7 @@ images:
 sourceIds:
   - corven-mirage
   - acara-siomaa-2026-08
+  - corven-mirage-pdf
 relatedModelIds:
   - corven-energy-110
   - gilera-smash

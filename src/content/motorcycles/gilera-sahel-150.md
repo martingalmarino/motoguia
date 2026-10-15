@@ -33,8 +33,8 @@ engine:
   declaredPowerOriginalUnit: hp
   declaredPowerOriginalValue: 10.7
   torqueNm: null
-  cooling: null
-  fuelSystem: null
+  cooling: Aire
+  fuelSystem: Carburador
   transmission: Manual 5 marchas
   gears: 5
 chassis:
@@ -42,15 +42,15 @@ chassis:
   brakesRear: Tambor
   abs: null
   cbs: null
-  suspensionFront: null
-  suspensionRear: null
-  tireFront: null
-  tireRear: null
+  suspensionFront: Horquilla hidráulica
+  suspensionRear: Monoamortiguador
+  tireFront: 90/90-19
+  tireRear: 110/90-17
 dimensions:
-  lengthMm: null
-  widthMm: null
-  heightMm: null
-  wheelbaseMm: null
+  lengthMm: 2060
+  widthMm: 870
+  heightMm: 1070
+  wheelbaseMm: 1370
   seatHeightMm: null
   weightKg: 120
   weightBasis: en seco
@@ -83,6 +83,7 @@ sourceIds:
   - gilera-sahel
   - ambito-motos-2026-09-08
   - acara-siomaa-2026-08
+  - gilera-sahel-pdf
 relatedModelIds:
   - corven-triax-150
   - honda-xr150l

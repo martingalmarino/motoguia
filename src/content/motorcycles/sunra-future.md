@@ -46,7 +46,7 @@ electric:
   voltageV: 72
   capacityAh: 50
   batteryChemistry: NCM
-  removableBattery: null
+  removableBattery: true
   declaredRangeKm: 150
   rangeConditions: A 40 km/h con un conductor de 75 kg. Según la marca, la cifra baja a velocidad máxima, con más peso o con mal clima.
   chargingTimeHours: "~10"
@@ -75,6 +75,7 @@ sourceIds:
   - sunra-ar
   - acara-siomaa-2026-08
   - ansv-clases
+  - sunra-future-manual
 relatedModelIds:
   - sunra-miku-max
   - motomel-stratoe

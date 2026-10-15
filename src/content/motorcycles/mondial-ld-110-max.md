@@ -21,26 +21,38 @@ assemblyCountry: null
 importer: null
 price: null
 engine:
-  displacementCc: null
-  powerKw: null
-  declaredPowerOriginalUnit: null
-  declaredPowerOriginalValue: null
+  displacementCc: 110
+  powerKw: 5.148491
+  declaredPowerOriginalUnit: hp
+  declaredPowerOriginalValue: 7
   torqueNm: null
-  cooling: null
-  fuelSystem: null
-  transmission: null
-  gears: null
+  cooling: Aire
+  fuelSystem: Carburador Euro 2
+  transmission: 4 velocidades, embrague semiautomático
+  gears: 4
 chassis:
-  brakesFront: null
-  brakesRear: null
+  brakesFront: Disco hidráulico con CBS
+  brakesRear: Tambor con CBS
   abs: null
   cbs: true
   suspensionFront: null
   suspensionRear: null
-  tireFront: null
-  tireRear: null
-dimensions: null
-fuel: null
+  tireFront: 2.25-17
+  tireRear: 80/100-14
+dimensions:
+  lengthMm: 1900
+  widthMm: 660
+  heightMm: 1070
+  wheelbaseMm: null
+  seatHeightMm: null
+  weightKg: 92
+  weightBasis: peso neto, según ficha
+fuel:
+  tankLiters: 3
+  consumptionL100km: null
+  measurementBasis: null
+  sourceIds:
+    - mondial-ld-pdf
 electric: null
 editorial:
   summary: "La Mondial LD 110 MAX es una cub urbana con frenado combinado CBS, luces LED, puerto USB y baúl de guardado. Los datos de esta ficha corresponden a la versión AD."
@@ -51,9 +63,8 @@ editorial:
     - "Luces LED y puerto USB"
     - "Baúl de guardado"
   limitations:
-    - "Cilindrada, potencia, peso y tanque figuran como “No informado”"
     - "Mondial no publica precio de lista"
-  ownershipNotes: "Antes de comprar, pedí en el concesionario la ficha completa para confirmar cilindrada, peso y tanque."
+  ownershipNotes: "Al cotizar, pedí el precio actualizado en el concesionario."
 images:
   - path: /images/motos/mondial-ld-110-max.jpg
     alt: Mondial LD 110 MAX gris, foto de catálogo de Mondial Argentina
@@ -64,6 +75,7 @@ sourceIds:
   - mondial-ld
   - mondial-ar
   - acara-siomaa-2026-08
+  - mondial-ld-pdf
 relatedModelIds:
   - corven-energy-110
   - siam-qu-110
@@ -86,4 +98,4 @@ La Mondial LD 110 MAX es una cub de uso urbano. En la versión AD, Mondial desta
 
 El CBS acciona en conjunto los frenos delantero y trasero desde el comando combinado, lo que ayuda a repartir la frenada; no es un ABS. El puerto USB permite cargar el celular mientras andás, y el baúl suma lugar para objetos chicos.
 
-Cilindrada, potencia, peso y tanque figuran como “No informado” en esta ficha. Si vas a compararla con otras cub, pedí esos datos en el concesionario antes de decidir.
+Mondial declara 110 cc y 7 hp, con un peso de 92 kg y un tanque de 3 litros. El CBS y las luces LED son los puntos destacados de equipamiento.

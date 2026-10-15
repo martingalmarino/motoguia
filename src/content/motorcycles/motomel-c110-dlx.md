@@ -26,21 +26,33 @@ engine:
   declaredPowerOriginalUnit: hp
   declaredPowerOriginalValue: 8
   torqueNm: null
-  cooling: null
+  cooling: Aire
   fuelSystem: null
-  transmission: null
-  gears: null
+  transmission: 4 velocidades, embrague automático
+  gears: 4
 chassis:
   brakesFront: Disco con CBS
-  brakesRear: null
+  brakesRear: Tambor
   abs: null
   cbs: true
-  suspensionFront: null
-  suspensionRear: null
-  tireFront: null
-  tireRear: null
-dimensions: null
-fuel: null
+  suspensionFront: Horquilla hidráulica
+  suspensionRear: Amortiguadores hidráulicos
+  tireFront: 2.50-17
+  tireRear: 2.50-17
+dimensions:
+  lengthMm: null
+  widthMm: null
+  heightMm: null
+  wheelbaseMm: null
+  seatHeightMm: null
+  weightKg: 90
+  weightBasis: vacío
+fuel:
+  tankLiters: 3.8
+  consumptionL100km: 2.1
+  measurementBasis: Declarado por Motomel, sin método de medición informado
+  sourceIds:
+    - motomel-dlx
 electric: null
 editorial:
   summary: "La Motomel C110 DLX, que la marca vende como DLX Deluxe CBS, es una cub de 108 cc y 8 hp con disco delantero y frenado combinado CBS."
@@ -51,7 +63,6 @@ editorial:
     - "Disco delantero con CBS"
     - "Garantía Motomel de 12 meses o 12.000 km"
   limitations:
-    - "Tanque y peso no figuran en la ficha"
     - "Motomel no publica precio de lista"
   ownershipNotes: "Al cotizar, confirmá que la unidad sea la Deluxe CBS y no otra DLX."
 images:
@@ -87,4 +98,4 @@ La Motomel C110 DLX es una cub de 108 cc que Motomel comercializa como DLX Delux
 
 Adelante lleva freno a disco con CBS, que acciona en conjunto el freno delantero y el trasero desde el comando combinado. Ayuda a repartir la frenada, pero no reemplaza a un ABS.
 
-Tanque y peso figuran como “No informado”. Si vas a compararla con otras cub, pedilos en el concesionario junto con el precio.
+Motomel declara 108 cc, 8 hp y un consumo de 2,1 litros cada 100 km. Al cotizar, confirmá que la unidad sea la Deluxe CBS y preguntá por el precio actualizado.
