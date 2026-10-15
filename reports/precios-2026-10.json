@@ -5,13 +5,13 @@
       "modelId": "honda-wave-110s",
       "url": "https://motos.honda.com.ar/modelos/wave-110s",
       "before": {
-        "minARS": 3529707,
+        "minARS": 3529700,
         "versions": {
-          "Tambor": 3529707,
+          "Tambor": 3529700,
           "Cast Disc": 4020800
         }
       },
-      "status": "updated",
+      "status": "unchanged",
       "scraped": [
         {
           "label": "FRENO A TAMBOR",
@@ -51,10 +51,10 @@
       "modelId": "honda-glh-150",
       "url": "https://motos.honda.com.ar/modelos/glh-150",
       "before": {
-        "minARS": 4737555,
+        "minARS": 4737600,
         "versions": {}
       },
-      "status": "updated",
+      "status": "unchanged",
       "scraped": [
         {
           "label": "GLH150 YM25",
@@ -69,10 +69,10 @@
       "modelId": "honda-xr150l",
       "url": "https://motos.honda.com.ar/modelos/xr150l",
       "before": {
-        "minARS": 6051456,
+        "minARS": 6051500,
         "versions": {}
       },
-      "status": "updated",
+      "status": "unchanged",
       "scraped": [
         {
           "label": "XR150L YM25",
