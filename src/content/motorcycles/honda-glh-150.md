@@ -20,14 +20,13 @@ manufacturingCountry: AR
 assemblyCountry: AR
 importer: Honda Motor de Argentina S.A.
 price:
-  minARS: 4737555
-  maxARS: 4737555
+  minARS: 4737600
+  maxARS: 4737600
   priceType: list
   includesRegistration: null
-  observedAt: 2026-09-18
+  observedAt: 2026-10-14
   sourceIds:
     - honda-glh
-    - ambito-motos-2026-09-08
 engine:
   displacementCc: 149
   powerKw: null

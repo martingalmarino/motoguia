@@ -2,17 +2,31 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
 import SourceList from '../../components/editorial/SourceList.astro';
-import { paths } from '../../config/site';
-import { getPublishedMotorcycles, getRanking, motorcycleUrl } from '../../lib/content/catalog';
+import { paths, rankingYearPath } from '../../config/site';
+import {
+  getLatestMonthlyRanking,
+  getLatestSummaryRanking,
+  getPublishedMotorcycles,
+  getRankingYears,
+  motorcycleUrl,
+} from '../../lib/content/catalog';
 import { displayName, reportModelLabel } from '../../lib/content/present';
+import { periodLabel } from '../../lib/content/ranking-period';
 import { formatDate, formatInteger } from '../../lib/format';
-import { itemListLd } from '../../lib/seo/jsonld';
+import { breadcrumbLd, itemListLd } from '../../lib/seo/jsonld';
 
-const ytd = await getRanking('2026-ytd');
-const month = await getRanking('2026-08');
+export async function getStaticPaths() {
+  const years = await getRankingYears();
+  return years.map((year) => ({ params: { anio: String(year) }, props: { year } }));
+}
+
+const { year } = Astro.props as { year: number };
+const summary = await getLatestSummaryRanking(year);
+const month = await getLatestMonthlyRanking(year);
+if (!summary) throw new Error(`Missing summary ranking for ${year}`);
+
 const motos = await getPublishedMotorcycles();
 const byId = new Map(motos.map((entry) => [entry.data.id, entry]));
-if (!ytd) throw new Error('Missing YTD ranking');
 
 function rowInfo(row: { reportModelName: string; modelIds: string[] }) {
   const entry = row.modelIds.map((id) => byId.get(id)).find(Boolean);
@@ -23,37 +37,59 @@ function rowInfo(row: { reportModelName: string; modelIds: string[] }) {
   };
 }
 
-const topRows = ytd.data.rows.slice(0, 10);
-const moreRows = ytd.data.rows.slice(10);
+const path = rankingYearPath(year);
+const summaryLabel = periodLabel(summary.data);
+const monthLabel = month ? periodLabel(month.data) : null;
+const isAnnual = summary.data.periodType === 'annual';
+const summaryHeading = isAnnual ? `Total ${year}` : `Acumulado ${summaryLabel}`;
+const showMonth = month && month.data.periodEnd.valueOf() === summary.data.periodEnd.valueOf() && summary.data.periodStart.valueOf() !== month.data.periodStart.valueOf();
+const comparisonPeriod = month?.data.rows.find((row) => row.comparisonPeriod)?.comparisonPeriod ?? null;
+const topRows = summary.data.rows.slice(0, 10);
+const moreRows = summary.data.rows.slice(10);
 const crumbs = [
   { href: paths.home, label: 'Inicio' },
   { href: paths.ranking, label: 'Más vendidas' },
-  { href: paths.ranking2026, label: '2026' },
+  { href: path, label: String(year) },
 ];
-const sourceIds = [...new Set([...ytd.data.sourceIds, ...(month?.data.sourceIds ?? [])])];
+const sourceIds = [...new Set([...summary.data.sourceIds, ...(showMonth && month ? month.data.sourceIds : [])])];
 const formatChange = (value: number | null) =>
   value === null ? 'Sin dato' : `${value > 0 ? '+' : ''}${formatInteger(value)}`;
+const description = showMonth
+  ? `Ranking acumulado ${summaryLabel} de patentamientos de motos ACARA/SIOMAA, con el mes de ${monthLabel} aparte.`
+  : `Ranking ${summaryLabel} de patentamientos de motos en Argentina según ACARA/SIOMAA.`;
+const lede = [
+  `Ranking de patentamientos acumulados del ${formatDate(summary.data.periodStart)} al ${formatDate(summary.data.periodEnd)}`,
+  summary.data.totalUnits ? `: ${formatInteger(summary.data.totalUnits)} motos en todo el país.` : '.',
+  ` El informe de ACARA/SIOMAA tiene fecha ${formatDate(summary.data.reportPublishedAt)}.`,
+].join('');
 ---
 
 <BaseLayout
-  title="Motos más vendidas en Argentina 2026"
-  description="Ranking acumulado enero-agosto 2026 de patentamientos ACARA/SIOMAA, con el mes de agosto aparte."
-  path={paths.ranking2026}
-  jsonLd={[itemListLd('Patentamientos motos Argentina 2026 YTD', ytd.data.rows.map((row) => ({ name: row.reportModelName, path: rowInfo(row).href ?? undefined })))]}
+  title={`Motos más vendidas en Argentina ${year}`}
+  description={description}
+  path={path}
+  modifiedTime={summary.data.verifiedAt}
+  jsonLd={[
+    breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
+    itemListLd(
+      `Patentamientos de motos en Argentina, ${summaryLabel}`,
+      summary.data.rows.map((row) => ({ name: row.reportModelName, path: rowInfo(row).href ?? undefined })),
+    ),
+  ]}
 >
   <div class="wrap">
     <PageHeader
       crumbs={crumbs}
       eyebrow="Patentamientos ACARA/SIOMAA"
-      title="Motos más vendidas en Argentina en 2026"
-      lede={`Ranking de patentamientos acumulados del ${formatDate(ytd.data.periodStart)} al ${formatDate(ytd.data.periodEnd)}: 586.650 motos en todo el país. El informe de ACARA/SIOMAA tiene fecha ${formatDate(ytd.data.reportPublishedAt)}.`}
+      title={`Motos más vendidas en Argentina en ${year}`}
+      lede={lede}
     />
 
     <section class="section" aria-labelledby="acumulado-titulo">
       <div class="section-heading">
         <div>
-          <h2 id="acumulado-titulo">Acumulado enero-agosto 2026</h2>
-          <p>Los 10 modelos con más patentamientos en lo que va del año.</p>
+          <h2 id="acumulado-titulo">{summaryHeading}</h2>
+          <p>Los 10 modelos con más patentamientos {isAnnual ? 'del año' : 'en lo que va del año'}.</p>
         </div>
       </div>
       <div class="table-region" role="region" aria-labelledby="acumulado-titulo" tabindex="0">
@@ -85,7 +121,7 @@ const formatChange = (value: number | null) =>
       {
         moreRows.length > 0 && (
           <details class="more-rows">
-            <summary>Ver puestos 11 a {ytd.data.rows.length}</summary>
+            <summary>Ver puestos 11 a {summary.data.rows.length}</summary>
             <div class="table-region" role="region" aria-label="Puestos 11 en adelante" tabindex="0">
               <table class="data-table">
                 <thead>
@@ -118,22 +154,25 @@ const formatChange = (value: number | null) =>
     </section>
 
     {
-      month && (
-        <section class="section" aria-labelledby="agosto-titulo">
+      showMonth && month && (
+        <section class="section" aria-labelledby="mes-titulo">
           <div class="section-heading">
             <div>
-              <h2 id="agosto-titulo">Solo agosto 2026</h2>
-              <p>73.566 motos patentadas en el mes. La variación compara cada modelo con julio de 2026.</p>
+              <h2 id="mes-titulo">Solo {monthLabel}</h2>
+              <p>
+                {month.data.totalUnits ? `${formatInteger(month.data.totalUnits)} motos patentadas en el mes.` : 'Patentamientos del mes.'}
+                {comparisonPeriod && ` La variación compara cada modelo con ${comparisonPeriod}.`}
+              </p>
             </div>
           </div>
-          <div class="table-region" role="region" aria-labelledby="agosto-titulo" tabindex="0">
+          <div class="table-region" role="region" aria-labelledby="mes-titulo" tabindex="0">
             <table class="data-table">
               <thead>
                 <tr>
                   <th scope="col">Puesto</th>
                   <th scope="col">Modelo</th>
                   <th scope="col" class="num">Patentamientos</th>
-                  <th scope="col" class="num">Vs. julio</th>
+                  {comparisonPeriod && <th scope="col" class="num">Vs. {comparisonPeriod.replace(/\s\d{4}$/, '')}</th>}
                 </tr>
               </thead>
               <tbody>
@@ -144,7 +183,7 @@ const formatChange = (value: number | null) =>
                       <td class="pos">{row.rank}</td>
                       <th scope="row">{info.href ? <a href={info.href}>{info.name}</a> : info.name}</th>
                       <td class="num">{formatInteger(row.units)}</td>
-                      <td class="num">{formatChange(row.comparableChange)}</td>
+                      {comparisonPeriod && <td class="num">{formatChange(row.comparableChange)}</td>}
                     </tr>
                   );
                 })}
@@ -159,7 +198,7 @@ const formatChange = (value: number | null) =>
       <div class="notice">
         <h2 id="metodo-titulo">Cómo leer este ranking</h2>
         <p>
-          Los números son patentamientos, no ventas de concesionario. ACARA separa algunas versiones en filas distintas (por ejemplo, Wave 110S y Wave 110S CD), y acá se respetan tal como aparecen en el informe. Para agosto no se usa el boletín de CADECOM, que agrupa versiones y toma otro universo de datos.
+          Los números son patentamientos, no ventas de concesionario. ACARA separa algunas versiones en filas distintas (por ejemplo, Wave 110S y Wave 110S CD), y acá se respetan tal como aparecen en el informe. Para el ranking mensual no se usa el boletín de CADECOM, que agrupa versiones y toma otro universo de datos.
         </p>
         <p><a href={paths.methodology}>Ver la metodología de MotoGuía</a></p>
       </div>

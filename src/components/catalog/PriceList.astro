@@ -2,7 +2,14 @@
 import type { CollectionEntry } from 'astro:content';
 import Icon from '../ui/Icon.astro';
 import { getBrand, motorcycleUrl } from '../../lib/content/catalog';
-import { categoryLabel, displayName, priceTypeLabel, stageImage } from '../../lib/content/present';
+import {
+  categoryLabel,
+  displayName,
+  isPriceStale,
+  priceTypeLabel,
+  STALE_PRICE_NOTE,
+  stageImage,
+} from '../../lib/content/present';
 import { formatArs, formatDate } from '../../lib/format';
 
 interface Props {
@@ -140,6 +147,7 @@ const registration = (value: boolean | null) =>
                   al <time datetime={price.observedAt.toISOString().slice(0, 10)}>{formatDate(price.observedAt)}</time>
                 </span>
                 <span class="price-row__note">{registration(price.includesRegistration)}</span>
+                {isPriceStale(entry) && <span class="price-stale">{STALE_PRICE_NOTE}</span>}
               </div>
               <a class="price-row__cta" href={url}>
                 Ver ficha <Icon name="arrow" size={16} />

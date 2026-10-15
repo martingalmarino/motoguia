@@ -1289,6 +1289,18 @@ input[type='radio'] {
   font-size: 0.875rem;
 }
 
+.price-stale {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background: #fff4e0;
+  color: #7a4b00;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .price-ref--large .price-ref__missing {
   font-size: 1.125rem;
 }

@@ -81,6 +81,73 @@ for (const { dir, strict } of seoCollections) {
   }
 }
 
+const sourceIds = new Set(JSON.parse(readFileSync(join(root, 'src/data/sources.json'), 'utf8')).map((source) => source.id));
+const aliases = JSON.parse(readFileSync(join(root, 'src/data/ranking-aliases.json'), 'utf8'));
+const sameIds = (a, b) => a.length === b.length && a.every((id, index) => id === b[index]);
+const rankings = readdirSync(join(root, 'src/content/rankings'))
+  .filter((name) => name.endsWith('.json'))
+  .map((file) => ({ file, data: JSON.parse(readFileSync(join(root, 'src/content/rankings', file), 'utf8')) }))
+  .filter(({ data }) => data.status === 'published');
+
+for (const { file, data } of rankings) {
+  const label = `rankings/${file}`;
+  const expectedId = `ranking-${file.replace(/\.json$/, '')}`;
+  if (data.id !== expectedId) errors.push(`${label}: id should be ${expectedId}`);
+  if (Number(data.periodEnd.slice(0, 4)) !== data.year) errors.push(`${label}: year does not match periodEnd`);
+  if (data.periodStart > data.periodEnd) errors.push(`${label}: periodStart is after periodEnd`);
+  for (const id of data.sourceIds) {
+    if (!sourceIds.has(id)) errors.push(`${label}: unknown source ${id}`);
+  }
+  data.rows.forEach((row, index) => {
+    const where = `${label} rank ${row.rank}`;
+    if (row.rank !== index + 1) errors.push(`${where}: ranks must be consecutive from 1`);
+    if (!(row.units > 0)) errors.push(`${where}: units must be positive`);
+    if (index > 0 && row.units > data.rows[index - 1].units) errors.push(`${where}: units must not increase down the table`);
+    for (const id of row.modelIds) {
+      if (!ids.has(id)) errors.push(`${where}: unknown model ${id}`);
+    }
+    const alias = aliases[row.reportModelName];
+    if (alias === undefined) {
+      if (row.modelIds.length > 0) errors.push(`${where}: "${row.reportModelName}" is not in src/data/ranking-aliases.json`);
+    } else if (!sameIds(alias, row.modelIds)) {
+      errors.push(`${where}: modelIds differ from ranking-aliases.json for "${row.reportModelName}"`);
+    }
+  });
+}
+
+const byYear = new Map();
+for (const { file, data } of rankings) {
+  const group = byYear.get(data.year) ?? { summary: [], monthly: [] };
+  (data.periodType === 'monthly' ? group.monthly : group.summary).push({ file, data });
+  byYear.set(data.year, group);
+}
+const newest = (items) => [...items].sort((a, b) => b.data.periodEnd.localeCompare(a.data.periodEnd))[0];
+for (const [year, group] of byYear) {
+  const summary = newest(group.summary);
+  const monthly = newest(group.monthly);
+  if (!summary) {
+    errors.push(`rankings ${year}: monthly ranking without a year-to-date ranking`);
+    continue;
+  }
+  if (monthly && monthly.data.periodEnd !== summary.data.periodEnd) {
+    errors.push(
+      `rankings ${year}: latest monthly (${monthly.file}) and year-to-date (${summary.file}) must end on the same periodEnd`,
+    );
+  }
+}
+
+const warnings = [];
+const STALE_WARNING_DAYS = 120;
+for (const file of motorcycles.filter((name) => name.endsWith('.md'))) {
+  const text = readFileSync(join(root, 'src/content/motorcycles', file), 'utf8');
+  if (!/^status: published$/m.test(text)) continue;
+  const observedAt = text.match(/^price:\n(?: {2}.*\n)*? {2}observedAt: (\d{4}-\d{2}-\d{2})/m)?.[1];
+  if (!observedAt) continue;
+  const days = Math.floor((Date.now() - Date.parse(observedAt)) / 86_400_000);
+  if (days > STALE_WARNING_DAYS) warnings.push(`${file}: price observed ${days} days ago (${observedAt})`);
+}
+if (warnings.length) console.warn(`validate-content warnings:\n${warnings.join('\n')}`);
+
 if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);

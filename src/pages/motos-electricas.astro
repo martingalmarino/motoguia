@@ -4,10 +4,14 @@ import MotorcycleCard from '../components/catalog/MotorcycleCard.astro';
 import PageHeader from '../components/editorial/PageHeader.astro';
 import Icon from '../components/ui/Icon.astro';
 import { paths } from '../config/site';
-import { getPublishedMotorcycles } from '../lib/content/catalog';
+import { getLatestSummaryRanking, getPublishedMotorcycles } from '../lib/content/catalog';
+import { periodPhrase } from '../lib/content/ranking-period';
+import { formatInteger } from '../lib/format';
 import { modelListingLd } from '../lib/seo/jsonld';
 
 const motos = (await getPublishedMotorcycles()).filter((entry) => entry.data.engineType === 'electric');
+const summary = await getLatestSummaryRanking();
+const sunra = summary?.data.brandTotals.find((item) => item.brand.toUpperCase() === 'SUNRA');
 const crumbs = [
   { href: paths.home, label: 'Inicio' },
   { href: paths.catalog, label: 'Motos' },
@@ -54,10 +58,16 @@ const description =
           <li>Tiempo de carga y si la batería se puede extraer.</li>
           <li>Costo de reemplazo de la batería: si la marca no lo publica, conviene pedirlo por escrito.</li>
         </ul>
-        <h2>Patentamientos</h2>
-        <p>
-          ACARA registró 367 patentamientos de la marca SUNRA entre enero y agosto de 2026. El informe no separa esa cifra por modelo, así que no la usamos para armar un ranking de motos eléctricas.
-        </p>
+        {
+          sunra && summary && (
+            <>
+              <h2>Patentamientos</h2>
+              <p>
+                ACARA registró {formatInteger(sunra.units)} patentamientos de la marca SUNRA {periodPhrase(summary.data)}. El informe no separa esa cifra por modelo, así que no la usamos para armar un ranking de motos eléctricas.
+              </p>
+            </>
+          )
+        }
         <h2>Licencia</h2>
         <p>
           No todos los vehículos eléctricos de dos ruedas piden la misma licencia. Revisá las clases en la <a href={`${paths.guides}licencia-moto-argentina/`}>guía de licencias de la ANSV</a>.

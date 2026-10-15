@@ -14,6 +14,7 @@
   "indexable": true,
   "seoTitle": "Motos más patentadas en agosto 2026",
   "seoDescription": "Ranking mensual de patentamientos de motos en Argentina en agosto 2026, separado del acumulado del año y con fuente ACARA/SIOMAA.",
+  "totalUnits": 73566,
   "rows": [
     { "rank": 1, "reportModelName": "HONDA WAVE 110S", "modelIds": ["honda-wave-110s"], "units": 8337, "comparableChange": -108, "comparisonPeriod": "julio 2026" },
     { "rank": 2, "reportModelName": "GILERA SMASH", "modelIds": ["gilera-smash"], "units": 6513, "comparableChange": 178, "comparisonPeriod": "julio 2026" },

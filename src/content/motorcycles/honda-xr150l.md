@@ -20,11 +20,11 @@ manufacturingCountry: AR
 assemblyCountry: AR
 importer: Honda Motor de Argentina S.A.
 price:
-  minARS: 6051456
-  maxARS: 6051456
+  minARS: 6051500
+  maxARS: 6051500
   priceType: list
   includesRegistration: null
-  observedAt: 2026-09-18
+  observedAt: 2026-10-14
   sourceIds:
     - honda-xr150l
 engine:

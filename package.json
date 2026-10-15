@@ -16,7 +16,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "launch-check": "node scripts/launch-check.mjs",
-    "og": "node scripts/build-og.mjs"
+    "og": "node scripts/build-og.mjs",
+    "prices": "node scripts/update-prices.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

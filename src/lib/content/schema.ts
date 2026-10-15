@@ -179,6 +179,10 @@ export const rankingSchema = z.object({
   metric: z.literal('registrations'),
   reportScope: z.string(),
   methodology: z.string(),
+  totalUnits: z.number().int().positive().nullable().default(null),
+  brandTotals: z
+    .array(z.object({ brand: z.string(), units: z.number().int().nonnegative() }))
+    .default([]),
   rows: z.array(rankingRowSchema).min(1),
   status: statusSchema,
   indexable: z.boolean(),

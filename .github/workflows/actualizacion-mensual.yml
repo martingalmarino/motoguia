@@ -1,0 +1,47 @@
+name: Precios Honda (mensual)
+
+on:
+  schedule:
+    # Día 5 de cada mes, 9:00 de Argentina (12:00 UTC).
+    - cron: '0 12 5 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizacion-mensual
+  cancel-in-progress: false
+
+jobs:
+  precios:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Leer precios oficiales
+        run: npm run prices
+
+      - name: Validar y construir
+        run: npm run build
+
+      - name: Publicar en main
+        run: |
+          if [ -z "$(git status --porcelain -- src/content/motorcycles src/data/sources.json reports)" ]; then
+            echo "Sin cambios."
+            exit 0
+          fi
+          git config user.name "Martin"
+          git config user.email "56572703+martingalmarino@users.noreply.github.com"
+          git add src/content/motorcycles src/data/sources.json reports
+          git commit -m "Precios Honda $(TZ=America/Argentina/Buenos_Aires date +%Y-%m)"
+          git pull --rebase origin main
+          git push origin HEAD:main

@@ -86,7 +86,17 @@ export type PriceReference = {
   typeLabel: string;
   date: string;
   dateIso: string;
+  stale: boolean;
 };
+
+export const STALE_PRICE_NOTE = 'Precio de hace más de 3 meses: confirmalo en el concesionario.';
+
+/** El precio se tomó hace más de `site.priceStaleDays` días, contados al momento del build. */
+export function isPriceStale(entry: Moto, now = new Date()): boolean {
+  const price = entry.data.price;
+  if (!price) return false;
+  return (now.valueOf() - price.observedAt.valueOf()) / 86_400_000 > site.priceStaleDays;
+}
 
 export function priceReference(entry: Moto): PriceReference | null {
   const price = entry.data.price;
@@ -99,6 +109,7 @@ export function priceReference(entry: Moto): PriceReference | null {
     typeLabel: priceTypeLabel(price.priceType),
     date: formatDate(price.observedAt),
     dateIso: price.observedAt.toISOString().slice(0, 10),
+    stale: isPriceStale(entry),
   };
 }
 

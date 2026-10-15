@@ -1,5 +1,5 @@
 ---
-import { priceReference } from '../../lib/content/present';
+import { priceReference, STALE_PRICE_NOTE } from '../../lib/content/present';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -22,6 +22,7 @@ const ref = priceReference(entry);
       <p class="price-ref__date">
         {ref.typeLabel} al <time datetime={ref.dateIso}>{ref.date}</time>
       </p>
+      {ref.stale && <p class="price-stale">{size === 'large' ? STALE_PRICE_NOTE : 'Precio de hace más de 3 meses'}</p>}
     </div>
   ) : (
     <div class:list={['price-ref', 'price-ref--empty', `price-ref--${size}`]}>

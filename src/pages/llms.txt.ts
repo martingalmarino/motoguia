@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { paths, site } from '../config/site';
+import { latestRankingYear, paths, site } from '../config/site';
 import {
   getPublishedComparisons,
   getPublishedGuides,
@@ -55,7 +55,7 @@ export const GET: APIRoute = async () => {
     ...hubs.map((hub) => `- [${hub.h1}](${absoluteUrl(hub.path)}): ${hub.seoDescription}`),
     `- [Motos eléctricas en Argentina](${absoluteUrl(paths.electric)})`,
     `- [Precios de motos en Argentina](${absoluteUrl(paths.prices)})`,
-    `- [Motos más vendidas 2026](${absoluteUrl(paths.ranking2026)}): ranking de patentamientos ACARA/SIOMAA.`,
+    `- [Motos más vendidas ${latestRankingYear}](${absoluteUrl(paths.rankingLatest)}): ranking de patentamientos ACARA/SIOMAA.`,
     '',
     '## Comparativas',
     ...comparisons.map((item) => `- [${item.data.title}](${absoluteUrl(`${paths.comparisons}${item.id}/`)}): ${item.data.description}`),

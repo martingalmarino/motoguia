@@ -4,7 +4,8 @@ import Breadcrumbs from '../../components/editorial/Breadcrumbs.astro';
 import MotorcycleCard from '../../components/catalog/MotorcycleCard.astro';
 import Icon from '../../components/ui/Icon.astro';
 import { paths } from '../../config/site';
-import { getAllBrands, getPublishedComparisons, getPublishedMotorcycles, getRanking, motorcycleUrl } from '../../lib/content/catalog';
+import { periodPhrase } from '../../lib/content/ranking-period';
+import { getAllBrands, getPublishedComparisons, getPublishedMotorcycles, getLatestSummaryRanking, motorcycleUrl } from '../../lib/content/catalog';
 import { cardSpecLine, categoryLabel, displayName } from '../../lib/content/present';
 import { breadcrumbLd, collectionPageLd, faqLd, itemListLd } from '../../lib/seo/jsonld';
 
@@ -30,7 +31,7 @@ const crumbs = [
 ];
 const join = (items: string[]) => (items.length <= 1 ? items.join('') : `${items.slice(0, -1).join(', ')} y ${items.at(-1)}`);
 const newest = motos.map((moto) => moto.data.reviewedAt).sort((a, b) => b.valueOf() - a.valueOf())[0];
-const ytd = await getRanking('ranking-2026-ytd');
+const ytd = await getLatestSummaryRanking();
 const topRow = ytd?.data.rows.find((row) => row.modelIds.some((id) => ids.has(id)));
 const topModel = topRow ? motos.find((moto) => topRow.modelIds.includes(moto.data.id)) : undefined;
 const warranties = [...new Set(motos.map((moto) => moto.data.warranty).filter((value): value is string => Boolean(value)))];
@@ -45,7 +46,7 @@ const faqs = [
     ? [
         {
           question: `¿Cuál es la moto ${brand.name} más patentada?`,
-          answer: `La ${displayName(topModel)}: figura en el puesto ${topRow.rank} del ranking de patentamientos de enero a agosto de 2026 de ACARA/SIOMAA.`,
+          answer: `La ${displayName(topModel)}: figura en el puesto ${topRow.rank} del ranking de patentamientos de ACARA/SIOMAA ${periodPhrase(ytd.data)}.`,
         },
       ]
     : []),

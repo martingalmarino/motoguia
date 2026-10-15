@@ -4,22 +4,23 @@ import BrandTile from '../components/catalog/BrandTile.astro';
 import MotorcycleCard from '../components/catalog/MotorcycleCard.astro';
 import SearchForm from '../components/search/SearchForm.astro';
 import Icon from '../components/ui/Icon.astro';
-import { paths, site } from '../config/site';
+import { paths, rankingYearPath, site } from '../config/site';
 import {
   getAllBrands,
   getPublishedAccessoryGuides,
   getPublishedGuides,
   getPublishedMotorcycles,
-  getRanking,
+  getLatestSummaryRanking,
   motorcycleUrl,
 } from '../lib/content/catalog';
 import { displayName, reportModelLabel, stageImage } from '../lib/content/present';
+import { periodShortLabel } from '../lib/content/ranking-period';
 import { formatDate, formatInteger } from '../lib/format';
 import { organizationLd, websiteLd } from '../lib/seo/jsonld';
 
 const motos = await getPublishedMotorcycles();
 const byId = new Map(motos.map((entry) => [entry.data.id, entry]));
-const ranking = await getRanking('2026-ytd');
+const ranking = await getLatestSummaryRanking();
 const guides = await getPublishedGuides();
 const accessories = await getPublishedAccessoryGuides();
 
@@ -115,7 +116,7 @@ const helmet = accessories.find((item) => item.id === 'como-elegir-casco-moto') 
         </div>
         <a class="home-hero__caption" href={motorcycleUrl(hero)}>
           {displayName(hero)}
-          {heroRank && <span>· N.º {heroRank.rank} en patentamientos ene-ago 2026</span>}
+          {heroRank && ranking && <span>· N.º {heroRank.rank} en patentamientos {periodShortLabel(ranking.data)}</span>}
         </a>
       </figure>
     </div>
@@ -187,7 +188,7 @@ const helmet = accessories.find((item) => item.id === 'como-elegir-casco-moto') 
                 Patentamientos acumulados del {formatDate(ranking.data.periodStart)} al {formatDate(ranking.data.periodEnd)}, según ACARA/SIOMAA.
               </p>
             </div>
-            <a class="link-arrow" href={paths.ranking2026}>Ver ranking completo <Icon name="arrow" size={18} /></a>
+            <a class="link-arrow" href={rankingYearPath(ranking.data.year)}>Ver ranking completo <Icon name="arrow" size={18} /></a>
           </div>
           <ol class="rank-list">
             {topFive.map((row) => (

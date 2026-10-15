@@ -1,0 +1,26 @@
+{
+  "honda-wave-110s": {
+    "adapter": "honda",
+    "url": "https://motos.honda.com.ar/modelos/wave-110s",
+    "sourceId": "honda-wave",
+    "versions": { "FRENO A TAMBOR": "Tambor", "FRENO A DISCO": "Cast Disc" }
+  },
+  "honda-navi": {
+    "adapter": "honda",
+    "url": "https://motos.honda.com.ar/modelos/navi",
+    "sourceId": "honda-navi",
+    "versions": {}
+  },
+  "honda-glh-150": {
+    "adapter": "honda",
+    "url": "https://motos.honda.com.ar/modelos/glh-150",
+    "sourceId": "honda-glh",
+    "versions": {}
+  },
+  "honda-xr150l": {
+    "adapter": "honda",
+    "url": "https://motos.honda.com.ar/modelos/xr150l",
+    "sourceId": "honda-xr150l",
+    "versions": {}
+  }
+}

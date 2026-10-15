@@ -1,3 +1,6 @@
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+
 function stripSlash(value: string): string {
   return value.replace(/\/+$/, '');
 }
@@ -86,8 +89,31 @@ export const site = {
     envValue('PUBLIC_GOOGLE_SITE_VERIFICATION') ?? 'SQoTmZlSdJ4aZeZoHGEdTKJORX9Eai4AdOG19by9k_8',
   defaultOgImage: '/images/og-default.png',
   defaultOgImageAlt: 'MotoGuía AR, guía para elegir y comparar motos en Argentina',
-  priceReviewDays: 30,
+  priceStaleDays: 90,
 } as const;
+
+/** Año del ranking acumulado o anual más reciente publicado en src/content/rankings. */
+function readLatestRankingYear(): number {
+  try {
+    const dir = join(process.cwd(), 'src/content/rankings');
+    const years = readdirSync(dir)
+      .filter((file) => file.endsWith('.json'))
+      .map((file) => JSON.parse(readFileSync(join(dir, file), 'utf8')))
+      .filter((ranking) => ranking.status === 'published' && ranking.periodType !== 'monthly')
+      .map((ranking) => Number(ranking.year))
+      .filter(Number.isFinite);
+    if (years.length > 0) return Math.max(...years);
+  } catch {
+    // Sin acceso al disco: se usa el año en curso.
+  }
+  return new Date().getFullYear();
+}
+
+export const latestRankingYear = readLatestRankingYear();
+
+export function rankingYearPath(year: number): string {
+  return `/motos-mas-vendidas/${year}/`;
+}
 
 export const paths = {
   home: '/',
@@ -95,7 +121,7 @@ export const paths = {
   prices: '/motos/precios/',
   brands: '/marcas/',
   ranking: '/motos-mas-vendidas/',
-  ranking2026: '/motos-mas-vendidas/2026/',
+  rankingLatest: rankingYearPath(latestRankingYear),
   chinese: '/motos-chinas/',
   electric: '/motos-electricas/',
   comparator: '/comparador/',
@@ -153,7 +179,7 @@ export const footerGroups: { title: string; links: NavLink[] }[] = [
       { href: paths.catalog, label: 'Catálogo' },
       { href: paths.prices, label: 'Precios' },
       { href: paths.brands, label: 'Marcas' },
-      { href: paths.ranking2026, label: 'Más vendidas 2026' },
+      { href: paths.rankingLatest, label: `Más vendidas ${latestRankingYear}` },
       { href: '/motos/110cc/', label: 'Motos 110 cc' },
       { href: '/motos/150cc/', label: 'Motos 150 cc' },
       { href: '/motos/tipo/trail/', label: 'Motos trail' },

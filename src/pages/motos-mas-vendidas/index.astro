@@ -2,11 +2,21 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
 import Icon from '../../components/ui/Icon.astro';
-import { paths } from '../../config/site';
-import { getRanking } from '../../lib/content/catalog';
+import { paths, rankingYearPath } from '../../config/site';
+import { getLatestMonthlyRanking, getLatestSummaryRanking, getRankingYears } from '../../lib/content/catalog';
+import { periodLabel, periodPhrase } from '../../lib/content/ranking-period';
 import { formatDate } from '../../lib/format';
 
-const ytd = await getRanking('2026-ytd');
+const years = await getRankingYears();
+const cards = (
+  await Promise.all(
+    years.map(async (year) => ({
+      year,
+      summary: await getLatestSummaryRanking(year),
+      month: await getLatestMonthlyRanking(year),
+    })),
+  )
+).filter((card) => card.summary);
 const crumbs = [
   { href: paths.home, label: 'Inicio' },
   { href: paths.ranking, label: 'Más vendidas' },
@@ -29,12 +39,26 @@ const crumbs = [
     <section class="section" aria-labelledby="rankings-titulo">
       <h2 id="rankings-titulo" class="visually-hidden">Rankings disponibles</h2>
       <div class="editorial-cards">
-        <a class="editorial-card" href={paths.ranking2026}>
-          <span class="editorial-card__kicker"><Icon name="tag" size={16} /> Ranking 2026</span>
-          <h3>Motos más patentadas en 2026</h3>
-          <p>Acumulado de enero a agosto y el mes de agosto por separado, con las fichas de cada modelo cuando están en MotoGuía.</p>
-          {ytd && <span class="editorial-card__meta">Datos al {formatDate(ytd.data.periodEnd)}</span>}
-        </a>
+        {
+          cards.map(({ year, summary, month }) => (
+            <a class="editorial-card" href={rankingYearPath(year)}>
+              <span class="editorial-card__kicker">
+                <Icon name="tag" size={16} /> Ranking {year}
+              </span>
+              <h3>Motos más patentadas en {year}</h3>
+              <p>
+                {[
+                  summary!.data.periodType === 'annual' ? `Total del año ${year}` : `Acumulado ${periodPhrase(summary!.data)}`,
+                  month && month.data.periodEnd.valueOf() === summary!.data.periodEnd.valueOf()
+                    ? ` y el mes de ${periodLabel(month.data)} por separado`
+                    : '',
+                  ', con las fichas de cada modelo cuando están en MotoGuía.',
+                ].join('')}
+              </p>
+              <span class="editorial-card__meta">Datos al {formatDate(summary!.data.periodEnd)}</span>
+            </a>
+          ))
+        }
       </div>
       <p class="muted">Los rankings de años anteriores se suman en su propia página a medida que se verifican los informes.</p>
     </section>

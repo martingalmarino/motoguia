@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-10-14",
+  "results": [
+    {
+      "modelId": "honda-wave-110s",
+      "url": "https://motos.honda.com.ar/modelos/wave-110s",
+      "before": {
+        "minARS": 3529707,
+        "versions": {
+          "Tambor": 3529707,
+          "Cast Disc": 4020800
+        }
+      },
+      "status": "updated",
+      "scraped": [
+        {
+          "label": "FRENO A TAMBOR",
+          "priceARS": 3529700
+        },
+        {
+          "label": "FRENO A DISCO",
+          "priceARS": 4020800
+        }
+      ],
+      "minARS": 3529700,
+      "maxARS": 4020800,
+      "versionPrices": {
+        "Tambor": 3529700,
+        "Cast Disc": 4020800
+      }
+    },
+    {
+      "modelId": "honda-navi",
+      "url": "https://motos.honda.com.ar/modelos/navi",
+      "before": {
+        "minARS": 3434700,
+        "versions": {}
+      },
+      "status": "unchanged",
+      "scraped": [
+        {
+          "label": "NAVI",
+          "priceARS": 3434700
+        }
+      ],
+      "minARS": 3434700,
+      "maxARS": 3434700,
+      "versionPrices": {}
+    },
+    {
+      "modelId": "honda-glh-150",
+      "url": "https://motos.honda.com.ar/modelos/glh-150",
+      "before": {
+        "minARS": 4737555,
+        "versions": {}
+      },
+      "status": "updated",
+      "scraped": [
+        {
+          "label": "GLH150 YM25",
+          "priceARS": 4737600
+        }
+      ],
+      "minARS": 4737600,
+      "maxARS": 4737600,
+      "versionPrices": {}
+    },
+    {
+      "modelId": "honda-xr150l",
+      "url": "https://motos.honda.com.ar/modelos/xr150l",
+      "before": {
+        "minARS": 6051456,
+        "versions": {}
+      },
+      "status": "updated",
+      "scraped": [
+        {
+          "label": "XR150L YM25",
+          "priceARS": 6051500
+        }
+      ],
+      "minARS": 6051500,
+      "maxARS": 6051500,
+      "versionPrices": {}
+    }
+  ]
+}

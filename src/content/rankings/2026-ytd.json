@@ -14,6 +14,8 @@
   "indexable": true,
   "seoTitle": "Motos más vendidas en Argentina 2026",
   "seoDescription": "Ranking acumulado enero-agosto 2026 de patentamientos de motos en Argentina, con fuente ACARA/SIOMAA y el mes de agosto aparte.",
+  "totalUnits": 586650,
+  "brandTotals": [{ "brand": "SUNRA", "units": 367 }],
   "rows": [
     { "rank": 1, "reportModelName": "HONDA WAVE 110S", "modelIds": ["honda-wave-110s"], "units": 59184, "comparableChange": null, "comparisonPeriod": null },
     { "rank": 2, "reportModelName": "GILERA SMASH", "modelIds": ["gilera-smash"], "units": 51687, "comparableChange": null, "comparisonPeriod": null },

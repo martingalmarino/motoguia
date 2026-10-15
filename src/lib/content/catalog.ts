@@ -1,6 +1,7 @@
 import { getCollection, getEntry, render, type CollectionEntry } from 'astro:content';
 import brandsData from '../../data/brands.json';
 import sourcesData from '../../data/sources.json';
+import { latestByPeriodEnd } from './ranking-period';
 
 export type Brand = (typeof brandsData)[number];
 export type Source = (typeof sourcesData)[number];
@@ -44,6 +45,28 @@ export async function getPublishedRankings() {
 export async function getRanking(id: string) {
   const rankings = await getPublishedRankings();
   return rankings.find((entry) => entry.data.id === id || entry.id === id);
+}
+
+/** Ranking acumulado (o anual) más reciente; si se pasa un año, el más reciente de ese año. */
+export async function getLatestSummaryRanking(year?: number) {
+  const rankings = (await getPublishedRankings()).filter(
+    (entry) => entry.data.periodType !== 'monthly' && (year === undefined || entry.data.year === year),
+  );
+  const annual = rankings.filter((entry) => entry.data.periodType === 'annual');
+  return latestByPeriodEnd(annual.length > 0 && year !== undefined ? annual : rankings);
+}
+
+export async function getLatestMonthlyRanking(year?: number) {
+  const rankings = (await getPublishedRankings()).filter(
+    (entry) => entry.data.periodType === 'monthly' && (year === undefined || entry.data.year === year),
+  );
+  return latestByPeriodEnd(rankings);
+}
+
+export async function getRankingYears(): Promise<number[]> {
+  const rankings = await getPublishedRankings();
+  const years = rankings.filter((entry) => entry.data.periodType !== 'monthly').map((entry) => entry.data.year);
+  return [...new Set(years)].sort((a, b) => b - a);
 }
 
 export function getBrand(id: string): Brand | undefined {

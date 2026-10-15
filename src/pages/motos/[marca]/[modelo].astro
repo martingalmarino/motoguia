@@ -7,13 +7,13 @@ import MotorcycleCard from '../../../components/catalog/MotorcycleCard.astro';
 import PriceReference from '../../../components/catalog/PriceReference.astro';
 import SpecificationGroup, { type SpecRow } from '../../../components/catalog/SpecificationGroup.astro';
 import Icon from '../../../components/ui/Icon.astro';
-import { paths } from '../../../config/site';
+import { paths, rankingYearPath } from '../../../config/site';
 import {
   getBrand,
   getPublishedComparisons,
   getPublishedGuides,
   getPublishedMotorcycles,
-  getRanking,
+  getLatestSummaryRanking,
   motorcycleUrl,
   relatedMotorcycles,
   render,
@@ -57,7 +57,7 @@ const facts = keyFacts(entry);
 const allMotos = await getPublishedMotorcycles();
 const hubs = hubsForModel(entry, allMotos);
 const comparisons = (await getPublishedComparisons()).filter((item) => item.data.modelIds.includes(d.id));
-const ytd = await getRanking('ranking-2026-ytd');
+const ytd = await getLatestSummaryRanking();
 const rankingRow = ytd?.data.rows.find((row) => row.modelIds.includes(d.id));
 const faqs = modelFaqs(entry);
 const ogImage = `/images/og/${entry.id}.jpg`;
@@ -431,8 +431,8 @@ const availability =
               )}
               {rankingRow && (
                 <li>
-                  <a class="link-arrow" href={paths.ranking2026}>
-                    Su lugar en el ranking de patentamientos 2026 <Icon name="arrow" size={16} />
+                  <a class="link-arrow" href={rankingYearPath(ytd!.data.year)}>
+                    Su lugar en el ranking de patentamientos {ytd!.data.year} <Icon name="arrow" size={16} />
                   </a>
                 </li>
               )}

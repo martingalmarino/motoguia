@@ -20,14 +20,13 @@ manufacturingCountry: AR
 assemblyCountry: AR
 importer: Honda Motor de Argentina S.A.
 price:
-  minARS: 3529707
+  minARS: 3529700
   maxARS: 4020800
   priceType: list
   includesRegistration: null
-  observedAt: 2026-09-18
+  observedAt: 2026-10-14
   sourceIds:
     - honda-wave
-    - ambito-motos-2026-09-08
 engine:
   displacementCc: 109
   powerKw: null
@@ -107,7 +106,7 @@ licenceHint: Hasta 150 cc, clase A 1.2 según ANSV. Verificá la cédula.
 warranty: 36 meses o 36.000 km; batería 12 meses.
 versions:
   - name: "Tambor"
-    priceARS: 3529707
+    priceARS: 3529700
     note: "Freno delantero a tambor."
   - name: "Cast Disc"
     priceARS: 4020800
