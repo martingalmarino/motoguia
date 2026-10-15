@@ -32,7 +32,7 @@ chassis:
 dimensions:
   lengthMm: 1745
   widthMm: 685
-  heightMm: null
+  heightMm: 1090
   wheelbaseMm: 1285
   seatHeightMm: null
   weightKg: 81
@@ -74,6 +74,7 @@ sourceIds:
   - siam-n4
   - siam-motos
   - ansv-clases
+  - siam-n4-pdf
 relatedModelIds:
   - motomel-stratoe
   - sunra-miku-max

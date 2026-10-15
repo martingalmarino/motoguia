@@ -25,8 +25,8 @@ chassis:
   brakesRear: Disco
   abs: null
   cbs: null
-  suspensionFront: null
-  suspensionRear: null
+  suspensionFront: Hidráulica
+  suspensionRear: Hidráulica
   tireFront: 3.0-10
   tireRear: 3.0-10
 dimensions:
@@ -45,7 +45,7 @@ electric:
   capacityBasis: 60 V × 20 Ah extraíble
   voltageV: 60
   capacityAh: 20
-  batteryChemistry: null
+  batteryChemistry: litio
   removableBattery: true
   declaredRangeKm: 45
   rangeConditions: En condiciones ideales. Según la marca, la cifra baja a velocidad máxima, con más peso o con mal clima.

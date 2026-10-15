@@ -25,9 +25,9 @@ engine:
   powerKw: 5.295591
   declaredPowerOriginalUnit: hp
   declaredPowerOriginalValue: 7.2
-  torqueNm: null
-  cooling: null
-  fuelSystem: null
+  torqueNm: 7.2
+  cooling: Aire
+  fuelSystem: Carburador
   transmission: Semiautomática 4 marchas
   gears: 4
 chassis:
@@ -35,15 +35,15 @@ chassis:
   brakesRear: Disco (Full II)
   abs: null
   cbs: true
-  suspensionFront: null
-  suspensionRear: null
-  tireFront: null
-  tireRear: null
+  suspensionFront: Horquilla hidráulica
+  suspensionRear: Doble amortiguador
+  tireFront: 2.25-17
+  tireRear: 2.75-14
 dimensions:
-  lengthMm: null
-  widthMm: null
+  lengthMm: 1910
+  widthMm: 680
   heightMm: 1070
-  wheelbaseMm: null
+  wheelbaseMm: 1280
   seatHeightMm: null
   weightKg: 87
   weightBasis: en seco, versión Full II
@@ -76,6 +76,7 @@ sourceIds:
   - gilera-smash
   - gilera-ar
   - acara-siomaa-2026-08
+  - gilera-smash-pdf
 relatedModelIds:
   - honda-wave-110s
   - corven-energy-110

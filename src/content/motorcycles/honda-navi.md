@@ -33,8 +33,8 @@ engine:
   declaredPowerOriginalUnit: null
   declaredPowerOriginalValue: null
   torqueNm: null
-  cooling: null
-  fuelSystem: null
+  cooling: Aire
+  fuelSystem: Carburador
   transmission: Automática tipo V-Matic
   gears: null
 chassis:
@@ -42,15 +42,15 @@ chassis:
   brakesRear: Tambor 130 mm
   abs: null
   cbs: true
-  suspensionFront: null
-  suspensionRear: null
-  tireFront: null
-  tireRear: null
+  suspensionFront: Horquilla telescópica, 89 mm de recorrido
+  suspensionRear: Monoamortiguador, 70 mm de recorrido
+  tireFront: 90/90-12
+  tireRear: 90/100-10
 dimensions:
-  lengthMm: null
-  widthMm: null
-  heightMm: null
-  wheelbaseMm: null
+  lengthMm: 1808
+  widthMm: 748
+  heightMm: 1039
+  wheelbaseMm: 1286
   seatHeightMm: 762
   weightKg: 104
   weightBasis: orden de marcha
@@ -84,6 +84,7 @@ sourceIds:
   - honda-navi
   - honda-garantia
   - acara-siomaa-2026-08
+  - honda-navi-pdf
 relatedModelIds:
   - honda-wave-110s
   - siam-n4

@@ -25,24 +25,24 @@ engine:
   powerKw: 4.927841
   declaredPowerOriginalUnit: hp
   declaredPowerOriginalValue: 6.7
-  torqueNm: null
-  cooling: null
-  fuelSystem: null
+  torqueNm: 6.9
+  cooling: Aire
+  fuelSystem: Carburador
   transmission: 4 velocidades
   gears: 4
 chassis:
   brakesFront: Disco
   brakesRear: Tambor
   abs: null
-  cbs: null
-  suspensionFront: null
-  suspensionRear: null
+  cbs: true
+  suspensionFront: Horquilla hidráulica
+  suspensionRear: Doble amortiguador hidráulico
   tireFront: 110/90-17
-  tireRear: null
+  tireRear: 80/100-14
 dimensions:
-  lengthMm: null
-  widthMm: null
-  heightMm: null
+  lengthMm: 1960
+  widthMm: 700
+  heightMm: 1100
   wheelbaseMm: null
   seatHeightMm: null
   weightKg: 97
@@ -76,6 +76,7 @@ sourceIds:
   - corven-energy
   - corven-motos
   - acara-siomaa-2026-08
+  - corven-energy-pdf
 relatedModelIds:
   - gilera-smash
   - mondial-ld-110-max

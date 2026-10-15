@@ -35,10 +35,10 @@ chassis:
   brakesRear: Tambor
   abs: null
   cbs: null
-  suspensionFront: null
-  suspensionRear: null
-  tireFront: null
-  tireRear: null
+  suspensionFront: Horquilla hidráulica
+  suspensionRear: Monoamortiguador hidráulico
+  tireFront: 3.00-21
+  tireRear: 4.10-18
 dimensions: null
 fuel:
   tankLiters: 12
@@ -68,6 +68,7 @@ images:
 sourceIds:
   - corven-triax
   - acara-siomaa-2026-08
+  - corven-triax-pdf
 relatedModelIds:
   - honda-xr150l
   - gilera-sahel-150

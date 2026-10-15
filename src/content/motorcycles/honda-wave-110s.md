@@ -33,8 +33,8 @@ engine:
   declaredPowerOriginalUnit: null
   declaredPowerOriginalValue: null
   torqueNm: null
-  cooling: null
-  fuelSystem: null
+  cooling: Aire
+  fuelSystem: Carburador
   transmission: Cadena, 4 velocidades
   gears: 4
 chassis:
@@ -42,15 +42,15 @@ chassis:
   brakesRear: Tambor 110 mm en ficha disco
   abs: null
   cbs: true
-  suspensionFront: null
-  suspensionRear: null
-  tireFront: null
-  tireRear: null
+  suspensionFront: Horquilla telescópica, 81 mm de recorrido
+  suspensionRear: Doble amortiguador hidráulico, 81 mm de recorrido
+  tireFront: 70/90-17
+  tireRear: 80/90-17
 dimensions:
-  lengthMm: null
-  widthMm: null
-  heightMm: null
-  wheelbaseMm: null
+  lengthMm: 1898
+  widthMm: 702
+  heightMm: 1086
+  wheelbaseMm: 1227
   seatHeightMm: 763
   weightKg: 102
   weightBasis: en orden de marcha, versión Cast Disc

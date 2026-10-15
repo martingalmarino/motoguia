@@ -33,8 +33,8 @@ engine:
   declaredPowerOriginalUnit: null
   declaredPowerOriginalValue: null
   torqueNm: null
-  cooling: null
-  fuelSystem: null
+  cooling: Aire
+  fuelSystem: Inyección electrónica
   transmission: Cadena, 5 velocidades
   gears: 5
 chassis:
@@ -42,15 +42,15 @@ chassis:
   brakesRear: Tambor 130 mm
   abs: null
   cbs: true
-  suspensionFront: null
-  suspensionRear: null
-  tireFront: null
-  tireRear: null
+  suspensionFront: Horquilla telescópica, 107 mm de recorrido
+  suspensionRear: Doble amortiguador hidráulico, 91 mm de recorrido
+  tireFront: 80/100-18 tubeless
+  tireRear: 90/90-18 tubeless
 dimensions:
-  lengthMm: null
-  widthMm: null
-  heightMm: null
-  wheelbaseMm: null
+  lengthMm: 2038
+  widthMm: 771
+  heightMm: 1077
+  wheelbaseMm: 1303
   seatHeightMm: 757
   weightKg: 129
   weightBasis: orden de marcha
@@ -84,6 +84,7 @@ sourceIds:
   - honda-glh
   - honda-garantia
   - acara-siomaa-2026-08
+  - honda-glh-pdf
 relatedModelIds:
   - motomel-s2-150
   - honda-xr150l

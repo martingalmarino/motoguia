@@ -26,7 +26,7 @@ engine:
   declaredPowerOriginalValue: 7
   torqueNm: null
   cooling: Aire
-  fuelSystem: null
+  fuelSystem: Carburador
   transmission: 4 velocidades o automática según versión; embrague automático en START
   gears: 4
 chassis:

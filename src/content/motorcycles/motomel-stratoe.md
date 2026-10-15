@@ -25,10 +25,10 @@ chassis:
   brakesRear: Disco
   abs: null
   cbs: null
-  suspensionFront: null
-  suspensionRear: null
-  tireFront: null
-  tireRear: null
+  suspensionFront: Horquilla telescópica
+  suspensionRear: Basculante
+  tireFront: 3.50-10 tubeless
+  tireRear: 3.50-10 tubeless
 dimensions:
   lengthMm: null
   widthMm: null
