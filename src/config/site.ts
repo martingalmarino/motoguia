@@ -216,7 +216,22 @@ export const footerGroups: { title: string; links: NavLink[] }[] = [
       { href: paths.affiliates, label: 'Afiliados' },
     ],
   },
+  {
+    title: 'Enlaces útiles',
+    links: [
+      { href: 'https://www.calculadorapatentes.ar/', label: 'Calculadora de Patentes Argentina' },
+      { href: 'https://www.patentearba.com/', label: 'Simular Patente ARBA' },
+      { href: 'https://www.autoschinos.ar/', label: 'Autos Chinos en Argentina' },
+      { href: 'https://www.autoescuelas.ar/', label: 'Escuelas de Manejo en Argentina' },
+      { href: 'https://www.guiadelconductor.ar/', label: 'Guía del Conductor' },
+    ],
+  },
 ];
+
+export const author = {
+  name: 'Martín Galmarino',
+  email: 'm.galmarino@gmail.com',
+};
 
 export function motorcyclePath(brandSlug: string, modelSlug: string): string {
   return `/motos/${brandSlug}/${modelSlug}/`;

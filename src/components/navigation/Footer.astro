@@ -1,6 +1,6 @@
 ---
 import Logo from './Logo.astro';
-import { footerGroups, paths } from '../../config/site';
+import { author, footerGroups, paths } from '../../config/site';
 ---
 
 <footer class="site-footer">
@@ -17,7 +17,13 @@ import { footerGroups, paths } from '../../config/site';
             <ul>
               {group.links.map((link) => (
                 <li>
-                  <a href={link.href}>{link.label}</a>
+                  {link.href.startsWith('http') ? (
+                    <a href={link.href} rel="noopener">
+                      {link.label}
+                    </a>
+                  ) : (
+                    <a href={link.href}>{link.label}</a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -28,5 +34,8 @@ import { footerGroups, paths } from '../../config/site';
   </div>
   <div class="wrap site-footer__note">
     <p>MotoGuía AR es un sitio de información: no vende motos. Los precios son referencias con fecha y pueden cambiar.</p>
+    <p class="site-footer__credit">
+      Desarrollado por <a href={`mailto:${author.email}`}>{author.name}</a>
+    </p>
   </div>
 </footer>
