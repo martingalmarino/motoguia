@@ -25,7 +25,7 @@ function priceFaq(entry: Moto, name: string): Faq {
       answer: `La marca no publica un precio para la ${name}. Pedí una cotización por escrito en un concesionario y confirmá qué versión te ofrecen y si el precio incluye patentamiento.`,
     };
   }
-  const label = priceTypeLabel(d.price.priceType).toLowerCase();
+  const label = priceTypeLabel(d.price.priceType, entry).toLowerCase();
   const date = formatDate(d.price.observedAt);
   const priced = d.versions.filter((version) => version.priceARS !== null);
   const amount =

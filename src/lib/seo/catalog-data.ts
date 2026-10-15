@@ -71,7 +71,7 @@ export function modelRecord(entry: Moto) {
       ? {
           minARS: d.price.minARS,
           maxARS: d.price.maxARS,
-          type: priceTypeLabel(d.price.priceType),
+          type: priceTypeLabel(d.price.priceType, entry),
           observedAt: isoDate(d.price.observedAt),
           includesRegistration: d.price.includesRegistration,
         }

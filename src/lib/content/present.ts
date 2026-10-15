@@ -40,8 +40,17 @@ export function engineLabel(type: string): string {
   return type === 'electric' ? 'Eléctrica' : 'Combustión';
 }
 
-export function priceTypeLabel(type: string): string {
-  return PRICE_TYPE_LABELS[type] ?? 'Precio de referencia';
+export function isDealerPrice(entry: Moto): boolean {
+  return entry.data.dataNotes?.some(note => note.startsWith('Precio de concesionario, no oficial')) ?? false;
+}
+
+export function priceTypeLabel(type: string, entry?: Moto): string {
+  const baseLabel = PRICE_TYPE_LABELS[type] ?? 'Precio de referencia';
+  if (entry && isDealerPrice(entry)) {
+    const suffix = type === 'promotional' ? ' de concesionario (oferta)' : type === 'cash' ? ' de concesionario (contado)' : ' de concesionario';
+    return baseLabel.replace(/^Precio /, 'Precio') + suffix.replace('Precio ', '');
+  }
+  return baseLabel;
 }
 
 function decimal(value: number): string {
@@ -106,7 +115,7 @@ export function priceReference(entry: Moto): PriceReference | null {
     amount: formatArs(price.minARS),
     prefix: isRange ? 'Desde' : null,
     rangeNote: isRange ? `Según versión, hasta ${formatArs(price.maxARS)}` : null,
-    typeLabel: priceTypeLabel(price.priceType),
+    typeLabel: priceTypeLabel(price.priceType, entry),
     date: formatDate(price.observedAt),
     dateIso: price.observedAt.toISOString().slice(0, 10),
     stale: isPriceStale(entry),
@@ -139,7 +148,7 @@ export function registrationLabel(entry: Moto): string {
 export function priceLabel(entry: Moto): string {
   const price = entry.data.price;
   if (!price) return 'Precio no disponible';
-  return `${shortPrice(entry)} · ${priceTypeLabel(price.priceType)} al ${formatDate(price.observedAt)}. ${registrationLabel(entry)}`;
+  return `${shortPrice(entry)} · ${priceTypeLabel(price.priceType, entry)} al ${formatDate(price.observedAt)}. ${registrationLabel(entry)}`;
 }
 
 export type KeyFact = { label: string; value: string };

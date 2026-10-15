@@ -1035,5 +1035,29 @@
     "supports": [
       "sunra-future-specs"
     ]
+  },
+  {
+    "id": "yuhmak-ofertas-2026-10",
+    "title": "Ofertas Exclusivas — Yuhmak Motos (precio de concesionario, no oficial)",
+    "url": "https://ofertas.yuhmak.com/",
+    "publisher": "Yuhmak Motos (concesionario; no es precio oficial de la marca)",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "precio-zanella-zb-110-z3-st"
+    ]
+  },
+  {
+    "id": "sunra-nordelta-miku-max-2026-10",
+    "title": "Miku Max PRECIO CONTADO $4.140.000 — Sunra Nordelta (precio de concesionario, no oficial)",
+    "url": "https://www.sunranordelta.com.ar/productos/miku-max-precio-contado-3-850-000-gsv8s/",
+    "publisher": "Sunra Nordelta (concesionario; no es precio oficial de la marca)",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "precio-sunra-miku-max"
+    ]
   }
 ]
