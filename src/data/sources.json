@@ -1,5 +1,35 @@
 [
   {
+    "id": "acara-siomaa-2026-09",
+    "title": "Informe del Sector SIOMAA — Septiembre 2026",
+    "url": "https://autoblog.com.ar/wp-content/uploads/2026/10/2026.09-ACARA.-Informe-de-Mercado-2W_Inst.pdf",
+    "publisher": "ACARA / SIOMAA (hospedado por Autoblog)",
+    "publishedAt": "2026-09-30",
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["ranking-ytd-2026", "ranking-septiembre-2026", "totales-mercado"]
+  },
+  {
+    "id": "motonews-patentamientos-septiembre-2026",
+    "title": "Patentamientos de motovehículos: septiembre finalizó con 80.113 unidades",
+    "url": "https://www.motonews.com.ar/patentamientos-de-motovehiculos-septiembre-finalizo-con-80-113-unidades-000019346/",
+    "publisher": "MotoNews",
+    "publishedAt": "2026-10-01",
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["ranking-septiembre-2026-top5", "totales-septiembre"]
+  },
+  {
+    "id": "lanacion-motos-septiembre-2026",
+    "title": "¿Cuáles son las motos más vendidas en la Argentina en septiembre 2026?",
+    "url": "https://www.lanacion.com.ar/autos/cuales-son-las-motos-mas-vendidas-en-la-argentina-en-septiembre-2026-nid09102026/",
+    "publisher": "La Nación",
+    "publishedAt": "2026-10-09",
+    "accessedAt": "2026-10-14",
+    "countryScope": "AR",
+    "supports": ["ranking-septiembre-2026-top10", "ranking-ytd-top10"]
+  },
+  {
     "id": "acara-siomaa-2026-08",
     "title": "Informe del Sector SIOMAA — Agosto 2026",
     "url": "https://autoblog.com.ar/wp-content/uploads/2026/10/2026.08-ACARA.-Informe-de-Mercado-2W_Inst-1.pdf",
