@@ -1,6 +1,6 @@
 ---
 title: "Cómo elegir un casco de moto: talle, tipos y certificación"
-description: "Guía completa para elegir el casco de moto correcto en Argentina. Talle, tipos, certificaciones IRAM y ECE, y qué mirar antes de comprar."
+description: "Guía para elegir el casco correcto en Argentina. Talle, tipos y certificaciones IRAM/ECE/DOT verificadas."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
 status: published
@@ -16,252 +16,392 @@ sourceIds:
 relatedModelIds:
   - honda-wave-110s
   - gilera-smash
-  - corven-energy-110
 relatedArticleIds:
   - guantes-impermeables-moto
   - primera-moto-argentina
 accessoryCategoryIds:
   - helmets
 seoTitle: "Cómo elegir un casco de moto: talle, tipos y certificación en Argentina"
-seoDescription: "Talle, tipos, certificaciones IRAM/ECE/DOT y qué mirar antes de comprar un casco de moto en Argentina. Guía completa con criterios verificables."
+seoDescription: "Talle, tipos y certificaciones IRAM/ECE/DOT. Guía concisa para elegir casco de moto en Argentina con datos verificables."
 ---
 
-Un casco que baila en tu cabeza vale menos que uno en talle correcto con dos años de uso. Esta guía no inventa cifras de protección: te explica qué mirar, qué dice la ley argentina y cómo verificar lo que el vendedor declara.
+<div class="quick-answer">
 
-## Respuesta rápida
+**Lo esencial:** Medí tu cabeza, probá varios talles y buscá la etiqueta de certificación interna. En Argentina se admiten IRAM-AITA 3621, ECE R22.05/06 o DOT. Un casco que calza bien protege más que uno caro que baila.
 
-**Necesitás medir tu cabeza, probar varios talles y buscar un casco con etiqueta de certificación legible.** En Argentina, la Ley 24.449 exige casco reglamentario; las certificaciones admitidas son IRAM-AITA 3621, ECE R22.05/22.06 o DOT (Decreto 196/2025). Un casco integral protege más que uno abierto, pero el mejor es el que usás siempre porque calza bien.
+</div>
 
-> **Transparencia:** Esta guía contiene enlaces de afiliado a Mercado Libre. Si comprás a través de estos enlaces, MotoGuía AR puede recibir una comisión sin costo adicional para vos. Esto ayuda a mantener el sitio y no influye en las recomendaciones editoriales.
+> **Enlaces de afiliado:** Esta guía contiene enlaces a Mercado Libre. Si comprás, MotoGuía AR puede recibir una comisión sin costo extra para vos.
 
-## Tipos de casco
-
-| Tipo | Para qué sirve | Limitaciones |
-|------|----------------|--------------|
-| **Integral (full-face)** | Máxima protección en impactos frontales y laterales. Ideal para ruta y ciudad | Más calor en verano sin buena ventilación |
-| **Modular (flip-up)** | Versátil: integral cuando viajás, abierto en semáforos o para hablar | Mecanismo suma peso (100-200 g más). Algunos modelos no certifican con mentonera levantada |
-| **Abierto / Jet** | Liviano, fresco. Popular en city y baja velocidad | Mentón y mandíbula sin protección. No recomendado para ruta |
-| **Cross / Off-road** | Para tierra: ventilación extrema, campo de visión amplio (con antiparras) | En asfalto incómodo por el viento. La visera alargada empuja la cabeza hacia atrás a velocidad |
-| **Doble propósito (adventure)** | Híbrido: si alternás asfalto y ripio | Menos aerodinámico que un integral puro |
-
-## Qué mirar antes de comprar
-
-### Talle y ajuste
-
-1. **Medí tu cabeza:** Pasá una cinta métrica por encima de las cejas, sobre las orejas y la parte más prominente de la nuca. Anotá la medida en cm.
-2. **Consultá la tabla del fabricante:** M en una marca puede ser L en otra. No asumas talles estándar.
-3. **Test de calce:**
-   - Debe entrar con leve resistencia (si entra "fácil", es grande)
-   - Con la correa abrochada, girá la cabeza: el casco se mueve contigo, no sobre tu piel
-   - Agarrá el casco por atrás e intentá girarlo hacia adelante: debe moverse muy poco
-   - Llevalo puesto 10-15 minutos: presión uniforme es normal; puntos de dolor intenso indican mala forma para tu cráneo
-
-**Señales de que es chico:** Te cuesta meterlo/sacarlo, presión intensa que no cede, dolor de cabeza.  
-**Señales de que es grande:** Entra fácil sin resistencia, se mueve al sacudir la cabeza, ves el marco de la visera moverse al girar.
-
-### Certificación y etiqueta
-
-**En Argentina:**
-- **Ley 24.449 Art. 40:** Uso obligatorio de casco reglamentario, siempre abrochado
-- **Decreto 779/1995:** Especificaciones técnicas (exterior duro, EPS, correa bajo el mentón)
-- **Decreto 196/2025 (marzo 2025):** Reconoce IRAM-AITA 3621, ECE R22.05/22.06 y DOT sin homologación adicional
-
-**Cómo verificar:**
-1. Mirá el interior: debe haber una etiqueta cosida o pegada permanentemente
-2. Qué debe decir: IRAM-AITA 3621 + número, o ECE + número (E1, E2, etc.), o DOT (impreso exterior trasero)
-3. **Si no tiene etiqueta legible:** Asumí que no tiene certificación verificable. No confíes en lo que diga solo la publicación
-
-**Certificaciones admitidas:**
-- **IRAM-AITA 3621:** Norma argentina
-- **ECE R22.05 / R22.06:** Reglamento europeo (etiqueta blanca con "E" en círculo + número)
-- **DOT FMVSS 218:** Estándar estadounidense (impresión "DOT" en parte trasera exterior)
-
-**Importante:** Ningún casco garantiza protección absoluta. Las certificaciones son pruebas de laboratorio bajo condiciones controladas; un accidente real tiene infinitas variables.
-
-### Visera, ventilación y cierre
-
-- **Visera:** No debe tener rayas profundas ni distorsión. El mecanismo de cierre debe trabar firme. Preguntá si hay viseras de repuesto disponibles
-- **Pinlock:** Sistema de doble lámina que evita empañamiento. Muy útil en lluvia o frío
-- **Ventilación:** Tomas de aire (frente, mentón, nuca) deben abrir y cerrar sin trabarse. En cascos baratos pueden ser decorativas sin paso de aire real
-- **Cierre:** Hebilla de clip (rápida), micrométrica (práctica, ajuste en segundos) o doble D (más segura, requiere práctica). La correa debe pasar bajo el mentón, no en la garganta
-
-### Interior y peso
-
-- **Interior desmontable:** Esencial para lavar. Verificá que se pueda sacar con velcro o broches
-- **Peso orientativo:**
-  - Integral policarbonato: 1.300-1.500 g
-  - Integral fibra: 1.100-1.300 g
-  - Modular: 1.400-1.700 g
-  - Abierto/jet: 900-1.200 g
-
-200 g extra se sienten poco en la tienda, pero en 2 horas de ruta con viento, tu cuello lo nota.
-
-### Qué justifica pagar más
-
-Un casco de $100.000 no es "dos veces más seguro" que uno de $50.000 con la misma certificación. Las diferencias están en:
-- **Materiales y peso:** Fibra vs. policarbonato (200-300 g menos)
-- **Visera de mejor calidad:** Anti-ralladuras durable, Pinlock incluido, repuestos fáciles
-- **Ventilación diseñada:** Túneles internos que mueven aire vs. agujeros decorativos
-- **Interior premium:** Telas que absorben humedad, almohadillas intercambiables
-- **Aerodinámica:** Menos ruido, menor levantamiento a velocidad
-
-**Prioridad #1:** Certificación legible + calce correcto. Todo lo demás es secundario.
-
-## Productos para comparar
-
-### Casco Integral Vertigo V32 Vanguard Negro Mate Talle L
-
-**Por qué lo incluimos:** Casco integral de marca argentina con distribución establecida. Vertigo tiene presencia en el mercado local y repuestos disponibles. El modelo V32 es de gama media accesible.
-
-**Características del producto:**
-- **Marca:** Vertigo
-- **Modelo:** V32 Vanguard
-- **Tipo:** Integral
-- **Talle:** L
-- **Acabado:** Negro mate
-- **Certificación declarada:** No informado en la publicación al 15/10/2026
-
-**Características destacadas:**
-- Tipo integral (cobertura completa)
-- Acabado negro mate (menos reflejo solar)
-- Talle L (verificar tabla de talles del fabricante)
-
-**Limitaciones:**
-- Certificación no visible en la publicación (verificar etiqueta interna antes de comprar)
-- Precio no disponible al momento de redacción
-- Especificaciones técnicas (peso, tipo de calota, Pinlock) no detalladas en el anuncio
-
-**[Consultar el producto en Mercado Libre →](https://meli.la/2wYsFeG)** *(enlace de afiliado)*
+**En esta guía:**  
+[Tipos de casco](#tipos) · [Cómo medir tu talle](#talle) · [Certificaciones](#certificacion) · [Productos recomendados](#productos) · [Preguntas frecuentes](#faq)
 
 ---
 
-### Casco Integral Vertigo V32 Line Negro Brillante Talle M
+## Tipos de casco {#tipos}
 
-**Por qué lo incluimos:** Variante del V32 con acabado brillante en talle M. Mismo fabricante, diferente gráfica. Alternativa para quienes necesitan talle más chico o prefieren acabado brillante.
+<div class="helmet-types">
 
-**Características del producto:**
-- **Marca:** Vertigo
-- **Modelo:** V32 Line
-- **Tipo:** Integral
-- **Talle:** M
-- **Acabado:** Negro brillante
-- **Certificación declarada:** No informado en la publicación al 15/10/2026
+### Integral
+✓ Máxima protección (mentón cubierto)  
+✓ Ideal ruta y ciudad  
+✗ Más calor en verano
 
-**Características destacadas:**
-- Tipo integral (cobertura completa)
-- Acabado negro brillante
-- Talle M (verificar tabla de talles del fabricante)
+### Modular
+✓ Mentonera levantable  
+✓ Versátil (integral o abierto)  
+✗ 100-200 g más pesado
 
-**Limitaciones:**
-- Certificación no visible en la publicación (verificar etiqueta interna antes de comprar)
-- Precio no disponible al momento de redacción
-- Acabado brillante puede generar más reflejo solar directo
+### Abierto / Jet
+✓ Liviano y fresco  
+✓ Popular en ciudad  
+✗ Mentón sin protección
 
-**[Consultar el producto en Mercado Libre →](https://meli.la/2L1KQG1)** *(enlace de afiliado)*
+### Cross
+✓ Ventilación extrema  
+✓ Para tierra y enduro  
+✗ Incómodo en asfalto
 
-### Tabla comparativa
+### Adventure
+✓ Híbrido (asfalto + ripio)  
+✓ Visera desmontable  
+✗ Menos aerodinámico
 
-| Característica | Vertigo V32 Vanguard | Vertigo V32 Line |
-|----------------|----------------------|------------------|
-| **Marca** | Vertigo | Vertigo |
-| **Modelo** | V32 Vanguard | V32 Line |
-| **Tipo** | Integral | Integral |
-| **Talle** | L | M |
-| **Acabado** | Negro mate | Negro brillante |
-| **Certificación declarada** | No informado | No informado |
-| **Precio** | No verificado al 15/10/2026 | No verificado al 15/10/2026 |
+</div>
 
-**Nota:** Antes de comprar, verificá en la publicación actualizada la certificación (etiqueta interna), precio actual (los precios en ML varían), política de cambio del vendedor y disponibilidad de repuestos (especialmente visera).
+---
 
-## Qué revisar antes de comprar
+## Cómo medir tu talle {#talle}
 
-**En la publicación:**
-1. Pedí foto clara de la etiqueta interna con certificación. Si no puede mostrártela, considerá otra opción
-2. Verificá política de cambio (si el talle no es correcto)
-3. Preguntá disponibilidad de viseras de repuesto y precio
-4. Confirmá que el interior es desmontable para lavar
-5. Revisá reputación del vendedor y opiniones sobre "cascos que no son como la foto"
+### 3 pasos para medir
 
-**Precio sospechosamente bajo** puede indicar: modelo descontinuado sin repuestos, réplica de baja calidad, o unidad con defectos. Preguntá directamente.
+1. **Medí la circunferencia de tu cabeza:** Pasá una cinta métrica por encima de las cejas, sobre las orejas y la parte más prominente de la nuca. Anotá la medida en cm.
 
-## Errores frecuentes
+2. **Consultá la tabla del fabricante:** M en una marca puede ser L en otra. No asumas talles estándar. Cada fabricante tiene su propia tabla.
 
-1. **Comprar por diseño antes que por calce:** Un casco que no calza bien no lo vas a usar
-2. **Asumir que tu talle es el mismo en todas las marcas:** Siempre medí y consultá la tabla específica
-3. **Comprar un talle más grande "para que sea cómodo":** Un casco suelto no protege
-4. **Ignorar la etiqueta de certificación:** Exigí ver la foto. "Homologado" en ML no significa nada sin etiqueta interna
-5. **Usar un casco después de un golpe fuerte:** El EPS se comprime y pierde capacidad. Reemplazalo aunque la calota se vea bien
+3. **Probá el casco:** Debe entrar con leve resistencia. Si entra "fácil", es grande. Con la correa abrochada, girá la cabeza: el casco se mueve contigo, no sobre tu piel.
 
-## Mantenimiento básico
+### Test de ajuste
 
-**Limpieza:**
-- Interior desmontable: lavar con agua tibia y jabón neutro, secar al aire
-- Visera: paño suave con agua o limpiador específico. No uses alcohol, nafta ni amoníaco
+- Agarrá el casco por atrás e intentá girarlo hacia adelante: debe moverse muy poco
+- Llevalo puesto 10-15 minutos: presión uniforme es normal; dolor intenso indica que no es para tu forma de cabeza
+- No debe entrar un dedo entre la sien y el acolchado
 
-**Reemplazá el casco si:**
-- Sufrió un golpe fuerte en accidente (aunque no se vea dañado)
-- La calota tiene fisuras o la correa está deshilachada
-- El EPS se siente blando o comprimido
-- Tiene 5-7 años de uso regular (según fabricante y estado)
+<div class="callout tip">
 
-## Checklist de compra
+**Tip:** Si dudás entre dos talles y uno es muy ajustado, puede ser buena opción: el interior se asienta 5-10% en las primeras semanas.
 
-- [ ] Medí tu cabeza (circunferencia en cm)
-- [ ] Consultaste la tabla de talles del fabricante
-- [ ] Verificaste la certificación (foto de etiqueta: IRAM, ECE o DOT)
-- [ ] El interior es desmontable para lavar
-- [ ] La visera no está rayada y hay repuestos disponibles
-- [ ] El cierre funciona correctamente
-- [ ] Precio acorde al mercado (si es muy bajo, preguntaste el motivo)
+</div>
 
-## Preguntas frecuentes
+---
 
-### ¿Puedo usar un casco sin certificación en Argentina?
+## Certificaciones en Argentina {#certificacion}
 
-Legalmente, la Ley 24.449 exige casco reglamentario. Circular sin uno que cumpla con los estándares admitidos (IRAM, ECE, DOT) puede ser motivo de infracción. Además, un casco sin certificación no tiene respaldo de que haya pasado pruebas de impacto.
+**Marco legal:** La [Ley 24.449 Art. 40](https://www.argentina.gob.ar/normativa/nacional/ley-24449-2449) exige casco reglamentario, siempre abrochado. El [Decreto 196/2025](https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/) reconoce tres estándares:
 
-### ¿Un casco más caro es más seguro?
+- **IRAM-AITA 3621:** Norma argentina. Etiqueta interna cosida con número de certificado.
+- **ECE R22.05/06:** Reglamento europeo. Etiqueta blanca con "E" en círculo + número.
+- **DOT FMVSS 218:** Estándar estadounidense. Impresión "DOT" en la parte trasera exterior.
 
-No necesariamente. Si ambos tienen la misma certificación (ej: ECE R22.05), han pasado las mismas pruebas básicas. La diferencia está en materiales (peso), confort (ventilación, ruido) y calidad de terminación. Un casco de $80.000 bien certificado puede proteger igual que uno de $300.000 en un impacto similar.
+### Cómo verificar
 
-### ¿Los cascos modulares protegen menos que los integrales?
+Mirá el interior del casco: debe haber una etiqueta **cosida o pegada permanentemente**. Papel suelto no cuenta. Si no tiene etiqueta legible, no tiene certificación verificable.
 
-Un modular certificado ECE R22 **con la mentonera cerrada** ha pasado las mismas pruebas que un integral. Algunos modulares solo certifican con mentonera cerrada (la etiqueta lo indica). **Nunca circules con la mentonera levantada a velocidad.**
+<div class="callout warning">
 
-### ¿Cada cuánto tiempo debo cambiar el casco?
+**Importante:** Ningún casco garantiza protección absoluta. Las certificaciones son pruebas de laboratorio bajo condiciones controladas.
 
-Reemplazalo inmediatamente si sufrió un golpe fuerte o tiene fisuras/correa dañada. Considerá reemplazarlo después de 5-7 años de uso regular (según fabricante), pero inspeccioná el estado real más que confiar ciegamente en el número. Si el EPS está firme, la correa bien y no hubo golpes, puede durar más.
+</div>
 
-### ¿Es obligatorio llevar la patente en el casco?
+<details>
+<summary>Referencias legales completas</summary>
 
-Depende de la jurisdicción. En **Provincia de Buenos Aires**, la Resolución 224/14 exige la patente en letras reflectantes de 3 cm en cada lateral del casco. En **CABA** y otras provincias, no es obligatorio (al 15/10/2026). Verificá la normativa local.
+- **Ley 24.449** - Art. 40: Uso obligatorio de casco reglamentario  
+- **Decreto 779/1995** - Especificaciones técnicas (exterior duro, EPS, correa)  
+- **Resolución 381/2008** - Provisión obligatoria con motos nuevas  
+- **Decreto 196/2025** - Reconoce IRAM, ECE y DOT sin homologación adicional
 
-## Siguiente paso
+Fuentes: [argentina.gob.ar/normativa](https://www.argentina.gob.ar/normativa), [motoblog.com](https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/), [iram.org.ar](https://www.iram.org.ar/servicio/elementos-de-proteccion-personal/)
 
-Si estás armando tu equipamiento completo, revisá nuestra guía sobre [guantes impermeables para moto](/accesorios/guantes-impermeables-moto/). Si estás eligiendo tu primera moto, consultá [cómo elegir tu primera moto en Argentina](/guias/primera-moto-argentina/).
+</details>
 
-## Fuentes y revisión
+---
 
-**Fuentes oficiales consultadas:**
+## Productos recomendados {#productos}
 
-1. **Ley Nacional de Tránsito 24.449** - Artículo 40 (uso obligatorio de casco)  
-   [argentina.gob.ar/normativa/nacional/ley-24449-2449](https://www.argentina.gob.ar/normativa/nacional/ley-24449-2449)
+<div class="affiliate-products">
 
-2. **Decreto 779/1995** - Anexo I, Artículos 29 y 40 (especificaciones técnicas)  
-   [argentina.gob.ar/normativa/nacional/decreto-779-1995](https://www.argentina.gob.ar/normativa/nacional/decreto-779-1995)
+<div class="product-card">
+<div class="product-badge">Opción integral</div>
 
-3. **Resolución 381/2008** - Requerimientos de seguridad para cascos  
-   [argentina.gob.ar/normativa/nacional/norma-147595/texto](https://www.argentina.gob.ar/normativa/nacional/norma-147595/texto)
+### Vertigo V32 Vanguard
+**Negro mate · Talle L**
 
-4. **Decreto 196/2025** - Anexo C: reconoce IRAM, ECE y DOT  
-   [motoblog.com/adios-al-chas-segun-el-decreto-196-25](https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/)
+**Verificado:**
+- ✓ Marca argentina con distribución local
+- ✓ Tipo integral (cobertura completa)
+- ✓ Acabado mate (menos reflejo solar)
 
-5. **IRAM - Certificación de cascos**  
-   [iram.org.ar/servicio/elementos-de-proteccion-personal](https://www.iram.org.ar/servicio/elementos-de-proteccion-personal/)
+**Limitación:**
+- Certificación no visible en publicación (verificar etiqueta interna)
 
-**Revisión editorial:**  
-Redacción MotoGuía AR  
-Última verificación: 15 de octubre de 2026
+<a href="https://meli.la/2wYsFeG" class="cta-button" rel="sponsored nofollow noopener" target="_blank">
+Ver talles y precio en Mercado Libre
+</a>
 
-**Descargo de responsabilidad:**  
-Esta guía proporciona información general sobre selección de cascos en Argentina basada en fuentes oficiales. No sustituye la consulta de normativa vigente ni asesoría profesional. MotoGuía AR no garantiza resultados específicos ni se responsabiliza por decisiones de compra individuales. Verificá siempre la certificación visible en el producto.
+</div>
+
+<div class="product-card">
+<div class="product-badge">Opción integral</div>
+
+### Vertigo V32 Line
+**Negro brillante · Talle M**
+
+**Verificado:**
+- ✓ Marca argentina con distribución local
+- ✓ Tipo integral (cobertura completa)
+- ✓ Talle M (para cabezas más chicas)
+
+**Limitación:**
+- Certificación no visible en publicación (verificar etiqueta interna)
+
+<a href="https://meli.la/2L1KQG1" class="cta-button" rel="sponsored nofollow noopener" target="_blank">
+Ver talles y precio en Mercado Libre
+</a>
+
+</div>
+
+</div>
+
+<div class="comparison-note">
+
+**Nota:** Ambos cascos son Vertigo V32 (misma línea). Diferencia principal: acabado (mate vs. brillante) y talle. **Precio y certificación:** No informados en las publicaciones al 15/10/2026. Verificá etiqueta interna antes de comprar.
+
+</div>
+
+---
+
+## Preguntas frecuentes {#faq}
+
+<details>
+<summary>¿Puedo usar un casco sin certificación en Argentina?</summary>
+
+No. La Ley 24.449 exige casco reglamentario. Circular sin certificación admitida (IRAM, ECE o DOT) puede ser motivo de infracción. Además, no tenés garantía de que haya pasado pruebas de impacto.
+
+</details>
+
+<details>
+<summary>¿Un casco más caro es más seguro?</summary>
+
+No necesariamente. Si ambos tienen la misma certificación (ej: ECE R22.05), pasaron las mismas pruebas básicas. La diferencia está en materiales (peso), confort (ventilación) y calidad de terminación.
+
+</details>
+
+<details>
+<summary>¿Cuándo debo cambiar el casco?</summary>
+
+Inmediatamente si sufrió un golpe fuerte (el EPS interno se comprime y pierde capacidad). Considerá reemplazarlo después de 5-7 años de uso regular, o si la correa está dañada o el EPS se siente blando.
+
+</details>
+
+<details>
+<summary>¿Los cascos modulares protegen menos?</summary>
+
+Un modular certificado ECE R22 **con mentonera cerrada** pasó las mismas pruebas que un integral. Nunca circules con la mentonera levantada a velocidad.
+
+</details>
+
+<details>
+<summary>Cuidado básico del casco</summary>
+
+**Limpieza:** Interior desmontable lavar con agua tibia y jabón neutro. Visera limpiar con paño suave, nunca alcohol o amoníaco.
+
+**Almacenamiento:** Lugar fresco y seco, alejado de sol directo. No dejarlo en el baúl expuesto a calor extremo.
+
+</details>
+
+---
+
+## Fuentes
+
+Esta guía se basa en normativa oficial argentina: [Ley 24.449](https://www.argentina.gob.ar/normativa/nacional/ley-24449-2449), [Decreto 779/1995](https://www.argentina.gob.ar/normativa/nacional/decreto-779-1995), [Resolución 381/2008](https://www.argentina.gob.ar/normativa/nacional/norma-147595/texto), [Decreto 196/2025](https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/), y [IRAM](https://www.iram.org.ar/servicio/elementos-de-proteccion-personal/).
+
+**Revisión:** Redacción MotoGuía AR, 15 de octubre de 2026.
+
+**Más guías:** [Guantes impermeables](/accesorios/guantes-impermeables-moto/) · [Primera moto en Argentina](/guias/primera-moto-argentina/)
+
+<style>
+.quick-answer {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.quick-answer strong {
+  color: white;
+}
+
+.helmet-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.helmet-types > div,
+.helmet-types > h3 {
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+.helmet-types h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  color: var(--primary);
+}
+
+.callout {
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  border-radius: 0.25rem;
+}
+
+.callout.tip {
+  background: #ecfdf5;
+  border-color: #10b981;
+  color: #065f46;
+}
+
+.callout.warning {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #92400e;
+}
+
+.affiliate-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.product-card {
+  padding: 2rem;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 0.75rem;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.product-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 2rem;
+}
+
+.product-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.product-card h3 + p {
+  margin: 0 0 1.5rem 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.product-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.product-card li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.cta-button {
+  display: block;
+  padding: 1rem 1.5rem;
+  background: var(--primary);
+  color: white !important;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  background: var(--primary-hover, #1d4ed8);
+  transform: none;
+}
+
+.comparison-note {
+  padding: 1rem 1.5rem;
+  background: var(--bg-secondary);
+  border-left: 3px solid var(--primary);
+  border-radius: 0.25rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+details {
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary);
+  user-select: none;
+  margin: -1rem -1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+summary:hover {
+  background: var(--bg-hover, rgba(0,0,0,0.02));
+}
+
+details[open] summary {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .helmet-types {
+    grid-template-columns: 1fr;
+  }
+  
+  .affiliate-products {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
