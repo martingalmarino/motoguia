@@ -79,6 +79,32 @@ export function articleLd(input: {
   };
 }
 
+export function newsArticleLd(input: {
+  headline: string;
+  description: string;
+  path: string;
+  datePublished: string;
+  dateModified?: string;
+  image: string;
+  authorName: string;
+  authorUrl: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: input.headline,
+    description: input.description,
+    datePublished: input.datePublished,
+    dateModified: input.dateModified ?? input.datePublished,
+    inLanguage: 'es-AR',
+    author: { '@type': 'Person', name: input.authorName, url: absoluteUrl(input.authorUrl) },
+    publisher: { '@id': ORG_ID },
+    image: absoluteUrl(input.image),
+    mainEntityOfPage: absoluteUrl(input.path),
+    isPartOf: { '@id': WEBSITE_ID },
+  };
+}
+
 export function itemListLd(name: string, elements: { name: string; path?: string }[]) {
   return {
     '@context': 'https://schema.org',

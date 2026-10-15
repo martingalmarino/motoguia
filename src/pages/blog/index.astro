@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/editorial/PageHeader.astro';
+import Icon from '../../components/ui/Icon.astro';
+import { paths } from '../../config/site';
+import { getPublishedBlogPosts } from '../../lib/content/catalog';
+import { formatDate } from '../../lib/format';
+
+const posts = await getPublishedBlogPosts();
+const crumbs = [
+  { href: paths.home, label: 'Inicio' },
+  { href: paths.blog, label: 'Blog' },
+];
+---
+
+<BaseLayout
+  title="Blog de Motos"
+  description="Noticias, análisis y novedades del mercado de motos en Argentina. Lanzamientos, tendencias y datos del sector."
+  path={paths.blog}
+>
+  <div class="wrap">
+    <PageHeader
+      crumbs={crumbs}
+      eyebrow="Blog"
+      title="Noticias y análisis del mercado de motos"
+      lede="Lanzamientos, tendencias y datos del sector en Argentina."
+    />
+
+    <section class="section" aria-labelledby="blog-lista">
+      <h2 id="blog-lista" class="visually-hidden">Artículos del blog</h2>
+      {
+        posts.length === 0 ? (
+          <div class="empty-state">
+            <p>Próximamente: artículos sobre el mercado de motos en Argentina.</p>
+          </div>
+        ) : (
+          <div class="editorial-cards">
+            {posts.map((post) => (
+              <a class="editorial-card" href={`${paths.blog}${post.id}/`}>
+                <span class="editorial-card__kicker">
+                  <Icon name="book" size={16} /> Artículo
+                </span>
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <span class="editorial-card__meta">
+                  {post.data.author} · {formatDate(post.data.pubDate)}
+                </span>
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .empty-state {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--surface);
+    border-radius: 0.5rem;
+  }
+</style>

@@ -20,6 +20,7 @@
     "prices": "node scripts/update-prices.mjs"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
     "@fontsource/archivo": "^5.3.0",
     "astro": "^7.3.3"

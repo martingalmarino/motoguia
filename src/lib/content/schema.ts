@@ -209,3 +209,32 @@ export const articleSchema = z.object({
 export const comparisonSchema = articleSchema.extend({
   modelIds: z.array(z.string()).min(2).max(3),
 });
+
+export const blogSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  pubDate: z.coerce.date(),
+  updatedDate: z.coerce.date().optional(),
+  author: z.string(),
+  heroImage: z.object({
+    path: z.string(),
+    alt: z.string(),
+    width: z.number().int().min(1200),
+    height: z.number().int(),
+  }).refine((img) => {
+    const ratio = img.width / img.height;
+    return Math.abs(ratio - 16/9) < 0.01;
+  }, {
+    message: 'Hero image must have 16:9 aspect ratio (1200x675 or similar)',
+  }),
+  sources: z.array(z.object({
+    name: z.string(),
+    url: z.string().url(),
+  })).default([]),
+  tags: z.array(z.string()).default([]),
+  relatedMotorcycles: z.array(z.string()).default([]),
+  status: statusSchema,
+  indexable: z.boolean(),
+  seoTitle: z.string().optional(),
+  seoDescription: z.string().optional(),
+});
