@@ -1,6 +1,7 @@
 ---
 import Logo from './Logo.astro';
-import { author, footerGroups, paths } from '../../config/site';
+import Icon from '../ui/Icon.astro';
+import { author, footerGroups, footerLegalLinks, paths } from '../../config/site';
 ---
 
 <footer class="site-footer">
@@ -12,8 +13,11 @@ import { author, footerGroups, paths } from '../../config/site';
     <div class="site-footer__groups">
       {
         footerGroups.map((group) => (
-          <section>
-            <h2>{group.title}</h2>
+          <details class="footer-group" open data-footer-group>
+            <summary>
+              <h2>{group.title}</h2>
+              <Icon name="chevron" size={20} />
+            </summary>
             <ul>
               {group.links.map((link) => (
                 <li>
@@ -27,15 +31,47 @@ import { author, footerGroups, paths } from '../../config/site';
                 </li>
               ))}
             </ul>
-          </section>
+          </details>
         ))
       }
     </div>
   </div>
-  <div class="wrap site-footer__note">
-    <p>MotoGuía AR es un sitio de información: no vende motos. Los precios son referencias con fecha y pueden cambiar.</p>
+  <div class="wrap site-footer__bottom">
+    <nav class="site-footer__legal" aria-label="Legales">
+      <ul>
+        {
+          footerLegalLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <p class="site-footer__note">MotoGuía AR es un sitio de información: no vende motos. Los precios son referencias con fecha y pueden cambiar.</p>
     <p class="site-footer__credit">
       Desarrollado por <a href={`mailto:${author.email}`}>{author.name}</a>
     </p>
   </div>
 </footer>
+
+<script>
+  const groups = document.querySelectorAll<HTMLDetailsElement>('[data-footer-group]');
+  const compact = window.matchMedia('(max-width: 767px)');
+
+  const sync = () => {
+    groups.forEach((group) => {
+      group.open = !compact.matches;
+      group.querySelector('summary')?.setAttribute('tabindex', compact.matches ? '0' : '-1');
+    });
+  };
+
+  groups.forEach((group) => {
+    group.querySelector('summary')?.addEventListener('click', (event) => {
+      if (!compact.matches) event.preventDefault();
+    });
+  });
+
+  sync();
+  compact.addEventListener('change', sync);
+</script>

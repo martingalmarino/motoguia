@@ -182,38 +182,27 @@ export const footerGroups: { title: string; links: NavLink[] }[] = [
       { href: paths.rankingLatest, label: `Más vendidas ${latestRankingYear}` },
       { href: '/motos/110cc/', label: 'Motos 110 cc' },
       { href: '/motos/150cc/', label: 'Motos 150 cc' },
-      { href: '/motos/tipo/trail/', label: 'Motos trail' },
       { href: paths.chinese, label: 'Motos chinas' },
       { href: paths.electric, label: 'Motos eléctricas' },
     ],
   },
   {
-    title: 'Comparar y calcular',
+    title: 'Herramientas y guías',
     links: [
       { href: paths.comparator, label: 'Comparador' },
       { href: paths.comparisons, label: 'Comparativas' },
       { href: paths.fuel, label: 'Gasto en combustible' },
       { href: paths.monthlyCost, label: 'Costo mensual' },
-    ],
-  },
-  {
-    title: 'Guías y equipamiento',
-    links: [
       { href: paths.guides, label: 'Guías de compra' },
       { href: paths.accessories, label: 'Accesorios' },
-      { href: paths.search, label: 'Buscar en el sitio' },
     ],
   },
   {
-    title: 'Información',
+    title: 'MotoGuía',
     links: [
       { href: paths.about, label: 'Sobre nosotros' },
       { href: paths.methodology, label: 'Metodología y fuentes' },
       { href: paths.contact, label: 'Contacto' },
-      { href: paths.privacy, label: 'Privacidad' },
-      { href: paths.cookies, label: 'Cookies' },
-      { href: paths.legal, label: 'Aviso legal' },
-      { href: paths.affiliates, label: 'Afiliados' },
     ],
   },
   {
@@ -226,6 +215,13 @@ export const footerGroups: { title: string; links: NavLink[] }[] = [
       { href: 'https://www.guiadelconductor.ar/', label: 'Guía del Conductor' },
     ],
   },
+];
+
+export const footerLegalLinks: NavLink[] = [
+  { href: paths.privacy, label: 'Privacidad' },
+  { href: paths.cookies, label: 'Cookies' },
+  { href: paths.legal, label: 'Aviso legal' },
+  { href: paths.affiliates, label: 'Afiliados' },
 ];
 
 export const author = {
