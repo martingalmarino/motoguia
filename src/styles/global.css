@@ -4448,3 +4448,55 @@ thead .sticky-col {
   color: var(--text-secondary);
   font-size: 0.8125rem;
 }
+
+/* ---------- Blog mobile overflow fixes ---------- */
+/* Scoped to blog post page only - does not affect catalog/ficha pages */
+@media (max-width: 767px) {
+  /* Force article children to stay within grid container */
+  .article > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Article header - fix text-wrap balance overflow */
+  .article-header h1,
+  .article-header h2,
+  .article-header h3,
+  .article-header h4 {
+    text-wrap: wrap;
+  }
+
+  /* Article content */
+  .article .prose table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .article .prose th,
+  .article .prose td {
+    white-space: nowrap;
+  }
+
+  .article .prose img,
+  .article-hero img {
+    height: auto;
+  }
+
+  .article .prose a {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .article .prose {
+    overflow-wrap: break-word;
+  }
+
+  /* Related motorcycles section - only on blog post pages */
+  .article-layout + .section .moto-card__media img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
