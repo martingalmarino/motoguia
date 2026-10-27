@@ -7,8 +7,7 @@ import Icon from '../components/ui/Icon.astro';
 import { paths, rankingYearPath, site } from '../config/site';
 import {
   getAllBrands,
-  getPublishedAccessoryGuides,
-  getPublishedGuides,
+  getPublishedBlogPosts,
   getPublishedMotorcycles,
   getLatestSummaryRanking,
   motorcycleUrl,
@@ -21,8 +20,7 @@ import { organizationLd, websiteLd } from '../lib/seo/jsonld';
 const motos = await getPublishedMotorcycles();
 const byId = new Map(motos.map((entry) => [entry.data.id, entry]));
 const ranking = await getLatestSummaryRanking();
-const guides = await getPublishedGuides();
-const accessories = await getPublishedAccessoryGuides();
+const latestPosts = (await getPublishedBlogPosts()).slice(0, 3);
 
 const pick = (ids: string[]) =>
   ids.map((id) => byId.get(id)).filter((entry): entry is (typeof motos)[number] => Boolean(entry));
@@ -77,11 +75,6 @@ const topFive = (ranking?.data.rows ?? []).slice(0, 5).map((row) => {
   };
 });
 
-const guideCards = [
-  guides.find((guide) => guide.id === 'primera-moto-argentina'),
-  guides.find((guide) => guide.id === 'comprar-moto-usada'),
-].filter((guide): guide is (typeof guides)[number] => Boolean(guide));
-const helmet = accessories.find((item) => item.id === 'como-elegir-casco-moto') ?? accessories[0];
 ---
 
 <BaseLayout
@@ -252,38 +245,30 @@ const helmet = accessories.find((item) => item.id === 'como-elegir-casco-moto') 
   </section>
 
   <div class="wrap">
-    <section class="section" aria-labelledby="guias-titulo">
-      <div class="section-heading">
-        <div>
-          <h2 id="guias-titulo">Guías para elegir tu moto</h2>
-        </div>
-        <a class="link-arrow" href={paths.guides}>Ver todas las guías <Icon name="arrow" size={18} /></a>
-      </div>
-      <div class="editorial-cards">
-        {
-          guideCards.map((guide) => (
-            <a class="editorial-card" href={`${paths.guides}${guide.id}/`}>
-              <span class="editorial-card__kicker">
-                <Icon name="book" size={16} /> Guía
-              </span>
-              <h3>{guide.data.title}</h3>
-              <p>{guide.data.description}</p>
-            </a>
-          ))
-        }
-        {
-          helmet && (
-            <a class="editorial-card" href={`${paths.accessories}${helmet.id}/`}>
-              <span class="editorial-card__kicker">
-                <Icon name="helmet" size={16} /> Equipamiento
-              </span>
-              <h3>{helmet.data.title}</h3>
-              <p>{helmet.data.description}</p>
-            </a>
-          )
-        }
-      </div>
-    </section>
+    {
+      latestPosts.length > 0 && (
+        <section class="section" aria-labelledby="blog-titulo">
+          <div class="section-heading">
+            <div>
+              <h2 id="blog-titulo">Últimos artículos del blog</h2>
+            </div>
+            <a class="link-arrow" href={paths.blog}>Ver el blog <Icon name="arrow" size={18} /></a>
+          </div>
+          <div class="editorial-cards">
+            {latestPosts.map((post) => (
+              <a class="editorial-card" href={`${paths.blog}${post.id}/`}>
+                <span class="editorial-card__kicker">
+                  <Icon name="book" size={16} /> Artículo
+                </span>
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <span class="editorial-card__meta">{formatDate(post.data.pubDate)}</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )
+    }
 
     <section class="section">
       <p class="muted">
