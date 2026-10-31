@@ -1,11 +1,12 @@
 /* MotoGuía / automotive discovery */
 
 :root {
-  --brand-navy: #123d50;
-  --brand-navy-dark: #0b2938;
-  --brand-primary: #006f9e;
-  --brand-primary-hover: #005679;
-  --brand-tint: #eaf5fa;
+  --brand-navy: #0a2e57;
+  --brand-navy-dark: #061c38;
+  --brand-primary: #0062b1;
+  --brand-primary-hover: #004c8c;
+  --brand-tint: #e8f1fc;
+  --brand-accent: #ffb400;
   --page: #ffffff;
   --surface-muted: #f5f7f8;
   --text: #17232c;
