@@ -24,7 +24,7 @@ price:
   maxARS: 6051500
   priceType: list
   includesRegistration: null
-  observedAt: 2026-10-14
+  observedAt: 2026-11-05
   sourceIds:
     - honda-xr150l
 engine:
