@@ -29,7 +29,7 @@
     { "rank": 11, "reportModelName": "SIAM QU 110", "modelIds": ["siam-qu-110"], "units": 1502, "comparableChange": 60, "comparisonPeriod": "septiembre 2026" },
     { "rank": 12, "reportModelName": "MOTOMEL CX 150", "modelIds": ["motomel-skua-150"], "units": 1409, "comparableChange": 135, "comparisonPeriod": "septiembre 2026" },
     { "rank": 13, "reportModelName": "HONDA XR150L", "modelIds": ["honda-xr150l"], "units": 1246, "comparableChange": 36, "comparisonPeriod": "septiembre 2026" },
-    { "rank": 14, "reportModelName": "HONDA BIZ 110", "modelIds": [], "units": 1219, "comparableChange": null, "comparisonPeriod": null },
+    { "rank": 14, "reportModelName": "HONDA BIZ 110", "modelIds": ["honda-biz-110"], "units": 1219, "comparableChange": null, "comparisonPeriod": null },
     { "rank": 15, "reportModelName": "CORVEN TRIAX 150", "modelIds": ["corven-triax-150"], "units": 1161, "comparableChange": -141, "comparisonPeriod": "septiembre 2026" },
     { "rank": 16, "reportModelName": "CORVEN MIRAGE 110", "modelIds": ["corven-mirage-110"], "units": 956, "comparableChange": -292, "comparisonPeriod": "septiembre 2026" },
     { "rank": 17, "reportModelName": "GUERRERO G110 TRIP", "modelIds": ["guerrero-trip-110"], "units": 955, "comparableChange": 9, "comparisonPeriod": "septiembre 2026" },

@@ -4,7 +4,7 @@
     "name": "Honda",
     "slug": "honda",
     "originCountry": "JP",
-    "originNote": "Marca japonesa. Las fichas locales de Wave, GLH 150, XR150L y Navi indican origen Argentina.",
+    "originNote": "Marca japonesa. Las fichas locales de Wave, Biz 110, GLH 150, CB300F Twister, XR150L y Navi indican origen Argentina.",
     "importer": "Honda Motor de Argentina S.A.",
     "chineseHub": false,
     "website": "https://motos.honda.com.ar/",
@@ -88,7 +88,7 @@
     "name": "Zanella",
     "slug": "zanella",
     "originCountry": null,
-    "originNote": "Zanella publica su catálogo argentino en zanellaglobal.com/ar. Las fichas de la ZB 110 no informan el país de fabricación.",
+    "originNote": "Zanella publica su catálogo argentino en zanellaglobal.com/ar. Las fichas de la ZB 110 y la ZR 150 OHC no informan el país de fabricación.",
     "importer": null,
     "chineseHub": true,
     "website": "https://zanellaglobal.com/ar/",
@@ -139,5 +139,17 @@
     "website": "https://sunra.com.ar/",
     "logo": { "src": "/images/marcas/sunra.png", "width": 255, "height": 56, "sourceUrl": "https://sunra.com.ar/wp-content/uploads/2025/06/logo-sunra-blanco.png" },
     "sourceIds": ["sunra-ar", "acara-siomaa-2026-08"]
+  },
+  {
+    "id": "yamaha",
+    "name": "Yamaha",
+    "slug": "yamaha",
+    "originCountry": "JP",
+    "originNote": "Marca japonesa. Yamaha Motor Argentina S.A. comercializa el catálogo local. Las fichas de FZ V4.0 ABS, XTZ125 y Crypton Finn no informan el país de fabricación.",
+    "importer": "Yamaha Motor Argentina S.A.",
+    "chineseHub": false,
+    "website": "https://www.yamaha-motor.com.ar/",
+    "logo": { "src": "/images/marcas/yamaha.svg", "width": 374, "height": 128, "sourceUrl": "https://www.yamaha-motor.com.ar/bundles/frontend/img/Logo_nuevo2025_alternativo-01.svg" },
+    "sourceIds": ["yamaha-motor-ar"]
   }
 ]

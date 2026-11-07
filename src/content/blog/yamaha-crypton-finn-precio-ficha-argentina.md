@@ -32,6 +32,7 @@ tags:
   - cub
   - precios
 relatedMotorcycles:
+  - yamaha-crypton-finn
   - honda-wave-110s
   - gilera-smash
   - keller-crono-classic-110
@@ -44,7 +45,7 @@ indexable: true
 
 Yamaha relanzó la Crypton en Argentina con una nueva generación que recupera el nombre Finn. La marca presentó el modelo el 22 de octubre en un evento en Buenos Aires y ya está disponible en toda su red de concesionarios oficiales con un precio de lanzamiento de $3.690.000 y garantía de 5 años.
 
-La Crypton Finn es una moto cub de 114 cm³ (Yamaha la comunica como 115 cc) que apunta al segmento más grande del mercado argentino: según el ranking ACARA de septiembre 2026, las motos tipo cub representan al menos el 55% de las ventas totales del mes, contando solo los primeros 25 modelos más vendidos.
+La [Crypton Finn](/motos/yamaha/yamaha-crypton-finn/) es una moto cub de 114 cm³ (Yamaha la comunica como 115 cc) que apunta al segmento más grande del mercado argentino: según el ranking ACARA de septiembre 2026, las motos tipo cub representan al menos el 55% de las ventas totales del mes, contando solo los primeros 25 modelos más vendidos.
 
 ## Precio y cómo comprarla
 

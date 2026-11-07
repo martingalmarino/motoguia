@@ -1285,5 +1285,205 @@
     "supports": [
       "boxer-ct100-specs"
     ]
+  },
+  {
+    "id": "honda-biz",
+    "title": "Honda Biz 110",
+    "url": "https://motos.honda.com.ar/modelos/biz-110",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["biz-110", "precio-biz-110"]
+  },
+  {
+    "id": "honda-biz-pdf",
+    "title": "Ficha técnica Honda Biz 110 (PDF)",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/Ficha%20Tecnica%20Biz%20110.pdf",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["biz-110-specs"]
+  },
+  {
+    "id": "honda-cb300f",
+    "title": "Honda CB300F Twister",
+    "url": "https://motos.honda.com.ar/modelos/cb300f-twister",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["cb300f-twister", "precio-cb300f"]
+  },
+  {
+    "id": "honda-cb300f-pdf",
+    "title": "Ficha técnica Honda CB300F Twister (PDF)",
+    "url": "https://motos.honda.com.ar/assets/uploads/models/FICHA%20T%C3%89CNICA%20CB300F%20TWISTER%20digital.pdf",
+    "publisher": "Honda Motos Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["cb300f-twister-specs"]
+  },
+  {
+    "id": "bajaj-rouser-ns200",
+    "title": "Nueva Rouser NS200",
+    "url": "https://bajaj.com.ar/nueva-rouser-ns200/",
+    "publisher": "Bajaj Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["rouser-ns200"]
+  },
+  {
+    "id": "bajaj-rouser-ns200-pdf",
+    "title": "Ficha técnica Nueva Rouser NS200 2026 (PDF)",
+    "url": "https://bajaj.com.ar/wp-content/uploads/2026/09/Ficha-Tecnica-nueva-Rouser-NS200-2026.pdf",
+    "publisher": "Bajaj Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["rouser-ns200-specs"]
+  },
+  {
+    "id": "bajaj-rouser-ls125",
+    "title": "Rouser LS125",
+    "url": "https://bajaj.com.ar/rouser-ls125/",
+    "publisher": "Bajaj Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["rouser-ls125"]
+  },
+  {
+    "id": "bajaj-rouser-ls125-pdf",
+    "title": "Especificaciones técnicas Rouser LS125 (PDF)",
+    "url": "https://bajaj.com.ar/wp-content/uploads/2025/07/BAJAJ_RouserLS125-1.pdf",
+    "publisher": "Bajaj Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["rouser-ls125-specs"]
+  },
+  {
+    "id": "bajaj-rouser-p150",
+    "title": "Rouser P150",
+    "url": "https://bajaj.com.ar/rouser-p150/",
+    "publisher": "Bajaj Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["rouser-p150"]
+  },
+  {
+    "id": "bajaj-rouser-p150-pdf",
+    "title": "Ficha técnica Rouser P150 (PDF)",
+    "url": "https://bajaj.com.ar/wp-content/uploads/2025/07/Ficha-Tecnica-Rouser-P150-1.pdf",
+    "publisher": "Bajaj Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["rouser-p150-specs"]
+  },
+  {
+    "id": "zanella-zr-150-ohc",
+    "title": "ZR 150 OHC",
+    "url": "https://zanellaglobal.com/producto/zr-150-ohc/",
+    "publisher": "Zanella",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["zr-150-ohc"]
+  },
+  {
+    "id": "zanella-zr-150-ohc-pdf",
+    "title": "Ficha técnica ZR 150 OHC (PDF)",
+    "url": "https://zanellaglobal.com/wp-content/uploads/2025/07/FT-ZR-150-2025-2.pdf",
+    "publisher": "Zanella",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["zr-150-ohc-specs"]
+  },
+  {
+    "id": "yamaha-motor-ar",
+    "title": "Yamaha Motor Argentina",
+    "url": "https://www.yamaha-motor.com.ar/",
+    "publisher": "Yamaha Motor Argentina S.A.",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["fichas-yamaha"]
+  },
+  {
+    "id": "yamaha-fz-v4-abs",
+    "title": "Yamaha FZ V4.0 ABS",
+    "url": "https://www.yamaha-motor.com.ar/modelo/fz-v4-0-abs",
+    "publisher": "Yamaha Motor Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["fz-v4-abs", "precio-fz-v4-abs"]
+  },
+  {
+    "id": "yamaha-xtz125",
+    "title": "Yamaha XTZ125",
+    "url": "https://www.yamaha-motor.com.ar/modelo/xtz125",
+    "publisher": "Yamaha Motor Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["xtz125", "precio-xtz125"]
+  },
+  {
+    "id": "yamaha-crypton-finn",
+    "title": "Yamaha Crypton Finn",
+    "url": "https://www.yamaha-motor.com.ar/modelo/crypton-finn",
+    "publisher": "Yamaha Motor Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["crypton-finn", "precio-crypton-finn"]
+  },
+  {
+    "id": "yamaha-crypton-finn-landing",
+    "title": "Landing Yamaha Crypton Finn",
+    "url": "https://landings.yamaha-motor.com.ar/crypton-finn",
+    "publisher": "Yamaha Motor Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["crypton-finn-specs", "precio-crypton-finn"]
+  },
+  {
+    "id": "yamaha-garantia",
+    "title": "Condiciones de garantía Yamaha Motos",
+    "url": "https://landings.yamaha-motor.com.ar/crypton-finn",
+    "publisher": "Yamaha Motor Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["garantia-yamaha"]
+  },
+  {
+    "id": "gilera-vc-150",
+    "title": "Gilera VC 150 II",
+    "url": "https://gilera.com.ar/modelo/vc-150-ii/",
+    "publisher": "Gilera Motors Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["vc-150"]
+  },
+  {
+    "id": "gilera-vc-150-pdf",
+    "title": "Manual Gilera VC 150 (PDF)",
+    "url": "https://gilera.com.ar/wp-content/uploads/2026/10/GLR_MANUAL_VC150.pdf",
+    "publisher": "Gilera Motors Argentina",
+    "publishedAt": null,
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": ["vc-150-specs", "garantia-vc-150"]
   }
 ]
