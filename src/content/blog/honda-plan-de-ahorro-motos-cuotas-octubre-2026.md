@@ -1,6 +1,7 @@
 ---
 title: Honda lanzó su plan de ahorro para motos en Argentina con cuotas desde $71.205
 description: Honda inició operaciones de su plan de ahorro en octubre 2026 con cuotas en pesos para Wave 110S, GLH 150, XR150L y Biz 110.
+category: Financiación
 pubDate: 2026-10-20
 author: Lautaro Diaz
 heroImage:

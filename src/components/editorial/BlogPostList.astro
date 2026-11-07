@@ -1,0 +1,75 @@
+---
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import { paths } from '../../config/site';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+  /** La primera foto es candidata a LCP cuando el listado arranca arriba del pliegue. */
+  eagerFirst?: boolean;
+}
+
+const { posts, eagerFirst = false } = Astro.props;
+
+const blogImages = import.meta.glob<ImageMetadata>(
+  '../../../public/images/blog/*.{jpg,jpeg,png,webp}',
+  { eager: true, import: 'default' },
+);
+
+function heroFile(path: string): ImageMetadata {
+  const file = path.split('/').pop() ?? path;
+  const match = Object.entries(blogImages).find(([key]) => key.endsWith(`/${file}`));
+  if (!match) throw new Error(`No está la imagen del blog: ${path}`);
+  return match[1];
+}
+
+const cards = await Promise.all(
+  posts.map(async (post, index) => {
+    const image = await getImage({
+      src: heroFile(post.data.heroImage.path),
+      width: 800,
+      height: 450,
+      widths: [480, 800],
+      format: 'webp',
+      quality: 75,
+      fit: 'cover',
+    });
+    const category = post.data.category?.trim();
+    return {
+      href: `${paths.blog}${post.id}/`,
+      title: post.data.title,
+      category: category ? category : undefined,
+      src: image.src,
+      srcset: image.srcSet.attribute,
+      width: image.attributes.width as number,
+      height: image.attributes.height as number,
+      eager: eagerFirst && index === 0,
+    };
+  }),
+);
+---
+
+<div class="blog-cards">
+  {
+    cards.map((card) => (
+      <a class="blog-card" href={card.href}>
+        <span class="blog-card__media">
+          <img
+            src={card.src}
+            srcset={card.srcset}
+            sizes="(min-width: 1024px) 368px, calc(100vw - 32px)"
+            width={card.width}
+            height={card.height}
+            alt=""
+            loading={card.eager ? 'eager' : 'lazy'}
+            decoding="async"
+            fetchpriority={card.eager ? 'high' : undefined}
+          />
+          {card.category && <span class="blog-card__badge">{card.category}</span>}
+        </span>
+        <h3 class="blog-card__title">{card.title}</h3>
+      </a>
+    ))
+  }
+</div>

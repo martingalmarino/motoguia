@@ -1,6 +1,7 @@
 ---
 title: "Yamaha Crypton Finn: precio, ficha técnica y garantía en Argentina"
 description: "Yamaha relanzó la Crypton en Argentina: la nueva Finn tiene 114 cm³ con inyección, frenos UBS, 5 años de garantía y precio de lanzamiento de $3.690.000."
+category: Lanzamiento
 pubDate: 2026-10-27
 author: Lautaro Diaz
 heroImage:
