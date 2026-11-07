@@ -50,7 +50,7 @@ Hay un segundo punto a tener en cuenta. La clase A 1.1 corresponde a ciclomotore
 
 ## Quién da la licencia
 
-La licencia la otorgan municipios u organismos provinciales autorizados por la ANSV, y es válida en todo el país (Ley 24.449, art. 13). Para las clases A (motos), B y G, el organismo tiene que ser el del domicilio que figura en tu DNI, según la reglamentación actualizada por el [Decreto 196/2025](https://www.argentina.gob.ar/normativa/nacional/decreto-196-2025-410682/texto).
+La licencia la otorgan municipios u organismos provinciales autorizados por la ANSV, y es válida en todo el país (Ley 24.449, art. 13). Para las clases A (motos), B y G, el organismo tiene que ser el del domicilio que figura en tu DNI, según la reglamentación actualizada por el [Decreto 196/2025](https://www.boletinoficial.gob.ar/detalleAviso/primera/322652/20250318).
 
 La ANSV publica un listado de [municipios que otorgan la Licencia Nacional de Conducir](https://www.argentina.gob.ar/seguridadvial/municipios-licencia-nacional). Los turnos, los costos, los formularios y los requisitos de cada lugar están en el sitio oficial de tu municipio o provincia: si alguno contradice lo que leíste en otro lado, consultalo directamente con ese organismo, que es quien emite tu licencia.
 

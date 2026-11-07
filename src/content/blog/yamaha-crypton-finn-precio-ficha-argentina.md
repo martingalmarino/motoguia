@@ -91,7 +91,7 @@ Solo se vende en concesionarios oficiales Yamaha. Podés consultar la red en [ya
 
 La Crypton Finn tiene **5 años de garantía o 36.000 km**, lo que ocurra primero. La garantía vale solo para unidades facturadas por concesionarios oficiales de Yamaha en Argentina.
 
-Esto la ubica por encima de la mayoría de sus rivales directos. A modo de ejemplo, la [Honda Wave 110S](/motos/honda-wave-110s/), la moto más vendida de Argentina en 2026, ofrece 36 meses o 36.000 km de garantía.
+Esto la ubica por encima de la mayoría de sus rivales directos. A modo de ejemplo, la [Honda Wave 110S](/motos/honda/honda-wave-110s/), la moto más vendida de Argentina en 2026, ofrece 36 meses o 36.000 km de garantía.
 
 ## Qué trae y qué no trae
 
@@ -121,17 +121,17 @@ Yamaha no aparece en el ranking de los 25 modelos más vendidos de septiembre ni
 
 Los principales competidores de la Crypton Finn en Argentina son:
 
-1. **[Honda Wave 110S](/motos/honda-wave-110s/)**: puesto 1 del ranking de septiembre con 8.718 unidades. Precio oficial: $3.529.700 (freno a tambor) o $4.020.800 (freno a disco). Motor de 109 cc con carburador. Garantía de 36 meses o 36.000 km.
+1. **[Honda Wave 110S](/motos/honda/honda-wave-110s/)**: puesto 1 del ranking de septiembre con 8.718 unidades. Precio oficial: $3.529.700 (freno a tambor) o $4.020.800 (freno a disco). Motor de 109 cc con carburador. Garantía de 36 meses o 36.000 km.
 
-2. **[Gilera Smash](/motos/gilera-smash/)**: puesto 2 con 6.905 unidades.
+2. **[Gilera Smash](/motos/gilera/gilera-smash/)**: puesto 2 con 6.905 unidades.
 
-3. **[Keller Crono Classic 110](/motos/keller-crono-classic-110/)**: puesto 3 con 5.906 unidades.
+3. **[Keller Crono Classic 110](/motos/keller/keller-crono-classic-110/)**: puesto 3 con 5.906 unidades.
 
-4. **[Motomel Blitz 110](/motos/motomel-blitz-110/)**: puesto 4 con 5.635 unidades. Nota: Motomel presentó la versión Plus MY26 la misma semana del lanzamiento de la Crypton, con puños calefaccionados, tablero digital, LED, USB y alarma con arranque remoto.
+4. **[Motomel Blitz 110](/motos/motomel/motomel-blitz-110/)**: puesto 4 con 5.635 unidades. Nota: Motomel presentó la versión Plus MY26 la misma semana del lanzamiento de la Crypton, con puños calefaccionados, tablero digital, LED, USB y alarma con arranque remoto.
 
-5. **[Corven Energy 110](/motos/corven-energy-110/)**: puesto 5 con 3.716 unidades.
+5. **[Corven Energy 110](/motos/corven/corven-energy-110/)**: puesto 5 con 3.716 unidades.
 
-6. **[Mondial LD 110 Max](/motos/mondial-ld-110-max/)**: puesto 6 con 3.489 unidades.
+6. **[Mondial LD 110 Max](/motos/mondial/mondial-ld-110-max/)**: puesto 6 con 3.489 unidades.
 
 También compite con la Honda Biz 110, que tiene un precio oficial de $4.006.500 y empezó a producirse localmente en septiembre de 2026, aunque todavía no tiene suficiente historia en el ranking argentino.
 
