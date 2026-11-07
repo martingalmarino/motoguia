@@ -6,6 +6,9 @@ import { navItems, paths } from '../../config/site';
 
 const current = Astro.url.pathname;
 const isCurrent = (href: string) => (href === '/' ? current === '/' : current.startsWith(href));
+const categories = navItems.find((item) => item.href === paths.catalog)?.children ?? [];
+const isCategoryCurrent = (href: string) =>
+  href === paths.catalog ? current === href : current === href || current.startsWith(href);
 ---
 
 <header class="site-header">
@@ -20,7 +23,11 @@ const isCurrent = (href: string) => (href === '/' ? current === '/' : current.st
           navItems.map((item, index) =>
             item.children ? (
               <li class="main-nav__item has-sub" data-subnav>
-                <a class:list={['main-nav__link', { 'is-current': isCurrent(item.href) }]} href={item.href}>
+                <a
+                  class:list={['main-nav__link', { 'is-current': isCurrent(item.href) }]}
+                  href={item.href}
+                  aria-current={current === item.href ? 'page' : isCurrent(item.href) ? 'true' : undefined}
+                >
                   {item.label}
                 </a>
                 <button
@@ -33,17 +40,23 @@ const isCurrent = (href: string) => (href === '/' ? current === '/' : current.st
                   <span class="visually-hidden">Más opciones de {item.label}</span>
                   <Icon name="chevron" size={16} />
                 </button>
-                <ul class="main-nav__sub" id={`subnav-${index}`}>
+                <ul class:list={['main-nav__sub', { 'main-nav__sub--cats': item.children.length > 4 }]} id={`subnav-${index}`}>
                   {item.children.map((child) => (
                     <li>
-                      <a href={child.href}>{child.label}</a>
+                      <a href={child.href} aria-current={current === child.href ? 'page' : undefined}>
+                        {child.label}
+                      </a>
                     </li>
                   ))}
                 </ul>
               </li>
             ) : (
               <li class="main-nav__item">
-                <a class:list={['main-nav__link', { 'is-current': isCurrent(item.href) }]} href={item.href}>
+                <a
+                  class:list={['main-nav__link', { 'is-current': isCurrent(item.href) }]}
+                  href={item.href}
+                  aria-current={current === item.href ? 'page' : undefined}
+                >
                   {item.label}
                 </a>
               </li>
@@ -63,12 +76,40 @@ const isCurrent = (href: string) => (href === '/' ? current === '/' : current.st
         <span class="header-compare__label">Comparador</span>
         <span class="header-compare__count" data-compare-count aria-label="modelos elegidos">0</span>
       </a>
-      <button class="icon-btn site-header__menu" type="button" data-drawer-open aria-haspopup="dialog" aria-controls="menu-movil">
+      <button
+        class="icon-btn site-header__menu"
+        type="button"
+        data-drawer-open
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        aria-controls="menu-movil"
+      >
         <Icon name="menu" />
         <span class="visually-hidden">Abrir menú</span>
       </button>
     </div>
   </div>
+  {
+    categories.length > 0 && (
+      <nav class="cat-nav" aria-label="Categorías de motos">
+        <div class="wrap cat-nav__clip">
+          <ul class="cat-nav__list">
+            {categories.map((item) => (
+              <li>
+                <a
+                  class:list={['cat-nav__link', { 'is-current': isCategoryCurrent(item.href) }]}
+                  href={item.href}
+                  aria-current={isCategoryCurrent(item.href) ? 'page' : undefined}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+    )
+  }
 </header>
 
 <dialog class="search-dialog" id="dialogo-busqueda" aria-labelledby="dialogo-busqueda-titulo" data-search-dialog>
@@ -100,16 +141,18 @@ const isCurrent = (href: string) => (href === '/' ? current === '/' : current.st
       {
         navItems.map((item) => (
           <div class="nav-drawer__group">
-            <a class="nav-drawer__link" href={item.href}>
+            <a class="nav-drawer__link" href={item.href} aria-current={current === item.href ? 'page' : isCurrent(item.href) ? 'true' : undefined}>
               {item.label}
             </a>
             {item.children && (
-              <ul class="nav-drawer__sub">
+              <ul class:list={['nav-drawer__sub', { 'nav-drawer__sub--cats': item.children.length > 4 }]}>
                 {item.children
                   .filter((child) => child.href !== item.href)
                   .map((child) => (
                     <li>
-                      <a href={child.href}>{child.label}</a>
+                      <a href={child.href} aria-current={current === child.href ? 'page' : undefined}>
+                        {child.label}
+                      </a>
                     </li>
                   ))}
               </ul>
