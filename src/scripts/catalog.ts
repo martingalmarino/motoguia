@@ -232,6 +232,23 @@ function render(state: State) {
   renderChips(state);
   updateFacets(state);
   updatePreview(state);
+  syncPills(state);
+}
+
+function syncPills(state: State) {
+  const pills = document.querySelectorAll<HTMLButtonElement>('[data-quick]');
+  if (!pills.length) return;
+  let active = 'all';
+  if (state.categoria.length === 1 && state.motor.length === 0 && !state.cc) active = `categoria:${state.categoria[0]}`;
+  else if (state.motor.length === 1 && state.categoria.length === 0 && !state.cc) active = `motor:${state.motor[0]}`;
+  else if (state.cc && state.categoria.length === 0 && state.motor.length === 0) active = `cc:${state.cc}`;
+  else if (state.categoria.length || state.motor.length || state.cc) active = '';
+  pills.forEach((pill) => {
+    const id = pill.dataset.quick === 'all' ? 'all' : `${pill.dataset.quick}:${pill.dataset.value ?? ''}`;
+    const on = id === active;
+    pill.classList.toggle('is-on', on);
+    pill.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
 }
 
 function updatePreview(state: State) {
@@ -370,6 +387,28 @@ form?.addEventListener('change', (event) => {
     return;
   }
   commit(readForm());
+});
+
+form?.addEventListener('click', (event) => {
+  const pill = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>('[data-quick]');
+  if (!pill || !form.contains(pill)) return;
+  event.preventDefault();
+  const draft = readForm();
+  const state: State = {
+    q: draft.q,
+    marca: draft.marca,
+    categoria: [],
+    motor: [],
+    cc: '',
+    precio: draft.precio,
+    orden: draft.orden,
+  };
+  const kind = pill.dataset.quick;
+  const value = pill.dataset.value ?? '';
+  if (kind === 'categoria') state.categoria = [value];
+  else if (kind === 'motor') state.motor = [value];
+  else if (kind === 'cc') state.cc = value;
+  commit(state);
 });
 
 document.addEventListener('click', (event) => {

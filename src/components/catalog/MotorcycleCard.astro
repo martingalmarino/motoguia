@@ -10,14 +10,18 @@ interface Props {
   showBrand?: boolean;
   headingLevel?: 'h2' | 'h3';
   eager?: boolean;
+  /** Tarjeta del boceto: marco, chips, badge y CTAs pill. Home y catálogo. */
+  shelf?: boolean;
 }
 
-const { entry, showBrand = true, headingLevel = 'h3', eager = false } = Astro.props;
+const { entry, showBrand = true, headingLevel = 'h3', eager = false, shelf = false } = Astro.props;
 const brand = getBrand(entry.data.brandId);
 const href = motorcycleUrl(entry);
 const image = stageImage(entry);
 const name = displayName(entry);
 const Heading = headingLevel;
+const specChips = cardSpecLine(entry).split(' · ').filter(Boolean);
+const shelfSizes = '(min-width: 1024px) 280px, (min-width: 601px) 45vw, 46vw';
 const searchText = [
   brand?.name,
   entry.data.name,
@@ -34,7 +38,7 @@ const searchText = [
 ---
 
 <article
-  class="moto-card"
+  class:list={['moto-card', { 'moto-card--shelf': shelf }]}
   data-moto-card
   data-id={entry.data.id}
   data-brand={entry.data.brandId}
@@ -46,10 +50,11 @@ const searchText = [
   data-search={searchText}
 >
   <a class="moto-card__media" href={href} tabindex="-1" aria-hidden="true">
+    {shelf && entry.data.engineType === 'electric' && <span class="moto-badge">Eléctrica</span>}
     <img
       src={image.src}
       srcset={image.srcset ?? undefined}
-      sizes="(min-width: 1200px) 300px, (min-width: 640px) 45vw, 92vw"
+      sizes={shelf ? shelfSizes : '(min-width: 1200px) 300px, (min-width: 640px) 45vw, 92vw'}
       alt=""
       width="600"
       height="450"
@@ -62,7 +67,15 @@ const searchText = [
     <Heading class="moto-card__title">
       <a href={href}>{entry.data.name}</a>
     </Heading>
-    <p class="moto-card__spec">{cardSpecLine(entry)}</p>
+    {
+      shelf ? (
+        <ul class="moto-chips">
+          {specChips.map((chip) => <li class="moto-chip">{chip}</li>)}
+        </ul>
+      ) : (
+        <p class="moto-card__spec">{cardSpecLine(entry)}</p>
+      )
+    }
     <PriceReference entry={entry} size="card" />
     <div class="moto-card__actions">
       <a class="btn btn-primary btn-sm" href={href}>

@@ -51,21 +51,21 @@ const typeCards = [
     text: 'Cubs y scooters para moverte todos los días por la ciudad.',
     href: `${paths.catalog}#categoria=cub,scooter`,
     count: cityCount,
-    image: byId.get('honda-navi'),
+    tone: 'city',
   },
   {
     title: 'Motos eléctricas',
     text: 'Modelos a batería con la potencia y la autonomía que declara cada marca.',
     href: paths.electric,
     count: electric.length,
-    image: byId.get('siam-n4'),
+    tone: 'electric',
   },
   {
     title: 'Motos chinas',
     text: 'Las marcas de mayor volumen del mercado, con su origen explicado cuando hay fuente.',
     href: paths.chinese,
     count: chinese.length,
-    image: byId.get('gilera-smash'),
+    tone: 'chinese',
   },
 ].filter((card) => card.count > 0);
 
@@ -76,7 +76,6 @@ const topFive = (ranking?.data.rows ?? []).slice(0, 5).map((row) => {
     units: row.units,
     entry,
     name: entry ? displayName(entry) : reportModelLabel(row.reportModelName),
-    image: entry ? stageImage(entry) : null,
   };
 });
 
@@ -126,155 +125,132 @@ const topFive = (ranking?.data.rows ?? []).slice(0, 5).map((row) => {
     </div>
   </section>
 
-  <div class="wrap">
-    <section class="section" aria-labelledby="marcas-titulo">
-      <div class="section-heading">
-        <div>
-          <h2 id="marcas-titulo">Elegí tu marca</h2>
-          <p>Explorá los modelos y encontrá sus características principales.</p>
-        </div>
-        <a class="link-arrow" href={paths.brands}>Ver todas las marcas <Icon name="arrow" size={18} /></a>
+  <section class="home-block" aria-labelledby="marcas-titulo">
+    <div class="wrap">
+      <div class="home-head">
+        <h2 id="marcas-titulo">Elegí tu marca</h2>
+        <a class="home-more" href={paths.brands}>Ver todas las marcas</a>
+        <p>Explorá los modelos y encontrá sus características principales.</p>
       </div>
-      <div class="brand-tiles">
+      <div class="brand-tiles home-brands">
         {brandTiles.map(({ brand, count }) => <BrandTile brand={brand} count={count} />)}
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" aria-labelledby="modelos-titulo">
-      <div class="section-heading">
-        <div>
-          <h2 id="modelos-titulo">Explorá modelos</h2>
-          <p>Una selección de cubs, street, trail, scooters y eléctricas del catálogo.</p>
-        </div>
-        <a class="link-arrow" href={paths.catalog}>Ver catálogo completo <Icon name="arrow" size={18} /></a>
+  <section class="home-block home-block--alt" aria-labelledby="modelos-titulo">
+    <div class="wrap">
+      <div class="home-head">
+        <h2 id="modelos-titulo">Explorá modelos</h2>
+        <a class="home-more" href={paths.catalog}>Ver catálogo completo</a>
+        <p>Una selección de cubs, street, trail, scooters y eléctricas del catálogo.</p>
       </div>
-      <div class="card-grid card-grid--3">
-        {featured.map((entry) => <MotorcycleCard entry={entry} />)}
+      <div class="home-models moto-grid--shelf">
+        {featured.map((entry) => <MotorcycleCard entry={entry} shelf />)}
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" aria-labelledby="tipos-titulo">
-      <div class="section-heading">
-        <div>
-          <h2 id="tipos-titulo">Buscá por tipo de moto</h2>
-        </div>
+  <section class="home-block" aria-labelledby="tipos-titulo">
+    <div class="wrap">
+      <div class="home-head">
+        <h2 id="tipos-titulo">Buscá por tipo de moto</h2>
       </div>
       <div class="type-cards">
         {
-          typeCards.map((card) => {
-            const img = card.image ? stageImage(card.image) : null;
-            return (
-              <a class="type-card" href={card.href}>
-                <div class="type-card__media">
-                  {img && <img src={img.src} alt="" width="600" height="450" loading="lazy" decoding="async" />}
-                </div>
-                <div class="type-card__body">
-                  <h3>{card.title}</h3>
-                  <p>{card.text}</p>
-                  <span class="type-card__cta">
-                    Ver {formatInteger(card.count)} {card.count === 1 ? 'modelo' : 'modelos'} <Icon name="arrow" size={18} />
-                  </span>
-                </div>
-              </a>
-            );
-          })
+          typeCards.map((card) => (
+            <a class:list={['type-card', `type-card--${card.tone}`]} href={card.href} data-n={card.count}>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+              <span class="type-card__cta">
+                Ver {formatInteger(card.count)} {card.count === 1 ? 'modelo' : 'modelos'}
+              </span>
+            </a>
+          ))
         }
       </div>
-    </section>
+    </div>
+  </section>
 
-    {
-      ranking && (
-        <section class="section" aria-labelledby="ranking-titulo">
-          <div class="section-heading">
-            <div>
-              <h2 id="ranking-titulo">Las motos más vendidas de Argentina</h2>
-              <p>
-                Patentamientos acumulados del {formatDate(ranking.data.periodStart)} al {formatDate(ranking.data.periodEnd)}, según ACARA/SIOMAA.
-              </p>
-            </div>
-            <a class="link-arrow" href={rankingYearPath(ranking.data.year)}>Ver ranking completo <Icon name="arrow" size={18} /></a>
+  {
+    ranking && (
+      <section class="home-block home-block--alt" aria-labelledby="ranking-titulo">
+        <div class="wrap">
+          <div class="home-head">
+            <h2 id="ranking-titulo">Las motos más vendidas de Argentina</h2>
+            <a class="home-more" href={rankingYearPath(ranking.data.year)}>Ver ranking completo</a>
+            <p>
+              Patentamientos acumulados del {formatDate(ranking.data.periodStart)} al {formatDate(ranking.data.periodEnd)}, según ACARA/SIOMAA.
+            </p>
           </div>
           <ol class="rank-list">
             {topFive.map((row) => (
               <li class="rank-item">
                 <span class="rank-item__pos" aria-label={`Puesto ${row.rank}`}>{row.rank}</span>
-                {row.image ? (
-                  <span class="rank-item__img">
-                    <img src={row.image.src} alt="" width="64" height="48" loading="lazy" decoding="async" />
+                <span class="rank-item__copy">
+                  <span class="rank-item__name">
+                    {row.entry ? <a href={motorcycleUrl(row.entry)}>{row.name}</a> : row.name}
+                    {!row.entry && <span class="rank-item__note">Sin ficha en MotoGuía</span>}
                   </span>
-                ) : (
-                  <span class="rank-item__img rank-item__img--empty" aria-hidden="true" />
-                )}
-                <span class="rank-item__name">
-                  {row.entry ? <a href={motorcycleUrl(row.entry)}>{row.name}</a> : row.name}
-                  {!row.entry && <span class="rank-item__note">Sin ficha en MotoGuía</span>}
-                </span>
-                <span class="rank-item__units">
-                  {formatInteger(row.units)} <span>patentamientos</span>
+                  <small class="rank-item__units">{formatInteger(row.units)} patentamientos</small>
                 </span>
               </li>
             ))}
           </ol>
-          <p class="ranking-footer muted">
-            <span>Cuenta motos patentadas, no ventas de concesionario.</span>
-            <a href={paths.methodology}>Cómo armamos el ranking</a>
+          <p class="ranking-footer">
+            Cuenta motos patentadas, no ventas de concesionario. <a href={paths.methodology}>Cómo armamos el ranking</a>
           </p>
-        </section>
-      )
-    }
-  </div>
-
-  <section class="tint-band" aria-labelledby="herramientas-titulo">
-    <div class="wrap">
-      <div class="section-heading">
-        <div>
-          <h2 id="herramientas-titulo">Herramientas para decidir</h2>
         </div>
-        <a class="link-arrow" href={paths.tools}>Ver herramientas <Icon name="arrow" size={18} /></a>
+      </section>
+    )
+  }
+
+  <section class="home-block" aria-labelledby="herramientas-titulo">
+    <div class="wrap">
+      <div class="home-head">
+        <h2 id="herramientas-titulo">Herramientas para decidir</h2>
+        <a class="home-more" href={paths.tools}>Ver herramientas</a>
       </div>
-      <div class="tool-tiles">
+      <div class="tool-tiles home-tools">
         <a class="tool-tile" href={paths.comparator}>
-          <span class="tool-tile__icon"><Icon name="compare" size={24} /></span>
+          <span class="tool-tile__icon"><Icon name="compare" size={22} /></span>
           <h3>Compará hasta 3 motos</h3>
           <p>Revisá sus características lado a lado.</p>
-          <span class="tool-tile__cta">Ir al comparador <Icon name="arrow" size={18} /></span>
+          <span class="tool-tile__cta">Ir al comparador</span>
         </a>
         <a class="tool-tile" href={paths.fuel}>
-          <span class="tool-tile__icon"><Icon name="fuel" size={24} /></span>
+          <span class="tool-tile__icon"><Icon name="fuel" size={22} /></span>
           <h3>Calculá tu gasto en combustible</h3>
           <p>Estimá cuánto gastás según tus kilómetros y el precio por litro.</p>
-          <span class="tool-tile__cta">Calcular combustible <Icon name="arrow" size={18} /></span>
+          <span class="tool-tile__cta">Calcular combustible</span>
         </a>
         <a class="tool-tile" href={paths.monthlyCost}>
-          <span class="tool-tile__icon"><Icon name="wallet" size={24} /></span>
+          <span class="tool-tile__icon"><Icon name="wallet" size={22} /></span>
           <h3>Estimá el costo mensual</h3>
           <p>Sumá combustible, seguro, patente y mantenimiento.</p>
-          <span class="tool-tile__cta">Calcular costo mensual <Icon name="arrow" size={18} /></span>
+          <span class="tool-tile__cta">Calcular costo mensual</span>
         </a>
       </div>
     </div>
   </section>
 
-  <div class="wrap">
-    {
-      latestPosts.length > 0 && (
-        <section class="section" aria-labelledby="blog-titulo">
-          <div class="section-heading">
-            <div>
+  <section class="home-block home-block--alt" aria-labelledby={latestPosts.length > 0 ? 'blog-titulo' : undefined}>
+    <div class="wrap">
+      {
+        latestPosts.length > 0 && (
+          <>
+            <div class="home-head">
               <h2 id="blog-titulo">Últimos artículos del blog</h2>
+              <a class="home-more" href={paths.blog}>Ver el blog</a>
             </div>
-            <a class="link-arrow" href={paths.blog}>Ver el blog <Icon name="arrow" size={18} /></a>
-          </div>
-          <BlogPostList posts={latestPosts} />
-        </section>
-      )
-    }
-
-    <section class="section">
-      <p class="muted">
+            <BlogPostList posts={latestPosts} />
+          </>
+        )
+      }
+      <p class="home-note">
         MotoGuía reúne fichas técnicas, precios de referencia con fecha y datos de patentamientos de fuentes públicas para que compares
         motos en Argentina con información clara. <a href={paths.methodology}>Cómo trabajamos</a>.
       </p>
-    </section>
-  </div>
+    </div>
+  </section>
 </BaseLayout>

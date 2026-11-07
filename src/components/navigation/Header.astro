@@ -1,5 +1,6 @@
 ---
 import Icon from '../ui/Icon.astro';
+import SiteMark from './SiteMark.astro';
 import SearchForm from '../search/SearchForm.astro';
 import { navItems, paths, type NavItem } from '../../config/site';
 
@@ -40,11 +41,7 @@ const currentValue = (href: string, on: boolean) => (current === href ? 'page' :
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="site-header__logo" href={paths.home} aria-label="MotoGuía AR, inicio">
-      <span class="brand-mark">
-        <span class="brand-mark__mono" aria-hidden="true">MG</span>
-        <span class="brand-mark__word">MotoGuía</span>
-        <span class="brand-mark__geo">AR</span>
-      </span>
+      <SiteMark />
     </a>
 
     <nav class="main-nav" aria-label="Principal">
@@ -162,11 +159,7 @@ const currentValue = (href: string, on: boolean) => (current === href ? 'page' :
   <div class="nav-drawer__panel">
     <div class="nav-drawer__head">
       <a class="site-header__logo" href={paths.home} aria-label="MotoGuía AR, inicio">
-        <span class="brand-mark">
-          <span class="brand-mark__mono" aria-hidden="true">MG</span>
-          <span class="brand-mark__word">MotoGuía</span>
-          <span class="brand-mark__geo">AR</span>
-        </span>
+        <SiteMark />
       </a>
       <button class="icon-btn" type="button" data-dialog-close>
         <Icon name="close" />
