@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import '../../../styles/ficha.css';
 import Breadcrumbs from '../../../components/editorial/Breadcrumbs.astro';
 import FaqList from '../../../components/editorial/FaqList.astro';
 import SourceList from '../../../components/editorial/SourceList.astro';
@@ -161,7 +162,7 @@ const availability =
     faqLd(faqs),
   ]}
 >
-  <article class="wrap">
+  <article class="wrap model-page">
     <Breadcrumbs items={crumbs} />
 
     <div class="model-hero">
