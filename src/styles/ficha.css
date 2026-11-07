@@ -1,0 +1,141 @@
+/* Presentación de la ficha (/motos/<marca>/<modelo>/).
+   Todo queda bajo .model-page para no alcanzar header, footer, blog ni otras páginas.
+   El hero (.model-hero), las migas y sus controles se dejan como están en la hoja global. */
+
+.model-page {
+  --fx-p: #0062b1;
+  --fx-ph: #004c8c;
+  --fx-acc: #ffb400;
+  --fx-tint: #e8f1fc;
+  --fx-gray: #f4f6f9;
+}
+
+/* Pills solo en el cuerpo. :where deja la especificidad en (0,1,0):
+   pisa .btn / .toggle-more y no el radio de .moto-card__actions .btn. */
+.model-page :where(.model-body .btn, .model-body .compare-toggle, .model-body .toggle-more) {
+  border-radius: 999px;
+}
+
+.model-page .anchor-nav {
+  margin-top: 0;
+}
+
+.model-page .anchor-nav ul {
+  gap: 6px;
+  padding-block: 10px;
+}
+
+.model-page .anchor-nav a {
+  border: 1px solid #c9d6e6;
+  border-radius: 999px;
+  padding: 6px 14px;
+  color: var(--brand-navy);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.model-page .anchor-nav a:hover {
+  background: var(--fx-tint);
+  border-color: var(--fx-p);
+  color: var(--fx-ph);
+}
+
+.model-page .model-body {
+  gap: 0;
+}
+
+.model-page .model-section {
+  padding-block: 40px;
+  margin: 0;
+}
+
+.model-page .model-section:nth-child(even) {
+  background: var(--fx-gray);
+  box-shadow: 0 0 0 100vmax var(--fx-gray);
+  clip-path: inset(0 -100vmax);
+}
+
+.model-page .model-section > h2,
+.model-page .model-section .section-heading h2 {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.model-page .model-section > h2::after,
+.model-page .model-section .section-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--fx-p) 0 60%, var(--fx-acc) 60%);
+}
+
+.model-page :where(.spec-group, .version-card, .highlight-card, .moto-card, .editorial-card) {
+  border-radius: 14px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.model-page :where(.spec-group, .version-card, .moto-card, .editorial-card) {
+  border-top: 4px solid var(--fx-p);
+}
+
+.model-page :where(.highlight-card, .version-card:nth-child(even)) {
+  border-top: 4px solid var(--fx-acc);
+}
+
+.model-page .spec-group caption {
+  background: var(--fx-tint);
+  color: var(--brand-navy);
+}
+
+.model-page .is-missing {
+  color: #52616b;
+}
+
+.model-page .version-card__price {
+  color: var(--brand-navy);
+}
+
+.model-page .cost-panel {
+  border-radius: 14px;
+  border-left: 4px solid var(--fx-acc);
+}
+
+.model-page .faq-item {
+  background: #fff;
+  border: 1px solid #dbe3ec;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+}
+
+.model-page .faq-item[hidden='until-found'] {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.model-page .faq-list {
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  .model-page .model-section {
+    padding-block: 32px;
+  }
+
+  .model-page .anchor-nav ul {
+    flex-wrap: nowrap;
+  }
+}
+
+.model-page :where(.anchor-nav, .model-body) :focus-visible {
+  outline: 3px solid var(--fx-p);
+  outline-offset: 2px;
+}
