@@ -40,7 +40,16 @@ const brandTiles = getAllBrands()
   .sort((a, b) => b.count - a.count || a.brand.name.localeCompare(b.brand.name, 'es'))
   .slice(0, 8);
 
-const featured = pick(['honda-wave-110s', 'gilera-smash', 'motomel-s2-150', 'corven-triax-150', 'honda-navi', 'siam-n4']);
+const featured = pick([
+  'honda-wave-110s',
+  'gilera-smash',
+  'motomel-s2-150',
+  'corven-triax-150',
+  'honda-navi',
+  'siam-n4',
+  'honda-glh-150',
+  'honda-xr150l',
+]);
 
 const cityCount = motos.filter((moto) => ['cub', 'scooter'].includes(moto.data.category)).length;
 const electric = motos.filter((moto) => moto.data.engineType === 'electric');
