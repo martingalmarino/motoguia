@@ -1245,5 +1245,69 @@
     "supports": [
       "boxer-ct100-specs"
     ]
+  },
+  {
+    "id": "ley-24449-transito-argentina",
+    "title": "Ley 24.449 de Tránsito y Seguridad Vial - Artículo 40 (uso de casco)",
+    "url": "https://www.argentina.gob.ar/normativa/nacional/ley-24449-2449",
+    "publisher": "Argentina.gob.ar",
+    "publishedAt": "1995-12-23",
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "cascos-uso-obligatorio"
+    ]
+  },
+  {
+    "id": "decreto-779-1995-transito",
+    "title": "Decreto 779/1995 Reglamentario de la Ley de Tránsito - Anexo I Arts. 29 y 40",
+    "url": "https://www.argentina.gob.ar/normativa/nacional/decreto-779-1995",
+    "publisher": "Argentina.gob.ar",
+    "publishedAt": "1995-11-20",
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "cascos-especificaciones-tecnicas",
+      "cascos-provision-obligatoria-motos-nuevas"
+    ]
+  },
+  {
+    "id": "resolucion-381-2008-cascos",
+    "title": "Resolución 381/2008 - Requerimiento de Seguridad Categoría L - Cascos de Provisión Obligatoria",
+    "url": "https://www.argentina.gob.ar/normativa/nacional/norma-147595/texto",
+    "publisher": "Argentina.gob.ar - ex Secretaría de Industria",
+    "publishedAt": "2008-06-19",
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "cascos-licencia-configuracion-modelo",
+      "cascos-reglamento-ece-r22"
+    ]
+  },
+  {
+    "id": "decreto-196-2025-homologaciones",
+    "title": "Decreto 196/2025 Anexo C - Cascos de Protección para Uso Vehicular",
+    "url": "https://motoblog.com/adios-al-chas-segun-el-decreto-196-25-se-podran-importar-cascos-con-homologaciones-ece-y-dot/",
+    "publisher": "Motoblog (análisis del Boletín Oficial)",
+    "publishedAt": "2025-03-18",
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "cascos-homologacion-ece-dot",
+      "cascos-importacion-sin-chas"
+    ]
+  },
+  {
+    "id": "iram-aita-3621",
+    "title": "IRAM-AITA 3621 - Certificación de Cascos de Protección para Uso Vehicular",
+    "url": "https://www.iram.org.ar/servicio/elementos-de-proteccion-personal/",
+    "publisher": "IRAM - Instituto Argentino de Normalización y Certificación",
+    "publishedAt": null,
+    "accessedAt": "2026-10-15",
+    "countryScope": "AR",
+    "supports": [
+      "cascos-norma-argentina",
+      "cascos-certificacion-iram"
+    ]
   }
 ]
