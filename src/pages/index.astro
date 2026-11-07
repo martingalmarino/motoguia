@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BrandTile from '../components/catalog/BrandTile.astro';
+import BlogPostList from '../components/editorial/BlogPostList.astro';
 import MotorcycleCard from '../components/catalog/MotorcycleCard.astro';
 import SearchForm from '../components/search/SearchForm.astro';
 import Icon from '../components/ui/Icon.astro';
@@ -254,18 +255,7 @@ const topFive = (ranking?.data.rows ?? []).slice(0, 5).map((row) => {
             </div>
             <a class="link-arrow" href={paths.blog}>Ver el blog <Icon name="arrow" size={18} /></a>
           </div>
-          <div class="editorial-cards">
-            {latestPosts.map((post) => (
-              <a class="editorial-card" href={`${paths.blog}${post.id}/`}>
-                <span class="editorial-card__kicker">
-                  <Icon name="book" size={16} /> Artículo
-                </span>
-                <h3>{post.data.title}</h3>
-                <p>{post.data.description}</p>
-                <span class="editorial-card__meta">{formatDate(post.data.pubDate)}</span>
-              </a>
-            ))}
-          </div>
+          <BlogPostList posts={latestPosts} />
         </section>
       )
     }

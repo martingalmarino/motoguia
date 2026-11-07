@@ -1,6 +1,7 @@
 ---
 title: Septiembre 2026 cerró con 80.113 motos patentadas en Argentina
 description: Análisis del mercado de motos en septiembre 2026. Honda Wave 110S lidera con 8.718 unidades, seguida de Gilera Smash y Keller Crono Classic 110.
+category: Mercado
 pubDate: 2026-10-15
 author: Lautaro Diaz
 heroImage:

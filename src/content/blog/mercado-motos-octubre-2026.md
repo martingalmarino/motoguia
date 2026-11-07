@@ -1,6 +1,7 @@
 ---
 title: "Motos más vendidas de octubre 2026: 79.497 patentamientos y la Wave 110S otra vez primera"
 description: "En octubre se patentaron 79.497 motos, 25,9% más que un año atrás según ACARA. Mirá el ranking de modelos y marcas, y el debut de la Honda Biz 110."
+category: Mercado
 pubDate: 2026-11-02
 author: Lautaro Diaz
 heroImage:

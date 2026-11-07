@@ -213,6 +213,8 @@ export const comparisonSchema = articleSchema.extend({
 export const blogSchema = z.object({
   title: z.string(),
   description: z.string(),
+  /** Etiqueta visible en la tarjeta. No genera página ni URL. */
+  category: z.string().min(1).max(40).optional(),
   pubDate: z.coerce.date(),
   updatedDate: z.coerce.date().optional(),
   author: z.string(),

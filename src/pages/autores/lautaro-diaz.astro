@@ -1,10 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogPostList from '../../components/editorial/BlogPostList.astro';
 import PageHeader from '../../components/editorial/PageHeader.astro';
-import Icon from '../../components/ui/Icon.astro';
 import { authorPath, paths } from '../../config/site';
 import { getPublishedBlogPosts } from '../../lib/content/catalog';
-import { formatDate } from '../../lib/format';
 
 const authorName = 'Lautaro Diaz';
 const authorSlug = 'lautaro-diaz';
@@ -48,18 +47,7 @@ const crumbs = [
             <p>Este autor aún no ha publicado artículos.</p>
           </div>
         ) : (
-          <div class="editorial-cards">
-            {posts.map((post) => (
-              <a class="editorial-card" href={`${paths.blog}${post.id}/`}>
-                <span class="editorial-card__kicker">
-                  <Icon name="book" size={16} /> Artículo
-                </span>
-                <h3>{post.data.title}</h3>
-                <p>{post.data.description}</p>
-                <span class="editorial-card__meta">{formatDate(post.data.pubDate)}</span>
-              </a>
-            ))}
-          </div>
+          <BlogPostList posts={posts} eagerFirst />
         )
       }
     </section>

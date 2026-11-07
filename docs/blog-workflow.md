@@ -14,6 +14,7 @@ Cada artículo es un archivo Markdown (`.md`) en `src/content/blog/` con este fr
 ---
 title: Título del artículo (máx. 60 caracteres recomendado)
 description: Resumen breve del artículo (máx. 155 caracteres recomendado)
+category: Mercado  # Opcional. Etiqueta de la tarjeta. No crea una página ni una URL.
 pubDate: 2026-10-15
 updatedDate: 2026-10-20  # Opcional, para actualizaciones
 author: Lautaro Diaz
@@ -56,6 +57,7 @@ seoDescription: Descripción SEO personalizada (opcional)
 ## Campos opcionales
 
 - **updatedDate**: Fecha de última actualización
+- **category**: Etiqueta corta que se muestra sobre la foto de la tarjeta (por ejemplo Mercado, Lanzamiento, Financiación). Si falta, la tarjeta no lleva etiqueta. No genera una ruta.
 - **sources**: Array de fuentes con `name` y `url`
 - **tags**: Array de etiquetas para categorizar
 - **relatedMotorcycles**: Array de IDs de motos mencionadas (slug sin marca)
@@ -148,6 +150,7 @@ Para añadir más autores, crear nuevas páginas en `src/pages/autores/`.
 ---
 title: Honda XR300L Tornado llega a Argentina
 description: La nueva trail de Honda desembarca en el país con motor de 300cc y equipamiento off-road. Precio y características.
+category: Lanzamiento
 pubDate: 2026-10-15
 author: Lautaro Diaz
 heroImage:
