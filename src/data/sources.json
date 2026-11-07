@@ -1,5 +1,45 @@
 [
   {
+    "id": "acara-siomaa-2026-10",
+    "title": "Informe del Sector SIOMAA — Octubre 2026",
+    "url": "https://autoblog.com.ar/wp-content/uploads/2026/11/2026.10-ACARA.-Informe-de-Mercado-2W_Inst.pdf",
+    "publisher": "ACARA / SIOMAA (hospedado por Autoblog)",
+    "publishedAt": "2026-10-30",
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": [
+      "ranking-ytd-2026",
+      "ranking-octubre-2026",
+      "totales-mercado"
+    ]
+  },
+  {
+    "id": "ambito-motos-octubre-2026",
+    "title": "Los patentamientos de motos crecieron 25,9% en octubre, pero bajaron frente a septiembre",
+    "url": "https://www.ambito.com/autos/los-patentamientos-motos-crecieron-259-octubre-pero-bajaron-frente-septiembre-n6340012",
+    "publisher": "Ámbito",
+    "publishedAt": "2026-10-30",
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": [
+      "ranking-octubre-2026-top5",
+      "totales-octubre"
+    ]
+  },
+  {
+    "id": "parabrisas-motos-octubre-2026",
+    "title": "Estas fueron las motos más vendidas en octubre",
+    "url": "https://parabrisas.perfil.com/noticias/novedades/estas-fueron-las-motos-mas-vendidas-en-octubre.phtml",
+    "publisher": "Parabrisas",
+    "publishedAt": "2026-11-02",
+    "accessedAt": "2026-11-07",
+    "countryScope": "AR",
+    "supports": [
+      "ranking-octubre-2026-top3",
+      "ranking-ytd-top3"
+    ]
+  },
+  {
     "id": "acara-siomaa-2026-09",
     "title": "Informe del Sector SIOMAA — Septiembre 2026",
     "url": "https://autoblog.com.ar/wp-content/uploads/2026/10/2026.09-ACARA.-Informe-de-Mercado-2W_Inst.pdf",

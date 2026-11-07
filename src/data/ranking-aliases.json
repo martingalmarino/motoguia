@@ -1,11 +1,13 @@
 {
   "BAJAJ BOXER CT 100": ["bajaj-boxer-ct100"],
+  "BAJAJ ROUSER 200": [],
   "CORVEN ENERGY 110": ["corven-energy-110"],
   "CORVEN MIRAGE 110": ["corven-mirage-110"],
   "CORVEN TRIAX 150": ["corven-triax-150"],
   "GILERA SAHEL 150": ["gilera-sahel-150"],
   "GILERA SMASH": ["gilera-smash"],
   "GUERRERO G110 TRIP": ["guerrero-trip-110"],
+  "HONDA BIZ 110": [],
   "HONDA CB125F TWISTER": ["honda-cb125f-twister"],
   "HONDA GLH 150": ["honda-glh-150"],
   "HONDA NAVI": ["honda-navi"],
@@ -24,5 +26,6 @@
   "SIAM QU 110": ["siam-qu-110"],
   "ZANELLA ZB 110": ["zanella-zb-110"],
   "ZANELLA ZB 110 Z3 FULL": ["zanella-zb-110"],
-  "ZANELLA ZB 110 Z3 ST": ["zanella-zb-110-z3-st"]
+  "ZANELLA ZB 110 Z3 ST": ["zanella-zb-110-z3-st"],
+  "ZANELLA ZR 150 OHC V2": []
 }
