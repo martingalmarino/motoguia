@@ -72,9 +72,9 @@ export const HUBS: Hub[] = [
     path: '/motos/tipo/trail/',
     label: 'Trail',
     h1: 'Motos trail en Argentina',
-    seoTitle: 'Motos trail en Argentina: modelos de 150 cc y ficha técnica',
+    seoTitle: 'Motos trail en Argentina: modelos, ficha técnica y precios',
     seoDescription:
-      'Motos trail de 150 cc que se venden en Argentina: potencia declarada, frenos, ABS, altura de asiento, peso, tanque y precio de referencia de cada modelo.',
+      'Motos trail que se venden en Argentina: potencia declarada, frenos, ABS, altura de asiento, peso, tanque y precio de referencia de cada modelo.',
     lede: 'Motos de uso mixto, para ciudad y caminos de tierra, con suspensiones más largas y rueda delantera grande.',
     intro: [
       'Una trail tiene suspensiones de mayor recorrido, rueda delantera de mayor diámetro y neumáticos de uso mixto. Eso le da más despeje para caminos de ripio o tierra, a cambio de un asiento más alto que el de una moto de calle.',

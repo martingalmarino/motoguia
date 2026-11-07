@@ -1485,5 +1485,394 @@
     "accessedAt": "2026-11-07",
     "countryScope": "AR",
     "supports": ["vc-150-specs", "garantia-vc-150"]
-  }
+  },
+    {
+      "id": "siam-quirion",
+      "title": "SIAM Quirion 150",
+      "url": "https://siammotos.com.ar/quirion",
+      "publisher": "SIAM Motos (Newsan)",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "quirion-150"
+      ]
+    },
+    {
+      "id": "siam-quirion-pdf",
+      "title": "Ficha técnica SIAM Quirion 150 (PDF)",
+      "url": "https://siammotos.com.ar/uploads/productos/archivos/ficha_tecnica_6.pdf",
+      "publisher": "SIAM Motos (Newsan)",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "quirion-150-specs"
+      ]
+    },
+    {
+      "id": "siam-nomad",
+      "title": "SIAM Nomad 150",
+      "url": "https://siammotos.com.ar/nomad",
+      "publisher": "SIAM Motos (Newsan)",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "nomad-150"
+      ]
+    },
+    {
+      "id": "siam-nomad-pdf",
+      "title": "Ficha técnica SIAM Nomad 150 (PDF)",
+      "url": "https://siammotos.com.ar/uploads/productos/archivos/ficha_tecnica_8.pdf",
+      "publisher": "SIAM Motos (Newsan)",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "nomad-150-specs"
+      ]
+    },
+    {
+      "id": "corven-hunter-ad",
+      "title": "Corven Hunter 150 AD",
+      "url": "https://corvenmotos.com.ar/project/hunter-150-ad/",
+      "publisher": "Corven Motos",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hunter-150-ad"
+      ]
+    },
+    {
+      "id": "corven-hunter-ad-pdf",
+      "title": "Ficha técnica Corven Hunter 150 AD (PDF)",
+      "url": "https://corvenmotos.com.ar/wp-content/uploads/2026/01/Ficha-Tecnica-Corven-Hunter-150-AD.pdf",
+      "publisher": "Corven Motos",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hunter-150-ad-specs"
+      ]
+    },
+    {
+      "id": "corven-hunter-rt",
+      "title": "Corven Hunter 150 RT",
+      "url": "https://corvenmotos.com.ar/project/hunter-150-rt/",
+      "publisher": "Corven Motos",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hunter-150-rt"
+      ]
+    },
+    {
+      "id": "corven-hunter-rt-pdf",
+      "title": "Ficha técnica Corven Hunter 150 RT (PDF)",
+      "url": "https://corvenmotos.com.ar/wp-content/uploads/2026/01/Ficha-Tecnica-Corven-Hunter-150-RT.pdf",
+      "publisher": "Corven Motos",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hunter-150-rt-specs"
+      ]
+    },
+    {
+      "id": "corven-hunter-r2",
+      "title": "Corven Hunter 150 R2",
+      "url": "https://corvenmotos.com.ar/project/hunter-150-r2/",
+      "publisher": "Corven Motos",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hunter-150-r2"
+      ]
+    },
+    {
+      "id": "corven-hunter-r2-pdf",
+      "title": "Ficha técnica Corven Hunter 150 R2 (PDF)",
+      "url": "https://corvenmotos.com.ar/wp-content/uploads/2026/01/Ficha-Tecnica-Corven-Hunter-150-R2-AD.pdf",
+      "publisher": "Corven Motos",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hunter-150-r2-specs"
+      ]
+    },
+    {
+      "id": "keller-miracle-150",
+      "title": "Keller Miracle 150 Evo",
+      "url": "https://motoskeller.com.ar/miracle-150-evo/",
+      "publisher": "Keller Motos",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "miracle-150-evo"
+      ]
+    },
+    {
+      "id": "keller-miracle-manual",
+      "title": "Manual del usuario Keller Miracle 150 Evo (KN150GY), 2016",
+      "url": "http://images.unomotos.com.ar/unomotos/manuales/manual_usuario_keller_miracle_150_evo_enduro.pdf",
+      "publisher": "Emprendimiento Industrial Mediterráneo S.A. (PDF publicado por el concesionario Uno Motos)",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "miracle-150-evo",
+        "nombre-ranking-kn150gy"
+      ]
+    },
+    {
+      "id": "keller-stratus-full",
+      "title": "Keller Stratus 150 FULL",
+      "url": "https://motoskeller.com.ar/stratus-150-full/",
+      "publisher": "Keller Motos",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "stratus-150"
+      ]
+    },
+    {
+      "id": "keller-stratus-plus",
+      "title": "Keller Stratus 150 PLUS",
+      "url": "https://motoskeller.com.ar/stratus-150-plus/",
+      "publisher": "Keller Motos",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "stratus-150"
+      ]
+    },
+    {
+      "id": "keller-stratus-eco",
+      "title": "Keller Stratus 150 ECO",
+      "url": "https://motoskeller.com.ar/stratus-150-eco-2/",
+      "publisher": "Keller Motos",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "stratus-150"
+      ]
+    },
+    {
+      "id": "keller-stratus-manual",
+      "title": "Manual del usuario Keller Stratus 150 FULL (KN150-13), 2015",
+      "url": "http://images.unomotos.com.ar/unomotos/manuales/manual_usuario_keller_stratus_150_full.pdf",
+      "publisher": "Emprendimiento Industrial Mediterráneo S.A. (PDF publicado por el concesionario Uno Motos)",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "stratus-150",
+        "nombre-ranking-kn150-13"
+      ]
+    },
+    {
+      "id": "suzuki-ar",
+      "title": "Suzuki Motos Argentina",
+      "url": "https://suzukimotosarg.com.ar/",
+      "publisher": "Suzuki Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "suzuki"
+      ]
+    },
+    {
+      "id": "suzuki-ax100",
+      "title": "Suzuki AX100",
+      "url": "https://suzukimotosarg.com.ar/products/ax100/",
+      "publisher": "Suzuki Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "ax100"
+      ]
+    },
+    {
+      "id": "suzuki-ax100-pdf",
+      "title": "Ficha técnica Suzuki AX100 (PDF)",
+      "url": "https://suzukimotosarg.com.ar/wp-content/uploads/2021/08/Ficha-tecnica-AX100.pdf",
+      "publisher": "Suzuki Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "ax100-specs"
+      ]
+    },
+    {
+      "id": "hero-ar",
+      "title": "Hero Motos Argentina",
+      "url": "https://heromotos.com.ar/",
+      "publisher": "Hero Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hero"
+      ]
+    },
+    {
+      "id": "hero-urbanas",
+      "title": "Hero Argentina, motos urbanas",
+      "url": "https://heromotos.com.ar/urbanas/",
+      "publisher": "Hero Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hero-precios"
+      ]
+    },
+    {
+      "id": "hero-hunk-125r",
+      "title": "Hero Hunk 125R",
+      "url": "https://heromotos.com.ar/urbanas/hunk125r/",
+      "publisher": "Hero Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hunk-125r",
+        "precio-hunk-125r"
+      ]
+    },
+    {
+      "id": "hero-hunk-150-dd",
+      "title": "Hero Hunk 150 DD",
+      "url": "https://heromotos.com.ar/urbanas/hunk-150-dd/",
+      "publisher": "Hero Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hunk-150-dd"
+      ]
+    },
+    {
+      "id": "hero-hunk-150-xtec",
+      "title": "Hero Hunk 150 XTEC",
+      "url": "https://heromotos.com.ar/urbanas/hunk-150-xtec/",
+      "publisher": "Hero Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hunk-150-xtec",
+        "precio-hunk-150-xtec"
+      ]
+    },
+    {
+      "id": "hero-xpulse-200-4v",
+      "title": "Hero Xpulse 200 4V",
+      "url": "https://heromotos.com.ar/doble-proposito/xpulse-200-4v/",
+      "publisher": "Hero Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "xpulse-200-4v",
+        "precio-xpulse-200-4v"
+      ]
+    },
+    {
+      "id": "hero-xpulse-200-advance",
+      "title": "Hero Xpulse 200 Advance",
+      "url": "https://heromotos.com.ar/doble-proposito/xpulse-200-advance/",
+      "publisher": "Hero Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "xpulse-200-advance"
+      ]
+    },
+    {
+      "id": "hero-garantia",
+      "title": "Política de garantías Hero Argentina",
+      "url": "https://heromotos.com.ar/politica-de-garantias/",
+      "publisher": "Hero Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "garantia-hero"
+      ]
+    },
+    {
+      "id": "hero-lanzamiento",
+      "title": "Lanzamiento de nuevos modelos Hero Argentina",
+      "url": "https://heromotos.com.ar/lanzamiento-nuevos-modelos-hero-argentina/",
+      "publisher": "Hero Argentina",
+      "publishedAt": "2025-11-20",
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "hero-ensamble"
+      ]
+    },
+    {
+      "id": "cfmoto-ar",
+      "title": "CFMOTO Argentina",
+      "url": "https://cfmotoargentina.com.ar/",
+      "publisher": "CFMOTO Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "cfmoto"
+      ]
+    },
+    {
+      "id": "cfmoto-sobre",
+      "title": "Sobre CFMOTO",
+      "url": "https://cfmotoargentina.com.ar/sobrecfmoto/",
+      "publisher": "CFMOTO Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "cfmoto-origen"
+      ]
+    },
+    {
+      "id": "cfmoto-450mt",
+      "title": "CFMOTO 450MT",
+      "url": "https://cfmotoargentina.com.ar/450mt/",
+      "publisher": "CFMOTO Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "450mt"
+      ]
+    },
+    {
+      "id": "cfmoto-450mt-pdf",
+      "title": "Ficha técnica CFMOTO 450MT (PDF)",
+      "url": "https://cfmotoargentina.com.ar/wp-content/uploads/2026/09/FT_450MT-Vertical_NUEVA-VERSION.pdf",
+      "publisher": "CFMOTO Argentina",
+      "publishedAt": null,
+      "accessedAt": "2026-11-07",
+      "countryScope": "AR",
+      "supports": [
+        "450mt-specs"
+      ]
+    }
 ]
