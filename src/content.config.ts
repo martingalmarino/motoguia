@@ -1,5 +1,6 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 import { articleSchema, blogSchema, comparisonSchema, motorcycleSchema, rankingSchema } from './lib/content/schema';
 
 const motorcycles = defineCollection({
@@ -12,9 +13,18 @@ const rankings = defineCollection({
   schema: rankingSchema,
 });
 
+const guideFaqSchema = z
+  .array(
+    z.object({
+      question: z.string().min(1),
+      answer: z.string().min(1),
+    }),
+  )
+  .optional();
+
 const guides = defineCollection({
   loader: glob({ base: './src/content/guides', pattern: '**/*.md' }),
-  schema: articleSchema,
+  schema: articleSchema.extend({ faqs: guideFaqSchema }),
 });
 
 const comparisons = defineCollection({
