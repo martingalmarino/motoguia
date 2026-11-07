@@ -36,6 +36,6 @@
     { "rank": 17, "reportModelName": "HONDA NAVI", "modelIds": ["honda-navi"], "units": 8061, "comparableChange": null, "comparisonPeriod": null },
     { "rank": 18, "reportModelName": "GILERA SAHEL 150", "modelIds": ["gilera-sahel-150"], "units": 7322, "comparableChange": null, "comparisonPeriod": null },
     { "rank": 19, "reportModelName": "MOTOMEL C110 DLX", "modelIds": ["motomel-c110-dlx"], "units": 7036, "comparableChange": null, "comparisonPeriod": null },
-    { "rank": 20, "reportModelName": "BAJAJ ROUSER 200", "modelIds": [], "units": 6634, "comparableChange": null, "comparisonPeriod": null }
+    { "rank": 20, "reportModelName": "BAJAJ ROUSER 200", "modelIds": ["bajaj-rouser-ns200"], "units": 6634, "comparableChange": null, "comparisonPeriod": null }
   ]
 }
