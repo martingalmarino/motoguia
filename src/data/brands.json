@@ -28,7 +28,7 @@
     "name": "Keller",
     "slug": "keller",
     "originCountry": null,
-    "originNote": "Keller tiene su planta industrial en Córdoba y usa motores UNNITEC en la línea Crono. En el informe de patentamientos, la Crono Classic 110 figura como KN110-8.",
+    "originNote": "Keller tiene su planta industrial en Córdoba y usa motores UNNITEC. En el informe de patentamientos, la Crono Classic 110 figura como KN110-8, la Miracle 150 Evo como KN150GY y la Stratus 150 como KN150-13.",
     "importer": null,
     "chineseHub": true,
     "website": "https://motoskeller.com.ar/",
@@ -76,7 +76,7 @@
     "name": "SIAM",
     "slug": "siam",
     "originCountry": "AR",
-    "originNote": "Marca argentina comercializada por Newsan. El N4 declara motor Yadea; la ficha del QU 110 no informa país de fabricación.",
+    "originNote": "Marca argentina comercializada por Newsan. El N4 declara motor Yadea. Las fichas del QU 110, la Quirion 150 y la Nomad 150 no informan país de fabricación.",
     "importer": "Newsan",
     "chineseHub": true,
     "website": "https://siammotos.com.ar/",
@@ -151,5 +151,41 @@
     "website": "https://www.yamaha-motor.com.ar/",
     "logo": { "src": "/images/marcas/yamaha.svg", "width": 374, "height": 128, "sourceUrl": "https://www.yamaha-motor.com.ar/bundles/frontend/img/Logo_nuevo2025_alternativo-01.svg" },
     "sourceIds": ["yamaha-motor-ar"]
+  },
+  {
+    "id": "suzuki",
+    "name": "Suzuki",
+    "slug": "suzuki",
+    "originCountry": "JP",
+    "originNote": "Marca japonesa. El sitio local se presenta como Suzuki Argentina. La ficha de la AX100 no informa el país de fabricación.",
+    "importer": "Suzuki Argentina",
+    "chineseHub": false,
+    "website": "https://suzukimotosarg.com.ar/",
+    "logo": { "src": "/images/marcas/suzuki.png", "width": 239, "height": 120, "sourceUrl": "https://suzukimotosarg.com.ar/wp-content/uploads/2024/02/logo_img.gif" },
+    "sourceIds": ["suzuki-ar"]
+  },
+  {
+    "id": "hero",
+    "name": "Hero",
+    "slug": "hero",
+    "originCountry": "IN",
+    "originNote": "Marca india. Hero Argentina informa que Gilera Motors es el distribuidor oficial. El comunicado del 20 de noviembre de 2025 dice que Hunk 150 XTEC, Hunk 160 4V y XPulse 200 4V FI se ensamblan en el país con componentes importados de India.",
+    "importer": "Gilera Motors",
+    "chineseHub": false,
+    "website": "https://heromotos.com.ar/",
+    "logo": { "src": "/images/marcas/hero.png", "width": 90, "height": 30, "sourceUrl": "https://heromotos.com.ar/wp-content/uploads/2023/02/logoHero.png" },
+    "sourceIds": ["hero-ar", "hero-lanzamiento"]
+  },
+  {
+    "id": "cfmoto",
+    "name": "CFMOTO",
+    "slug": "cfmoto",
+    "originCountry": "CN",
+    "originNote": "Zhejiang CFMOTO Power Co., Ltd. fue fundada en 1989 y tiene sede en Hangzhou, Zhejiang, China. El sitio argentino menciona una sucursal en el país y no publica la razón social del importador.",
+    "importer": null,
+    "chineseHub": true,
+    "website": "https://cfmotoargentina.com.ar/",
+    "logo": { "src": "/images/marcas/cfmoto.png", "width": 1200, "height": 256, "sourceUrl": "https://cfmotoargentina.com.ar/wp-content/uploads/2026/10/logo-cfmoto-scaled.webp" },
+    "sourceIds": ["cfmoto-ar", "cfmoto-sobre"]
   }
 ]
