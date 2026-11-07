@@ -24,7 +24,7 @@ price:
   maxARS: 3434700
   priceType: list
   includesRegistration: null
-  observedAt: 2026-10-14
+  observedAt: 2026-11-05
   sourceIds:
     - honda-navi
 engine:
