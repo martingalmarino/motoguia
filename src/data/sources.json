@@ -292,11 +292,11 @@
   },
   {
     "id": "corven-energy",
-    "title": "Corven Energy 110 AD",
-    "url": "https://corvenmotos.com.ar/project/energy-110-nueva/",
+    "title": "Corven Motos: listado de modelos",
+    "url": "https://corvenmotos.com.ar/motos/",
     "publisher": "Corven Motos",
     "publishedAt": null,
-    "accessedAt": "2026-09-18",
+    "accessedAt": "2026-11-07",
     "countryScope": "AR",
     "supports": [
       "energy-110"
@@ -636,7 +636,7 @@
     "url": "https://sunra.com.ar/moto-electrica-future/",
     "publisher": "SUNRA Argentina",
     "publishedAt": null,
-    "accessedAt": "2026-10-14",
+    "accessedAt": "2026-11-07",
     "countryScope": "AR",
     "supports": [
       "sunra-future"
@@ -675,10 +675,10 @@
   {
     "id": "decreto-196-2025",
     "title": "Decreto 196/2025: modificación de la reglamentación de la Ley de Tránsito",
-    "url": "https://www.argentina.gob.ar/normativa/nacional/decreto-196-2025-410682/texto",
-    "publisher": "Boletín Oficial / Argentina.gob.ar",
+    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/322652/20250318",
+    "publisher": "Boletín Oficial de la República Argentina",
     "publishedAt": "2025-03-18",
-    "accessedAt": "2026-10-15",
+    "accessedAt": "2026-11-07",
     "countryScope": "AR",
     "supports": [
       "licencia-domicilio-dni",
@@ -962,7 +962,7 @@
     "url": "https://corvenmotos.com.ar/wp-content/uploads/2026/01/Ficha-Tecnica-Corven-Energy-110-AD.pdf",
     "publisher": "Corven Motos S.A.",
     "publishedAt": null,
-    "accessedAt": "2026-10-15",
+    "accessedAt": "2026-11-07",
     "countryScope": "AR",
     "supports": [
       "energy-110-specs"
