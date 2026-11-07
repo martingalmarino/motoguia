@@ -2,18 +2,25 @@ import { onCompareChange, readCompare } from './compare-store';
 
 const triggers = new WeakMap<HTMLDialogElement, HTMLElement | null>();
 
+function setExpanded(trigger: HTMLElement | null | undefined, open: boolean) {
+  if (trigger?.hasAttribute('aria-expanded')) trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
 function openDialog(dialog: HTMLDialogElement, trigger: HTMLElement | null, focusTarget?: HTMLElement | null) {
   if (dialog.open) return;
   triggers.set(dialog, trigger);
   dialog.showModal();
   document.documentElement.classList.add('has-dialog');
+  setExpanded(trigger, true);
   focusTarget?.focus();
 }
 
 document.querySelectorAll<HTMLDialogElement>('dialog.search-dialog, dialog.nav-drawer').forEach((dialog) => {
   dialog.addEventListener('close', () => {
     document.documentElement.classList.remove('has-dialog');
-    triggers.get(dialog)?.focus();
+    const trigger = triggers.get(dialog);
+    setExpanded(trigger, false);
+    trigger?.focus();
   });
   dialog.addEventListener('click', (event) => {
     if (event.target === dialog) dialog.close();
@@ -50,11 +57,28 @@ function closeSubnavs(except?: HTMLElement) {
 }
 subnavs.forEach((item) => {
   const toggle = item.querySelector<HTMLButtonElement>('[data-subnav-toggle]');
+  const setOpen = (open: boolean) => {
+    item.classList.toggle('is-open', open);
+    toggle?.setAttribute('aria-expanded', String(open));
+  };
   toggle?.addEventListener('click', () => {
     const open = !item.classList.contains('is-open');
     closeSubnavs(item);
-    item.classList.toggle('is-open', open);
-    toggle.setAttribute('aria-expanded', String(open));
+    setOpen(open);
+    if (!open && item.matches(':hover')) toggle?.setAttribute('aria-expanded', 'true');
+  });
+  item.addEventListener('mouseenter', () => {
+    toggle?.setAttribute('aria-expanded', 'true');
+  });
+  item.addEventListener('mouseleave', () => {
+    if (item.classList.contains('is-open') || item.contains(document.activeElement)) return;
+    toggle?.setAttribute('aria-expanded', 'false');
+  });
+  item.addEventListener('focusout', (event) => {
+    const next = event.relatedTarget;
+    if (next instanceof Node && item.contains(next)) return;
+    item.classList.remove('is-open');
+    toggle?.setAttribute('aria-expanded', item.matches(':hover') ? 'true' : 'false');
   });
 });
 document.addEventListener('keydown', (event) => {

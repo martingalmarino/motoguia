@@ -13,7 +13,7 @@ import {
   getLatestSummaryRanking,
   motorcycleUrl,
 } from '../lib/content/catalog';
-import { displayName, reportModelLabel, stageImage } from '../lib/content/present';
+import { displayName, priceReference, reportModelLabel, stageImage } from '../lib/content/present';
 import { periodShortLabel } from '../lib/content/ranking-period';
 import { formatDate, formatInteger } from '../lib/format';
 import { organizationLd, websiteLd } from '../lib/seo/jsonld';
@@ -29,6 +29,10 @@ const pick = (ids: string[]) =>
 const hero = byId.get('honda-wave-110s') ?? motos[0];
 const heroImage = stageImage(hero);
 const heroRank = ranking?.data.rows.find((row) => row.modelIds.includes(hero.data.id));
+const heroPriceRef = priceReference(hero);
+const heroPrice = heroPriceRef
+  ? `${heroPriceRef.prefix ? `${heroPriceRef.prefix} ` : ''}${heroPriceRef.amount} · ${heroPriceRef.typeLabel} al ${heroPriceRef.date}`
+  : 'Precio no disponible';
 
 const brandTiles = getAllBrands()
   .map((brand) => ({ brand, count: motos.filter((moto) => moto.data.brandId === brand.id).length }))
@@ -90,29 +94,35 @@ const topFive = (ranking?.data.rows ?? []).slice(0, 5).map((row) => {
         <p class="eyebrow">Motos en Argentina</p>
         <h1>Encontrá la moto que va con vos.</h1>
         <p class="home-hero__support">Explorá modelos, compará características y calculá cuánto cuesta tener tu próxima moto.</p>
-        <SearchForm id="busqueda-inicio" />
+        <SearchForm
+          id="busqueda-inicio"
+          label="¿Qué moto estás buscando?"
+          hideLabel
+          placeholder="¿Qué moto estás buscando?"
+        />
         <div class="home-hero__links">
-          <a href={paths.catalog}>Ver todas las motos <Icon name="arrow" size={18} /></a>
-          <a href={paths.comparator}>Comparar modelos <Icon name="arrow" size={18} /></a>
+          <a class="home-hero__cta" href={paths.catalog}>Ver todas las motos</a>
+          <a class="home-hero__cta" href={paths.comparator}>Comparar modelos</a>
         </div>
       </div>
-      <figure class="home-hero__visual">
-        <div class="home-hero__stage">
-          <img
-            src={heroImage.src}
-            srcset={heroImage.srcset ?? undefined}
-            sizes="(min-width: 1024px) 640px, 100vw"
-            alt={heroImage.alt}
-            width="1200"
-            height="900"
-            fetchpriority="high"
-          />
-        </div>
-        <a class="home-hero__caption" href={motorcycleUrl(hero)}>
-          {displayName(hero)}
-          {heroRank && ranking && <span>· N.º {heroRank.rank} en patentamientos {periodShortLabel(ranking.data)}</span>}
-        </a>
-      </figure>
+      <a class="home-hero__feat" href={motorcycleUrl(hero)}>
+        {
+          heroRank && ranking && (
+            <span class="home-hero__badge">N.º {heroRank.rank} en patentamientos {periodShortLabel(ranking.data)}</span>
+          )
+        }
+        <img
+          src={heroImage.src}
+          srcset={heroImage.srcset ?? undefined}
+          sizes="(min-width: 1024px) 560px, 340px"
+          alt={heroImage.alt}
+          width="1200"
+          height="900"
+          fetchpriority="high"
+        />
+        <strong>{displayName(hero)}</strong>
+        <span class="home-hero__price">{heroPrice}</span>
+      </a>
     </div>
   </section>
 

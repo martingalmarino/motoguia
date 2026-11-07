@@ -6,10 +6,17 @@ interface Props {
   id: string;
   label?: string;
   hideLabel?: boolean;
+  placeholder?: string;
   variant?: 'hero' | 'dialog';
 }
 
-const { id, label = '¿Qué moto estás buscando?', hideLabel = false, variant = 'hero' } = Astro.props;
+const {
+  id,
+  label = '¿Qué moto estás buscando?',
+  hideLabel = false,
+  placeholder = 'Buscá por marca o modelo',
+  variant = 'hero',
+} = Astro.props;
 ---
 
 <form class:list={['search-form', `search-form--${variant}`]} method="get" action={paths.catalog} role="search" data-model-search>
@@ -23,7 +30,7 @@ const { id, label = '¿Qué moto estás buscando?', hideLabel = false, variant =
         name="q"
         autocomplete="off"
         enterkeyhint="search"
-        placeholder="Buscá por marca o modelo"
+        placeholder={placeholder}
       />
     </span>
     <button class="btn btn-primary" type="submit">Buscar motos</button>

@@ -1,49 +1,92 @@
 ---
 import Icon from '../ui/Icon.astro';
-import Logo from './Logo.astro';
 import SearchForm from '../search/SearchForm.astro';
-import { navItems, paths } from '../../config/site';
+import { navItems, paths, type NavItem } from '../../config/site';
 
 const current = Astro.url.pathname;
-const isCurrent = (href: string) => (href === '/' ? current === '/' : current.startsWith(href));
+const motoChildren = navItems.find((item) => item.href === paths.catalog)?.children ?? [];
+
+const menu: NavItem[] = [
+  { label: 'Motos', href: paths.catalog, children: motoChildren },
+  { label: 'Marcas', href: paths.brands },
+  { label: 'Comparar', href: paths.comparisons },
+  { label: 'Guías', href: paths.guides },
+  { label: 'Accesorios', href: paths.accessories },
+  { label: 'Blog', href: paths.blog },
+];
+
+const quick = [
+  { href: paths.prices, label: 'Precios' },
+  { href: paths.ranking, label: 'Más vendidas' },
+  { href: '/motos/tipo/cub/', label: 'Cub' },
+  { href: '/motos/tipo/scooter/', label: 'Scooters' },
+  { href: '/motos/150cc/', label: '150 cc' },
+  { href: paths.electric, label: 'Eléctricas' },
+  { href: paths.tools, label: 'Herramientas' },
+  { href: paths.accessories, label: 'Accesorios' },
+];
+
+const inMotos =
+  current.startsWith('/motos/') ||
+  current.startsWith('/motos-mas-vendidas') ||
+  current.startsWith('/motos-electricas') ||
+  current.startsWith('/motos-chinas');
+
+const sectionOn = (href: string) => (href === paths.catalog ? inMotos : current === href || current.startsWith(href));
+const chipOn = (href: string) => current === href || current.startsWith(href);
+const currentValue = (href: string, on: boolean) => (current === href ? 'page' : on ? 'true' : undefined);
 ---
 
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="site-header__logo" href={paths.home} aria-label="MotoGuía AR, inicio">
-      <Logo />
+      <span class="brand-mark">
+        <span class="brand-mark__mono" aria-hidden="true">MG</span>
+        <span class="brand-mark__word">MotoGuía</span>
+        <span class="brand-mark__geo">AR</span>
+      </span>
     </a>
 
     <nav class="main-nav" aria-label="Principal">
       <ul class="main-nav__list">
         {
-          navItems.map((item, index) =>
+          menu.map((item) =>
             item.children ? (
               <li class="main-nav__item has-sub" data-subnav>
-                <a class:list={['main-nav__link', { 'is-current': isCurrent(item.href) }]} href={item.href}>
+                <a
+                  class:list={['main-nav__link', { 'is-current': sectionOn(item.href) }]}
+                  href={item.href}
+                  aria-current={currentValue(item.href, sectionOn(item.href))}
+                >
                   {item.label}
                 </a>
                 <button
                   class="main-nav__toggle"
                   type="button"
                   aria-expanded="false"
-                  aria-controls={`subnav-${index}`}
+                  aria-haspopup="true"
+                  aria-controls="subnav-motos"
                   data-subnav-toggle
                 >
                   <span class="visually-hidden">Más opciones de {item.label}</span>
-                  <Icon name="chevron" size={16} />
                 </button>
-                <ul class="main-nav__sub" id={`subnav-${index}`}>
+                <ul class="main-nav__sub" id="subnav-motos">
                   {item.children.map((child) => (
                     <li>
-                      <a href={child.href}>{child.label}</a>
+                      <a href={child.href} aria-current={current === child.href ? 'page' : undefined}>
+                        {child.label}
+                      </a>
                     </li>
                   ))}
                 </ul>
               </li>
             ) : (
               <li class="main-nav__item">
-                <a class:list={['main-nav__link', { 'is-current': isCurrent(item.href) }]} href={item.href}>
+                <a
+                  class:list={['main-nav__link', { 'is-current': sectionOn(item.href) }]}
+                  href={item.href}
+                  aria-current={currentValue(item.href, sectionOn(item.href))}
+                >
                   {item.label}
                 </a>
               </li>
@@ -54,7 +97,10 @@ const isCurrent = (href: string) => (href === '/' ? current === '/' : current.st
     </nav>
 
     <div class="site-header__actions">
-      <button class="icon-btn" type="button" data-search-open aria-haspopup="dialog" aria-controls="dialogo-busqueda">
+      <a class="site-header__search" href={paths.search}>
+        <span aria-hidden="true">⌕</span> Buscar moto
+      </a>
+      <button class="icon-btn site-header__search-btn" type="button" data-search-open aria-haspopup="dialog" aria-controls="dialogo-busqueda">
         <Icon name="search" />
         <span class="visually-hidden">Buscar motos</span>
       </button>
@@ -63,13 +109,38 @@ const isCurrent = (href: string) => (href === '/' ? current === '/' : current.st
         <span class="header-compare__label">Comparador</span>
         <span class="header-compare__count" data-compare-count aria-label="modelos elegidos">0</span>
       </a>
-      <button class="icon-btn site-header__menu" type="button" data-drawer-open aria-haspopup="dialog" aria-controls="menu-movil">
+      <button
+        class="icon-btn site-header__menu"
+        type="button"
+        data-drawer-open
+        aria-expanded="false"
+        aria-haspopup="dialog"
+        aria-controls="menu-movil"
+      >
         <Icon name="menu" />
         <span class="visually-hidden">Abrir menú</span>
       </button>
     </div>
   </div>
 </header>
+
+<nav class="cat-nav" aria-label="Accesos rápidos">
+  <ul class="cat-nav__list">
+    {
+      quick.map((item) => (
+        <li>
+          <a
+            class:list={['cat-nav__link', { 'is-current': chipOn(item.href) }]}
+            href={item.href}
+            aria-current={currentValue(item.href, chipOn(item.href))}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
 
 <dialog class="search-dialog" id="dialogo-busqueda" aria-labelledby="dialogo-busqueda-titulo" data-search-dialog>
   <div class="search-dialog__panel">
@@ -90,7 +161,13 @@ const isCurrent = (href: string) => (href === '/' ? current === '/' : current.st
 <dialog class="nav-drawer" id="menu-movil" aria-label="Menú" data-nav-drawer>
   <div class="nav-drawer__panel">
     <div class="nav-drawer__head">
-      <Logo />
+      <a class="site-header__logo" href={paths.home} aria-label="MotoGuía AR, inicio">
+        <span class="brand-mark">
+          <span class="brand-mark__mono" aria-hidden="true">MG</span>
+          <span class="brand-mark__word">MotoGuía</span>
+          <span class="brand-mark__geo">AR</span>
+        </span>
+      </a>
       <button class="icon-btn" type="button" data-dialog-close>
         <Icon name="close" />
         <span class="visually-hidden">Cerrar menú</span>
@@ -98,26 +175,28 @@ const isCurrent = (href: string) => (href === '/' ? current === '/' : current.st
     </div>
     <nav aria-label="Menú móvil">
       {
-        navItems.map((item) => (
+        menu.map((item) => (
           <div class="nav-drawer__group">
-            <a class="nav-drawer__link" href={item.href}>
+            <a class="nav-drawer__link" href={item.href} aria-current={currentValue(item.href, sectionOn(item.href))}>
               {item.label}
             </a>
             {item.children && (
-              <ul class="nav-drawer__sub">
-                {item.children
-                  .filter((child) => child.href !== item.href)
-                  .map((child) => (
-                    <li>
-                      <a href={child.href}>{child.label}</a>
-                    </li>
-                  ))}
+              <ul class="nav-drawer__sub nav-drawer__sub--cats">
+                {item.children.map((child) => (
+                  <li>
+                    <a href={child.href} aria-current={current === child.href ? 'page' : undefined}>
+                      {child.label}
+                    </a>
+                  </li>
+                ))}
               </ul>
             )}
           </div>
         ))
       }
       <div class="nav-drawer__group">
+        <a class="nav-drawer__link" href={paths.search}>Buscar moto</a>
+        <a class="nav-drawer__link" href={paths.tools}>Herramientas</a>
         <a class="nav-drawer__link" href={paths.comparator}>
           Comparador <span class="nav-drawer__count" data-compare-count-drawer hidden></span>
         </a>
