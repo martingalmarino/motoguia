@@ -138,7 +138,7 @@
     "url": "https://www.argentina.gob.ar/seguridadvial/licencianacional/clasesysubclases",
     "publisher": "ANSV / Argentina.gob.ar",
     "publishedAt": "2026-02-11",
-    "accessedAt": "2026-11-07",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": [
       "licencia-clases-A"
@@ -660,7 +660,7 @@
     "url": "https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/818/texact.htm",
     "publisher": "InfoLEG — Ministerio de Justicia",
     "publishedAt": null,
-    "accessedAt": "2026-11-07",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": [
       "licencia-edades-art11",
@@ -913,7 +913,7 @@
     "url": "https://www.argentina.gob.ar/seguridadvial/municipios-licencia-nacional",
     "publisher": "ANSV / Argentina.gob.ar",
     "publishedAt": null,
-    "accessedAt": "2026-11-07",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": [
       "centros-emisores"
@@ -925,7 +925,7 @@
     "url": "https://www.argentina.gob.ar/servicio/realizar-el-curso-nacional-de-seguridad-vial-para-obtener-la-licencia",
     "publisher": "ANSV / Argentina.gob.ar",
     "publishedAt": null,
-    "accessedAt": "2026-11-07",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": [
       "curso-primera-licencia"
@@ -937,7 +937,7 @@
     "url": "https://www.argentina.gob.ar/servicio/renovar-yo-ampliar-la-licencia-nacional-de-conducir",
     "publisher": "ANSV / Argentina.gob.ar",
     "publishedAt": null,
-    "accessedAt": "2026-11-07",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": [
       "renovacion-ampliacion-online"
@@ -949,7 +949,7 @@
     "url": "https://www.argentina.gob.ar/noticias/comienza-implementarse-la-nueva-modalidad-para-renovacion-online-de-licencias-de-conducir",
     "publisher": "Argentina.gob.ar",
     "publishedAt": "2025-05-19",
-    "accessedAt": "2026-11-07",
+    "accessedAt": "2026-10-15",
     "countryScope": "AR",
     "supports": [
       "licencia-digital-primera-vez",
@@ -1284,80 +1284,6 @@
     "countryScope": "AR",
     "supports": [
       "boxer-ct100-specs"
-    ]
-  },
-  {
-    "id": "ansv-cenat-202-2026",
-    "title": "Disposición ANSV 202/2026: valor del formulario CENAT",
-    "url": "https://www.boletinoficial.gob.ar/detalleAviso/primera/344130/20260707",
-    "publisher": "Boletín Oficial de la República Argentina",
-    "publishedAt": "2026-07-07",
-    "accessedAt": "2026-11-07",
-    "countryScope": "AR",
-    "supports": [
-      "cenat-10150"
-    ]
-  },
-  {
-    "id": "caba-otorgamiento-licencia",
-    "title": "Otorgamiento de licencia de conducir",
-    "url": "https://buenosaires.gob.ar/tramites/otorgamiento-de-licencia-de-conducir",
-    "publisher": "Gobierno de la Ciudad Autónoma de Buenos Aires",
-    "publishedAt": null,
-    "accessedAt": "2026-11-07",
-    "countryScope": "AR",
-    "supports": [
-      "caba-bui-licencia",
-      "caba-examen-moto"
-    ]
-  },
-  {
-    "id": "caba-ley-tarifaria-6928",
-    "title": "Ley tarifaria de la Ciudad Autónoma de Buenos Aires (PDF vigente en el sitio oficial)",
-    "url": "https://buenosaires.gob.ar/sites/default/files/LEY_6711_Tarifaria_VIGENTE.pdf",
-    "publisher": "Legislatura de la Ciudad Autónoma de Buenos Aires",
-    "publishedAt": "2025-11-27",
-    "accessedAt": "2026-11-07",
-    "countryScope": "AR",
-    "supports": [
-      "caba-licencia-36-uf"
-    ]
-  },
-  {
-    "id": "rosario-nueva-licencia",
-    "title": "Nueva licencia de conducir",
-    "url": "https://www.rosario.gob.ar/inicio/nueva-licencia-de-conducir",
-    "publisher": "Municipalidad de Rosario",
-    "publishedAt": null,
-    "accessedAt": "2026-11-07",
-    "countryScope": "AR",
-    "supports": [
-      "rosario-sellado-licencia",
-      "rosario-edad-licencia-nueva"
-    ]
-  },
-  {
-    "id": "laplata-tarifario-licencias",
-    "title": "Tarifario de licencias de conducir",
-    "url": "https://tramites.laplata.gob.ar/licencias/tarifario.html",
-    "publisher": "Municipalidad de La Plata",
-    "publishedAt": null,
-    "accessedAt": "2026-11-07",
-    "countryScope": "AR",
-    "supports": [
-      "laplata-arancel-licencia"
-    ]
-  },
-  {
-    "id": "mendoza-emision-licencia",
-    "title": "Emisión de Licencias de Conducir Nacional Particular",
-    "url": "https://ciudaddemendoza.gob.ar/tramites/emision-de-licencias-de-conducir-nacional-particular/",
-    "publisher": "Ciudad de Mendoza",
-    "publishedAt": null,
-    "accessedAt": "2026-11-07",
-    "countryScope": "AR",
-    "supports": [
-      "mendoza-tasa-licencia"
     ]
   }
 ]

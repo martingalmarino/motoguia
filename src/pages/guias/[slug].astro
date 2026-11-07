@@ -8,7 +8,7 @@ import AdSlot from '../../components/monetization/AdSlot.astro';
 import { paths } from '../../config/site';
 import { getPublishedGuides, getPublishedMotorcycles, render } from '../../lib/content/catalog';
 import { formatDate, isoDate } from '../../lib/format';
-import { articleLd, breadcrumbLd, faqLd } from '../../lib/seo/jsonld';
+import { articleLd, breadcrumbLd } from '../../lib/seo/jsonld';
 
 export async function getStaticPaths() {
   const guides = await getPublishedGuides();
@@ -28,17 +28,6 @@ const related = entry.data.relatedModelIds
   .map((id) => motos.find((moto) => moto.data.id === id))
   .filter((moto): moto is (typeof motos)[number] => Boolean(moto))
   .slice(0, 3);
-const jsonLd = [
-  breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
-  articleLd({
-    headline: entry.data.title,
-    description: entry.data.description,
-    path,
-    datePublished: isoDate(entry.data.publishedAt),
-    dateModified: isoDate(entry.data.reviewedAt),
-  }),
-  ...(entry.data.faqs?.length ? [faqLd(entry.data.faqs)] : []),
-];
 ---
 
 <BaseLayout
@@ -48,7 +37,16 @@ const jsonLd = [
   ogType="article"
   modifiedTime={entry.data.reviewedAt}
   publishedTime={entry.data.publishedAt}
-  jsonLd={jsonLd}
+  jsonLd={[
+    breadcrumbLd(crumbs.map((item) => ({ name: item.label, path: item.href }))),
+    articleLd({
+      headline: entry.data.title,
+      description: entry.data.description,
+      path,
+      datePublished: isoDate(entry.data.publishedAt),
+      dateModified: isoDate(entry.data.reviewedAt),
+    }),
+  ]}
 >
   <div class="wrap">
     <div class="article-layout">

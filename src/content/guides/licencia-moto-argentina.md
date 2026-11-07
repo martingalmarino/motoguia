@@ -30,17 +30,6 @@ relatedArticleIds:
   - moto-110-125-150
 seoTitle: "Licencia de moto en Argentina: A 1.2 hasta 150 cc, edades y CENAT de $10.150"
 seoDescription: "Mirá qué clase te toca según los cc o los kW, desde qué edad la pide la ANSV y qué arancel publican CABA, Rosario y La Plata."
-faqs:
-  - question: "¿Con la licencia de auto puedo manejar una moto?"
-    answer: "No. La clase B 1 incluye la A 3, que es para triciclos y cuatriciclos con cabina y volante, y no incluye las subclases A 1. Para una moto necesitás la A 1.1, A 1.2, A 1.3 o A 1.4 que corresponda a la cilindrada o, si es eléctrica, a la potencia máxima continua nominal."
-  - question: "¿Desde qué edad se saca cada clase de moto?"
-    answer: "La ANSV publica 16 años para la A 1.1, 17 para la A 1.2, 19 para la A 1.3 y 21 para la A 1.4. Los menores de 18 necesitan autorización de su representante legal. La Ley 24.449 permite excepciones locales, así que el centro emisor puede pedir otra edad: Rosario, en la página de licencia nueva, pide ser mayor de 18."
-  - question: "¿Cuánto sale sacar la licencia de moto?"
-    answer: "El CENAT nacional es de $10.150 desde la Disposición ANSV 202/2026, publicada el 7 de julio de 2026. El arancel local se suma y no es único: el 7 de noviembre de 2026, CABA publicaba $42.230 de BUI para el otorgamiento. El curso nacional es gratuito. El costo de imprimir la tarjeta física no está publicado a nivel nacional: No informado."
-  - question: "¿Qué clase corresponde a una moto eléctrica?"
-    answer: "La ANSV usa la potencia máxima continua nominal, no la potencia de pico. Hasta 4 kW es A 1.1, hasta 11 kW es A 1.2, más de 11 y hasta 20 kW es A 1.3, y más de 20 kW es A 1.4. Si la ficha solo dice watts y no aclara que son continuos y nominales, ese número no alcanza: confirmalo en la cédula y en el centro emisor."
-  - question: "¿Alcanza la licencia digital o hace falta el plástico?"
-    answer: "El Decreto 196/2025 otorga la licencia en formato digital, visible en Mi Argentina, con la misma validez legal que la tarjeta. El plástico es optativo y no tiene vencimiento propio: vale mientras valga la digital. La nota oficial del 19 de mayo de 2025 dice que imprimirlo tiene un costo adicional. Ese monto no está publicado: No informado."
 ---
 
 Para una moto de hasta 150 cc, la clase que publica la Agencia Nacional de Seguridad Vial es la A 1.2, desde los 17 años. El Certificado Nacional de Antecedentes de Tránsito sale $10.150 desde el 7 de julio de 2026. El arancel del centro emisor es otro importe, y CABA, Rosario, La Plata y Mendoza no publican el mismo número.
