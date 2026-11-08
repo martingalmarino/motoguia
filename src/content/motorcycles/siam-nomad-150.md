@@ -95,7 +95,7 @@ seoDescription: "SIAM Nomad 150: trail de 149 cc y 11,5 hp, caja de 5 y discos d
 licenceHint: "149 cc, clase A 1.2 según ANSV."
 warranty: "12 meses o 12.000 km."
 dataNotes:
-  - "La página escribe el motor como “4T 0HC” y la compresión como “9:2:1”. El PDF dice “Monocilíndrico 4T OHC” y 9,2:1. La ficha usa el PDF."
+  - "La página escribe el motor como “4T 0HC” y la compresión como “9:2:1”. El PDF dice “Monocilíndrico 4T OHC” y 9,2:1. Acá figuran los datos del PDF."
   - "El PDF indica 132 kg en vacío, 150 kg de carga y tanque de 11,5 litros. El despeje queda en blanco en la página y no aparece en el PDF."
   - "El torque se publica como 11 Nm a 6.500 rpm."
 ---

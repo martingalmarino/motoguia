@@ -108,7 +108,7 @@ dataNotes:
   - "El ABS figura en el freno delantero: disco de 276 mm con ABS. El trasero es un disco de 220 mm."
   - "El comunicado del 20 de noviembre de 2025, fechado en el texto como Buenos Aires, septiembre de 2025, dice que la Hunk 150 XTEC se ensambla en Argentina con componentes importados de India."
   - "El precio en pesos es $4.190.000, rotulado Precio 2026, sugerido y de contado, sin patentamiento ni seguro. Observado el 7 de noviembre de 2026. La página también imprime “Precio 2025: Q 16.490”, en quetzales."
-  - "El peso sin carga es 146,5 kg. La compresión publicada es 9,1:1. El informe nombra HERO HUNK 150 sin distinguir DD y XTEC, y el alias queda sin asignar."
+  - "El peso sin carga es 146,5 kg. La compresión publicada es 9,1:1. El informe nombra HERO HUNK 150 sin distinguir DD y XTEC, y ese nombre no corresponde a una sola de las dos."
 ---
 
 La Hero Hunk 150 XTEC es una moto de calle con motor monocilíndrico de 149,2 cc, 4 tiempos, OHC y 2 válvulas. Declara 14,15 hp a 8.500 rpm y 12,6 Nm a 6.500 rpm. La compresión es 9,1:1. El arranque es eléctrico y a pedal, y la caja tiene 5 velocidades de marcha constante. La tabla no informa refrigeración ni alimentación. Hero es una marca india. El comunicado oficial dice que este modelo se ensambla en Argentina con componentes importados de India, a través de Gilera Motors.

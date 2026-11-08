@@ -96,9 +96,9 @@ licenceHint: "149 cc, clase A 1.2 según ANSV."
 warranty: "12 meses o 12.000 km."
 dataNotes:
   - "La página y el PDF coinciden en motor, frenos, medidas y tanque. El PDF suma la suspensión, que la tabla de la página no publica."
-  - "La página indica 150 kg de carga. En el PDF esa celda dice “??? kgs”. La ficha no carga ese dato."
+  - "La página indica 150 kg de carga. En el PDF esa celda no trae un número legible, así que la carga no figura acá."
   - "El peso de 112 kg no aclara si es en seco, en vacío o en orden de marcha."
-  - "El torque se publica como 12 Nm a 6.000 rpm. La ficha guarda el valor en Nm."
+  - "El torque publicado es 12 Nm a 6.000 rpm."
 ---
 
 La SIAM Quirion 150 es una moto de calle con motor monocilíndrico de 4 tiempos y 149 cc, refrigerado por aire. Declara 12,7 hp a 8.500 rpm y 12 Nm a 6.000 rpm. La caja es manual de 5 velocidades y el arranque es eléctrico y a patada. SIAM es una marca argentina comercializada por Newsan. La ficha no informa el país de fabricación ni el tipo de alimentación.

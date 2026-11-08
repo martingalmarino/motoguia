@@ -97,7 +97,7 @@ licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null
 dataNotes:
   - "El informe de patentamientos lista una sola fila CORVEN ENERGY 110, sin separar las versiones AD y RT."
-  - "Al 7 de noviembre de 2026, la ficha https://corvenmotos.com.ar/project/energy-110-nueva/ responde 404. El menú y el listado de motos publican Energy 110 RT y Energy 110 Max, no la AD. En la portada queda un recuadro ENERGY 110 AD que apunta a esa URL. Las cifras salen del PDF de la AD, que sigue en línea."
+  - "Al 7 de noviembre de 2026, la página https://corvenmotos.com.ar/project/energy-110-nueva/ ya no está publicada. El menú y el listado de motos publican Energy 110 RT y Energy 110 Max, no la AD. En la portada queda un recuadro ENERGY 110 AD que apunta a esa página. Las cifras salen del PDF de la AD, que sigue en línea."
 ---
 
 La Corven Energy 110 es una cub de 106,7 cc con caja de 4 velocidades. Los datos de esta ficha corresponden a la versión AD, que combina disco delantero y tambor trasero.
@@ -106,4 +106,4 @@ Corven declara 6,7 hp a 8.000 rpm, un tanque de 4 litros y un peso de 97 kg, sin
 
 El tanque de 4 litros está entre los más grandes de las cub de este catálogo, a la par del de la Keller Crono Classic 110.
 
-Al 7 de noviembre de 2026, la versión AD no tiene ficha en el sitio de Corven. El enlace que usaba la marca responde 404, y ni el menú ni el listado de motos incluyen la AD: ahí figuran la Energy 110 RT y la Energy 110 Max. En la portada queda un recuadro con el nombre ENERGY 110 AD que lleva a esa página caída. Por eso esta ficha no la da por disponible. Las cifras siguen siendo las del PDF de la AD, que Corven mantiene en línea, y no describen a la RT ni a la Max. Si te ofrecen una Energy, confirmá por escrito la versión.
+Al 7 de noviembre de 2026, la versión AD no tiene página en el sitio de Corven. El enlace que usaba la marca ya no abre, y ni el menú ni el listado de motos incluyen la AD: ahí figuran la Energy 110 RT y la Energy 110 Max. En la portada queda un recuadro con el nombre ENERGY 110 AD que lleva a esa página. Por eso no la damos por disponible. Las cifras siguen siendo las del PDF de la AD, que Corven mantiene en línea, y no describen a la RT ni a la Max. Si te ofrecen una Energy, confirmá por escrito la versión.

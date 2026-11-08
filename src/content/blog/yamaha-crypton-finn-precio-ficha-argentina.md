@@ -154,9 +154,7 @@ Yamaha no informó:
 - **Potencia máxima y torque máximo**: la ficha técnica oficial no incluye estos datos.
 - **Consumo de combustible**: la marca solo habla de "menor consumo" sin dar cifras.
 - **Vigencia del precio de lanzamiento**: no hay fecha límite publicada para el precio de $3.690.000.
-- **Patentamientos de octubre**: el lanzamiento fue el 22 de octubre y el informe ACARA de octubre se publica a fin de mes. Recién ahí vamos a poder saber cuántas unidades se patentaron en la primera semana.
-
-Vamos a actualizar esta nota cuando esos datos estén disponibles.
+- **Patentamientos de octubre**: el lanzamiento fue el 22 de octubre y el informe ACARA de octubre se publica a fin de mes. Recién ahí se puede saber cuántas unidades se patentaron en la primera semana.
 
 ---
 

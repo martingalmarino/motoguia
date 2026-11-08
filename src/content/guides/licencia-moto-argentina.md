@@ -36,7 +36,7 @@ Para una moto de hasta 150 cc, la clase que publica la Agencia Nacional de Segur
 
 <figure style="margin:1.4rem 0 0">
   <img src="/images/guias/motos-buenos-aires.jpg" alt="Fila de motos de calle y cub estacionadas en un playón de Buenos Aires, con autos y árboles de fondo" width="1600" height="1200" style="width:100%;height:auto;display:block" />
-  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Motos en un playón de Buenos Aires, 4 de enero de 2025. Foto de Grandmaster Huon, dominio público (CC0) en <a href="https://commons.wikimedia.org/wiki/File:Motorcycles_of_Buenos_Aires.jpeg">Wikimedia Commons</a>. Esta copia está reducida a 1600 px de ancho.</figcaption>
+  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Foto: Grandmaster Huon, CC0.</figcaption>
 </figure>
 
 ## Qué clase corresponde a cada moto
@@ -56,10 +56,10 @@ En la práctica, una 110 y una 150 de calle piden la misma A 1.2. En las fichas 
 
 <figure style="margin:1.4rem 0 0">
   <img src="/images/guias/zanella-patagonian-retiro.jpg" alt="Zanella Patagonian Eagle negra estacionada en una vereda de Retiro. En la tapa del motor se lee 150 cc" width="1600" height="900" style="width:100%;height:auto;display:block" />
-  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Zanella Patagonian en Retiro, Buenos Aires, 27 de febrero de 2019. La tapa dice «150 cc». Foto de Gordon Leggett, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>, en <a href="https://commons.wikimedia.org/wiki/File:2019-02-27_Moto_Zanella_Patagonian_Blackstreet_150_Custom_motorcycle.jpg">Wikimedia Commons</a>. Copia reducida a 1600 px.</figcaption>
+  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Foto: Gordon Leggett, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>.</figcaption>
 </figure>
 
-Una tapa que dice 150 cc no reemplaza a la cédula. En el catálogo de [Zanella](/marcas/zanella/) hay modelos de 110 cc. Esta foto es de una Patagonian en Retiro y no tiene ficha propia en el sitio. Si el número de la cédula no pasa de 150, la clase nacional es A 1.2. Si estás comparando 110, 125 y 150, la guía de [diferencias entre esas cilindradas](/guias/moto-110-125-150/) sirve para el uso. La licencia, en ese rango, no cambia. El catálogo de [Honda](/marcas/honda/) concentra varias de esas fichas.
+Una tapa que dice 150 cc no reemplaza a la cédula. En el catálogo de [Zanella](/marcas/zanella/) hay modelos de 110 cc. Esta foto es de una Patagonian en Retiro; no es uno de los modelos de este catálogo. Si el número de la cédula no pasa de 150, la clase nacional es A 1.2. Si estás comparando 110, 125 y 150, la guía de [diferencias entre esas cilindradas](/guias/moto-110-125-150/) sirve para el uso. La licencia, en ese rango, no cambia. El catálogo de [Honda](/marcas/honda/) concentra varias de esas fichas.
 
 Para pasar de 150 cc la clase sí cambia. La [Honda XR190L](/motos/honda/honda-xr190l/) figura en su ficha con 184 cc: eso es A 1.3. La [Honda XR300L Tornado](/motos/honda/honda-xr300l-tornado/) figura con 294 cc. Como el corte de la A 1.4 es «más de 300 cc», 294 cc siguen en A 1.3. Si la cédula dijera más de 300, pasarías a A 1.4. La antigüedad previa es la de la tabla: dos años en la clase anterior, con la excepción de los mayores de 21 que publica la ANSV.
 
@@ -73,7 +73,7 @@ Hay un segundo filtro. La ley define al ciclomotor como una motocicleta de hasta
 
 ## Qué cobra cada lugar
 
-El único importe nacional que esta revisión pudo fijar con una norma es el CENAT. La [Disposición ANSV 202/2026](https://www.boletinoficial.gob.ar/detalleAviso/primera/344130/20260707), publicada en el Boletín Oficial el 7 de julio de 2026, lo lleva a $10.150. Se pide antes de otorgar, renovar, ampliar o cambiar el domicilio de la licencia. El curso nacional, en cambio, es gratuito.
+El único importe nacional publicado en una norma es el CENAT. La [Disposición ANSV 202/2026](https://www.boletinoficial.gob.ar/detalleAviso/primera/344130/20260707), publicada en el Boletín Oficial el 7 de julio de 2026, lo lleva a $10.150. Se pide antes de otorgar, renovar, ampliar o cambiar el domicilio de la licencia. El curso nacional, en cambio, es gratuito.
 
 El arancel del municipio o de la provincia es aparte. Estas cifras son las que publicaban los sitios oficiales el 7 de noviembre de 2026. No las sumamos en un «total del país», porque cada boleta arma su propio importe y varias páginas municipales todavía muestran un CENAT viejo.
 
@@ -102,7 +102,7 @@ El tarifario de La Plata desglosa el original y la renovación por 5 años en CE
 
 En la [Ciudad de Mendoza](https://ciudaddemendoza.gob.ar/tramites/emision-de-licencias-de-conducir-nacional-particular/), la emisión de la licencia particular está en 200 UTM. Entre los 66 y los 70 baja a 100 UTM, y desde los 71 a 50 UTM. La página no convierte la UTM a pesos: No informado. El CENAT que imprime, $6.800, también está por debajo de los $10.150.
 
-En la ciudad de Córdoba, esta revisión no encontró un monto en pesos en una página oficial abierta el 7 de noviembre de 2026. No informado. El listado de [municipios que otorgan la licencia nacional](https://www.argentina.gob.ar/seguridadvial/municipios-licencia-nacional) sirve para ubicar el organismo. Turnos, formularios y el peso final están en el sitio de tu municipio o de tu provincia.
+En la ciudad de Córdoba, ninguna página oficial abierta el 7 de noviembre de 2026 publica un monto en pesos. No informado. El listado de [municipios que otorgan la licencia nacional](https://www.argentina.gob.ar/seguridadvial/municipios-licencia-nacional) sirve para ubicar el organismo. Turnos, formularios y el peso final están en el sitio de tu municipio o de tu provincia.
 
 El trámite no entra en el costo de todos los meses. Para armar ese número, la guía de [cuánto cuesta mantener una moto](/guias/cuanto-cuesta-mantener-moto/) separa nafta, service y seguro, y la [calculadora de costo mensual](/herramientas/costo-mensual-moto/) prorratea lo que ya conozcas.
 
@@ -129,7 +129,7 @@ Si cambiás un dato de la licencia y no lo informás, a los 90 días pierde vali
 
 <figure style="margin:1.4rem 0 0">
   <img src="/images/guias/licencia-nacional-muestra-2017.jpg" alt="Muestra del diseño físico de la Licencia Nacional de Conducir, con número 999999999 y las clases A3 y B2" width="1300" height="822" style="width:100%;height:auto;display:block" />
-  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Muestra del diseño físico de 2017 publicada por el Gobierno de la Ciudad de Buenos Aires bajo <a href="https://creativecommons.org/licenses/by/2.5/ar/deed.es">CC BY 2.5 AR</a>. El archivo de Commons, retocado por VictiniFan360, está en <a href="https://commons.wikimedia.org/wiki/File:Argentina_Licencia_de_conducir_2017.png">Wikimedia Commons</a>. Los datos son de ejemplo. Las clases impresas en esta muestra son A3 y B2, no las subclases de moto.</figcaption>
+  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Foto: Gobierno de la Ciudad de Buenos Aires, retoque de VictiniFan360, <a href="https://creativecommons.org/licenses/by/2.5/ar/deed.es">CC BY 2.5 AR</a>. Datos de ejemplo. Las clases impresas son A3 y B2, no las de moto.</figcaption>
 </figure>
 
 ## Preguntas frecuentes

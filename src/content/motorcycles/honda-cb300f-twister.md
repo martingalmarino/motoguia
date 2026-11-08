@@ -100,7 +100,7 @@ seoDescription: "Honda CB300F Twister: street de 294 cc fabricada en Argentina, 
 licenceHint: "294 cc, clase A 1.3 según ANSV (más de 150 y hasta 300 cc)."
 warranty: "36 meses o 36.000 km; batería 12 meses."
 dataNotes:
-  - "La página de Honda habla de un motor de 293 cm³; la ficha técnica declara 294 cc. La ficha usa el dato de la ficha técnica."
+  - "La página de Honda habla de un motor de 293 cm³; la ficha técnica declara 294 cc, y es el valor que figura acá."
   - "El ABS de doble canal y el control de tracción HSTC salen del texto de la página del modelo. La ficha técnica marca ABS en los dos discos y HSTC como sí."
   - "El precio es el valor sugerido por Honda a su red de concesionarios, vigente del 1 al 30 de noviembre de 2026, y no incluye flete, seguro ni patentamiento."
   - "Honda no publica potencia, torque ni consumo."

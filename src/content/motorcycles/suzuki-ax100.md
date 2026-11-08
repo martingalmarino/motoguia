@@ -97,7 +97,7 @@ seoDescription: "Suzuki AX100: calle de 98 cc y 10 hp, motor 2 tiempos, caja de 
 licenceHint: "98 cc, clase A 1.2 según ANSV."
 warranty: null
 dataNotes:
-  - "La página y el PDF coinciden en cilindrada, potencia, frenos y medidas. El torque se publica como 0,97 kg-m a 6.500 rpm. La ficha no lo convierte a Nm."
+  - "La página y el PDF coinciden en cilindrada, potencia, frenos y medidas. Suzuki publica el torque como 0,97 kg-m a 6.500 rpm, y así figura acá."
   - "La página dice que el amortiguador trasero es regulable en 5 posiciones. El PDF dice “doble amortiguador regulable” y no aclara las posiciones."
   - "El peso de 86 kg no aclara la base. El tanque es de 12 litros, con 2 litros de reserva."
   - "En el informe de patentamientos figura como SUZUKI AX 100."

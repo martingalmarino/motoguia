@@ -98,7 +98,7 @@ warranty: 12 meses o 12.000 km, según Gilera.
 versionNote: "Los datos técnicos corresponden a la versión Full II."
 dataNotes:
   - "El informe de patentamientos cuenta todas las Smash en una sola fila, sin separar versiones."
-  - "La potencia se convirtió a kW con el caballo métrico (0,7355 kW por hp)."
+  - "Gilera publica la potencia en hp. El valor en kW equivale a 0,7355 kW por cada hp (caballo métrico)."
 ---
 
 La Gilera Smash es una cub de 107 cc con caja semiautomática de 4 marchas: los cambios se pasan con el pie, sin embrague a mano. Hay más de una Smash en el mercado; los datos técnicos de esta ficha corresponden a la Full II.

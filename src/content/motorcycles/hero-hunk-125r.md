@@ -111,7 +111,7 @@ dataNotes:
   - "La página publica 0 a 60 km/h en 5,9 segundos. El peso es en húmedo, 133 kg. En el informe figura como HERO HUNK 125R."
 ---
 
-La Hero Hunk 125R es una moto de calle con motor de 124,7 cc, 4 tiempos, SOHC y 2 válvulas. Declara 10,72 hp a 8.250 rpm y 10,4 Nm a 6.500 rpm. La alimentación es carburada, el arranque es eléctrico y a pedal, y la caja es mecánica de 5 velocidades. La tabla no informa el tipo de refrigeración. Hero es una marca india y Gilera Motors es el distribuidor oficial en Argentina. Esta ficha no dice que la 125R se ensamble en el país.
+La Hero Hunk 125R es una moto de calle con motor de 124,7 cc, 4 tiempos, SOHC y 2 válvulas. Declara 10,72 hp a 8.250 rpm y 10,4 Nm a 6.500 rpm. La alimentación es carburada, el arranque es eléctrico y a pedal, y la caja es mecánica de 5 velocidades. La tabla no informa el tipo de refrigeración. Hero es una marca india y Gilera Motors es el distribuidor oficial en Argentina. Hero no informa que la 125R se ensamble en el país.
 
 El freno delantero es un disco de 240 mm con IBS y el trasero, un tambor de 130 mm. Hero no lo llama ABS. Adelante lleva suspensión hidráulica telescópica. El texto de la página la describe como horquilla Showa de 37 mm. Atrás hay un monoamortiguador hidráulico de 7 posiciones. La tabla no publica la medida de los neumáticos.
 

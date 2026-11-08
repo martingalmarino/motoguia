@@ -106,7 +106,7 @@ dataNotes:
   - "La refrigeración “por aire y aceite” y el ABS monocanal están en la sección de características. La tabla de motor no repite la refrigeración y la de frenos no repite el ABS."
   - "El comunicado del 20 de noviembre de 2025 nombra la XPulse 200 4V FI entre los modelos ensamblados en Argentina con componentes importados de India."
   - "El precio es $5.900.000, rotulado Precio 2026, sugerido y de contado, sin patentamiento ni seguro. Observado el 7 de noviembre de 2026."
-  - "Hero también vende la Xpulse 200 Advance, con motor OHC de 18,1 hp. El informe dice HERO XPULSE 200 y no aclara cuál de las dos es, así que el alias no se asigna."
+  - "Hero también vende la Xpulse 200 Advance, con motor OHC de 18,1 hp. El informe dice HERO XPULSE 200 y no aclara cuál de las dos es, así que ese nombre no corresponde a una sola de las dos."
 ---
 
 La Hero Xpulse 200 4V es una doble propósito con motor de 199,6 cc, 4 tiempos, OHV y 4 válvulas. Declara 18,9 hp a 8.500 rpm y 17,35 Nm a 6.500 rpm. La compresión es 10,5:1. La alimentación es por inyección electrónica, el arranque es eléctrico y a pedal, y la caja es mecánica de 5 velocidades. La página indica refrigeración por aire y aceite. Hero es una marca india. El comunicado oficial incluye la XPulse 200 4V FI entre los modelos ensamblados en Argentina con componentes importados de India.

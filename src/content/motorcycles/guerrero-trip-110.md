@@ -97,8 +97,8 @@ versionNote: "Guerrero ofrece la Trip 110 en versiones Econo, Full, Tuning y Aut
 specVersion: "Econo"
 dataNotes:
   - "El informe de patentamientos registra el modelo como GUERRERO G110 TRIP."
-  - "En la web de Guerrero, el link 'Ver Trip Econo' abre una página titulada 'Trip full'. La ficha toma esos datos como de la Econo, según el menú del sitio."
-  - "La página de la Trip Full indica frenos a disco adelante y atrás con frenado combinado; no se usó porque no coincide con otras fuentes y no pudo confirmarse."
+  - "En la web de Guerrero, el enlace «Ver Trip Econo» abre una página titulada «Trip full». Los datos de la Econo son los de esa página, según el menú del sitio."
+  - "La página de la Trip Full indica frenos a disco adelante y atrás con frenado combinado. Ese dato no figura acá: no coincide con otras fuentes y no está confirmado."
   - "Guerrero no publica potencia, suspensiones, neumáticos ni garantía en la ficha del modelo."
 ---
 

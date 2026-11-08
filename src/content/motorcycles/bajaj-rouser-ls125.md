@@ -92,7 +92,7 @@ licenceHint: "124,4 cc, clase A 1.2 según ANSV."
 warranty: null
 dataNotes:
   - "El nombre en el catálogo de Bajaj Argentina es Rouser LS125."
-  - "La página del modelo dice 125.00 cc. La ficha técnica declara 124,4 cc. La ficha usa el dato de la ficha técnica."
+  - "La página del modelo dice 125.00 cc. La ficha técnica declara 124,4 cc, y es el valor que figura acá."
   - "La ficha técnica no informa el sistema de alimentación, si tiene ABS o CBS, la altura del asiento ni la garantía."
 ---
 

@@ -91,7 +91,7 @@ seoDescription: "Bajaj Rouser P150: street de 149 cc y 14,5 hp, con inyección, 
 licenceHint: "149 cc, clase A 1.2 según ANSV."
 warranty: null
 dataNotes:
-  - "La página del modelo dice 150.00 cc. La ficha técnica declara 149.00 cc. La ficha usa el dato de la ficha técnica."
+  - "La página del modelo dice 150.00 cc. La ficha técnica declara 149.00 cc, y es el valor que figura acá."
   - "La ficha técnica no informa la cantidad de marchas, el largo, el ancho ni el alto."
 ---
 

@@ -97,8 +97,8 @@ warranty: "El manual de 2016 distingue ATV y off-road (6 meses, solo piezas de m
 dataNotes:
   - "Los datos de motor, frenos y medidas salen de la ficha actual de motoskeller.com.ar. La cilindrada está escrita como 149 ml."
   - "El manual de usuario de 2016, de Emprendimiento Industrial Mediterráneo S.A., identifica el modelo como “MIRACLE 150 Evo (KN150GY)”. Advierte que las especificaciones pueden cambiar."
-  - "Ese manual indica freno trasero mecánico de expansión interna y relación de compresión 9,0:1. La web actual indica disco trasero de 220 mm y no publica la compresión. La ficha sigue la web."
-  - "La carga declarada en la web es de 180 kg. El despeje, 310 mm, no tiene un campo propio en la tabla."
+  - "Ese manual indica freno trasero mecánico de expansión interna y relación de compresión 9,0:1. La web actual indica disco trasero de 220 mm y no publica la compresión. Acá figuran los datos de la web actual."
+  - "La carga declarada en la web es de 180 kg. El despeje declarado es de 310 mm."
 ---
 
 La Keller Miracle 150 Evo es una trail con motor UNNITEC monocilíndrico de 149 cc, OHV y refrigeración por aire. Declara 11,5 hp a 8.000 rpm. El diámetro y la carrera son 62 x 49,5 mm. Lleva carburador de 27 mm, arranque eléctrico y a patada, y caja de 5 velocidades con transmisión por cadena. El embrague es multidisco manual en baño de aceite. Keller no publica torque.

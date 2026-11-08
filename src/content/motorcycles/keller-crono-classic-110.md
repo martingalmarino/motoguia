@@ -109,7 +109,7 @@ specVersion: FULL
 dataNotes:
   - "El código KN110-8 sale del manual del usuario de la versión FULL, que identifica el modelo como “CRONO CLASSIC 110 (KN110-8)”."
   - "El informe de patentamientos no separa las versiones ECO, PLUS y FULL."
-  - "El manual de la FULL indica neumático trasero 2.75 x 14 y horquilla invertida; la web actual de Keller, 80/100-14 y horquilla telescópica hidráulica. La ficha toma los datos de la web."
+  - "El manual de la FULL indica neumático trasero 2.75 x 14 y horquilla invertida; la web actual de Keller, 80/100-14 y horquilla telescópica hidráulica. Acá figuran los datos de la web actual."
 ---
 
 La Keller Crono Classic 110 es una cub de 107 cc con caja semiautomática de 4 velocidades: el embrague multidisco trabaja solo y los cambios se pasan con el pie. Keller la vende en tres versiones, ECO, PLUS y FULL, con el mismo motor UNNITEC de 7 hp a 8.000 rpm y carburador de 19 mm.
