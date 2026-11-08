@@ -110,9 +110,9 @@ versions:
 versionNote: "Motor, caja, suspensión, neumáticos y tanque coinciden en los PDF de la AD y la RT. Cambian el freno delantero y las llantas."
 specVersion: AD
 dataNotes:
-  - "Los números de esta ficha salen de los PDF enlazados como ficha técnica. La página de la AD publica ~11 HP, freno delantero hidráulico, suspensión trasera regulable, 125 kg y ~35 km/l. El PDF de la AD no trae potencia ni peso, y describe el disco como manual."
-  - "La página de la RT publica 11,5 HP y un consumo aproximado de 35 a 40 km/l. Su PDF tampoco trae potencia ni consumo. Por eso la ficha deja la potencia vacía."
-  - "La Hunter 150 R2 no entra en esta ficha. Su página describe una moto con CVT, neumáticos 90/90-12 y 100/90-10 y tanque de 5,5 litros. El PDF enlazado desde esa página repite la ficha de la AD, con caja de 5 velocidades, disco y CBS. No hay una fuente única para cargar la R2."
+  - "Los números de esta página son los de los PDF de ficha técnica. La página de la AD publica ~11 HP, freno delantero hidráulico, suspensión trasera regulable, 125 kg y ~35 km/l. El PDF de la AD no trae potencia ni peso, y describe el disco como manual."
+  - "La página de la RT publica 11,5 HP y un consumo aproximado de 35 a 40 km/l. Su PDF tampoco trae potencia ni consumo. Por eso la potencia figura como no informada."
+  - "La Hunter 150 R2 no está en esta página. Su página describe una moto con CVT, neumáticos 90/90-12 y 100/90-10 y tanque de 5,5 litros. El PDF enlazado desde esa página repite los datos de la AD, con caja de 5 velocidades, disco y CBS. No hay una fuente única y coherente para la R2."
 ---
 
 La Corven Hunter 150 es una moto de calle con motor monocilíndrico de 4 tiempos y 150 cc, refrigerado por aire, con encendido CDI de avance electrónico. El arranque es eléctrico y a pedal. La caja tiene 5 velocidades. Corven no publica potencia ni torque en los PDF de la AD y la RT.

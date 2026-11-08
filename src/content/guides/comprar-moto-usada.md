@@ -33,7 +33,7 @@ Antes de pagar una moto usada, seguí este orden: quién puede firmar la venta, 
 
 <figure style="margin:1.4rem 0 0">
   <img src="/images/guias/motos-cafayate-plaza.jpg" alt="Cinco motos de viaje estacionadas en fila junto a la vereda de una plaza arbolada en Cafayate, Salta" width="1600" height="900" style="width:100%;height:auto;display:block" />
-  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Motos en la plaza de Cafayate, Salta. La ficha del archivo fecha la toma el 15 de noviembre de 2013. Foto de Ontzia Fotógrafo, <a href="https://creativecommons.org/licenses/by/3.0/deed.es">CC BY 3.0</a>, en <a href="https://commons.wikimedia.org/wiki/File:Motos_(129720893).jpeg">Wikimedia Commons</a>. Esta copia está reducida a 1600 px de ancho.</figcaption>
+  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Foto: Ontzia Fotógrafo, <a href="https://creativecommons.org/licenses/by/3.0/deed.es">CC BY 3.0</a>.</figcaption>
 </figure>
 
 ## Quién vende y qué papeles muestra
@@ -81,7 +81,7 @@ En la [ficha de la Wave 110S](/motos/honda/honda-wave-110s/) el freno delantero 
 
 <figure style="margin:1.4rem 0 0">
   <img src="/images/guias/honda-wave-110s-catalogo.jpg" alt="Honda Wave 110S roja de perfil, foto de catálogo de Honda Motos Argentina, con freno delantero a disco" width="1200" height="800" style="width:100%;height:auto;display:block" />
-  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Honda Wave 110S, foto de catálogo de Honda Motos Argentina. Es el mismo archivo que usa la ficha, pasado a JPG en 1200×800 px. Página del modelo: <a href="https://motos.honda.com.ar/modelos/wave-110s">motos.honda.com.ar/modelos/wave-110s</a>.</figcaption>
+  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Foto: Honda Motos Argentina.</figcaption>
 </figure>
 
 Manubrio, palancas, pedalines o escape raspados pueden indicar una caída. No miden el daño. En el [segmento de 110 cc](/motos/110cc/) la misma lectura sirve para una [Gilera Smash](/motos/gilera/gilera-smash/) o una [Motomel Blitz 110](/motos/motomel/motomel-blitz-110/). La comparación [Wave 110S vs Smash](/comparativas/wave-110s-vs-smash/) junta frenos y medidas de las fichas. Las marcas están en [Honda](/marcas/honda/), [Gilera](/marcas/gilera/) y [Motomel](/marcas/motomel/). En octubre de 2026 la Wave volvió a encabezar los patentamientos: el detalle está en el [ranking de octubre](/blog/mercado-motos-octubre-2026/).
@@ -134,7 +134,7 @@ Si la otra opción es una 0 km, cruzá el precio de lista en [precios de motos](
 
 <figure style="margin:1.4rem 0 0">
   <img src="/images/guias/honda-glh-150-catalogo.jpg" alt="Honda GLH 150 roja de perfil, foto de catálogo de Honda Motos Argentina, con freno delantero a disco y portaequipaje" width="1200" height="800" style="width:100%;height:auto;display:block" />
-  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Honda GLH 150, foto de catálogo de Honda Motos Argentina. Es el mismo archivo que usa la ficha, pasado a JPG en 1200×800 px. Página del modelo: <a href="https://motos.honda.com.ar/modelos/glh-150">motos.honda.com.ar/modelos/glh-150</a>.</figcaption>
+  <figcaption style="margin-top:0.45rem;font-size:0.875rem;line-height:1.45;color:var(--text-secondary)">Foto: Honda Motos Argentina.</figcaption>
 </figure>
 
 La garantía legal no empata sola la cuenta. La Ley 24.240, en el artículo 11, da 3 meses para bienes muebles usados y 6 meses en los demás casos, desde la entrega. Las partes pueden pactar un plazo mayor. Eso vale cuando quien vende es proveedor: el artículo 2 define así a quien, de manera profesional y aunque sea ocasional, produce, importa, distribuye o comercializa bienes para consumidores. En una venta entre particulares el vendedor no actúa como proveedor, y esos 3 meses no se aplican. Si comprás en una agencia o en un concesionario, la garantía de la marca es otra cosa: la guía de [garantía, repuestos y service](/guias/garantia-repuestos-servicio/) explica qué pedir por escrito.
@@ -182,4 +182,4 @@ La ficha de transferencia, consultada el 8 de noviembre de 2026, dice que si el 
 
 ## Actualización
 
-Texto revisado el 8 de noviembre de 2026. Se contrastaron la ficha de transferencia, la de informe de dominio, las guías de informe y de verificación de la DNRPA, el anexo de aranceles de motovehículos, la Resolución 308/2026, la Ley 24.449, el Decreto 196/2025, la Ley 24.240 y el manual de la Honda Wave 110S publicado por Honda Motor de Argentina. Donde una página oficial no daba un peso, esta nota dice No informado. El número que se paga es el de la boleta del Registro.
+Texto revisado el 8 de noviembre de 2026. Se contrastaron la ficha de transferencia, la de informe de dominio, las guías de informe y de verificación de la DNRPA, el anexo de aranceles de motovehículos, la Resolución 308/2026, la Ley 24.449, el Decreto 196/2025, la Ley 24.240 y el manual de la Honda Wave 110S publicado por Honda Motor de Argentina. Si una página oficial no publica un importe, acá figura como no informado. El número que se paga es el de la boleta del Registro.

@@ -62,7 +62,7 @@ editorial:
     - "Discos de 240 mm y 220 mm"
     - "Garantía de 4 años o 40.000 km"
   limitations:
-    - "La página publica un precio promocional sin fecha, y esta ficha no lo carga"
+    - "La página publica un precio promocional sin fecha, y no figura como precio de lista"
     - "La tabla no menciona ABS ni el tipo de alimentación"
     - "El informe de patentamientos no distingue esta versión de la XTEC"
   ownershipNotes: "La garantía publicada es de 4 años o 40.000 km. Pedí el precio final por escrito: la página lo llama promocional y no indica la vigencia."
@@ -96,8 +96,8 @@ licenceHint: "149,2 cc, clase A 1.2 según ANSV."
 warranty: "4 años o 40.000 km."
 dataNotes:
   - "La tabla no informa alimentación ni ABS. La luz delantera es halógena."
-  - "La página muestra “Precio PROMOCIONAL: $3.500.000” sin fecha. La página de urbanas dice “Precio desde $3.500.000” y tampoco lo llama Precio 2026. Esta ficha no carga ese monto."
-  - "El informe nombra HERO HUNK 150. Hero vende al mismo tiempo la Hunk 150 DD y la Hunk 150 XTEC, así que el alias no se asigna a ninguna de las dos."
+  - "La página muestra “Precio PROMOCIONAL: $3.500.000” sin fecha. La página de urbanas dice “Precio desde $3.500.000” y tampoco lo llama Precio 2026. Ese monto no figura como precio de lista."
+  - "El informe nombra HERO HUNK 150. Hero vende al mismo tiempo la Hunk 150 DD y la Hunk 150 XTEC, así que ese nombre del informe no corresponde a una sola de las dos."
   - "La compresión publicada es 10:1, con combustible corriente. El peso es sin carga, 145 kg."
 ---
 
@@ -107,4 +107,4 @@ Frena con un disco de 240 mm adelante y uno de 220 mm atrás. La ficha no mencio
 
 Mide 2.080 mm de largo y 1.325 mm entre ejes. Pesa 145 kg sin carga y el tanque es de 12,4 litros. La garantía publicada es de 4 años o 40.000 km.
 
-La página muestra un precio promocional de $3.500.000 sin fecha de vigencia. Esta ficha no lo publica como precio de lista.
+La página muestra un precio promocional de $3.500.000 sin fecha de vigencia. No figura acá como precio de lista.

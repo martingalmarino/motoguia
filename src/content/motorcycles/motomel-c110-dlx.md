@@ -91,7 +91,7 @@ seoDescription: "Motomel C110 DLX (DLX Deluxe CBS): cub de 108 cc y 8 hp con dis
 licenceHint: 108 cm³, clase A 1.2 según ANSV.
 warranty: "12 meses o 12.000 km para unidades 2026."
 dataNotes:
-  - "La ficha de Motomel muestra 150 kg junto a “peso vacío”. Como esa cifra coincide con la capacidad de carga de otras fichas de la marca, no se tomó como peso de la moto."
+  - "Motomel muestra 150 kg junto a «peso vacío». Esa cifra coincide con la capacidad de carga de otros modelos de la marca, así que no figura como peso de la moto."
 ---
 
 La Motomel C110 DLX es una cub de 108 cc que Motomel comercializa como DLX Deluxe CBS. Declara 8 hp a 7.500 rpm, la potencia más alta entre las cub de este catálogo que publican ese dato. Las marcas no informan con qué norma miden, así que tomala como referencia.

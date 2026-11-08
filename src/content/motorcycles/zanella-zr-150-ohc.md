@@ -91,7 +91,7 @@ seoDescription: "Zanella ZR 150 OHC: trail de 149 cc y 11,5 hp, con caja de 5, d
 licenceHint: "149 cc, clase A 1.2 según ANSV."
 warranty: null
 dataNotes:
-  - "El catálogo de Zanella nombra el modelo ZR 150 OHC. El informe de patentamientos tiene una fila ZANELLA ZR 150 OHC V2. La ficha oficial no usa la sigla V2, así que no se vinculan."
+  - "El catálogo de Zanella nombra el modelo ZR 150 OHC. El informe de patentamientos tiene una fila ZANELLA ZR 150 OHC V2. La ficha oficial no usa la sigla V2, así que no es la misma fila."
   - "La ficha técnica no informa el sistema de alimentación, la distancia entre ejes, la altura del asiento ni si tiene ABS o CBS."
 ---
 

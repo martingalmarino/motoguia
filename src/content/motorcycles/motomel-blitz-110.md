@@ -99,7 +99,7 @@ specVersion: START
 dataNotes:
   - "Motomel no usa el código B110 en su web ni en el manual; el vínculo con la Blitz 110 surge de concesionarios (Fava) y de la prensa (Los Andes)."
   - "El informe de patentamientos no separa las versiones de la Blitz."
-  - "El manual de usuario MY26 declara 7,1 hp a 8.500 rpm; la página de producto, 7 hp a 8.000 rpm. La ficha usa el dato de la página."
+  - "El manual de usuario MY26 declara 7,1 hp a 8.500 rpm; la página de producto, 7 hp a 8.000 rpm. Acá figura el dato de la página."
 ---
 
 La Motomel Blitz 110 es una cub de 110 cc que se vende en varias versiones. Cambian dos cosas: la transmisión, de 4 velocidades o automática, y el freno delantero, a tambor o a disco con CBS. Los datos técnicos de esta ficha corresponden a la versión START.

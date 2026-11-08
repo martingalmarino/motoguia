@@ -94,7 +94,7 @@ seoDescription: "Zanella ZB 110 FULL: cub de 107 cc y 6,5 hp con disco delantero
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null
 dataNotes:
-  - "El informe de patentamientos tiene filas separadas para ZANELLA ZB 110, ZB 110 Z3 ST y ZB 110 Z3 FULL. Esta ficha está vinculada a la fila ZANELLA ZB 110."
+  - "El informe de patentamientos tiene filas separadas para ZANELLA ZB 110, ZB 110 Z3 ST y ZB 110 Z3 FULL. Los patentamientos de esta página se cuentan en la fila ZANELLA ZB 110."
 ---
 
 La Zanella ZB 110 FULL es la versión más equipada de las dos ZB 110 que publica Zanella: una cub de 107 cc y 6,5 hp con caja de 4 velocidades. Frena con disco adelante y tambor atrás, con CBS, y monta llantas de aleación.

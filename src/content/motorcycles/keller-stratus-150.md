@@ -113,7 +113,7 @@ versionNote: "Motor, medidas, peso, neumáticos y tanque coinciden en las tres f
 specVersion: FULL
 dataNotes:
   - "Los datos salen de las fichas actuales de ECO, PLUS y FULL. La cilindrada está escrita como 149 ml y la potencia como 11 hp a 9.000 rpm."
-  - "El manual de la FULL, de 2015, identifica el modelo como “STRATUS 150 (KN150-13)”. Publica 11,5 hp a 9.000 rpm y compresión 9,2:1. La web actual publica 11 hp y no informa la compresión. La ficha sigue la web."
+  - "El manual de la FULL, de 2015, identifica el modelo como “STRATUS 150 (KN150-13)”. Publica 11,5 hp a 9.000 rpm y compresión 9,2:1. La web actual publica 11 hp y no informa la compresión. Acá figuran los datos de la web actual."
   - "ECO y PLUS publican el mismo freno, el mismo bastidor y las mismas llantas. La diferencia de equipamiento entre esas dos versiones no está en la ficha técnica."
   - "La web declara 150 kg de carga y 230 mm de despeje. El ancho publicado es 1.040 mm."
 ---
