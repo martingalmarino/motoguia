@@ -1,0 +1,148 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { DNRPA_VALUATION_CITE, DNRPA_VALUATION_URL, SOON_JURISDICTIONS } from '../../lib/calculators/patente';
+import { breadcrumbLd } from '../../lib/seo/jsonld';
+import { paths } from '../../config/site';
+import '../../styles/patente.css';
+
+const crumbs = [
+  { name: 'Inicio', path: paths.home },
+  { name: 'Herramientas', path: paths.tools },
+  { name: 'Patente de motos', path: paths.patente },
+];
+const description = 'Estimá la patente anual de tu moto según la jurisdicción, con desglose y fuente oficial. El resultado es orientativo.';
+---
+
+<BaseLayout
+  title="Calculadora de patente de motos"
+  description={description}
+  path={paths.patente}
+  jsonLd={[breadcrumbLd(crumbs)]}
+>
+  <section class="pt" aria-labelledby="pt-titulo">
+    <div class="pt-hero">
+      <ol class="rs-crumb" aria-label="Migas de pan">
+        <li><a href={paths.home}>Inicio</a></li>
+        <li><a href={paths.tools}>Herramientas</a></li>
+        <li aria-current="page">Patente de motos</li>
+      </ol>
+      <p class="pt-kicker">Herramientas</p>
+      <h1 id="pt-titulo">Calculadora de patente de motos</h1>
+      <p>Estimá el impuesto anual según la jurisdicción. El resultado es orientativo: el monto real lo informa el organismo que cobra.</p>
+    </div>
+
+    <form
+      id="pt-form"
+      class="pt-card"
+      novalidate
+      data-brands="/data/valuacion-dnrpa/index.json"
+      data-brand-base="/data/valuacion-dnrpa/"
+    >
+      <h2>Datos de la moto</h2>
+
+      <div class="pt-field">
+        <label for="pt-jur">Jurisdicción</label>
+        <select id="pt-jur" name="jur" required>
+          <option value="">Elegí una provincia o CABA</option>
+          <option value="caba">CABA</option>
+          <option value="buenos-aires">Buenos Aires (Provincia)</option>
+          <option value="cordoba">Córdoba</option>
+          <option value="santa-fe">Santa Fe</option>
+          <option value="mendoza">Mendoza</option>
+          <option value="catamarca">Catamarca</option>
+          <option value="tucuman">Tucumán</option>
+          <optgroup label="Próximamente">
+            {SOON_JURISDICTIONS.map((item) => <option value={item.id}>{item.name}</option>)}
+          </optgroup>
+        </select>
+        <p class="pt-err" role="alert"></p>
+      </div>
+
+      <p class="pt-hint" style="margin-bottom:8px">¿Cómo cargás la valuación?</p>
+      <div class="pt-seg" role="radiogroup" aria-label="Modo de valuación">
+        <input type="radio" name="pt-mode" id="mode-elegir" value="elegir" checked />
+        <label for="mode-elegir">Elegir moto</label>
+        <input type="radio" name="pt-mode" id="mode-manual" value="manual" />
+        <label for="mode-manual">Ingresar valuación</label>
+      </div>
+
+      <div id="pt-elegir">
+        <div class="pt-row pt-row--2">
+          <div class="pt-field">
+            <label for="pt-marca">Marca</label>
+            <select id="pt-marca"><option value="">Elegí una marca</option></select>
+            <p class="pt-err" role="alert"></p>
+          </div>
+          <div class="pt-field">
+            <label for="pt-modelo">Modelo</label>
+            <select id="pt-modelo" disabled><option value="">Elegí un modelo</option></select>
+            <p class="pt-err" role="alert"></p>
+          </div>
+        </div>
+        <div class="pt-row pt-row--2">
+          <div class="pt-field">
+            <label for="pt-anio-elegir">Año</label>
+            <select id="pt-anio-elegir" disabled><option value="">Elegí un año</option></select>
+            <p class="pt-err" role="alert"></p>
+          </div>
+          <div class="pt-field">
+            <label for="pt-cc-elegir">Cilindrada (cc)</label>
+            <input id="pt-cc-elegir" type="number" min="0" max="2000" inputmode="numeric" placeholder="Ej. 110 · 0 si es eléctrica" />
+            <p class="pt-hint">Poné 0 si es una moto eléctrica. Hace falta para mínimos y exenciones.</p>
+            <p class="pt-err" role="alert"></p>
+          </div>
+        </div>
+        <div class="pt-demo" id="pt-val-box" hidden></div>
+      </div>
+
+      <div id="pt-manual" hidden>
+        <div class="pt-field">
+          <label for="pt-val">Valuación fiscal (pesos)</label>
+          <input type="number" id="pt-val" name="val" min="1" step="1" inputmode="numeric" placeholder="Ej. 3200000" />
+          <p class="pt-hint">Usá la valuación que publica el organismo de tu jurisdicción (AGIP, DNRPA u otro).</p>
+          <p class="pt-err" role="alert"></p>
+        </div>
+        <div class="pt-row pt-row--2">
+          <div class="pt-field">
+            <label for="pt-anio">Año del modelo</label>
+            <input type="number" id="pt-anio" name="anio" min="1980" max="2027" inputmode="numeric" placeholder="Ej. 2024" />
+            <p class="pt-err" role="alert"></p>
+          </div>
+          <div class="pt-field">
+            <label for="pt-cc">Cilindrada (cc)</label>
+            <input type="number" id="pt-cc" name="cc" min="0" max="2000" inputmode="numeric" placeholder="Ej. 110 · 0 si es eléctrica" />
+            <p class="pt-hint">Poné 0 si es una moto eléctrica.</p>
+            <p class="pt-err" role="alert"></p>
+          </div>
+        </div>
+      </div>
+
+      <p class="pt-cite">
+        <a href={DNRPA_VALUATION_URL} rel="noopener" target="_blank">{DNRPA_VALUATION_CITE}</a>
+      </p>
+
+      <div class="pt-actions">
+        <button type="submit" class="pt-btn pt-btn--pri">Calcular patente</button>
+        <button type="button" class="pt-btn pt-btn--sec" id="pt-reset">Limpiar</button>
+      </div>
+    </form>
+
+    <template id="pt-aviso-tpl">
+      <div class="pt-aviso" role="note">
+        <strong>Estimación orientativa.</strong> El monto real lo informa el organismo correspondiente (AGIP, Rentas, ATM, municipalidad, etc.). Las alícuotas y valuaciones pueden cambiar durante el año.
+      </div>
+    </template>
+
+    <div id="pt-result" class="pt-result" hidden aria-live="polite"></div>
+
+    <aside class="pt-card" aria-labelledby="pt-cobre">
+      <h2 id="pt-cobre">Qué cubre esta versión</h2>
+      <p class="pt-muted" style="margin:0 0 8px">Jurisdicciones con cálculo disponible: <strong>CABA, Córdoba, Santa Fe, Mendoza, Catamarca y Tucumán</strong>.</p>
+      <p class="pt-muted" style="margin:0 0 8px">En <strong>Provincia de Buenos Aires</strong> el cobro es municipal: te explicamos el régimen, sin estimar un monto provincial único.</p>
+      <p class="pt-muted" style="margin:0">El resto de las provincias figuran como <strong>próximamente</strong> hasta tener la alícuota oficial verificada.</p>
+    </aside>
+  </section>
+</BaseLayout>
+<script>
+  import '../../scripts/patente';
+</script>

@@ -1,0 +1,476 @@
+/* Calculadora de patente. Paleta acotada a .pt para no alterar el resto del sitio. */
+.pt {
+  --p: #0062b1;
+  --ph: #004c8c;
+  --navy: #0a2e57;
+  --dark: #061c38;
+  --acc: #ffb400;
+  --tint: #e8f1fc;
+  --gray: #f4f6f9;
+  --bd: #d5deea;
+  --sec: #52616b;
+  --ok: #0a7a3e;
+  --warn: #9a5b00;
+  --err: #b42318;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+main:has(> .pt) {
+  padding-bottom: 0;
+}
+
+.pt-hero {
+  background: var(--navy);
+  color: #fff;
+  box-shadow: 0 0 0 100vmax var(--navy);
+  clip-path: inset(0 -100vmax);
+  padding: 28px 16px 36px;
+  margin: 0 -16px 28px;
+  position: relative;
+  isolation: isolate;
+}
+
+.pt-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: min(36%, 220px);
+  background: repeating-linear-gradient(-55deg, transparent 0 14px, rgb(255 255 255 / 6%) 14px 18px);
+  mask-image: linear-gradient(90deg, transparent, #000 45%);
+  pointer-events: none;
+}
+
+.pt-hero .rs-crumb,
+.pt-hero .rs-crumb a {
+  color: #d6e2f1;
+  font-size: 0.8125rem;
+}
+
+.pt-hero .rs-crumb a:hover {
+  color: #fff;
+}
+
+.pt-hero .rs-crumb {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  flex-wrap: wrap;
+}
+
+.pt-hero .rs-crumb li + li::before {
+  content: '/';
+  margin-right: 6px;
+  opacity: 0.7;
+}
+
+.pt-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--acc);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.pt-kicker::before {
+  content: '';
+  width: 18px;
+  height: 3px;
+  background: var(--acc);
+  border-radius: 2px;
+}
+
+.pt-hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
+  line-height: 1.2;
+  color: #fff;
+}
+
+.pt-hero p {
+  margin: 0;
+  color: #c9d7ea;
+  max-width: 42ch;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.pt-card {
+  background: #fff;
+  border: 1px solid var(--bd);
+  border-radius: 14px;
+  border-top: 4px solid var(--p);
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgb(6 28 56 / 4%);
+}
+
+.pt-card h2 {
+  margin: 0 0 16px;
+  font-size: 1.125rem;
+  position: relative;
+  padding-bottom: 10px;
+  color: var(--dark);
+}
+
+.pt-card h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--p) 0 60%, var(--acc) 60%);
+}
+
+.pt-field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.pt-field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.pt-hint {
+  font-size: 0.75rem;
+  color: var(--sec);
+  margin: 0;
+}
+
+.pt-field :where(select, input[type='number'], input[type='text']) {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--bd);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+  background: #fff;
+  color: var(--dark);
+  box-shadow: none;
+}
+
+.pt-field select {
+  appearance: auto;
+  background-image: none;
+  padding-right: 12px;
+}
+
+.pt-field :where(select, input):focus,
+.pt-field :where(select, input):focus-visible {
+  outline: 3px solid var(--p);
+  outline-offset: 2px;
+  border-color: var(--p);
+  box-shadow: none;
+}
+
+.pt-field :where(select, input)[aria-invalid='true'] {
+  border-color: var(--err);
+}
+
+.pt-err {
+  color: var(--err);
+  font-size: 0.8125rem;
+  margin: 0;
+  display: none;
+}
+
+.pt-field.is-bad .pt-err {
+  display: block;
+}
+
+.pt-row {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 560px) {
+  .pt-row--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pt-seg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.pt .pt-seg input[type='radio'] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+.pt-seg label {
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 10px 8px;
+  border: 1px solid var(--bd);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fff;
+  color: var(--dark);
+}
+
+.pt-seg input:checked + label {
+  background: var(--p);
+  border-color: var(--p);
+  color: #fff;
+}
+
+.pt-seg input:focus-visible + label {
+  outline: 3px solid var(--acc);
+  outline-offset: 2px;
+}
+
+.pt-demo {
+  background: var(--tint);
+  border: 1px dashed #9bb6d6;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.8125rem;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.pt-demo strong {
+  color: var(--ph);
+}
+
+.pt-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.pt-btn {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  min-height: 48px;
+  padding: 12px 22px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pt-btn--pri {
+  background: var(--acc);
+  color: var(--dark);
+}
+
+.pt-btn--pri:hover {
+  background: #ffc633;
+  color: var(--dark);
+}
+
+.pt-btn--sec {
+  background: transparent;
+  border: 1.5px solid var(--p);
+  color: var(--p);
+}
+
+.pt-btn--sec:hover {
+  background: var(--tint);
+  color: var(--p);
+}
+
+.pt-btn:focus-visible {
+  outline: 3px solid var(--p);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.pt-result {
+  display: none;
+}
+
+.pt-result.is-on {
+  display: block;
+}
+
+.pt-amount {
+  background: var(--navy);
+  color: #fff;
+  border-radius: 14px;
+  padding: 22px 20px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pt-amount::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 30%;
+  background: repeating-linear-gradient(-55deg, transparent 0 12px, rgb(255 255 255 / 5%) 12px 16px);
+  pointer-events: none;
+}
+
+.pt-amount .pt-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--acc);
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.pt-amount .pt-big {
+  font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.25rem);
+  font-weight: 700;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.pt-amount .pt-sub {
+  margin: 8px 0 0;
+  color: #c9d7ea;
+  font-size: 0.9375rem;
+}
+
+.pt-break {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.pt-break li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--gray);
+  border-radius: 10px;
+  font-size: 0.875rem;
+}
+
+.pt-break .pt-k {
+  color: var(--sec);
+}
+
+.pt-break .pt-v {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.pt-status {
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  font-size: 0.9375rem;
+  line-height: 1.45;
+}
+
+.pt-status--info {
+  background: var(--tint);
+  border-left: 4px solid var(--p);
+  color: var(--navy);
+}
+
+.pt-status--ok {
+  background: #e8f7ee;
+  border-left: 4px solid var(--ok);
+  color: #0a3d22;
+}
+
+.pt-status--warn {
+  background: #fff6e5;
+  border-left: 4px solid var(--acc);
+  color: #5c3a00;
+}
+
+.pt-status--soon {
+  background: var(--gray);
+  border-left: 4px solid var(--sec);
+  color: var(--dark);
+}
+
+.pt .pt-status a,
+.pt .pt-status a:hover {
+  color: inherit;
+  font-weight: 700;
+}
+
+.pt-aviso {
+  background: #fff8e8;
+  border: 1px solid #f0d48a;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 0.875rem;
+  color: #5c3a00;
+  margin-top: 8px;
+}
+
+.pt-src,
+.pt-cite {
+  font-size: 0.8125rem;
+  color: var(--sec);
+  margin: 12px 0 0;
+}
+
+.pt-cite {
+  margin: 0 0 14px;
+}
+
+.pt-src a,
+.pt-cite a,
+.pt-src a:hover,
+.pt-cite a:hover {
+  color: var(--p);
+}
+
+.pt-muted {
+  color: var(--sec);
+  font-size: 0.875rem;
+}
+
+.pt [hidden] {
+  display: none !important;
+}
+
+@media (max-width: 389px) {
+  .pt {
+    padding-inline: 12px;
+  }
+
+  .pt-hero {
+    margin-inline: -12px;
+    padding-inline: 12px;
+  }
+}

@@ -30,12 +30,19 @@ const tools = [
     text: 'Sumá combustible, seguro, patente y mantenimiento.',
     cta: 'Calcular costo mensual',
   },
+  {
+    href: paths.patente,
+    icon: 'city',
+    title: 'Calculá la patente de tu moto',
+    text: 'Estimá el impuesto anual según la jurisdicción y la valuación.',
+    cta: 'Calcular patente',
+  },
 ] as const;
 ---
 
 <BaseLayout
   title="Herramientas para elegir moto"
-  description="Comparador de motos y calculadoras de combustible y costo mensual para motos en Argentina."
+  description="Comparador de motos y calculadoras de combustible, patente y costo mensual para motos en Argentina."
   path={paths.tools}
 >
   <div class="wrap">
@@ -43,7 +50,7 @@ const tools = [
       crumbs={crumbs}
       eyebrow="Herramientas"
       title="Herramientas para decidir"
-      lede="Compará modelos y hacé tus cuentas antes de elegir. Las calculadoras usan los valores que cargás vos."
+      lede="Compará modelos y hacé tus cuentas antes de elegir. Las calculadoras usan los valores que cargás vos; la de patente también puede tomar la valuación oficial."
     />
 
     <section class="section" aria-labelledby="herramientas-lista">

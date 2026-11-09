@@ -67,6 +67,7 @@ export const GET: APIRoute = async () => {
     `- [Catálogo en JSON](${absoluteUrl('/datos/motos.json')}): todas las fichas con especificaciones, precios, fechas y fuentes.`,
     `- [Calculadora de costo mensual](${absoluteUrl(paths.monthlyCost)})`,
     `- [Calculadora de combustible](${absoluteUrl(paths.fuel)})`,
+    `- [Calculadora de patente de motos](${absoluteUrl(paths.patente)})`,
     `- [Comparador de motos](${absoluteUrl(paths.comparator)})`,
     '',
   ];
