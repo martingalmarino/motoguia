@@ -17,7 +17,8 @@
     "test:watch": "vitest",
     "launch-check": "node scripts/launch-check.mjs",
     "og": "node scripts/build-og.mjs",
-    "prices": "node scripts/update-prices.mjs"
+    "prices": "node scripts/update-prices.mjs",
+    "valuacion:dnrpa": "node scripts/build-dnrpa-valuacion.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

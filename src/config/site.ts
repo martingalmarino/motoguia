@@ -128,6 +128,7 @@ export const paths = {
   comparisons: '/comparativas/',
   tools: '/herramientas/',
   fuel: '/herramientas/calculadora-combustible/',
+  patente: '/herramientas/patente-moto/',
   monthlyCost: '/herramientas/costo-mensual-moto/',
   guides: '/guias/',
   accessories: '/accesorios/',
