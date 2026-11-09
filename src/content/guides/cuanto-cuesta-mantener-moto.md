@@ -1,5 +1,5 @@
 ---
-title: "Cuánto cuesta mantener una moto: en Varela, 101 a 150 cc paga $59.100 de patente"
+title: "Cuánto cuesta mantener una moto: patente, nafta, seguro y service con datos oficiales"
 description: "Te contamos cómo estimar nafta, patente y service. En Florencio Varela, una moto modelo 2026 de 101 a 150 cc paga $59.100 de patente al año."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
@@ -32,7 +32,7 @@ relatedArticleIds:
   - comprar-moto-usada
   - licencia-moto-argentina
   - garantia-repuestos-servicio
-seoTitle: "Cuánto cuesta mantener una moto: en Varela, 101 a 150 cc paga $59.100 de patente"
+seoTitle: "Cuánto cuesta mantener una moto: patente, nafta, seguro y service con datos oficiales"
 seoDescription: "Te contamos cómo estimar nafta, patente y service. En Florencio Varela, una moto modelo 2026 de 101 a 150 cc paga $59.100 de patente al año."
 ---
 
@@ -108,7 +108,7 @@ La [calculadora de costo mensual](/herramientas/costo-mensual-moto/) suma nafta 
 
 Este ejemplo no es un promedio del país. Usa el consumo que declara Zanella y la patente de Florencio Varela. La nafta, el seguro y el service los completás con tus propios números.
 
-Si recorés 600 km en el mes con una ZB 110 FULL, a 1,8 litros cada 100 km, cargás 10,8 litros. Multiplicá esos litros por el precio de tu estación. Si la moto es modelo 2026, tiene entre 101 y 150 cc y está radicada en Florencio Varela, reservá $4.925 por mes de patente, que son $59.100 divididos 12. Si pagás el año junto en las fechas del decreto, la boleta puede bajar por el descuento.
+Si recorrés 600 km en el mes con una ZB 110 FULL, a 1,8 litros cada 100 km, cargás 10,8 litros. Multiplicá esos litros por el precio de tu estación. Si la moto es modelo 2026, tiene entre 101 y 150 cc y está radicada en Florencio Varela, reservá $4.925 por mes de patente, que son $59.100 divididos 12. Si pagás el año junto en las fechas del decreto, la boleta puede bajar por el descuento.
 
 Al lado van la cuota de tu seguro y el service que te presupuesten. La cochera, si la pagás, es una línea más. Una reparación fuera de plan, una multa o un robo no entran en esa cuenta. Si querés un colchón para imprevistos, es una decisión tuya.
 
