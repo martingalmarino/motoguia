@@ -1,5 +1,5 @@
 ---
-title: "Primera moto en Argentina: la Honda Navi publica $3.434.700 en noviembre"
+title: "Primera moto en Argentina: cómo elegirla, licencia A 1.2 y precios desde $3.434.700"
 description: "Te contamos cómo elegirla: recorridos, licencia A 1.2 hasta 150 cc y los precios de lista que Honda y Yamaha publican en noviembre."
 author: Redacción MotoGuía AR
 editor: Redacción MotoGuía AR
@@ -32,7 +32,7 @@ relatedArticleIds:
   - cuanto-cuesta-mantener-moto
   - garantia-repuestos-servicio
   - comprar-moto-usada
-seoTitle: "Primera moto en Argentina: la Honda Navi publica $3.434.700 en noviembre"
+seoTitle: "Primera moto en Argentina: cómo elegirla, licencia A 1.2 y precios desde $3.434.700"
 seoDescription: "Te contamos cómo elegirla: recorridos, licencia A 1.2 hasta 150 cc y los precios de lista que Honda y Yamaha publican en noviembre."
 ---
 
