@@ -24,7 +24,7 @@ price:
   maxARS: 11392100
   priceType: list
   includesRegistration: false
-  observedAt: 2026-10-15
+  observedAt: 2026-11-10
   sourceIds:
     - honda-xr300l-tornado
 engine:
@@ -107,13 +107,13 @@ warranty: "36 meses o 36.000 km, lo que ocurra primero."
 versions:
   - name: "XR300L Tornado"
     priceARS: 10954000
-    note: "Valor sugerido por Honda, vigente del 1 al 31/10/2026"
+    note: "Valor sugerido por Honda, vigente del 1 al 30/11/2026"
   - name: "XR300L Tornado Rally"
     priceARS: 11392100
-    note: "Valor sugerido por Honda, vigente del 1 al 31/10/2026"
+    note: "Valor sugerido por Honda, vigente del 1 al 30/11/2026"
 versionNote: "Los datos técnicos salen de la ficha técnica de Honda, que no distingue entre la versión estándar y la Rally."
 dataNotes:
-  - "Los precios son valores sugeridos por Honda a su red de concesionarios, vigentes del 1 al 31 de octubre de 2026, y no incluyen flete, seguro ni patentamiento."
+  - "Los precios son valores sugeridos por Honda a su red de concesionarios, vigentes del 1 al 30 de noviembre de 2026, y no incluyen flete, seguro ni patentamiento."
   - "La página de Honda menciona embrague asistido con función antirrebote, pero la ficha técnica no lo detalla."
   - "Honda no publica potencia, torque ni consumo."
 ---

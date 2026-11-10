@@ -24,7 +24,7 @@ price:
   maxARS: 7033500
   priceType: list
   includesRegistration: false
-  observedAt: 2026-10-15
+  observedAt: 2026-11-10
   sourceIds:
     - honda-xr190l
 engine:
@@ -106,7 +106,7 @@ licenceHint: "184 cc, clase A 1.3 según ANSV (más de 150 y hasta 300 cc)."
 warranty: "36 meses o 36.000 km, lo que ocurra primero."
 dataNotes:
   - "La página de Honda habla de un motor de 190 cc; la ficha técnica declara 184 cc, y es el valor que figura acá."
-  - "El precio es el valor sugerido por Honda para la XR190L YM25, vigente del 1 al 31 de octubre de 2026, y no incluye flete, seguro ni patentamiento."
+  - "El precio es el valor sugerido por Honda para la XR190L YM25, vigente del 1 al 30 de noviembre de 2026, y no incluye flete, seguro ni patentamiento."
   - "Honda no publica potencia, torque ni consumo."
 ---
 

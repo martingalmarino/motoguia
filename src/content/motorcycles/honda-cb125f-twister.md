@@ -24,7 +24,7 @@ price:
   maxARS: 4176700
   priceType: list
   includesRegistration: false
-  observedAt: 2026-10-15
+  observedAt: 2026-11-10
   sourceIds:
     - honda-cb125f-twister
 engine:
@@ -106,14 +106,14 @@ warranty: "36 meses o 36.000 km, lo que ocurra primero."
 versions:
   - name: "CB125F Twister"
     priceARS: 4135300
-    note: "Valor sugerido por Honda, vigente del 1 al 31/10/2026"
+    note: "Valor sugerido por Honda, vigente del 1 al 30/11/2026"
   - name: "CB125F Deluxe"
     priceARS: 4176700
-    note: "Valor sugerido por Honda, vigente del 1 al 31/10/2026"
+    note: "Valor sugerido por Honda, vigente del 1 al 30/11/2026"
 versionNote: "La ficha técnica de Honda es una sola para la CB125F; la Deluxe figura como color en la ficha y con precio propio en la web."
 dataNotes:
   - "La ficha técnica no aclara el tipo de embrague ni si tiene frenado combinado (CBS) o ABS; esos campos quedan sin informar."
-  - "Los precios son valores sugeridos por Honda, vigentes del 1 al 31 de octubre de 2026, y no incluyen flete, seguro ni patentamiento."
+  - "Los precios son valores sugeridos por Honda, vigentes del 1 al 30 de noviembre de 2026, y no incluyen flete, seguro ni patentamiento."
   - "Honda no publica potencia, torque ni consumo."
 ---
 
