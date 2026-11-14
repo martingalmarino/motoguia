@@ -52,17 +52,17 @@ La columna de Corven es la de la Triax 150 ONE. Hay otra versión, la MAX, y est
 | --- | --- | --- |
 | Motor | 4 tiempos, 2 válvulas, monocilíndrico, OHC, aire y carburador | 4 tiempos, monocilíndrico, aire, carburador Euro 2 y CDI |
 | Cilindrada | 149 cc | 150 cc |
-| Potencia | No informado | No informado |
-| Torque | No informado | No informado |
+| Potencia | La marca no lo publica | La marca no lo publica |
+| Torque | La marca no lo publica | La marca no lo publica |
 | Caja | Cadena, 5 velocidades | 5 velocidades, embrague húmedo multidisco |
 | Arranque | Eléctrico y a patada | Eléctrico y a pedal |
 | Frenos | Disco delantero de 240 mm con ABS y tambor trasero de 110 mm | Disco hidráulico lobulado adelante y tambor atrás |
 | Suspensiones | Horquilla telescópica, 160 mm; monoshock, 149 mm | Horquilla hidráulica y monoamortiguador hidráulico |
 | Rodados | 90/90-19 y 110/90-17 | 3.00 x 21 y 4.10 x 18, llantas de rayos |
-| Peso | 131 kg en orden de marcha | No informado |
+| Peso | 131 kg en orden de marcha | La marca no lo publica |
 | Tanque | 12 litros | 12 litros |
-| Altura de asiento | 834 mm | No informado |
-| Precio | $6.051.500, valor sugerido al público según Honda Motos Argentina, del 1 al 30 de noviembre de 2026 | No informado |
+| Altura de asiento | 834 mm | La marca no lo publica |
+| Precio | $6.051.500, valor sugerido al público según Honda Motos Argentina, del 1 al 30 de noviembre de 2026 | Corven no lo publica |
 | Garantía | 36 meses o 36.000 km en modelos de calle, lo que ocurra primero. Batería: 12 meses | 12 meses o 12.000 km |
 
 ## Diferencias clave
