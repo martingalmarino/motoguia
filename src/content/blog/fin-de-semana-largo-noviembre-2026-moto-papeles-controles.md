@@ -7,17 +7,17 @@ pubDate: 2026-11-19
 author: Lautaro Diaz
 heroImage:
   path: /images/blog/fin-de-semana-largo-noviembre-2026-moto-papeles-controles.jpg
-  alt: Moto adventure amarilla en un camino de tierra junto al cartel de acceso al Parque Nacional Lanín, área Huechulafquen, con montañas y un cielo nublado
+  alt: "Moto adventure amarilla en un camino de tierra junto al cartel de acceso al Parque Nacional Lanín, área Huechulafquen, con montañas y un cielo nublado"
   width: 1280
   height: 720
 sources:
-  - name: Clarín - Dos fines de semana largos en noviembre 2026: qué días son feriados y quiénes tendrán más descanso
+  - name: "Clarín - Dos fines de semana largos en noviembre 2026: qué días son feriados y quiénes tendrán más descanso"
     url: https://www.clarin.com/informacion-general/feriados-noviembre-2026-fines-semana-largos-mismos-dias-descanso_0_8IKbBudiWe.html
-  - name: Infobae - Cuándo es el próximo fin de semana largo tras la visita del papa León XIV a la Argentina (11/11/2026)
+  - name: "Infobae - Cuándo es el próximo fin de semana largo tras la visita del papa León XIV a la Argentina (11/11/2026)"
     url: https://www.infobae.com/sociedad/2026/11/11/cuando-es-el-proximo-fin-de-semana-largo-tras-la-visita-del-papa-leon-xiv-a-la-argentina/
-  - name: Argentina.gob.ar - Manejo una moto (documentación y reglas para circular)
+  - name: "Argentina.gob.ar - Manejo una moto (documentación y reglas para circular)"
     url: https://www.argentina.gob.ar/manejo-una-moto
-  - name: Wikimedia Commons - Motorcycle touring Patagonia (foto de portada, CC BY 2.0)
+  - name: "Wikimedia Commons - Motorcycle touring Patagonia (foto de portada, CC BY 2.0)"
     url: https://commons.wikimedia.org/wiki/File:Motorcycle_touring_Patagonia.jpg
 tags:
   - feriados
