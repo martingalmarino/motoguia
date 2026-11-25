@@ -20,13 +20,16 @@ manufacturingCountry: null
 assemblyCountry: null
 importer: null
 price:
-  minARS: 1739000
-  maxARS: 1739000
-  priceType: promotional
-  includesRegistration: null
-  observedAt: 2026-10-15
+  minARS: 1836822
+  maxARS: 1836822
+  priceType: quoted
+  includesRegistration: false
+  observedAt: 2026-11-11
   sourceIds:
-    - yuhmak-ofertas-2026-10
+    - motonews-zanella-zb-2026-11
+    - eleconomista-zanella-zb-2026-11
+    - lanacion-zanella-zb-2026-11
+    - zirene-zanella-zb-2026-11
 engine:
   displacementCc: 107
   powerKw: 4.780742
@@ -83,7 +86,10 @@ sourceIds:
   - zanella-zb-st
   - zanella-zb-st-pdf
   - acara-siomaa-2026-08
-  - yuhmak-ofertas-2026-10
+  - motonews-zanella-zb-2026-11
+  - eleconomista-zanella-zb-2026-11
+  - lanacion-zanella-zb-2026-11
+  - zirene-zanella-zb-2026-11
 relatedModelIds:
   - zanella-zb-110
   - siam-qu-110
@@ -100,7 +106,7 @@ seoDescription: "Zanella ZB 110 ST: cub de 107 cc y 6,5 hp con frenos a tambor y
 licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null
 dataNotes:
-  - "Precio de concesionario, no oficial: oferta publicada por Yuhmak Motos para la ZANELLA ZB 110 Z3 ST – 2026, vista el 15 de octubre de 2026. Zanella no publica precio de lista."
+  - "Cotización de noviembre 2026: Zanella ZB 110 Z3 ST VE a $1.836.822. La web de Zanella no publica el precio. MotoNews (11/11/2026) da el código comercial; El Economista (16/11/2026) lo llama precio actualizado a noviembre; Zirene (6/11/2026) dice que es precio de lista informado por la marca y que no incluye patentamiento."
   - "Zanella la comercializa como ZB 110 ST, sin la sigla Z3 que usa el informe de patentamientos."
 ---
 

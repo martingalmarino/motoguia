@@ -19,7 +19,17 @@ brandOriginCountry: null
 manufacturingCountry: null
 assemblyCountry: null
 importer: null
-price: null
+price:
+  minARS: 2246337
+  maxARS: 2246337
+  priceType: quoted
+  includesRegistration: false
+  observedAt: 2026-11-11
+  sourceIds:
+    - motonews-zanella-zb-2026-11
+    - eleconomista-zanella-zb-2026-11
+    - lanacion-zanella-zb-2026-11
+    - zirene-zanella-zb-2026-11
 engine:
   displacementCc: 107
   powerKw: 4.780742
@@ -77,6 +87,10 @@ sourceIds:
   - zanella-zb-full-pdf
   - zanella-ar
   - acara-siomaa-2026-08
+  - motonews-zanella-zb-2026-11
+  - eleconomista-zanella-zb-2026-11
+  - lanacion-zanella-zb-2026-11
+  - zirene-zanella-zb-2026-11
 relatedModelIds:
   - zanella-zb-110-z3-st
   - siam-qu-110
@@ -95,6 +109,7 @@ licenceHint: Hasta 150 cc, clase A 1.2 según ANSV.
 warranty: null
 dataNotes:
   - "El informe de patentamientos tiene filas separadas para ZANELLA ZB 110, ZB 110 Z3 ST y ZB 110 Z3 FULL. Los patentamientos de esta página se cuentan en la fila ZANELLA ZB 110."
+  - "Cotización de noviembre 2026: Zanella ZB 110 Z3 F VE a $2.246.337. La web de Zanella no publica el precio. MotoNews (11/11/2026) y La Nación (16/11/2026) usan ese código; El Economista (16/11/2026) lo llama ZB 110 Full y precio actualizado a noviembre; Zirene (6/11/2026) dice que es precio de lista informado por la marca y que no incluye patentamiento."
 ---
 
 La Zanella ZB 110 FULL es la versión más equipada de las dos ZB 110 que publica Zanella: una cub de 107 cc y 6,5 hp con caja de 4 velocidades. Frena con disco adelante y tambor atrás, con CBS, y monta llantas de aleación.

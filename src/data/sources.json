@@ -1874,5 +1874,57 @@
       "supports": [
         "450mt-specs"
       ]
+    },
+    {
+      "id": "motonews-zanella-zb-2026-11",
+      "title": "Zanella actualiza la línea ZB con un nuevo enfoque estético y más equipamiento",
+      "url": "https://www.motonews.com.ar/zanella-actualiza-la-linea-zb-con-un-nuevo-enfoque-estetico-y-mas-equipamiento-000019465/",
+      "publisher": "MotoNews",
+      "publishedAt": "2026-11-11",
+      "accessedAt": "2026-11-25",
+      "countryScope": "AR",
+      "supports": [
+        "precio-zanella-zb-110-z3-st",
+        "precio-zanella-zb-110"
+      ]
+    },
+    {
+      "id": "eleconomista-zanella-zb-2026-11",
+      "title": "Zanella también renovó su oferta en el segmento de más ventas",
+      "url": "https://eleconomista.com.ar/autos/zanella-tambien-renovo-su-oferta-segmento-mas-ventas-n99672",
+      "publisher": "El Economista",
+      "publishedAt": "2026-11-16",
+      "accessedAt": "2026-11-25",
+      "countryScope": "AR",
+      "supports": [
+        "precio-zanella-zb-110-z3-st",
+        "precio-zanella-zb-110"
+      ]
+    },
+    {
+      "id": "lanacion-zanella-zb-2026-11",
+      "title": "Zanella renovó tres de sus motos más accesibles: qué cambios incorporan y cuánto cuestan",
+      "url": "https://www.lanacion.com.ar/autos/zanella-renovo-tres-de-sus-motos-mas-accesibles-que-cambios-incorporan-y-cuanto-cuestan-nid16112026/",
+      "publisher": "La Nación",
+      "publishedAt": "2026-11-16",
+      "accessedAt": "2026-11-25",
+      "countryScope": "AR",
+      "supports": [
+        "precio-zanella-zb-110-z3-st",
+        "precio-zanella-zb-110"
+      ]
+    },
+    {
+      "id": "zirene-zanella-zb-2026-11",
+      "title": "Zanella renueva la familia ZB: luces Full LED, color nuevo y precios de la ZB 110 ST, ZB 110 Full y ZB 125 Sport",
+      "url": "https://zirene.com.ar/motor-hub/zanella-zb-110-st-full-zb-125-sport-2026-renovacion-full-led-precios",
+      "publisher": "Zirene",
+      "publishedAt": "2026-11-06",
+      "accessedAt": "2026-11-25",
+      "countryScope": "AR",
+      "supports": [
+        "precio-zanella-zb-110-z3-st",
+        "precio-zanella-zb-110"
+      ]
     }
-]
+  ]
